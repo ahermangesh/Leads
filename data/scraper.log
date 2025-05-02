@@ -1,0 +1,1396 @@
+2025-05-02 12:28:22,039 - scrapers.google_maps - INFO - Navigating to Google Maps to search for cafe in test city
+2025-05-02 12:28:22,042 - scrapers.google_maps - INFO - Processing page 1/1
+2025-05-02 12:28:26,056 - scrapers.google_maps - INFO - Navigating to Google Maps to search for cafe in test city
+2025-05-02 12:28:26,057 - scrapers.google_maps - INFO - Processing page 1/1
+2025-05-02 12:28:29,059 - scrapers.google_maps - INFO - No phone found for Test Data
+2025-05-02 12:28:29,059 - scrapers.google_maps - INFO - No website found for Test Data
+2025-05-02 12:28:30,061 - scrapers.google_maps - INFO - No phone found for Test Data
+2025-05-02 12:28:30,062 - scrapers.google_maps - INFO - No website found for Test Data
+2025-05-02 12:28:30,081 - scrapers.google_maps - INFO - Navigating to Google Maps to search for cafe in test city
+2025-05-02 12:28:30,093 - scrapers.google_maps - INFO - Processing page 1/2
+2025-05-02 12:28:34,098 - scrapers.google_maps - INFO - Processing page 2/2
+2025-05-02 12:31:24,079 - scrapers.website - INFO - Successfully scraped https://example.com
+2025-05-02 12:31:24,080 - scrapers.website - INFO - Found 3 emails and 3 social links
+2025-05-02 12:31:24,094 - scrapers.website - INFO - Enriching data for Test Business 1
+2025-05-02 12:31:24,094 - scrapers.website - INFO - No website found for Test Business 2
+2025-05-02 12:35:12,124 - controllers.main_controller - INFO - Starting scraping for Cafe in New York
+2025-05-02 12:35:12,125 - controllers.main_controller - INFO - Starting Google Maps scraping
+2025-05-02 12:35:12,125 - controllers.main_controller - INFO - Found 2 leads from Google Maps
+2025-05-02 12:35:12,397 - controllers.main_controller - INFO - Starting scraping for Cafe in New York
+2025-05-02 12:35:12,397 - controllers.main_controller - INFO - Starting Google Maps scraping
+2025-05-02 12:35:12,398 - controllers.main_controller - INFO - Found 2 leads from Google Maps
+2025-05-02 12:35:12,398 - controllers.main_controller - INFO - Starting website data enrichment
+2025-05-02 12:35:12,398 - controllers.main_controller - INFO - Completed website data enrichment
+2025-05-02 12:35:12,623 - controllers.main_controller - INFO - Exported 2 leads to data/output/leads_Cafe_New York_20250502_123512.csv and data/output/leads_Cafe_New York_20250502_123512.xlsx
+2025-05-02 12:36:03,593 - controllers.main_controller - INFO - Starting scraping for Cafe in New York
+2025-05-02 12:36:03,594 - controllers.main_controller - INFO - Starting Google Maps scraping
+2025-05-02 12:36:03,594 - controllers.main_controller - INFO - Found 2 leads from Google Maps
+2025-05-02 12:36:04,076 - controllers.main_controller - INFO - Exported 2 leads to data/output/leads_Cafe_New York_20250502_123603.csv and data/output/leads_Cafe_New York_20250502_123603.xlsx
+2025-05-02 12:36:04,080 - controllers.main_controller - INFO - Starting scraping for Cafe in New York
+2025-05-02 12:36:04,080 - controllers.main_controller - INFO - Starting Google Maps scraping
+2025-05-02 12:36:04,080 - controllers.main_controller - INFO - Found 2 leads from Google Maps
+2025-05-02 12:36:04,080 - controllers.main_controller - INFO - Starting website data enrichment
+2025-05-02 12:36:04,080 - controllers.main_controller - INFO - Completed website data enrichment
+2025-05-02 12:36:04,113 - controllers.main_controller - INFO - Exported 2 leads to data/output/leads_Cafe_New York_20250502_123604.csv and data/output/leads_Cafe_New York_20250502_123604.xlsx
+2025-05-02 12:36:04,118 - controllers.main_controller - INFO - Exported 2 leads to data/output/leads_Cafe_New York_20250502_123604.csv and data/output/leads_Cafe_New York_20250502_123604.xlsx
+2025-05-02 12:39:18,824 - controllers.main_controller - INFO - Starting scraping for real estate in mumbai
+2025-05-02 12:39:18,825 - controllers.main_controller - INFO - Starting Google Maps scraping
+2025-05-02 12:39:25,324 - scrapers.google_maps - INFO - Navigating to Google Maps to search for real estate in mumbai
+2025-05-02 12:39:44,644 - scrapers.google_maps - ERROR - Fatal error during scraping: Message: 
+Stacktrace:
+	GetHandleVerifier [0x010AD363+60275]
+	GetHandleVerifier [0x010AD3A4+60340]
+	(No symbol) [0x00EE06F3]
+	(No symbol) [0x00F28690]
+	(No symbol) [0x00F28A2B]
+	(No symbol) [0x00F70EE2]
+	(No symbol) [0x00F4D0D4]
+	(No symbol) [0x00F6E6EB]
+	(No symbol) [0x00F4CE86]
+	(No symbol) [0x00F1C623]
+	(No symbol) [0x00F1D474]
+	GetHandleVerifier [0x012F8FE3+2467827]
+	GetHandleVerifier [0x012F45E6+2448886]
+	GetHandleVerifier [0x0130F80C+2560028]
+	GetHandleVerifier [0x010C3DF5+153093]
+	GetHandleVerifier [0x010CA3BD+179149]
+	GetHandleVerifier [0x010B4BB8+91080]
+	GetHandleVerifier [0x010B4D60+91504]
+	GetHandleVerifier [0x0109FA10+4640]
+	BaseThreadInitThunk [0x76AC7BA9+25]
+	RtlInitializeExceptionChain [0x7767C2EB+107]
+	RtlClearBits [0x7767C26F+191]
+
+2025-05-02 12:39:46,934 - controllers.main_controller - INFO - Found 0 leads from Google Maps
+2025-05-02 12:39:47,309 - controllers.main_controller - INFO - Exported 0 leads to data/output/leads_real estate_mumbai_20250502_123946.csv and data/output/leads_real estate_mumbai_20250502_123946.xlsx
+2025-05-02 12:40:14,621 - controllers.main_controller - INFO - Starting scraping for real estate in mumbai
+2025-05-02 12:40:14,621 - controllers.main_controller - INFO - Starting Google Maps scraping
+2025-05-02 12:40:17,381 - scrapers.google_maps - INFO - Navigating to Google Maps to search for real estate in mumbai
+2025-05-02 12:40:35,638 - scrapers.google_maps - ERROR - Fatal error during scraping: Message: 
+Stacktrace:
+	GetHandleVerifier [0x010AD363+60275]
+	GetHandleVerifier [0x010AD3A4+60340]
+	(No symbol) [0x00EE06F3]
+	(No symbol) [0x00F28690]
+	(No symbol) [0x00F28A2B]
+	(No symbol) [0x00F70EE2]
+	(No symbol) [0x00F4D0D4]
+	(No symbol) [0x00F6E6EB]
+	(No symbol) [0x00F4CE86]
+	(No symbol) [0x00F1C623]
+	(No symbol) [0x00F1D474]
+	GetHandleVerifier [0x012F8FE3+2467827]
+	GetHandleVerifier [0x012F45E6+2448886]
+	GetHandleVerifier [0x0130F80C+2560028]
+	GetHandleVerifier [0x010C3DF5+153093]
+	GetHandleVerifier [0x010CA3BD+179149]
+	GetHandleVerifier [0x010B4BB8+91080]
+	GetHandleVerifier [0x010B4D60+91504]
+	GetHandleVerifier [0x0109FA10+4640]
+	BaseThreadInitThunk [0x76AC7BA9+25]
+	RtlInitializeExceptionChain [0x7767C2EB+107]
+	RtlClearBits [0x7767C26F+191]
+
+2025-05-02 12:40:37,854 - controllers.main_controller - INFO - Found 0 leads from Google Maps
+2025-05-02 12:40:37,872 - controllers.main_controller - INFO - Exported 0 leads to data/output/leads_real estate_mumbai_20250502_124037.csv and data/output/leads_real estate_mumbai_20250502_124037.xlsx
+2025-05-02 12:48:00,358 - controllers.main_controller - INFO - Starting scraping for real estate in mumbai
+2025-05-02 12:48:00,358 - controllers.main_controller - INFO - Starting Google Maps scraping
+2025-05-02 12:48:03,462 - scrapers.google_maps - INFO - Navigating to Google Maps to search for real estate in mumbai
+2025-05-02 12:48:15,226 - scrapers.google_maps - INFO - Processing page 1/5
+2025-05-02 12:48:22,283 - scrapers.google_maps - WARNING - No results found on page
+2025-05-02 12:48:24,574 - controllers.main_controller - INFO - Found 0 leads from Google Maps
+2025-05-02 12:48:24,803 - controllers.main_controller - INFO - Exported 0 leads to data/output/leads_real estate_mumbai_20250502_124824.csv and data/output/leads_real estate_mumbai_20250502_124824.xlsx
+2025-05-02 12:50:12,404 - controllers.main_controller - INFO - Starting scraping for real estate in pune
+2025-05-02 12:50:12,405 - controllers.main_controller - INFO - Starting Google Maps scraping
+2025-05-02 12:50:15,350 - scrapers.google_maps - INFO - Navigating to Google Maps to search for real estate in pune
+2025-05-02 12:50:22,086 - scrapers.google_maps - INFO - Processing page 1/5
+2025-05-02 12:50:29,116 - scrapers.google_maps - WARNING - No results found on page
+2025-05-02 12:50:31,415 - controllers.main_controller - INFO - Found 0 leads from Google Maps
+2025-05-02 12:50:31,851 - controllers.main_controller - INFO - Exported 0 leads to data/output/leads_real estate_pune_20250502_125031.csv and data/output/leads_real estate_pune_20250502_125031.xlsx
+2025-05-02 12:51:18,880 - controllers.main_controller - INFO - Starting scraping for real estate in pune
+2025-05-02 12:51:18,880 - controllers.main_controller - INFO - Starting scraping for real estate in pune
+2025-05-02 12:51:18,912 - controllers.main_controller - INFO - Exported 0 leads to data/output/leads_real estate_pune_20250502_125118.csv and data/output/leads_real estate_pune_20250502_125118.xlsx
+2025-05-02 12:51:18,912 - controllers.main_controller - INFO - Exported 0 leads to data/output/leads_real estate_pune_20250502_125118.csv and data/output/leads_real estate_pune_20250502_125118.xlsx
+2025-05-02 12:51:23,046 - controllers.main_controller - INFO - Starting scraping for real estate in pune
+2025-05-02 12:51:23,046 - controllers.main_controller - INFO - Starting scraping for real estate in pune
+2025-05-02 12:51:23,074 - controllers.main_controller - INFO - Exported 0 leads to data/output/leads_real estate_pune_20250502_125123.csv and data/output/leads_real estate_pune_20250502_125123.xlsx
+2025-05-02 12:51:23,074 - controllers.main_controller - INFO - Exported 0 leads to data/output/leads_real estate_pune_20250502_125123.csv and data/output/leads_real estate_pune_20250502_125123.xlsx
+2025-05-02 12:51:24,497 - controllers.main_controller - INFO - Starting scraping for real estate in pune
+2025-05-02 12:51:24,497 - controllers.main_controller - INFO - Starting scraping for real estate in pune
+2025-05-02 12:51:24,526 - controllers.main_controller - INFO - Exported 0 leads to data/output/leads_real estate_pune_20250502_125124.csv and data/output/leads_real estate_pune_20250502_125124.xlsx
+2025-05-02 12:51:24,526 - controllers.main_controller - INFO - Exported 0 leads to data/output/leads_real estate_pune_20250502_125124.csv and data/output/leads_real estate_pune_20250502_125124.xlsx
+2025-05-02 12:51:54,951 - controllers.main_controller - INFO - Starting scraping for real estate in pune
+2025-05-02 12:51:54,952 - controllers.main_controller - INFO - Starting Google Maps scraping
+2025-05-02 12:51:58,882 - scrapers.google_maps - INFO - Navigating to Google Maps to search for real estate in pune
+2025-05-02 12:52:14,522 - scrapers.google_maps - INFO - Processing page 1/5
+2025-05-02 12:52:25,155 - scrapers.google_maps - ERROR - Error processing result: Message: element not interactable
+  (Session info: chrome=135.0.7049.115)
+Stacktrace:
+	GetHandleVerifier [0x010AD363+60275]
+	GetHandleVerifier [0x010AD3A4+60340]
+	(No symbol) [0x00EE056E]
+	(No symbol) [0x00F2980B]
+	(No symbol) [0x00F1E265]
+	(No symbol) [0x00F4D08C]
+	(No symbol) [0x00F1DCF4]
+	(No symbol) [0x00F4D304]
+	(No symbol) [0x00F6E6EB]
+	(No symbol) [0x00F4CE86]
+	(No symbol) [0x00F1C623]
+	(No symbol) [0x00F1D474]
+	GetHandleVerifier [0x012F8FE3+2467827]
+	GetHandleVerifier [0x012F45E6+2448886]
+	GetHandleVerifier [0x0130F80C+2560028]
+	GetHandleVerifier [0x010C3DF5+153093]
+	GetHandleVerifier [0x010CA3BD+179149]
+	GetHandleVerifier [0x010B4BB8+91080]
+	GetHandleVerifier [0x010B4D60+91504]
+	GetHandleVerifier [0x0109FA10+4640]
+	BaseThreadInitThunk [0x76AC7BA9+25]
+	RtlInitializeExceptionChain [0x7767C2EB+107]
+	RtlClearBits [0x7767C26F+191]
+
+2025-05-02 12:52:35,752 - scrapers.google_maps - ERROR - Error processing result: Message: element not interactable
+  (Session info: chrome=135.0.7049.115)
+Stacktrace:
+	GetHandleVerifier [0x010AD363+60275]
+	GetHandleVerifier [0x010AD3A4+60340]
+	(No symbol) [0x00EE056E]
+	(No symbol) [0x00F2980B]
+	(No symbol) [0x00F1E265]
+	(No symbol) [0x00F4D08C]
+	(No symbol) [0x00F1DCF4]
+	(No symbol) [0x00F4D304]
+	(No symbol) [0x00F6E6EB]
+	(No symbol) [0x00F4CE86]
+	(No symbol) [0x00F1C623]
+	(No symbol) [0x00F1D474]
+	GetHandleVerifier [0x012F8FE3+2467827]
+	GetHandleVerifier [0x012F45E6+2448886]
+	GetHandleVerifier [0x0130F80C+2560028]
+	GetHandleVerifier [0x010C3DF5+153093]
+	GetHandleVerifier [0x010CA3BD+179149]
+	GetHandleVerifier [0x010B4BB8+91080]
+	GetHandleVerifier [0x010B4D60+91504]
+	GetHandleVerifier [0x0109FA10+4640]
+	BaseThreadInitThunk [0x76AC7BA9+25]
+	RtlInitializeExceptionChain [0x7767C2EB+107]
+	RtlClearBits [0x7767C26F+191]
+
+2025-05-02 12:52:52,873 - scrapers.google_maps - WARNING - Timeout waiting for element: h1.fontHeadlineLarge, h2.fontHeadlineLarge
+2025-05-02 12:53:03,450 - scrapers.google_maps - WARNING - Timeout waiting for element: button[data-tooltip*="phone"], button[aria-label*="phone"]
+2025-05-02 12:53:14,044 - scrapers.google_maps - WARNING - Timeout waiting for element: button[data-item-id="address"], button[aria-label*="Address"]
+2025-05-02 12:53:24,623 - scrapers.google_maps - WARNING - Timeout waiting for element: span.fontBodyMedium span.fontBodyMedium, div[role="img"][aria-label*="rating"]
+2025-05-02 12:53:41,868 - scrapers.google_maps - WARNING - Timeout waiting for element: h1.fontHeadlineLarge, h2.fontHeadlineLarge
+2025-05-02 12:53:52,460 - scrapers.google_maps - WARNING - Timeout waiting for element: button[data-tooltip*="phone"], button[aria-label*="phone"]
+2025-05-02 12:54:03,088 - scrapers.google_maps - WARNING - Timeout waiting for element: button[data-item-id="address"], button[aria-label*="Address"]
+2025-05-02 12:54:13,651 - scrapers.google_maps - WARNING - Timeout waiting for element: span.fontBodyMedium span.fontBodyMedium, div[role="img"][aria-label*="rating"]
+2025-05-02 12:54:25,413 - scrapers.google_maps - WARNING - Failed to click element after 3 attempts: Message: element click intercepted: Element <div class="Nv2PK tH5CWc THOPZb " jsaction="mouseover:pane.wfvdle35;mouseout:pane.wfvdle35">...</div> is not clickable at point (273, 173). Other element would receive the click: <div jsaction="modal.backgroundClick" class="hoUMge">...</div>
+  (Session info: chrome=135.0.7049.115)
+Stacktrace:
+	GetHandleVerifier [0x010AD363+60275]
+	GetHandleVerifier [0x010AD3A4+60340]
+	(No symbol) [0x00EE06F3]
+	(No symbol) [0x00F2E970]
+	(No symbol) [0x00F2CD14]
+	(No symbol) [0x00F2A8B7]
+	(No symbol) [0x00F29B87]
+	(No symbol) [0x00F1E265]
+	(No symbol) [0x00F4D08C]
+	(No symbol) [0x00F1DCF4]
+	(No symbol) [0x00F4D304]
+	(No symbol) [0x00F6E6EB]
+	(No symbol) [0x00F4CE86]
+	(No symbol) [0x00F1C623]
+	(No symbol) [0x00F1D474]
+	GetHandleVerifier [0x012F8FE3+2467827]
+	GetHandleVerifier [0x012F45E6+2448886]
+	GetHandleVerifier [0x0130F80C+2560028]
+	GetHandleVerifier [0x010C3DF5+153093]
+	GetHandleVerifier [0x010CA3BD+179149]
+	GetHandleVerifier [0x010B4BB8+91080]
+	GetHandleVerifier [0x010B4D60+91504]
+	GetHandleVerifier [0x0109FA10+4640]
+	BaseThreadInitThunk [0x76AC7BA9+25]
+	RtlInitializeExceptionChain [0x7767C2EB+107]
+	RtlClearBits [0x7767C26F+191]
+
+2025-05-02 12:54:36,973 - scrapers.google_maps - WARNING - Timeout waiting for element: h1.fontHeadlineLarge, h2.fontHeadlineLarge
+2025-05-02 12:54:47,556 - scrapers.google_maps - WARNING - Timeout waiting for element: button[data-tooltip*="phone"], button[aria-label*="phone"]
+2025-05-02 12:54:58,144 - scrapers.google_maps - WARNING - Timeout waiting for element: button[data-item-id="address"], button[aria-label*="Address"]
+2025-05-02 12:55:08,705 - scrapers.google_maps - WARNING - Timeout waiting for element: span.fontBodyMedium span.fontBodyMedium, div[role="img"][aria-label*="rating"]
+2025-05-02 12:55:20,540 - scrapers.google_maps - WARNING - Failed to click element after 3 attempts: Message: element click intercepted: Element <div class="Nv2PK Q2HXcd THOPZb " jsaction="mouseover:pane.wfvdle40;mouseout:pane.wfvdle40">...</div> is not clickable at point (273, 163). Other element would receive the click: <div jsaction="modal.backgroundClick" class="hoUMge">...</div>
+  (Session info: chrome=135.0.7049.115)
+Stacktrace:
+	GetHandleVerifier [0x010AD363+60275]
+	GetHandleVerifier [0x010AD3A4+60340]
+	(No symbol) [0x00EE06F3]
+	(No symbol) [0x00F2E970]
+	(No symbol) [0x00F2CD14]
+	(No symbol) [0x00F2A8B7]
+	(No symbol) [0x00F29B87]
+	(No symbol) [0x00F1E265]
+	(No symbol) [0x00F4D08C]
+	(No symbol) [0x00F1DCF4]
+	(No symbol) [0x00F4D304]
+	(No symbol) [0x00F6E6EB]
+	(No symbol) [0x00F4CE86]
+	(No symbol) [0x00F1C623]
+	(No symbol) [0x00F1D474]
+	GetHandleVerifier [0x012F8FE3+2467827]
+	GetHandleVerifier [0x012F45E6+2448886]
+	GetHandleVerifier [0x0130F80C+2560028]
+	GetHandleVerifier [0x010C3DF5+153093]
+	GetHandleVerifier [0x010CA3BD+179149]
+	GetHandleVerifier [0x010B4BB8+91080]
+	GetHandleVerifier [0x010B4D60+91504]
+	GetHandleVerifier [0x0109FA10+4640]
+	BaseThreadInitThunk [0x76AC7BA9+25]
+	RtlInitializeExceptionChain [0x7767C2EB+107]
+	RtlClearBits [0x7767C26F+191]
+
+2025-05-02 12:55:32,097 - scrapers.google_maps - WARNING - Timeout waiting for element: h1.fontHeadlineLarge, h2.fontHeadlineLarge
+2025-05-02 12:55:42,624 - scrapers.google_maps - WARNING - Timeout waiting for element: button[data-tooltip*="phone"], button[aria-label*="phone"]
+2025-05-02 12:55:48,391 - scrapers.google_maps - INFO - No address found: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+2025-05-02 12:56:04,711 - scrapers.google_maps - INFO - No rating found: HTTPConnectionPool(host='localhost', port=50953): Max retries exceeded with url: /session/f5d08eeef0ed8c622c7593c78489e694/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002688C6D9CD0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-05-02 13:01:40,516 - controllers.main_controller - INFO - Starting scraping for cafe  in pune
+2025-05-02 13:01:40,516 - controllers.main_controller - INFO - Starting Google Maps scraping
+2025-05-02 13:01:40,521 - utils.web - INFO - Setting up Chrome driver (headless=False)
+2025-05-02 13:01:45,335 - scrapers.google_maps - INFO - Navigating to Google Maps to search for cafe  in pune
+2025-05-02 13:01:58,079 - scrapers.google_maps - INFO - Clicked search button
+2025-05-02 13:02:07,278 - scrapers.google_maps - INFO - Processing page 1/5
+2025-05-02 13:02:07,290 - scrapers.google_maps - INFO - Found 10 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"]
+2025-05-02 13:02:07,290 - scrapers.google_maps - INFO - Processing result 1/10
+2025-05-02 13:02:17,728 - scrapers.google_maps - WARNING - Timeout waiting for element: h1.fontHeadlineLarge, h2.fontHeadlineLarge, div.fontHeadlineLarge, span.fontHeadlineLarge
+2025-05-02 13:02:17,795 - scrapers.google_maps - INFO - Found phone: Send to phone
+2025-05-02 13:02:22,926 - scrapers.google_maps - WARNING - Timeout waiting for element: a[data-item-id*="authority"], a[aria-label*="website"], a[href^="http"]:not([href*="google"])
+2025-05-02 13:02:23,059 - scrapers.google_maps - INFO - Found rating: 4.2 stars 50,414 Reviews
+2025-05-02 13:02:26,150 - scrapers.google_maps - WARNING - Timeout waiting for element: button[jsaction*="back"]
+2025-05-02 13:02:26,150 - scrapers.google_maps - INFO - Processing result 2/10
+2025-05-02 13:02:37,296 - scrapers.google_maps - WARNING - Timeout waiting for element: h1.fontHeadlineLarge, h2.fontHeadlineLarge, div.fontHeadlineLarge, span.fontHeadlineLarge
+2025-05-02 13:02:37,343 - scrapers.google_maps - INFO - Found phone: Send to phone
+2025-05-02 13:02:42,494 - scrapers.google_maps - WARNING - Timeout waiting for element: a[data-item-id*="authority"], a[aria-label*="website"], a[href^="http"]:not([href*="google"])
+2025-05-02 13:02:44,609 - scrapers.google_maps - WARNING - Timeout waiting for element: button[data-item-id="address"], button[aria-label*="Address"], span[aria-label*="Address"], div[aria-label*="Address"]
+2025-05-02 13:02:46,715 - scrapers.google_maps - WARNING - Timeout waiting for element: span.fontBodyMedium span, div[role="img"][aria-label*="rating"], span[aria-label*="rating"]
+2025-05-02 13:02:46,716 - scrapers.google_maps - INFO - Added lead: Unnamed business
+2025-05-02 13:02:50,750 - scrapers.google_maps - INFO - Processing result 3/10
+2025-05-02 13:02:53,543 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:02:53,543 - scrapers.google_maps - WARNING - Failed to click result 3, skipping
+2025-05-02 13:02:53,543 - scrapers.google_maps - INFO - Processing result 4/10
+2025-05-02 13:02:55,755 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:02:55,755 - scrapers.google_maps - WARNING - Failed to click result 4, skipping
+2025-05-02 13:02:55,756 - scrapers.google_maps - INFO - Processing result 5/10
+2025-05-02 13:02:58,168 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:02:58,168 - scrapers.google_maps - WARNING - Failed to click result 5, skipping
+2025-05-02 13:02:58,168 - scrapers.google_maps - INFO - Processing result 6/10
+2025-05-02 13:03:00,902 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:03:00,902 - scrapers.google_maps - WARNING - Failed to click result 6, skipping
+2025-05-02 13:03:00,902 - scrapers.google_maps - INFO - Processing result 7/10
+2025-05-02 13:03:03,765 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:03:03,766 - scrapers.google_maps - WARNING - Failed to click result 7, skipping
+2025-05-02 13:03:03,766 - scrapers.google_maps - INFO - Processing result 8/10
+2025-05-02 13:03:06,232 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:03:06,233 - scrapers.google_maps - WARNING - Failed to click result 8, skipping
+2025-05-02 13:03:06,233 - scrapers.google_maps - INFO - Processing result 9/10
+2025-05-02 13:03:08,704 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:03:08,705 - scrapers.google_maps - WARNING - Failed to click result 9, skipping
+2025-05-02 13:03:08,705 - scrapers.google_maps - INFO - Processing result 10/10
+2025-05-02 13:03:11,313 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:03:11,314 - scrapers.google_maps - WARNING - Failed to click result 10, skipping
+2025-05-02 13:03:11,442 - scrapers.google_maps - INFO - Scrolled down for more results
+2025-05-02 13:03:15,508 - scrapers.google_maps - INFO - Processing page 2/5
+2025-05-02 13:03:15,527 - scrapers.google_maps - INFO - Found 90 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"]
+2025-05-02 13:03:15,527 - scrapers.google_maps - INFO - Processing result 1/90
+2025-05-02 13:03:26,736 - scrapers.google_maps - WARNING - Timeout waiting for element: h1.fontHeadlineLarge, h2.fontHeadlineLarge, div.fontHeadlineLarge, span.fontHeadlineLarge
+2025-05-02 13:03:26,794 - scrapers.google_maps - INFO - Found phone: Send to phone
+2025-05-02 13:03:31,911 - scrapers.google_maps - WARNING - Timeout waiting for element: a[data-item-id*="authority"], a[aria-label*="website"], a[href^="http"]:not([href*="google"])
+2025-05-02 13:03:31,993 - scrapers.google_maps - INFO - Found rating: 5.0 stars 8 Reviews
+2025-05-02 13:03:35,701 - scrapers.google_maps - INFO - Processing result 2/90
+2025-05-02 13:03:38,572 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:03:38,573 - scrapers.google_maps - WARNING - Failed to click result 2, skipping
+2025-05-02 13:03:38,573 - scrapers.google_maps - INFO - Processing result 3/90
+2025-05-02 13:03:41,046 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:03:41,046 - scrapers.google_maps - WARNING - Failed to click result 3, skipping
+2025-05-02 13:03:41,047 - scrapers.google_maps - INFO - Processing result 4/90
+2025-05-02 13:03:43,572 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:03:43,573 - scrapers.google_maps - WARNING - Failed to click result 4, skipping
+2025-05-02 13:03:43,573 - scrapers.google_maps - INFO - Processing result 5/90
+2025-05-02 13:03:46,266 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:03:46,267 - scrapers.google_maps - WARNING - Failed to click result 5, skipping
+2025-05-02 13:03:46,267 - scrapers.google_maps - INFO - Processing result 6/90
+2025-05-02 13:03:48,767 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:03:48,767 - scrapers.google_maps - WARNING - Failed to click result 6, skipping
+2025-05-02 13:03:48,767 - scrapers.google_maps - INFO - Processing result 7/90
+2025-05-02 13:03:51,499 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:03:51,500 - scrapers.google_maps - WARNING - Failed to click result 7, skipping
+2025-05-02 13:03:51,500 - scrapers.google_maps - INFO - Processing result 8/90
+2025-05-02 13:03:53,878 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:03:53,878 - scrapers.google_maps - WARNING - Failed to click result 8, skipping
+2025-05-02 13:03:53,879 - scrapers.google_maps - INFO - Processing result 9/90
+2025-05-02 13:03:56,562 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:03:56,563 - scrapers.google_maps - WARNING - Failed to click result 9, skipping
+2025-05-02 13:03:56,563 - scrapers.google_maps - INFO - Processing result 10/90
+2025-05-02 13:03:59,062 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:03:59,063 - scrapers.google_maps - WARNING - Failed to click result 10, skipping
+2025-05-02 13:03:59,063 - scrapers.google_maps - INFO - Processing result 11/90
+2025-05-02 13:04:01,475 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:04:01,475 - scrapers.google_maps - WARNING - Failed to click result 11, skipping
+2025-05-02 13:04:01,475 - scrapers.google_maps - INFO - Processing result 12/90
+2025-05-02 13:04:04,219 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:04:04,219 - scrapers.google_maps - WARNING - Failed to click result 12, skipping
+2025-05-02 13:04:04,220 - scrapers.google_maps - INFO - Processing result 13/90
+2025-05-02 13:04:06,461 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:04:06,462 - scrapers.google_maps - WARNING - Failed to click result 13, skipping
+2025-05-02 13:04:06,462 - scrapers.google_maps - INFO - Processing result 14/90
+2025-05-02 13:04:08,738 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:04:08,739 - scrapers.google_maps - WARNING - Failed to click result 14, skipping
+2025-05-02 13:04:08,739 - scrapers.google_maps - INFO - Processing result 15/90
+2025-05-02 13:04:11,085 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:04:11,085 - scrapers.google_maps - WARNING - Failed to click result 15, skipping
+2025-05-02 13:04:11,085 - scrapers.google_maps - INFO - Processing result 16/90
+2025-05-02 13:04:13,440 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:04:13,441 - scrapers.google_maps - WARNING - Failed to click result 16, skipping
+2025-05-02 13:04:13,441 - scrapers.google_maps - INFO - Processing result 17/90
+2025-05-02 13:04:15,900 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:04:15,900 - scrapers.google_maps - WARNING - Failed to click result 17, skipping
+2025-05-02 13:04:15,900 - scrapers.google_maps - INFO - Processing result 18/90
+2025-05-02 13:04:18,516 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:04:18,516 - scrapers.google_maps - WARNING - Failed to click result 18, skipping
+2025-05-02 13:04:18,516 - scrapers.google_maps - INFO - Processing result 19/90
+2025-05-02 13:04:21,165 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:04:21,165 - scrapers.google_maps - WARNING - Failed to click result 19, skipping
+2025-05-02 13:04:21,165 - scrapers.google_maps - INFO - Processing result 20/90
+2025-05-02 13:04:23,611 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:04:23,611 - scrapers.google_maps - WARNING - Failed to click result 20, skipping
+2025-05-02 13:04:23,612 - scrapers.google_maps - INFO - Processing result 21/90
+2025-05-02 13:04:25,783 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:04:25,784 - scrapers.google_maps - WARNING - Failed to click result 21, skipping
+2025-05-02 13:04:25,784 - scrapers.google_maps - INFO - Processing result 22/90
+2025-05-02 13:04:28,124 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:04:28,124 - scrapers.google_maps - WARNING - Failed to click result 22, skipping
+2025-05-02 13:04:28,124 - scrapers.google_maps - INFO - Processing result 23/90
+2025-05-02 13:04:30,802 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:04:30,803 - scrapers.google_maps - WARNING - Failed to click result 23, skipping
+2025-05-02 13:04:30,803 - scrapers.google_maps - INFO - Processing result 24/90
+2025-05-02 13:04:33,556 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:04:33,556 - scrapers.google_maps - WARNING - Failed to click result 24, skipping
+2025-05-02 13:04:33,557 - scrapers.google_maps - INFO - Processing result 25/90
+2025-05-02 13:04:36,255 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:04:36,256 - scrapers.google_maps - WARNING - Failed to click result 25, skipping
+2025-05-02 13:04:36,256 - scrapers.google_maps - INFO - Processing result 26/90
+2025-05-02 13:04:39,091 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:04:39,092 - scrapers.google_maps - WARNING - Failed to click result 26, skipping
+2025-05-02 13:04:39,092 - scrapers.google_maps - INFO - Processing result 27/90
+2025-05-02 13:04:41,299 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:04:41,299 - scrapers.google_maps - WARNING - Failed to click result 27, skipping
+2025-05-02 13:04:41,299 - scrapers.google_maps - INFO - Processing result 28/90
+2025-05-02 13:04:43,823 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:04:43,823 - scrapers.google_maps - WARNING - Failed to click result 28, skipping
+2025-05-02 13:04:43,823 - scrapers.google_maps - INFO - Processing result 29/90
+2025-05-02 13:04:46,571 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:04:46,572 - scrapers.google_maps - WARNING - Failed to click result 29, skipping
+2025-05-02 13:04:46,572 - scrapers.google_maps - INFO - Processing result 30/90
+2025-05-02 13:04:49,422 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:04:49,423 - scrapers.google_maps - WARNING - Failed to click result 30, skipping
+2025-05-02 13:04:49,423 - scrapers.google_maps - INFO - Processing result 31/90
+2025-05-02 13:04:51,905 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:04:51,906 - scrapers.google_maps - WARNING - Failed to click result 31, skipping
+2025-05-02 13:04:51,906 - scrapers.google_maps - INFO - Processing result 32/90
+2025-05-02 13:04:54,424 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:04:54,425 - scrapers.google_maps - WARNING - Failed to click result 32, skipping
+2025-05-02 13:04:54,425 - scrapers.google_maps - INFO - Processing result 33/90
+2025-05-02 13:04:57,002 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:04:57,002 - scrapers.google_maps - WARNING - Failed to click result 33, skipping
+2025-05-02 13:04:57,002 - scrapers.google_maps - INFO - Processing result 34/90
+2025-05-02 13:04:59,923 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:04:59,924 - scrapers.google_maps - WARNING - Failed to click result 34, skipping
+2025-05-02 13:04:59,924 - scrapers.google_maps - INFO - Processing result 35/90
+2025-05-02 13:05:02,555 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:05:02,556 - scrapers.google_maps - WARNING - Failed to click result 35, skipping
+2025-05-02 13:05:02,556 - scrapers.google_maps - INFO - Processing result 36/90
+2025-05-02 13:05:05,209 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:05:05,209 - scrapers.google_maps - WARNING - Failed to click result 36, skipping
+2025-05-02 13:05:05,209 - scrapers.google_maps - INFO - Processing result 37/90
+2025-05-02 13:05:07,382 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:05:07,382 - scrapers.google_maps - WARNING - Failed to click result 37, skipping
+2025-05-02 13:05:07,382 - scrapers.google_maps - INFO - Processing result 38/90
+2025-05-02 13:05:09,973 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:05:09,974 - scrapers.google_maps - WARNING - Failed to click result 38, skipping
+2025-05-02 13:05:09,974 - scrapers.google_maps - INFO - Processing result 39/90
+2025-05-02 13:05:12,349 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:05:12,350 - scrapers.google_maps - WARNING - Failed to click result 39, skipping
+2025-05-02 13:05:12,350 - scrapers.google_maps - INFO - Processing result 40/90
+2025-05-02 13:05:14,846 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:05:14,847 - scrapers.google_maps - WARNING - Failed to click result 40, skipping
+2025-05-02 13:05:14,847 - scrapers.google_maps - INFO - Processing result 41/90
+2025-05-02 13:05:17,511 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:05:17,511 - scrapers.google_maps - WARNING - Failed to click result 41, skipping
+2025-05-02 13:05:17,512 - scrapers.google_maps - INFO - Processing result 42/90
+2025-05-02 13:05:19,722 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:05:19,722 - scrapers.google_maps - WARNING - Failed to click result 42, skipping
+2025-05-02 13:05:19,722 - scrapers.google_maps - INFO - Processing result 43/90
+2025-05-02 13:05:22,451 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:05:22,451 - scrapers.google_maps - WARNING - Failed to click result 43, skipping
+2025-05-02 13:05:22,451 - scrapers.google_maps - INFO - Processing result 44/90
+2025-05-02 13:05:24,955 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:05:24,955 - scrapers.google_maps - WARNING - Failed to click result 44, skipping
+2025-05-02 13:05:24,956 - scrapers.google_maps - INFO - Processing result 45/90
+2025-05-02 13:05:27,230 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:05:27,230 - scrapers.google_maps - WARNING - Failed to click result 45, skipping
+2025-05-02 13:05:27,231 - scrapers.google_maps - INFO - Processing result 46/90
+2025-05-02 13:05:29,492 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:05:29,492 - scrapers.google_maps - WARNING - Failed to click result 46, skipping
+2025-05-02 13:05:29,492 - scrapers.google_maps - INFO - Processing result 47/90
+2025-05-02 13:05:31,557 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:05:31,558 - scrapers.google_maps - WARNING - Failed to click result 47, skipping
+2025-05-02 13:05:31,558 - scrapers.google_maps - INFO - Processing result 48/90
+2025-05-02 13:05:34,271 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:05:34,271 - scrapers.google_maps - WARNING - Failed to click result 48, skipping
+2025-05-02 13:05:34,271 - scrapers.google_maps - INFO - Processing result 49/90
+2025-05-02 13:05:36,445 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:05:36,445 - scrapers.google_maps - WARNING - Failed to click result 49, skipping
+2025-05-02 13:05:36,446 - scrapers.google_maps - INFO - Processing result 50/90
+2025-05-02 13:05:39,157 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:05:39,158 - scrapers.google_maps - WARNING - Failed to click result 50, skipping
+2025-05-02 13:05:39,158 - scrapers.google_maps - INFO - Processing result 51/90
+2025-05-02 13:05:41,967 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:05:41,967 - scrapers.google_maps - WARNING - Failed to click result 51, skipping
+2025-05-02 13:05:41,967 - scrapers.google_maps - INFO - Processing result 52/90
+2025-05-02 13:05:44,433 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:05:44,433 - scrapers.google_maps - WARNING - Failed to click result 52, skipping
+2025-05-02 13:05:44,433 - scrapers.google_maps - INFO - Processing result 53/90
+2025-05-02 13:05:46,874 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:05:46,874 - scrapers.google_maps - WARNING - Failed to click result 53, skipping
+2025-05-02 13:05:46,874 - scrapers.google_maps - INFO - Processing result 54/90
+2025-05-02 13:05:49,638 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:05:49,639 - scrapers.google_maps - WARNING - Failed to click result 54, skipping
+2025-05-02 13:05:49,639 - scrapers.google_maps - INFO - Processing result 55/90
+2025-05-02 13:05:52,513 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:05:52,513 - scrapers.google_maps - WARNING - Failed to click result 55, skipping
+2025-05-02 13:05:52,513 - scrapers.google_maps - INFO - Processing result 56/90
+2025-05-02 13:05:55,282 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:05:55,282 - scrapers.google_maps - WARNING - Failed to click result 56, skipping
+2025-05-02 13:05:55,283 - scrapers.google_maps - INFO - Processing result 57/90
+2025-05-02 13:05:57,456 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:05:57,456 - scrapers.google_maps - WARNING - Failed to click result 57, skipping
+2025-05-02 13:05:57,456 - scrapers.google_maps - INFO - Processing result 58/90
+2025-05-02 13:06:00,081 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:06:00,081 - scrapers.google_maps - WARNING - Failed to click result 58, skipping
+2025-05-02 13:06:00,082 - scrapers.google_maps - INFO - Processing result 59/90
+2025-05-02 13:06:02,763 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:06:02,764 - scrapers.google_maps - WARNING - Failed to click result 59, skipping
+2025-05-02 13:06:02,764 - scrapers.google_maps - INFO - Processing result 60/90
+2025-05-02 13:06:05,469 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:06:05,470 - scrapers.google_maps - WARNING - Failed to click result 60, skipping
+2025-05-02 13:06:05,470 - scrapers.google_maps - INFO - Processing result 61/90
+2025-05-02 13:06:07,970 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:06:07,971 - scrapers.google_maps - WARNING - Failed to click result 61, skipping
+2025-05-02 13:06:07,971 - scrapers.google_maps - INFO - Processing result 62/90
+2025-05-02 13:06:10,574 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:06:10,574 - scrapers.google_maps - WARNING - Failed to click result 62, skipping
+2025-05-02 13:06:10,574 - scrapers.google_maps - INFO - Processing result 63/90
+2025-05-02 13:06:12,842 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:06:12,842 - scrapers.google_maps - WARNING - Failed to click result 63, skipping
+2025-05-02 13:06:12,843 - scrapers.google_maps - INFO - Processing result 64/90
+2025-05-02 13:06:15,560 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:06:15,560 - scrapers.google_maps - WARNING - Failed to click result 64, skipping
+2025-05-02 13:06:15,560 - scrapers.google_maps - INFO - Processing result 65/90
+2025-05-02 13:06:17,909 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:06:17,909 - scrapers.google_maps - WARNING - Failed to click result 65, skipping
+2025-05-02 13:06:17,910 - scrapers.google_maps - INFO - Processing result 66/90
+2025-05-02 13:06:20,700 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:06:20,701 - scrapers.google_maps - WARNING - Failed to click result 66, skipping
+2025-05-02 13:06:20,701 - scrapers.google_maps - INFO - Processing result 67/90
+2025-05-02 13:06:23,367 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:06:23,368 - scrapers.google_maps - WARNING - Failed to click result 67, skipping
+2025-05-02 13:06:23,368 - scrapers.google_maps - INFO - Processing result 68/90
+2025-05-02 13:06:25,744 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:06:25,745 - scrapers.google_maps - WARNING - Failed to click result 68, skipping
+2025-05-02 13:06:25,745 - scrapers.google_maps - INFO - Processing result 69/90
+2025-05-02 13:06:28,146 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:06:28,146 - scrapers.google_maps - WARNING - Failed to click result 69, skipping
+2025-05-02 13:06:28,146 - scrapers.google_maps - INFO - Processing result 70/90
+2025-05-02 13:06:30,537 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:06:30,537 - scrapers.google_maps - WARNING - Failed to click result 70, skipping
+2025-05-02 13:06:30,537 - scrapers.google_maps - INFO - Processing result 71/90
+2025-05-02 13:06:33,088 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:06:33,089 - scrapers.google_maps - WARNING - Failed to click result 71, skipping
+2025-05-02 13:06:33,089 - scrapers.google_maps - INFO - Processing result 72/90
+2025-05-02 13:06:35,654 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:06:35,655 - scrapers.google_maps - WARNING - Failed to click result 72, skipping
+2025-05-02 13:06:35,655 - scrapers.google_maps - INFO - Processing result 73/90
+2025-05-02 13:06:38,503 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:06:38,504 - scrapers.google_maps - WARNING - Failed to click result 73, skipping
+2025-05-02 13:06:38,504 - scrapers.google_maps - INFO - Processing result 74/90
+2025-05-02 13:06:40,770 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:06:40,771 - scrapers.google_maps - WARNING - Failed to click result 74, skipping
+2025-05-02 13:06:40,771 - scrapers.google_maps - INFO - Processing result 75/90
+2025-05-02 13:06:43,419 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:06:43,419 - scrapers.google_maps - WARNING - Failed to click result 75, skipping
+2025-05-02 13:06:43,419 - scrapers.google_maps - INFO - Processing result 76/90
+2025-05-02 13:06:45,943 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:06:45,944 - scrapers.google_maps - WARNING - Failed to click result 76, skipping
+2025-05-02 13:06:45,944 - scrapers.google_maps - INFO - Processing result 77/90
+2025-05-02 13:06:48,565 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:06:48,565 - scrapers.google_maps - WARNING - Failed to click result 77, skipping
+2025-05-02 13:06:48,565 - scrapers.google_maps - INFO - Processing result 78/90
+2025-05-02 13:06:51,071 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:06:51,071 - scrapers.google_maps - WARNING - Failed to click result 78, skipping
+2025-05-02 13:06:51,071 - scrapers.google_maps - INFO - Processing result 79/90
+2025-05-02 13:06:53,458 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:06:53,459 - scrapers.google_maps - WARNING - Failed to click result 79, skipping
+2025-05-02 13:06:53,459 - scrapers.google_maps - INFO - Processing result 80/90
+2025-05-02 13:06:55,983 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:06:55,983 - scrapers.google_maps - WARNING - Failed to click result 80, skipping
+2025-05-02 13:06:55,983 - scrapers.google_maps - INFO - Processing result 81/90
+2025-05-02 13:06:58,440 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:06:58,440 - scrapers.google_maps - WARNING - Failed to click result 81, skipping
+2025-05-02 13:06:58,440 - scrapers.google_maps - INFO - Processing result 82/90
+2025-05-02 13:07:01,101 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:07:01,101 - scrapers.google_maps - WARNING - Failed to click result 82, skipping
+2025-05-02 13:07:01,101 - scrapers.google_maps - INFO - Processing result 83/90
+2025-05-02 13:07:03,506 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:07:03,507 - scrapers.google_maps - WARNING - Failed to click result 83, skipping
+2025-05-02 13:07:03,507 - scrapers.google_maps - INFO - Processing result 84/90
+2025-05-02 13:07:06,259 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:07:06,259 - scrapers.google_maps - WARNING - Failed to click result 84, skipping
+2025-05-02 13:07:06,259 - scrapers.google_maps - INFO - Processing result 85/90
+2025-05-02 13:07:08,902 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:07:08,902 - scrapers.google_maps - WARNING - Failed to click result 85, skipping
+2025-05-02 13:07:08,903 - scrapers.google_maps - INFO - Processing result 86/90
+2025-05-02 13:07:11,382 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:07:11,382 - scrapers.google_maps - WARNING - Failed to click result 86, skipping
+2025-05-02 13:07:11,383 - scrapers.google_maps - INFO - Processing result 87/90
+2025-05-02 13:07:13,959 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:07:13,960 - scrapers.google_maps - WARNING - Failed to click result 87, skipping
+2025-05-02 13:07:13,960 - scrapers.google_maps - INFO - Processing result 88/90
+2025-05-02 13:07:16,339 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:07:16,340 - scrapers.google_maps - WARNING - Failed to click result 88, skipping
+2025-05-02 13:07:16,340 - scrapers.google_maps - INFO - Processing result 89/90
+2025-05-02 13:07:18,833 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:07:18,834 - scrapers.google_maps - WARNING - Failed to click result 89, skipping
+2025-05-02 13:07:18,834 - scrapers.google_maps - INFO - Processing result 90/90
+2025-05-02 13:07:21,311 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:07:21,312 - scrapers.google_maps - WARNING - Failed to click result 90, skipping
+2025-05-02 13:07:21,366 - scrapers.google_maps - INFO - Scrolled down for more results
+2025-05-02 13:07:24,643 - scrapers.google_maps - INFO - Processing page 3/5
+2025-05-02 13:07:24,651 - scrapers.google_maps - INFO - Found 20 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"]
+2025-05-02 13:07:24,652 - scrapers.google_maps - INFO - Processing result 1/20
+2025-05-02 13:07:34,832 - scrapers.google_maps - WARNING - Timeout waiting for element: h1.fontHeadlineLarge, h2.fontHeadlineLarge, div.fontHeadlineLarge, span.fontHeadlineLarge
+2025-05-02 13:07:34,886 - scrapers.google_maps - INFO - Found phone: Send to phone
+2025-05-02 13:07:40,011 - scrapers.google_maps - WARNING - Timeout waiting for element: a[data-item-id*="authority"], a[aria-label*="website"], a[href^="http"]:not([href*="google"])
+2025-05-02 13:07:40,142 - scrapers.google_maps - INFO - Found rating: 5.0 stars 8 Reviews
+2025-05-02 13:07:43,625 - scrapers.google_maps - INFO - Processing result 2/20
+2025-05-02 13:07:45,957 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:07:45,958 - scrapers.google_maps - WARNING - Failed to click result 2, skipping
+2025-05-02 13:07:45,958 - scrapers.google_maps - INFO - Processing result 3/20
+2025-05-02 13:07:48,516 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:07:48,516 - scrapers.google_maps - WARNING - Failed to click result 3, skipping
+2025-05-02 13:07:48,516 - scrapers.google_maps - INFO - Processing result 4/20
+2025-05-02 13:07:50,624 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:07:50,624 - scrapers.google_maps - WARNING - Failed to click result 4, skipping
+2025-05-02 13:07:50,625 - scrapers.google_maps - INFO - Processing result 5/20
+2025-05-02 13:07:53,188 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:07:53,188 - scrapers.google_maps - WARNING - Failed to click result 5, skipping
+2025-05-02 13:07:53,188 - scrapers.google_maps - INFO - Processing result 6/20
+2025-05-02 13:07:55,764 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:07:55,764 - scrapers.google_maps - WARNING - Failed to click result 6, skipping
+2025-05-02 13:07:55,764 - scrapers.google_maps - INFO - Processing result 7/20
+2025-05-02 13:07:58,124 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:07:58,125 - scrapers.google_maps - WARNING - Failed to click result 7, skipping
+2025-05-02 13:07:58,125 - scrapers.google_maps - INFO - Processing result 8/20
+2025-05-02 13:08:00,941 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:08:00,942 - scrapers.google_maps - WARNING - Failed to click result 8, skipping
+2025-05-02 13:08:00,943 - scrapers.google_maps - INFO - Processing result 9/20
+2025-05-02 13:08:03,519 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:08:03,519 - scrapers.google_maps - WARNING - Failed to click result 9, skipping
+2025-05-02 13:08:03,520 - scrapers.google_maps - INFO - Processing result 10/20
+2025-05-02 13:08:05,791 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:08:05,791 - scrapers.google_maps - WARNING - Failed to click result 10, skipping
+2025-05-02 13:08:05,791 - scrapers.google_maps - INFO - Processing result 11/20
+2025-05-02 13:08:08,582 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:08:08,582 - scrapers.google_maps - WARNING - Failed to click result 11, skipping
+2025-05-02 13:08:08,582 - scrapers.google_maps - INFO - Processing result 12/20
+2025-05-02 13:08:10,913 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:08:10,913 - scrapers.google_maps - WARNING - Failed to click result 12, skipping
+2025-05-02 13:08:10,913 - scrapers.google_maps - INFO - Processing result 13/20
+2025-05-02 13:08:13,423 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:08:13,423 - scrapers.google_maps - WARNING - Failed to click result 13, skipping
+2025-05-02 13:08:13,424 - scrapers.google_maps - INFO - Processing result 14/20
+2025-05-02 13:08:15,655 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:08:15,655 - scrapers.google_maps - WARNING - Failed to click result 14, skipping
+2025-05-02 13:08:15,655 - scrapers.google_maps - INFO - Processing result 15/20
+2025-05-02 13:08:18,234 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:08:18,234 - scrapers.google_maps - WARNING - Failed to click result 15, skipping
+2025-05-02 13:08:18,234 - scrapers.google_maps - INFO - Processing result 16/20
+2025-05-02 13:08:20,713 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:08:20,714 - scrapers.google_maps - WARNING - Failed to click result 16, skipping
+2025-05-02 13:08:20,714 - scrapers.google_maps - INFO - Processing result 17/20
+2025-05-02 13:08:23,014 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:08:23,015 - scrapers.google_maps - WARNING - Failed to click result 17, skipping
+2025-05-02 13:08:23,015 - scrapers.google_maps - INFO - Processing result 18/20
+2025-05-02 13:08:25,449 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:08:25,450 - scrapers.google_maps - WARNING - Failed to click result 18, skipping
+2025-05-02 13:08:25,450 - scrapers.google_maps - INFO - Processing result 19/20
+2025-05-02 13:08:27,720 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:08:27,721 - scrapers.google_maps - WARNING - Failed to click result 19, skipping
+2025-05-02 13:08:27,721 - scrapers.google_maps - INFO - Processing result 20/20
+2025-05-02 13:08:30,225 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:08:30,225 - scrapers.google_maps - WARNING - Failed to click result 20, skipping
+2025-05-02 13:08:30,261 - scrapers.google_maps - INFO - Scrolled down for more results
+2025-05-02 13:08:34,176 - scrapers.google_maps - INFO - Processing page 4/5
+2025-05-02 13:08:34,186 - scrapers.google_maps - INFO - Found 20 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"]
+2025-05-02 13:08:34,186 - scrapers.google_maps - INFO - Processing result 1/20
+2025-05-02 13:08:44,797 - scrapers.google_maps - WARNING - Timeout waiting for element: h1.fontHeadlineLarge, h2.fontHeadlineLarge, div.fontHeadlineLarge, span.fontHeadlineLarge
+2025-05-02 13:08:44,835 - scrapers.google_maps - INFO - Found phone: Send to phone
+2025-05-02 13:08:49,949 - scrapers.google_maps - WARNING - Timeout waiting for element: a[data-item-id*="authority"], a[aria-label*="website"], a[href^="http"]:not([href*="google"])
+2025-05-02 13:08:52,036 - scrapers.google_maps - WARNING - Timeout waiting for element: button[data-item-id="address"], button[aria-label*="Address"], span[aria-label*="Address"], div[aria-label*="Address"]
+2025-05-02 13:08:54,128 - scrapers.google_maps - WARNING - Timeout waiting for element: span.fontBodyMedium span, div[role="img"][aria-label*="rating"], span[aria-label*="rating"]
+2025-05-02 13:08:54,129 - scrapers.google_maps - INFO - Added lead: Unnamed business
+2025-05-02 13:08:58,402 - scrapers.google_maps - INFO - Processing result 2/20
+2025-05-02 13:09:01,121 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:09:01,121 - scrapers.google_maps - WARNING - Failed to click result 2, skipping
+2025-05-02 13:09:01,121 - scrapers.google_maps - INFO - Processing result 3/20
+2025-05-02 13:09:03,581 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:09:03,581 - scrapers.google_maps - WARNING - Failed to click result 3, skipping
+2025-05-02 13:09:03,581 - scrapers.google_maps - INFO - Processing result 4/20
+2025-05-02 13:09:05,982 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:09:05,982 - scrapers.google_maps - WARNING - Failed to click result 4, skipping
+2025-05-02 13:09:05,983 - scrapers.google_maps - INFO - Processing result 5/20
+2025-05-02 13:09:08,847 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:09:08,848 - scrapers.google_maps - WARNING - Failed to click result 5, skipping
+2025-05-02 13:09:08,848 - scrapers.google_maps - INFO - Processing result 6/20
+2025-05-02 13:09:11,108 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:09:11,109 - scrapers.google_maps - WARNING - Failed to click result 6, skipping
+2025-05-02 13:09:11,109 - scrapers.google_maps - INFO - Processing result 7/20
+2025-05-02 13:09:13,427 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:09:13,428 - scrapers.google_maps - WARNING - Failed to click result 7, skipping
+2025-05-02 13:09:13,428 - scrapers.google_maps - INFO - Processing result 8/20
+2025-05-02 13:09:16,069 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:09:16,069 - scrapers.google_maps - WARNING - Failed to click result 8, skipping
+2025-05-02 13:09:16,069 - scrapers.google_maps - INFO - Processing result 9/20
+2025-05-02 13:09:18,722 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:09:18,722 - scrapers.google_maps - WARNING - Failed to click result 9, skipping
+2025-05-02 13:09:18,722 - scrapers.google_maps - INFO - Processing result 10/20
+2025-05-02 13:09:21,304 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:09:21,305 - scrapers.google_maps - WARNING - Failed to click result 10, skipping
+2025-05-02 13:09:21,305 - scrapers.google_maps - INFO - Processing result 11/20
+2025-05-02 13:09:23,659 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:09:23,659 - scrapers.google_maps - WARNING - Failed to click result 11, skipping
+2025-05-02 13:09:23,660 - scrapers.google_maps - INFO - Processing result 12/20
+2025-05-02 13:09:26,196 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:09:26,196 - scrapers.google_maps - WARNING - Failed to click result 12, skipping
+2025-05-02 13:09:26,197 - scrapers.google_maps - INFO - Processing result 13/20
+2025-05-02 13:09:28,684 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:09:28,684 - scrapers.google_maps - WARNING - Failed to click result 13, skipping
+2025-05-02 13:09:28,684 - scrapers.google_maps - INFO - Processing result 14/20
+2025-05-02 13:09:31,366 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:09:31,367 - scrapers.google_maps - WARNING - Failed to click result 14, skipping
+2025-05-02 13:09:31,367 - scrapers.google_maps - INFO - Processing result 15/20
+2025-05-02 13:09:33,762 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:09:33,763 - scrapers.google_maps - WARNING - Failed to click result 15, skipping
+2025-05-02 13:09:33,763 - scrapers.google_maps - INFO - Processing result 16/20
+2025-05-02 13:09:36,345 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:09:36,346 - scrapers.google_maps - WARNING - Failed to click result 16, skipping
+2025-05-02 13:09:36,346 - scrapers.google_maps - INFO - Processing result 17/20
+2025-05-02 13:09:38,667 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:09:38,668 - scrapers.google_maps - WARNING - Failed to click result 17, skipping
+2025-05-02 13:09:38,668 - scrapers.google_maps - INFO - Processing result 18/20
+2025-05-02 13:09:41,497 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:09:41,498 - scrapers.google_maps - WARNING - Failed to click result 18, skipping
+2025-05-02 13:09:41,498 - scrapers.google_maps - INFO - Processing result 19/20
+2025-05-02 13:09:44,099 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:09:44,100 - scrapers.google_maps - WARNING - Failed to click result 19, skipping
+2025-05-02 13:09:44,100 - scrapers.google_maps - INFO - Processing result 20/20
+2025-05-02 13:09:46,533 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:09:46,534 - scrapers.google_maps - WARNING - Failed to click result 20, skipping
+2025-05-02 13:09:46,582 - scrapers.google_maps - INFO - Scrolled down for more results
+2025-05-02 13:09:51,103 - scrapers.google_maps - INFO - Processing page 5/5
+2025-05-02 13:09:51,114 - scrapers.google_maps - INFO - Found 20 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"]
+2025-05-02 13:09:51,114 - scrapers.google_maps - INFO - Processing result 1/20
+2025-05-02 13:10:01,773 - scrapers.google_maps - WARNING - Timeout waiting for element: h1.fontHeadlineLarge, h2.fontHeadlineLarge, div.fontHeadlineLarge, span.fontHeadlineLarge
+2025-05-02 13:10:01,808 - scrapers.google_maps - INFO - Found phone: Send to phone
+2025-05-02 13:10:06,915 - scrapers.google_maps - WARNING - Timeout waiting for element: a[data-item-id*="authority"], a[aria-label*="website"], a[href^="http"]:not([href*="google"])
+2025-05-02 13:10:09,010 - scrapers.google_maps - WARNING - Timeout waiting for element: button[data-item-id="address"], button[aria-label*="Address"], span[aria-label*="Address"], div[aria-label*="Address"]
+2025-05-02 13:10:11,108 - scrapers.google_maps - WARNING - Timeout waiting for element: span.fontBodyMedium span, div[role="img"][aria-label*="rating"], span[aria-label*="rating"]
+2025-05-02 13:10:11,109 - scrapers.google_maps - INFO - Added lead: Unnamed business
+2025-05-02 13:10:15,452 - scrapers.google_maps - INFO - Processing result 2/20
+2025-05-02 13:10:18,032 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:10:18,032 - scrapers.google_maps - WARNING - Failed to click result 2, skipping
+2025-05-02 13:10:18,032 - scrapers.google_maps - INFO - Processing result 3/20
+2025-05-02 13:10:20,686 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:10:20,686 - scrapers.google_maps - WARNING - Failed to click result 3, skipping
+2025-05-02 13:10:20,686 - scrapers.google_maps - INFO - Processing result 4/20
+2025-05-02 13:10:23,009 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:10:23,010 - scrapers.google_maps - WARNING - Failed to click result 4, skipping
+2025-05-02 13:10:23,010 - scrapers.google_maps - INFO - Processing result 5/20
+2025-05-02 13:10:25,809 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:10:25,809 - scrapers.google_maps - WARNING - Failed to click result 5, skipping
+2025-05-02 13:10:25,810 - scrapers.google_maps - INFO - Processing result 6/20
+2025-05-02 13:10:28,391 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:10:28,392 - scrapers.google_maps - WARNING - Failed to click result 6, skipping
+2025-05-02 13:10:28,392 - scrapers.google_maps - INFO - Processing result 7/20
+2025-05-02 13:10:30,700 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:10:30,701 - scrapers.google_maps - WARNING - Failed to click result 7, skipping
+2025-05-02 13:10:30,701 - scrapers.google_maps - INFO - Processing result 8/20
+2025-05-02 13:10:33,064 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:10:33,064 - scrapers.google_maps - WARNING - Failed to click result 8, skipping
+2025-05-02 13:10:33,064 - scrapers.google_maps - INFO - Processing result 9/20
+2025-05-02 13:10:35,537 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:10:35,538 - scrapers.google_maps - WARNING - Failed to click result 9, skipping
+2025-05-02 13:10:35,538 - scrapers.google_maps - INFO - Processing result 10/20
+2025-05-02 13:10:38,004 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:10:38,005 - scrapers.google_maps - WARNING - Failed to click result 10, skipping
+2025-05-02 13:10:38,005 - scrapers.google_maps - INFO - Processing result 11/20
+2025-05-02 13:10:40,518 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:10:40,518 - scrapers.google_maps - WARNING - Failed to click result 11, skipping
+2025-05-02 13:10:40,518 - scrapers.google_maps - INFO - Processing result 12/20
+2025-05-02 13:10:42,885 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:10:42,886 - scrapers.google_maps - WARNING - Failed to click result 12, skipping
+2025-05-02 13:10:42,886 - scrapers.google_maps - INFO - Processing result 13/20
+2025-05-02 13:10:45,300 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:10:45,300 - scrapers.google_maps - WARNING - Failed to click result 13, skipping
+2025-05-02 13:10:45,300 - scrapers.google_maps - INFO - Processing result 14/20
+2025-05-02 13:10:48,002 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:10:48,003 - scrapers.google_maps - WARNING - Failed to click result 14, skipping
+2025-05-02 13:10:48,003 - scrapers.google_maps - INFO - Processing result 15/20
+2025-05-02 13:10:50,536 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:10:50,537 - scrapers.google_maps - WARNING - Failed to click result 15, skipping
+2025-05-02 13:10:50,537 - scrapers.google_maps - INFO - Processing result 16/20
+2025-05-02 13:10:52,944 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:10:52,944 - scrapers.google_maps - WARNING - Failed to click result 16, skipping
+2025-05-02 13:10:52,945 - scrapers.google_maps - INFO - Processing result 17/20
+2025-05-02 13:10:55,336 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:10:55,336 - scrapers.google_maps - WARNING - Failed to click result 17, skipping
+2025-05-02 13:10:55,337 - scrapers.google_maps - INFO - Processing result 18/20
+2025-05-02 13:10:57,982 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:10:57,983 - scrapers.google_maps - WARNING - Failed to click result 18, skipping
+2025-05-02 13:10:57,983 - scrapers.google_maps - INFO - Processing result 19/20
+2025-05-02 13:11:00,647 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:11:00,647 - scrapers.google_maps - WARNING - Failed to click result 19, skipping
+2025-05-02 13:11:00,648 - scrapers.google_maps - INFO - Processing result 20/20
+2025-05-02 13:11:03,522 - scrapers.google_maps - WARNING - Element went stale after 3 attempts
+2025-05-02 13:11:03,523 - scrapers.google_maps - WARNING - Failed to click result 20, skipping
+2025-05-02 13:11:03,568 - scrapers.google_maps - INFO - Scrolled down for more results
+2025-05-02 13:11:10,663 - controllers.main_controller - INFO - Found 6 leads from Google Maps
+2025-05-02 13:11:10,936 - controllers.main_controller - INFO - Exported 6 leads to data/output/leads_cafe _pune_20250502_131110.csv and data/output/leads_cafe _pune_20250502_131110.xlsx
+2025-05-02 13:11:10,975 - __main__ - ERROR - Scraping failed: LayoutsMixin.expander() got an unexpected keyword argument 'key'
+Traceback (most recent call last):
+  File "C:\Users\KIIT0001\cursor projects\Leads\app.py", line 182, in main
+    display_results(results)
+  File "C:\Users\KIIT0001\cursor projects\Leads\app.py", line 112, in display_results
+    with st.expander(f"{i}. {lead['business_name']}", key=f"lead_{timestamp}_{i}"):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\KIIT0001\cursor projects\Leads\venv\Lib\site-packages\streamlit\runtime\metrics_util.py", line 444, in wrapped_func
+    result = non_optional_func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: LayoutsMixin.expander() got an unexpected keyword argument 'key'
+2025-05-02 13:11:10,975 - __main__ - ERROR - Scraping failed: LayoutsMixin.expander() got an unexpected keyword argument 'key'
+Traceback (most recent call last):
+  File "C:\Users\KIIT0001\cursor projects\Leads\app.py", line 182, in main
+    display_results(results)
+  File "C:\Users\KIIT0001\cursor projects\Leads\app.py", line 112, in display_results
+    with st.expander(f"{i}. {lead['business_name']}", key=f"lead_{timestamp}_{i}"):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\KIIT0001\cursor projects\Leads\venv\Lib\site-packages\streamlit\runtime\metrics_util.py", line 444, in wrapped_func
+    result = non_optional_func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: LayoutsMixin.expander() got an unexpected keyword argument 'key'
+2025-05-02 13:11:10,975 - __main__ - ERROR - Scraping failed: LayoutsMixin.expander() got an unexpected keyword argument 'key'
+Traceback (most recent call last):
+  File "C:\Users\KIIT0001\cursor projects\Leads\app.py", line 182, in main
+    display_results(results)
+  File "C:\Users\KIIT0001\cursor projects\Leads\app.py", line 112, in display_results
+    with st.expander(f"{i}. {lead['business_name']}", key=f"lead_{timestamp}_{i}"):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\KIIT0001\cursor projects\Leads\venv\Lib\site-packages\streamlit\runtime\metrics_util.py", line 444, in wrapped_func
+    result = non_optional_func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: LayoutsMixin.expander() got an unexpected keyword argument 'key'
+2025-05-02 13:11:10,975 - __main__ - ERROR - Scraping failed: LayoutsMixin.expander() got an unexpected keyword argument 'key'
+Traceback (most recent call last):
+  File "C:\Users\KIIT0001\cursor projects\Leads\app.py", line 182, in main
+    display_results(results)
+  File "C:\Users\KIIT0001\cursor projects\Leads\app.py", line 112, in display_results
+    with st.expander(f"{i}. {lead['business_name']}", key=f"lead_{timestamp}_{i}"):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\KIIT0001\cursor projects\Leads\venv\Lib\site-packages\streamlit\runtime\metrics_util.py", line 444, in wrapped_func
+    result = non_optional_func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: LayoutsMixin.expander() got an unexpected keyword argument 'key'
+2025-05-02 13:39:28,523 - controllers.main_controller - INFO - Starting scraping for real estate in pune
+2025-05-02 13:39:28,524 - controllers.main_controller - INFO - Starting Google Maps scraping
+2025-05-02 13:39:28,528 - utils.web - INFO - Setting up Chrome driver (headless=False)
+2025-05-02 13:39:31,871 - scrapers.google_maps - INFO - Navigating to Google Maps to search for real estate in pune
+2025-05-02 13:39:45,172 - scrapers.google_maps - INFO - Clicked search button
+2025-05-02 13:39:54,486 - scrapers.google_maps - INFO - Processing page 1/5
+2025-05-02 13:39:54,501 - scrapers.google_maps - INFO - Found 21 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-02 13:39:54,502 - scrapers.google_maps - INFO - Processing result 1/21
+2025-05-02 13:39:55,705 - scrapers.google_maps - INFO - Clicked on result for detailed view
+2025-05-02 13:40:05,598 - scrapers.google_maps - WARNING - Timeout waiting for element: h1.fontHeadlineLarge, h2.fontHeadlineLarge, div.fontHeadlineLarge, span.fontHeadlineLarge
+2025-05-02 13:40:05,641 - scrapers.google_maps - INFO - Found phone: Send to phone
+2025-05-02 13:40:05,684 - scrapers.google_maps - INFO - Found website: https://www.spacerealty.in/
+2025-05-02 13:40:05,761 - scrapers.google_maps - INFO - Found rating: 4.8 stars 122 Reviews
+2025-05-02 13:40:08,880 - scrapers.google_maps - WARNING - Timeout waiting for element: button[jsaction*="back"]
+2025-05-02 13:40:10,052 - scrapers.google_maps - INFO - Found 21 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-02 13:40:10,053 - scrapers.google_maps - INFO - Added lead: Space Realty
+2025-05-02 13:40:10,053 - scrapers.google_maps - INFO - Processing result 2/21
+2025-05-02 13:40:10,190 - scrapers.google_maps - WARNING - Skipped result 2 - no usable data found
+2025-05-02 13:40:10,191 - scrapers.google_maps - INFO - Processing result 3/21
+2025-05-02 13:40:10,297 - scrapers.google_maps - INFO - Added lead: Space Realty
+2025-05-02 13:40:10,298 - scrapers.google_maps - INFO - Processing result 4/21
+2025-05-02 13:40:11,297 - scrapers.google_maps - INFO - Clicked on result for detailed view
+2025-05-02 13:40:20,865 - scrapers.google_maps - WARNING - Timeout waiting for element: h1.fontHeadlineLarge, h2.fontHeadlineLarge, div.fontHeadlineLarge, span.fontHeadlineLarge
+2025-05-02 13:40:20,913 - scrapers.google_maps - INFO - Found phone: Send to phone
+2025-05-02 13:40:20,955 - scrapers.google_maps - INFO - Found website: https://www.spacerealty.in/
+2025-05-02 13:40:21,057 - scrapers.google_maps - INFO - Found rating: 4.8 stars 122 Reviews
+2025-05-02 13:40:24,133 - scrapers.google_maps - WARNING - Timeout waiting for element: button[jsaction*="back"]
+2025-05-02 13:40:25,313 - scrapers.google_maps - INFO - Found 21 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-02 13:40:25,314 - scrapers.google_maps - INFO - Added lead: MAHALAXMI REAL ESTATE
+2025-05-02 13:40:25,314 - scrapers.google_maps - INFO - Processing result 5/21
+2025-05-02 13:40:25,435 - scrapers.google_maps - WARNING - Skipped result 5 - no usable data found
+2025-05-02 13:40:25,435 - scrapers.google_maps - INFO - Processing result 6/21
+2025-05-02 13:40:25,640 - scrapers.google_maps - INFO - Added lead: MAHALAXMI REAL ESTATE
+2025-05-02 13:40:25,641 - scrapers.google_maps - INFO - Processing result 7/21
+2025-05-02 13:40:26,498 - scrapers.google_maps - INFO - Clicked on result for detailed view
+2025-05-02 13:40:36,251 - scrapers.google_maps - WARNING - Timeout waiting for element: h1.fontHeadlineLarge, h2.fontHeadlineLarge, div.fontHeadlineLarge, span.fontHeadlineLarge
+2025-05-02 13:40:36,311 - scrapers.google_maps - INFO - Found phone: Send to phone
+2025-05-02 13:40:36,374 - scrapers.google_maps - INFO - Found website: https://www.spacerealty.in/
+2025-05-02 13:40:36,505 - scrapers.google_maps - INFO - Found rating: 4.8 stars 122 Reviews
+2025-05-02 13:40:39,599 - scrapers.google_maps - WARNING - Timeout waiting for element: button[jsaction*="back"]
+2025-05-02 13:40:41,349 - scrapers.google_maps - INFO - Found 21 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-02 13:40:41,350 - scrapers.google_maps - INFO - Added lead: Bardhaman Property
+2025-05-02 13:40:41,350 - scrapers.google_maps - INFO - Processing result 8/21
+2025-05-02 13:40:41,492 - scrapers.google_maps - WARNING - Skipped result 8 - no usable data found
+2025-05-02 13:40:41,492 - scrapers.google_maps - INFO - Processing result 9/21
+2025-05-02 13:40:41,616 - scrapers.google_maps - INFO - Added lead: Bardhaman Property
+2025-05-02 13:40:41,617 - scrapers.google_maps - INFO - Processing result 10/21
+2025-05-02 13:40:42,900 - scrapers.google_maps - INFO - Clicked on result for detailed view
+2025-05-02 13:40:52,803 - scrapers.google_maps - WARNING - Timeout waiting for element: h1.fontHeadlineLarge, h2.fontHeadlineLarge, div.fontHeadlineLarge, span.fontHeadlineLarge
+2025-05-02 13:40:52,848 - scrapers.google_maps - INFO - Found phone: Send to phone
+2025-05-02 13:40:52,921 - scrapers.google_maps - INFO - Found website: https://www.spacerealty.in/
+2025-05-02 13:40:53,024 - scrapers.google_maps - INFO - Found rating: 4.8 stars 122 Reviews
+2025-05-02 13:40:56,100 - scrapers.google_maps - WARNING - Timeout waiting for element: button[jsaction*="back"]
+2025-05-02 13:40:57,883 - scrapers.google_maps - INFO - Found 21 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-02 13:40:57,883 - scrapers.google_maps - INFO - Added lead: Aarya Realtors
+2025-05-02 13:40:57,883 - scrapers.google_maps - INFO - Processing result 11/21
+2025-05-02 13:40:58,018 - scrapers.google_maps - WARNING - Skipped result 11 - no usable data found
+2025-05-02 13:40:58,019 - scrapers.google_maps - INFO - Processing result 12/21
+2025-05-02 13:40:58,132 - scrapers.google_maps - INFO - Added lead: Aarya Realtors
+2025-05-02 13:40:58,132 - scrapers.google_maps - INFO - Processing result 13/21
+2025-05-02 13:40:59,297 - scrapers.google_maps - INFO - Clicked on result for detailed view
+2025-05-02 13:41:08,809 - scrapers.google_maps - WARNING - Timeout waiting for element: h1.fontHeadlineLarge, h2.fontHeadlineLarge, div.fontHeadlineLarge, span.fontHeadlineLarge
+2025-05-02 13:41:08,851 - scrapers.google_maps - INFO - Found phone: Send to phone
+2025-05-02 13:41:08,883 - scrapers.google_maps - INFO - Found website: https://www.spacerealty.in/
+2025-05-02 13:41:08,955 - scrapers.google_maps - INFO - Found rating: 4.8 stars 122 Reviews
+2025-05-02 13:41:12,038 - scrapers.google_maps - WARNING - Timeout waiting for element: button[jsaction*="back"]
+2025-05-02 13:41:13,790 - scrapers.google_maps - INFO - Found 21 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-02 13:41:13,791 - scrapers.google_maps - INFO - Added lead: Shree Krishna Properties & Infrastructure
+2025-05-02 13:41:13,791 - scrapers.google_maps - INFO - Processing result 14/21
+2025-05-02 13:41:13,950 - scrapers.google_maps - WARNING - Skipped result 14 - no usable data found
+2025-05-02 13:41:13,950 - scrapers.google_maps - INFO - Processing result 15/21
+2025-05-02 13:41:14,125 - scrapers.google_maps - INFO - Added lead: Shree Krishna Properties & Infrastructure
+2025-05-02 13:41:14,125 - scrapers.google_maps - INFO - Processing result 16/21
+2025-05-02 13:41:14,859 - scrapers.google_maps - INFO - Clicked on result for detailed view
+2025-05-02 13:41:24,979 - scrapers.google_maps - WARNING - Timeout waiting for element: h1.fontHeadlineLarge, h2.fontHeadlineLarge, div.fontHeadlineLarge, span.fontHeadlineLarge
+2025-05-02 13:41:25,006 - scrapers.google_maps - INFO - Found phone: Send to phone
+2025-05-02 13:41:25,036 - scrapers.google_maps - INFO - Found website: https://www.spacerealty.in/
+2025-05-02 13:41:25,106 - scrapers.google_maps - INFO - Found rating: 4.8 stars 122 Reviews
+2025-05-02 13:41:28,197 - scrapers.google_maps - WARNING - Timeout waiting for element: button[jsaction*="back"]
+2025-05-02 13:41:29,673 - scrapers.google_maps - INFO - Found 21 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-02 13:41:29,673 - scrapers.google_maps - INFO - Added lead: GPS Properties
+2025-05-02 13:41:29,673 - scrapers.google_maps - INFO - Processing result 17/21
+2025-05-02 13:41:29,821 - scrapers.google_maps - WARNING - Skipped result 17 - no usable data found
+2025-05-02 13:41:29,821 - scrapers.google_maps - INFO - Processing result 18/21
+2025-05-02 13:41:29,992 - scrapers.google_maps - INFO - Added lead: GPS Properties
+2025-05-02 13:41:29,992 - scrapers.google_maps - INFO - Processing result 19/21
+2025-05-02 13:41:30,956 - scrapers.google_maps - INFO - Clicked on result for detailed view
+2025-05-02 13:41:40,354 - scrapers.google_maps - WARNING - Timeout waiting for element: h1.fontHeadlineLarge, h2.fontHeadlineLarge, div.fontHeadlineLarge, span.fontHeadlineLarge
+2025-05-02 13:41:40,392 - scrapers.google_maps - INFO - Found phone: Send to phone
+2025-05-02 13:41:40,426 - scrapers.google_maps - INFO - Found website: https://www.spacerealty.in/
+2025-05-02 13:41:40,517 - scrapers.google_maps - INFO - Found rating: 4.8 stars 122 Reviews
+2025-05-02 13:41:43,602 - scrapers.google_maps - WARNING - Timeout waiting for element: button[jsaction*="back"]
+2025-05-02 13:41:45,553 - scrapers.google_maps - INFO - Found 42 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-02 13:41:45,553 - scrapers.google_maps - INFO - Added lead: Relation Realtech PVT. LTD.
+2025-05-02 13:41:45,553 - scrapers.google_maps - INFO - Processing result 20/42
+2025-05-02 13:41:45,731 - scrapers.google_maps - WARNING - Skipped result 20 - no usable data found
+2025-05-02 13:41:45,731 - scrapers.google_maps - INFO - Processing result 21/42
+2025-05-02 13:41:45,933 - scrapers.google_maps - INFO - Added lead: Relation Realtech PVT. LTD.
+2025-05-02 13:41:45,934 - scrapers.google_maps - INFO - Processing result 22/42
+2025-05-02 13:41:47,346 - scrapers.google_maps - INFO - Clicked on result for detailed view
+2025-05-02 13:41:57,231 - scrapers.google_maps - WARNING - Timeout waiting for element: h1.fontHeadlineLarge, h2.fontHeadlineLarge, div.fontHeadlineLarge, span.fontHeadlineLarge
+2025-05-02 13:41:57,261 - scrapers.google_maps - INFO - Found phone: Send to phone
+2025-05-02 13:41:57,291 - scrapers.google_maps - INFO - Found website: https://www.spacerealty.in/
+2025-05-02 13:41:57,359 - scrapers.google_maps - INFO - Found rating: 4.8 stars 122 Reviews
+2025-05-02 13:42:00,439 - scrapers.google_maps - WARNING - Timeout waiting for element: button[jsaction*="back"]
+2025-05-02 13:42:01,761 - scrapers.google_maps - INFO - Found 42 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-02 13:42:01,762 - scrapers.google_maps - INFO - Added lead: Pune Realty in Pune
+2025-05-02 13:42:01,762 - scrapers.google_maps - INFO - Processing result 23/42
+2025-05-02 13:42:01,919 - scrapers.google_maps - WARNING - Skipped result 23 - no usable data found
+2025-05-02 13:42:01,920 - scrapers.google_maps - INFO - Processing result 24/42
+2025-05-02 13:42:02,077 - scrapers.google_maps - INFO - Added lead: Pune Realty in Pune
+2025-05-02 13:42:02,077 - scrapers.google_maps - INFO - Processing result 25/42
+2025-05-02 13:42:03,207 - scrapers.google_maps - INFO - Clicked on result for detailed view
+2025-05-02 13:42:12,825 - scrapers.google_maps - WARNING - Timeout waiting for element: h1.fontHeadlineLarge, h2.fontHeadlineLarge, div.fontHeadlineLarge, span.fontHeadlineLarge
+2025-05-02 13:42:12,869 - scrapers.google_maps - INFO - Found phone: Send to phone
+2025-05-02 13:42:12,907 - scrapers.google_maps - INFO - Found website: https://www.spacerealty.in/
+2025-05-02 13:42:13,019 - scrapers.google_maps - INFO - Found rating: 4.8 stars 122 Reviews
+2025-05-02 13:42:16,088 - scrapers.google_maps - WARNING - Timeout waiting for element: button[jsaction*="back"]
+2025-05-02 13:42:18,123 - scrapers.google_maps - INFO - Found 42 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-02 13:42:18,123 - scrapers.google_maps - INFO - Added lead: Magic Stone Spaces LLP
+2025-05-02 13:42:18,123 - scrapers.google_maps - INFO - Found 17 leads, which meets our target of 15
+2025-05-02 13:42:18,123 - scrapers.google_maps - INFO - Found 17 leads, stopping early
+2025-05-02 13:42:20,629 - controllers.main_controller - INFO - Found 17 leads from Google Maps
+2025-05-02 13:42:20,886 - controllers.main_controller - INFO - Exported 17 leads to data/output/leads_real estate_pune_20250502_134220.csv and data/output/leads_real estate_pune_20250502_134220.xlsx
+2025-05-02 13:43:31,992 - controllers.main_controller - INFO - Starting scraping for real estate in pune
+2025-05-02 13:43:31,993 - controllers.main_controller - INFO - Starting Google Maps scraping
+2025-05-02 13:43:31,996 - utils.web - INFO - Setting up Chrome driver (headless=False)
+2025-05-02 13:43:35,149 - scrapers.google_maps - INFO - Navigating to Google Maps to search for real estate in pune
+2025-05-02 13:43:50,907 - scrapers.google_maps - INFO - Clicked search button
+2025-05-02 13:43:58,620 - scrapers.google_maps - INFO - Processing page 1/5
+2025-05-02 13:43:58,631 - scrapers.google_maps - INFO - Found 21 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-02 13:43:58,631 - scrapers.google_maps - INFO - Processing result 1/21
+2025-05-02 13:43:59,591 - scrapers.google_maps - INFO - Clicked on result for detailed view
+2025-05-02 13:44:09,206 - scrapers.google_maps - WARNING - Timeout waiting for element: h1.fontHeadlineLarge, h2.fontHeadlineLarge, div.fontHeadlineLarge, span.fontHeadlineLarge
+2025-05-02 13:44:09,259 - scrapers.google_maps - INFO - Found phone: Send to phone
+2025-05-02 13:44:09,297 - scrapers.google_maps - INFO - Found website: https://www.spacerealty.in/
+2025-05-02 13:44:09,371 - scrapers.google_maps - INFO - Found rating: 4.8 stars 122 Reviews
+2025-05-02 13:44:12,460 - scrapers.google_maps - WARNING - Timeout waiting for element: button[jsaction*="back"]
+2025-05-02 13:44:14,031 - scrapers.google_maps - INFO - Found 21 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-02 13:44:14,032 - scrapers.google_maps - INFO - Added lead: Space Realty
+2025-05-02 13:44:14,032 - scrapers.google_maps - INFO - Processing result 2/21
+2025-05-02 13:44:14,228 - scrapers.google_maps - WARNING - Skipped result 2 - no usable data found
+2025-05-02 13:44:14,229 - scrapers.google_maps - INFO - Processing result 3/21
+2025-05-02 13:44:14,405 - scrapers.google_maps - INFO - Added lead: Space Realty
+2025-05-02 13:44:14,406 - scrapers.google_maps - INFO - Processing result 4/21
+2025-05-02 13:44:31,072 - scrapers.google_maps - ERROR - Click error: HTTPConnectionPool(host='localhost', port=52408): Max retries exceeded with url: /session/b6d3f0af0b54c57c501eb0ab518353b0/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA59447410>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-05-02 13:44:49,102 - scrapers.google_maps - ERROR - Click error: HTTPConnectionPool(host='localhost', port=52408): Max retries exceeded with url: /session/b6d3f0af0b54c57c501eb0ab518353b0/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA59478410>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-05-02 13:45:07,202 - scrapers.google_maps - ERROR - Click error: HTTPConnectionPool(host='localhost', port=52408): Max retries exceeded with url: /session/b6d3f0af0b54c57c501eb0ab518353b0/execute/sync (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA72039DF0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-05-02 13:45:07,202 - scrapers.google_maps - WARNING - Could not click result 4
+2025-05-02 13:45:07,202 - scrapers.google_maps - INFO - Added lead: MAHALAXMI REAL ESTATE
+2025-05-02 13:45:07,203 - scrapers.google_maps - INFO - Processing result 5/21
+2025-05-02 13:46:28,784 - scrapers.google_maps - WARNING - Skipped result 5 - no usable data found
+2025-05-02 13:46:28,785 - scrapers.google_maps - INFO - Processing result 6/21
+2025-05-02 14:41:39,203 - controllers.main_controller - INFO - Starting scraping for cafe in sillod
+2025-05-02 14:41:40,008 - controllers.main_controller - INFO - Exported 0 leads to data/output/leads_cafe_sillod_20250502_144139.csv and data/output/leads_cafe_sillod_20250502_144139.xlsx
+2025-05-02 14:42:50,265 - controllers.main_controller - INFO - Starting scraping for cafe in sillod
+2025-05-02 14:42:50,268 - controllers.main_controller - INFO - Starting Google Maps scraping
+2025-05-02 14:42:50,273 - utils.web - INFO - Setting up Chrome driver (headless=False)
+2025-05-02 14:42:54,406 - scrapers.google_maps - INFO - Navigating to Google Maps to search for cafe in sillod
+2025-05-02 14:43:06,587 - scrapers.google_maps - INFO - Clicked search button
+2025-05-02 14:43:13,290 - scrapers.google_maps - INFO - Processing page 1/5
+2025-05-02 14:43:13,313 - scrapers.google_maps - INFO - Found 15 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-02 14:43:13,318 - scrapers.google_maps - INFO - Processing result 1/15
+2025-05-02 14:43:14,633 - scrapers.google_maps - INFO - Clicked on result for detailed view
+2025-05-02 14:43:24,781 - scrapers.google_maps - WARNING - Timeout waiting for element: h1.fontHeadlineLarge, h2.fontHeadlineLarge, div.fontHeadlineLarge, span.fontHeadlineLarge
+2025-05-02 14:43:24,865 - scrapers.google_maps - INFO - Found phone: Send to phone
+2025-05-02 14:43:30,045 - scrapers.google_maps - WARNING - Timeout waiting for element: a[data-item-id*="authority"], a[aria-label*="website"], a[href^="http"]:not([href*="google"])
+2025-05-02 14:43:30,255 - scrapers.google_maps - INFO - Found rating: 4.9 stars 99 Reviews
+2025-05-02 14:43:33,347 - scrapers.google_maps - WARNING - Timeout waiting for element: button[jsaction*="back"]
+2025-05-02 14:43:35,400 - scrapers.google_maps - INFO - Found 15 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-02 14:43:35,401 - scrapers.google_maps - INFO - Added lead: The cafe chiks's
+2025-05-02 14:43:35,402 - scrapers.google_maps - INFO - Processing result 2/15
+2025-05-02 14:43:35,926 - scrapers.google_maps - WARNING - Skipped result 2 - no usable data found
+2025-05-02 14:43:35,927 - scrapers.google_maps - INFO - Processing result 3/15
+2025-05-02 14:43:36,193 - scrapers.google_maps - INFO - Added lead: The cafe chiks's
+2025-05-02 14:43:36,194 - scrapers.google_maps - INFO - Processing result 4/15
+2025-05-02 14:43:37,874 - scrapers.google_maps - INFO - Clicked on result for detailed view
+2025-05-02 14:43:47,500 - scrapers.google_maps - WARNING - Timeout waiting for element: h1.fontHeadlineLarge, h2.fontHeadlineLarge, div.fontHeadlineLarge, span.fontHeadlineLarge
+2025-05-02 14:43:47,581 - scrapers.google_maps - INFO - Found phone: Send to phone
+2025-05-02 14:43:52,764 - scrapers.google_maps - WARNING - Timeout waiting for element: a[data-item-id*="authority"], a[aria-label*="website"], a[href^="http"]:not([href*="google"])
+2025-05-02 14:43:52,884 - scrapers.google_maps - INFO - Found rating: 4.9 stars 99 Reviews
+2025-05-02 14:43:55,971 - scrapers.google_maps - WARNING - Timeout waiting for element: button[jsaction*="back"]
+2025-05-02 14:43:57,964 - scrapers.google_maps - INFO - Found 15 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-02 14:43:57,965 - scrapers.google_maps - INFO - Added lead: Shri Sainath Tea House
+2025-05-02 14:43:57,966 - scrapers.google_maps - INFO - Processing result 5/15
+2025-05-02 14:43:58,272 - scrapers.google_maps - WARNING - Skipped result 5 - no usable data found
+2025-05-02 14:43:58,272 - scrapers.google_maps - INFO - Processing result 6/15
+2025-05-02 14:43:58,595 - scrapers.google_maps - INFO - Added lead: Shri Sainath Tea House
+2025-05-02 14:43:58,595 - scrapers.google_maps - INFO - Processing result 7/15
+2025-05-02 14:44:00,233 - scrapers.google_maps - INFO - Clicked on result for detailed view
+2025-05-02 14:44:10,263 - scrapers.google_maps - WARNING - Timeout waiting for element: h1.fontHeadlineLarge, h2.fontHeadlineLarge, div.fontHeadlineLarge, span.fontHeadlineLarge
+2025-05-02 14:44:10,323 - scrapers.google_maps - INFO - Found phone: Send to phone
+2025-05-02 14:44:15,477 - scrapers.google_maps - WARNING - Timeout waiting for element: a[data-item-id*="authority"], a[aria-label*="website"], a[href^="http"]:not([href*="google"])
+2025-05-02 14:44:15,627 - scrapers.google_maps - INFO - Found rating: 4.9 stars 99 Reviews
+2025-05-02 14:44:18,723 - scrapers.google_maps - WARNING - Timeout waiting for element: button[jsaction*="back"]
+2025-05-02 14:44:20,554 - scrapers.google_maps - INFO - Found 15 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-02 14:44:20,555 - scrapers.google_maps - INFO - Added lead: Aarambh 100% Pure Veg restaurant.
+2025-05-02 14:44:20,555 - scrapers.google_maps - INFO - Processing result 8/15
+2025-05-02 14:44:20,772 - scrapers.google_maps - WARNING - Skipped result 8 - no usable data found
+2025-05-02 14:44:20,773 - scrapers.google_maps - INFO - Processing result 9/15
+2025-05-02 14:44:20,971 - scrapers.google_maps - INFO - Added lead: Aarambh 100% Pure Veg restaurant.
+2025-05-02 14:44:20,972 - scrapers.google_maps - INFO - Processing result 10/15
+2025-05-02 14:44:22,226 - scrapers.google_maps - INFO - Clicked on result for detailed view
+2025-05-02 14:44:31,937 - scrapers.google_maps - WARNING - Timeout waiting for element: h1.fontHeadlineLarge, h2.fontHeadlineLarge, div.fontHeadlineLarge, span.fontHeadlineLarge
+2025-05-02 14:44:32,001 - scrapers.google_maps - INFO - Found phone: Send to phone
+2025-05-02 14:44:32,065 - scrapers.google_maps - INFO - Found website: https://sites.google.com/view/uzfoodcafe/home?authuser=0
+2025-05-02 14:44:32,196 - scrapers.google_maps - INFO - Found rating: 4.9 stars 99 Reviews
+2025-05-02 14:44:35,291 - scrapers.google_maps - WARNING - Timeout waiting for element: button[jsaction*="back"]
+2025-05-02 14:44:36,942 - scrapers.google_maps - INFO - Found 15 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-02 14:44:36,944 - scrapers.google_maps - INFO - Added lead: Uz food cafe
+2025-05-02 14:44:36,944 - scrapers.google_maps - INFO - Processing result 11/15
+2025-05-02 14:44:38,378 - scrapers.google_maps - WARNING - Skipped result 11 - no usable data found
+2025-05-02 14:44:38,378 - scrapers.google_maps - INFO - Processing result 12/15
+2025-05-02 14:44:38,552 - scrapers.google_maps - INFO - Added lead: Uz food cafe
+2025-05-02 14:44:38,552 - scrapers.google_maps - INFO - Processing result 13/15
+2025-05-02 14:44:40,349 - scrapers.google_maps - INFO - Clicked on result for detailed view
+2025-05-02 14:44:50,214 - scrapers.google_maps - WARNING - Timeout waiting for element: h1.fontHeadlineLarge, h2.fontHeadlineLarge, div.fontHeadlineLarge, span.fontHeadlineLarge
+2025-05-02 14:44:50,277 - scrapers.google_maps - INFO - Found phone: Send to phone
+2025-05-02 14:44:55,668 - scrapers.google_maps - WARNING - Timeout waiting for element: a[data-item-id*="authority"], a[aria-label*="website"], a[href^="http"]:not([href*="google"])
+2025-05-02 14:44:55,819 - scrapers.google_maps - INFO - Found rating: 4.9 stars 99 Reviews
+2025-05-02 14:44:58,921 - scrapers.google_maps - WARNING - Timeout waiting for element: button[jsaction*="back"]
+2025-05-02 14:45:00,158 - scrapers.google_maps - INFO - Found 15 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-02 14:45:00,159 - scrapers.google_maps - INFO - Added lead: New Neelam Tea House
+2025-05-02 14:45:00,160 - scrapers.google_maps - INFO - Processing result 14/15
+2025-05-02 14:45:00,516 - scrapers.google_maps - WARNING - Skipped result 14 - no usable data found
+2025-05-02 14:45:00,516 - scrapers.google_maps - INFO - Processing result 15/15
+2025-05-02 14:45:00,700 - scrapers.google_maps - INFO - Added lead: New Neelam Tea House
+2025-05-02 14:45:00,775 - scrapers.google_maps - INFO - Scrolled down results pane from 0 to 500
+2025-05-02 14:45:01,633 - scrapers.google_maps - INFO - New content loaded, scroll height increased from 956 to 1733
+2025-05-02 14:45:03,376 - scrapers.google_maps - INFO - Processing page 2/5
+2025-05-02 14:45:03,398 - scrapers.google_maps - INFO - Found 30 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-02 14:45:03,398 - scrapers.google_maps - INFO - Processing result 1/30
+2025-05-02 14:45:03,426 - scrapers.google_maps - INFO - Skipping duplicate result: https://www.google.com/maps/place/The+cafe+chiks%27s/data=!4m7!3m6!1s0x3bdbd358a57a03c5:0x98cc77f74c3768df!8m2!3d20.3101603!4d75.6536623!16s%2Fg%2F11wr98nqc9!19sChIJxQN6pVjT2zsR32g3TPd3zJg?authuser=0&hl=en&rclk=1
+2025-05-02 14:45:03,427 - scrapers.google_maps - INFO - Processing result 2/30
+2025-05-02 14:45:03,673 - scrapers.google_maps - WARNING - Skipped result 2 - no usable data found
+2025-05-02 14:45:03,673 - scrapers.google_maps - INFO - Processing result 3/30
+2025-05-02 14:45:03,866 - scrapers.google_maps - INFO - Added lead: The cafe chiks's
+2025-05-02 14:45:03,867 - scrapers.google_maps - INFO - Processing result 4/30
+2025-05-02 14:45:04,015 - scrapers.google_maps - INFO - Skipping duplicate result: https://www.google.com/maps/place/Shri+Sainath+Tea+House/data=!4m7!3m6!1s0x3bdbd27718cd425f:0x297110ae7a58fb9e!8m2!3d20.3091285!4d75.6531232!16s%2Fg%2F11bxfcydnm!19sChIJX0LNGHfS2zsRnvtYeq4QcSk?authuser=0&hl=en&rclk=1
+2025-05-02 14:45:04,016 - scrapers.google_maps - INFO - Processing result 5/30
+2025-05-02 14:45:04,314 - scrapers.google_maps - WARNING - Skipped result 5 - no usable data found
+2025-05-02 14:45:04,314 - scrapers.google_maps - INFO - Processing result 6/30
+2025-05-02 14:45:04,509 - scrapers.google_maps - INFO - Added lead: Shri Sainath Tea House
+2025-05-02 14:45:04,509 - scrapers.google_maps - INFO - Processing result 7/30
+2025-05-02 14:45:04,530 - scrapers.google_maps - INFO - Skipping duplicate result: https://www.google.com/maps/place/Aarambh+100%25+Pure+Veg+restaurant./data=!4m7!3m6!1s0x3bdbd390404347a1:0x488a7a2a27f1d9d0!8m2!3d20.323145!4d75.6565853!16s%2Fg%2F11vpr54jb1!19sChIJoUdDQJDT2zsR0NnxJyp6ikg?authuser=0&hl=en&rclk=1
+2025-05-02 14:45:04,531 - scrapers.google_maps - INFO - Processing result 8/30
+2025-05-02 14:45:04,700 - scrapers.google_maps - WARNING - Skipped result 8 - no usable data found
+2025-05-02 14:45:04,701 - scrapers.google_maps - INFO - Processing result 9/30
+2025-05-02 14:45:04,856 - scrapers.google_maps - INFO - Added lead: Aarambh 100% Pure Veg restaurant.
+2025-05-02 14:45:04,856 - scrapers.google_maps - INFO - Processing result 10/30
+2025-05-02 14:45:04,875 - scrapers.google_maps - INFO - Skipping duplicate result: https://www.google.com/maps/place/Uz+food+cafe/data=!4m7!3m6!1s0x3bdbd3d9ec0cfc1d:0x2e7e729740c90763!8m2!3d20.2957376!4d75.6506491!16s%2Fg%2F11shlhd9tr!19sChIJHfwM7NnT2zsRYwfJQJdyfi4?authuser=0&hl=en&rclk=1
+2025-05-02 14:45:04,876 - scrapers.google_maps - INFO - Processing result 11/30
+2025-05-02 14:45:05,064 - scrapers.google_maps - WARNING - Skipped result 11 - no usable data found
+2025-05-02 14:45:05,064 - scrapers.google_maps - INFO - Processing result 12/30
+2025-05-02 14:45:05,288 - scrapers.google_maps - INFO - Added lead: Uz food cafe
+2025-05-02 14:45:05,289 - scrapers.google_maps - INFO - Processing result 13/30
+2025-05-02 14:45:05,314 - scrapers.google_maps - INFO - Skipping duplicate result: https://www.google.com/maps/place/New+Neelam+Tea+House/data=!4m7!3m6!1s0x3bdbcd8934d7e7d9:0xfe4ff448ea44af4a!8m2!3d20.2988977!4d75.6515488!16s%2Fg%2F11dy_ghdtn!19sChIJ2efXNInN2zsRSq9E6kj0T_4?authuser=0&hl=en&rclk=1
+2025-05-02 14:45:05,314 - scrapers.google_maps - INFO - Processing result 14/30
+2025-05-02 14:45:05,501 - scrapers.google_maps - WARNING - Skipped result 14 - no usable data found
+2025-05-02 14:45:05,502 - scrapers.google_maps - INFO - Processing result 15/30
+2025-05-02 14:45:05,707 - scrapers.google_maps - INFO - Added lead: New Neelam Tea House
+2025-05-02 14:45:05,707 - scrapers.google_maps - INFO - Found 15 leads, which meets our target of 15
+2025-05-02 14:45:05,708 - scrapers.google_maps - INFO - Found 15 leads, stopping early
+2025-05-02 14:45:08,296 - controllers.main_controller - INFO - Found 15 leads from Google Maps
+2025-05-02 14:45:08,347 - controllers.main_controller - INFO - Exported 15 leads to data/output/leads_cafe_sillod_20250502_144508.csv and data/output/leads_cafe_sillod_20250502_144508.xlsx
+2025-05-02 15:05:03,990 - controllers.main_controller - INFO - Starting scraping for cafe in sillod
+2025-05-02 15:05:03,990 - controllers.main_controller - INFO - Starting Google Maps scraping
+2025-05-02 15:05:03,996 - utils.web - INFO - Setting up Chrome driver (headless=False)
+2025-05-02 15:05:08,663 - scrapers.google_maps - INFO - Navigating to Google Maps to search for cafe in sillod
+2025-05-02 15:05:20,762 - scrapers.google_maps - INFO - Clicked search button
+2025-05-02 15:05:27,495 - scrapers.google_maps - INFO - Processing page 1/5
+2025-05-02 15:05:27,538 - scrapers.google_maps - INFO - Found 15 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-02 15:05:27,538 - scrapers.google_maps - INFO - Processing result 1/15
+2025-05-02 15:05:28,720 - scrapers.google_maps - INFO - Clicked on result for detailed view
+2025-05-02 15:05:31,640 - scrapers.google_maps - INFO - Found business name: The cafe chiks's
+2025-05-02 15:05:31,782 - scrapers.google_maps - INFO - Found address: front of shivsena bhawan, Aurangabad -jalgaon road, Shivaji Nagar, Sillod, Maharashtra 431112
+2025-05-02 15:05:36,946 - scrapers.google_maps - WARNING - Timeout waiting for element: span.F7nice span[aria-hidden="true"], div[role="img"][aria-label*="rating"], span[aria-label*="rating"]
+2025-05-02 15:05:40,076 - scrapers.google_maps - WARNING - Timeout waiting for element: button[jsaction*="back"]
+2025-05-02 15:05:41,413 - scrapers.google_maps - INFO - Found 15 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-02 15:05:41,413 - scrapers.google_maps - INFO - Added lead: The cafe chiks's
+2025-05-02 15:05:41,416 - scrapers.google_maps - INFO - Processing result 2/15
+2025-05-02 15:05:43,058 - scrapers.google_maps - WARNING - Skipped result 2 - no usable data found
+2025-05-02 15:05:43,060 - scrapers.google_maps - INFO - Processing result 3/15
+2025-05-02 15:05:43,251 - scrapers.google_maps - INFO - Added lead: The cafe chiks's
+2025-05-02 15:05:43,251 - scrapers.google_maps - INFO - Processing result 4/15
+2025-05-02 15:05:44,324 - scrapers.google_maps - INFO - Clicked on result for detailed view
+2025-05-02 15:05:46,915 - scrapers.google_maps - INFO - Found business name: Shri Sainath Tea House
+2025-05-02 15:05:47,039 - scrapers.google_maps - INFO - Found address: 8M53+J7V, 01, Shri Krishna Nagar, Jai Bhawani Nagar, Sillod, Maharashtra 431112
+2025-05-02 15:05:52,205 - scrapers.google_maps - WARNING - Timeout waiting for element: span.F7nice span[aria-hidden="true"], div[role="img"][aria-label*="rating"], span[aria-label*="rating"]
+2025-05-02 15:05:55,340 - scrapers.google_maps - WARNING - Timeout waiting for element: button[jsaction*="back"]
+2025-05-02 15:05:57,046 - scrapers.google_maps - INFO - Found 15 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-02 15:05:57,047 - scrapers.google_maps - INFO - Added lead: Shri Sainath Tea House
+2025-05-02 15:05:57,048 - scrapers.google_maps - INFO - Processing result 5/15
+2025-05-02 15:05:57,383 - scrapers.google_maps - WARNING - Skipped result 5 - no usable data found
+2025-05-02 15:05:57,383 - scrapers.google_maps - INFO - Processing result 6/15
+2025-05-02 15:05:57,573 - scrapers.google_maps - INFO - Added lead: Shri Sainath Tea House
+2025-05-02 15:05:57,574 - scrapers.google_maps - INFO - Processing result 7/15
+2025-05-02 15:05:58,575 - scrapers.google_maps - INFO - Clicked on result for detailed view
+2025-05-02 15:06:07,854 - scrapers.google_maps - WARNING - Timeout waiting for element: h1.DUwDvf, h1.fontHeadlineLarge, h2.fontHeadlineLarge, div.fontHeadlineLarge, span.fontHeadlineLarge
+2025-05-02 15:06:13,112 - scrapers.google_maps - WARNING - Timeout waiting for element: span.F7nice span[aria-hidden="true"], div[role="img"][aria-label*="rating"], span[aria-label*="rating"]
+2025-05-02 15:06:16,234 - scrapers.google_maps - WARNING - Timeout waiting for element: button[jsaction*="back"]
+2025-05-02 15:06:17,517 - scrapers.google_maps - INFO - Found 15 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-02 15:06:17,518 - scrapers.google_maps - INFO - Added lead: Aarambh 100% Pure Veg restaurant.
+2025-05-02 15:06:17,518 - scrapers.google_maps - INFO - Processing result 8/15
+2025-05-02 15:06:17,751 - scrapers.google_maps - WARNING - Skipped result 8 - no usable data found
+2025-05-02 15:06:17,752 - scrapers.google_maps - INFO - Processing result 9/15
+2025-05-02 15:06:18,045 - scrapers.google_maps - INFO - Added lead: Aarambh 100% Pure Veg restaurant.
+2025-05-02 15:06:18,046 - scrapers.google_maps - INFO - Processing result 10/15
+2025-05-02 15:06:19,662 - scrapers.google_maps - INFO - Clicked on result for detailed view
+2025-05-02 15:06:30,226 - scrapers.google_maps - INFO - Found business name: Uz food cafe
+2025-05-02 15:06:30,335 - scrapers.google_maps - INFO - Found website: https://sites.google.com/view/uzfoodcafe/home?authuser=0
+2025-05-02 15:06:30,384 - scrapers.google_maps - INFO - Found address: Main road, dist, Sillod, Maharashtra 431112
+2025-05-02 15:06:35,568 - scrapers.google_maps - WARNING - Timeout waiting for element: span.F7nice span[aria-hidden="true"], div[role="img"][aria-label*="rating"], span[aria-label*="rating"]
+2025-05-02 15:06:38,660 - scrapers.google_maps - WARNING - Timeout waiting for element: button[jsaction*="back"]
+2025-05-02 15:06:40,624 - scrapers.google_maps - INFO - Found 15 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-02 15:06:40,625 - scrapers.google_maps - INFO - Added lead: Uz food cafe
+2025-05-02 15:06:40,626 - scrapers.google_maps - INFO - Processing result 11/15
+2025-05-02 15:06:40,871 - scrapers.google_maps - WARNING - Skipped result 11 - no usable data found
+2025-05-02 15:06:40,872 - scrapers.google_maps - INFO - Processing result 12/15
+2025-05-02 15:06:41,087 - scrapers.google_maps - INFO - Added lead: Shree Sai Bhojnalay Sillod
+2025-05-02 15:06:41,088 - scrapers.google_maps - INFO - Processing result 13/15
+2025-05-02 15:06:41,110 - scrapers.google_maps - INFO - Skipping duplicate result: https://www.google.com/maps/place/Aarambh+100%25+Pure+Veg+restaurant./data=!4m7!3m6!1s0x3bdbd390404347a1:0x488a7a2a27f1d9d0!8m2!3d20.323145!4d75.6565853!16s%2Fg%2F11vpr54jb1!19sChIJoUdDQJDT2zsR0NnxJyp6ikg?authuser=0&hl=en&rclk=1
+2025-05-02 15:06:41,111 - scrapers.google_maps - INFO - Processing result 14/15
+2025-05-02 15:06:41,520 - scrapers.google_maps - WARNING - Skipped result 14 - no usable data found
+2025-05-02 15:06:41,521 - scrapers.google_maps - INFO - Processing result 15/15
+2025-05-02 15:06:42,416 - scrapers.google_maps - INFO - Added lead: Aarambh 100% Pure Veg restaurant.
+2025-05-02 15:06:43,150 - scrapers.google_maps - INFO - Scrolled down results pane from 0 to 500
+2025-05-02 15:06:43,887 - scrapers.google_maps - INFO - New content loaded, scroll height increased from 956 to 1713
+2025-05-02 15:06:45,477 - scrapers.google_maps - INFO - Processing page 2/5
+2025-05-02 15:06:45,490 - scrapers.google_maps - INFO - Found 30 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-02 15:06:45,491 - scrapers.google_maps - INFO - Processing result 1/30
+2025-05-02 15:06:45,524 - scrapers.google_maps - INFO - Skipping duplicate result: https://www.google.com/maps/place/The+cafe+chiks%27s/data=!4m7!3m6!1s0x3bdbd358a57a03c5:0x98cc77f74c3768df!8m2!3d20.3101603!4d75.6536623!16s%2Fg%2F11wr98nqc9!19sChIJxQN6pVjT2zsR32g3TPd3zJg?authuser=0&hl=en&rclk=1
+2025-05-02 15:06:45,524 - scrapers.google_maps - INFO - Processing result 2/30
+2025-05-02 15:06:45,727 - scrapers.google_maps - WARNING - Skipped result 2 - no usable data found
+2025-05-02 15:06:45,727 - scrapers.google_maps - INFO - Processing result 3/30
+2025-05-02 15:06:45,910 - scrapers.google_maps - INFO - Added lead: The cafe chiks's
+2025-05-02 15:06:45,910 - scrapers.google_maps - INFO - Processing result 4/30
+2025-05-02 15:06:45,925 - scrapers.google_maps - INFO - Skipping duplicate result: https://www.google.com/maps/place/Shri+Sainath+Tea+House/data=!4m7!3m6!1s0x3bdbd27718cd425f:0x297110ae7a58fb9e!8m2!3d20.3091285!4d75.6531232!16s%2Fg%2F11bxfcydnm!19sChIJX0LNGHfS2zsRnvtYeq4QcSk?authuser=0&hl=en&rclk=1
+2025-05-02 15:06:45,927 - scrapers.google_maps - INFO - Processing result 5/30
+2025-05-02 15:06:46,117 - scrapers.google_maps - WARNING - Skipped result 5 - no usable data found
+2025-05-02 15:06:46,118 - scrapers.google_maps - INFO - Processing result 6/30
+2025-05-02 15:06:46,280 - scrapers.google_maps - INFO - Added lead: Shri Sainath Tea House
+2025-05-02 15:06:46,280 - scrapers.google_maps - INFO - Processing result 7/30
+2025-05-02 15:06:47,928 - scrapers.google_maps - INFO - Clicked on result for detailed view
+2025-05-02 15:06:50,148 - scrapers.google_maps - INFO - Found business name: Ande Ka Funda
+2025-05-02 15:06:50,634 - scrapers.google_maps - INFO - Found address: 8M53+89C, MH MSH 8, Sillod, Maharashtra 431112
+2025-05-02 15:06:55,793 - scrapers.google_maps - WARNING - Timeout waiting for element: span.F7nice span[aria-hidden="true"], div[role="img"][aria-label*="rating"], span[aria-label*="rating"]
+2025-05-02 15:06:58,910 - scrapers.google_maps - WARNING - Timeout waiting for element: button[jsaction*="back"]
+2025-05-02 15:07:00,763 - scrapers.google_maps - INFO - Found 30 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-02 15:07:00,764 - scrapers.google_maps - INFO - Added lead: Ande Ka Funda
+2025-05-02 15:07:00,765 - scrapers.google_maps - INFO - Processing result 8/30
+2025-05-02 15:07:00,978 - scrapers.google_maps - WARNING - Skipped result 8 - no usable data found
+2025-05-02 15:07:00,979 - scrapers.google_maps - INFO - Processing result 9/30
+2025-05-02 15:07:01,212 - scrapers.google_maps - INFO - Added lead: Ande Ka Funda
+2025-05-02 15:07:01,213 - scrapers.google_maps - INFO - Processing result 10/30
+2025-05-02 15:07:02,269 - scrapers.google_maps - INFO - Clicked on result for detailed view
+2025-05-02 15:07:05,003 - scrapers.google_maps - INFO - Found business name: Shree Sai Bhojnalay Sillod
+2025-05-02 15:07:05,119 - scrapers.google_maps - INFO - Found address: Dist, Jai Bhawani Nagar, Sillod, Maharashtra 431112
+2025-05-02 15:07:10,360 - scrapers.google_maps - WARNING - Timeout waiting for element: span.F7nice span[aria-hidden="true"], div[role="img"][aria-label*="rating"], span[aria-label*="rating"]
+2025-05-02 15:07:13,469 - scrapers.google_maps - WARNING - Timeout waiting for element: button[jsaction*="back"]
+2025-05-02 15:07:14,902 - scrapers.google_maps - INFO - Found 30 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-02 15:07:14,902 - scrapers.google_maps - INFO - Added lead: Shree Sai Bhojnalay Sillod
+2025-05-02 15:07:14,903 - scrapers.google_maps - INFO - Processing result 11/30
+2025-05-02 15:07:15,124 - scrapers.google_maps - WARNING - Skipped result 11 - no usable data found
+2025-05-02 15:07:15,124 - scrapers.google_maps - INFO - Processing result 12/30
+2025-05-02 15:07:15,369 - scrapers.google_maps - INFO - Added lead: Shree Sai Bhojnalay Sillod
+2025-05-02 15:07:15,369 - scrapers.google_maps - INFO - Processing result 13/30
+2025-05-02 15:07:15,394 - scrapers.google_maps - INFO - Skipping duplicate result: https://www.google.com/maps/place/Aarambh+100%25+Pure+Veg+restaurant./data=!4m7!3m6!1s0x3bdbd390404347a1:0x488a7a2a27f1d9d0!8m2!3d20.323145!4d75.6565853!16s%2Fg%2F11vpr54jb1!19sChIJoUdDQJDT2zsR0NnxJyp6ikg?authuser=0&hl=en&rclk=1
+2025-05-02 15:07:15,395 - scrapers.google_maps - INFO - Processing result 14/30
+2025-05-02 15:07:15,819 - scrapers.google_maps - WARNING - Skipped result 14 - no usable data found
+2025-05-02 15:07:15,819 - scrapers.google_maps - INFO - Processing result 15/30
+2025-05-02 15:07:16,045 - scrapers.google_maps - INFO - Added lead: Aarambh 100% Pure Veg restaurant.
+2025-05-02 15:07:16,045 - scrapers.google_maps - INFO - Found 16 leads, which meets our target of 15
+2025-05-02 15:07:16,045 - scrapers.google_maps - INFO - Found 16 leads, stopping early
+2025-05-02 15:07:18,621 - controllers.main_controller - INFO - Found 16 leads from Google Maps
+2025-05-02 15:07:19,004 - controllers.main_controller - INFO - Exported 16 leads to data/output/leads_cafe_sillod_20250502_150718.csv and data/output/leads_cafe_sillod_20250502_150718.xlsx
+2025-05-02 15:26:40,520 - controllers.main_controller - INFO - Starting scraping for schools in sillod
+2025-05-02 15:26:40,525 - controllers.main_controller - INFO - Starting Google Maps scraping
+2025-05-02 15:26:40,535 - utils.web - INFO - Setting up Chrome driver (headless=False)
+2025-05-02 15:26:44,544 - scrapers.google_maps - INFO - Navigating to Google Maps to search for schools in sillod
+2025-05-02 15:27:00,091 - scrapers.google_maps - INFO - Clicked search button
+2025-05-02 15:27:08,423 - scrapers.google_maps - INFO - Processing page 1/5
+2025-05-02 15:27:08,456 - scrapers.google_maps - INFO - Found 21 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-02 15:27:08,459 - scrapers.google_maps - INFO - Processing result 1/21
+2025-05-02 15:27:09,387 - scrapers.google_maps - INFO - Clicked on result for detailed view
+2025-05-02 15:27:15,214 - scrapers.google_maps - WARNING - Timeout waiting for element: button[jsaction*="back"]
+2025-05-02 15:27:16,601 - scrapers.google_maps - INFO - Found 21 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-02 15:27:16,601 - scrapers.google_maps - INFO - Added lead: ERA INTERNATIONAL SCHOOL SILLOD
+2025-05-02 15:27:16,602 - scrapers.google_maps - INFO - Processing result 2/21
+2025-05-02 15:27:16,998 - scrapers.google_maps - WARNING - Skipped result 2 - no usable data found
+2025-05-02 15:27:17,002 - scrapers.google_maps - INFO - Processing result 3/21
+2025-05-02 15:27:17,195 - scrapers.google_maps - INFO - Added lead: Little Wonders English School
+2025-05-02 15:27:17,195 - scrapers.google_maps - INFO - Processing result 4/21
+2025-05-02 15:27:17,218 - scrapers.google_maps - INFO - Skipping duplicate result: https://www.google.com/maps/place/ERA+INTERNATIONAL+SCHOOL+SILLOD/data=!4m7!3m6!1s0x3bdbd3f17718a8b3:0x2cb661bba24101b4!8m2!3d20.3113259!4d75.6544153!16s%2Fg%2F11rc0dnc9h!19sChIJs6gYd_HT2zsRtAFBorthtiw?authuser=0&hl=en&rclk=1
+2025-05-02 15:27:17,219 - scrapers.google_maps - INFO - Processing result 5/21
+2025-05-02 15:27:17,604 - scrapers.google_maps - WARNING - Skipped result 5 - no usable data found
+2025-05-02 15:27:17,605 - scrapers.google_maps - INFO - Processing result 6/21
+2025-05-02 15:27:17,889 - scrapers.google_maps - INFO - Added lead: ERA INTERNATIONAL SCHOOL SILLOD
+2025-05-02 15:27:17,889 - scrapers.google_maps - INFO - Processing result 7/21
+2025-05-02 15:27:18,970 - scrapers.google_maps - INFO - Clicked on result for detailed view
+2025-05-02 15:27:21,429 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.2 stars ((36))', 'address': '8J8V+R47, Sillod, Maharashtra 431112', 'merchant': 'https://business.google.com/create?fp=17454981227563766734&hl=en&authuser=0&gmbsrc=in-en-et-ip-z-gmb-s-z-l~mrc%7Cclaimbz%7Cu&ppsrc=GMBMI&utm_campaign=in-en-et-ip-z-gmb-s-z-l~mrc%7Cclaimbz%7Cu&utm_source=gmb_mrc81&utm_medium=et&getstarted&lis=0'}
+2025-05-02 15:27:21,430 - scrapers.google_maps - INFO - Extracted detailed lead information: {'business_name': '', 'rating': '4.2 stars ((36))', 'phone': '', 'address': '8J8V+R47, Sillod, Maharashtra 431112', 'website': '', 'notes': 'merchant: https://business.google.com/create?fp=17454981227563766734&hl=en&authuser=0&gmbsrc=in-en-et-ip-z-gmb-s-z-l~mrc%7Cclaimbz%7Cu&ppsrc=GMBMI&utm_campaign=in-en-et-ip-z-gmb-s-z-l~mrc%7Cclaimbz%7Cu&utm_source=gmb_mrc81&utm_medium=et&getstarted&lis=0'}
+2025-05-02 15:27:24,537 - scrapers.google_maps - WARNING - Timeout waiting for element: button[jsaction*="back"]
+2025-05-02 15:27:26,392 - scrapers.google_maps - INFO - Found 21 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-02 15:27:26,393 - scrapers.google_maps - INFO - Added lead: Cambridge English Scool , Sillod
+2025-05-02 15:27:26,394 - scrapers.google_maps - INFO - Processing result 8/21
+2025-05-02 15:27:26,650 - scrapers.google_maps - WARNING - Skipped result 8 - no usable data found
+2025-05-02 15:27:26,650 - scrapers.google_maps - INFO - Processing result 9/21
+2025-05-02 15:27:26,849 - scrapers.google_maps - INFO - Added lead: Cambridge English Scool , Sillod
+2025-05-02 15:27:26,850 - scrapers.google_maps - INFO - Processing result 10/21
+2025-05-02 15:27:28,506 - scrapers.google_maps - INFO - Clicked on result for detailed view
+2025-05-02 15:27:31,046 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.0 stars ((36))', 'address': '8M36+WCW, Sillod, Maharashtra 431112', 'merchant': 'https://business.google.com/create?fp=18168580290174841026&hl=en&authuser=0&gmbsrc=in-en-et-ip-z-gmb-s-z-l~mrc%7Cclaimbz%7Cu&ppsrc=GMBMI&utm_campaign=in-en-et-ip-z-gmb-s-z-l~mrc%7Cclaimbz%7Cu&utm_source=gmb_mrc81&utm_medium=et&getstarted&lis=0'}
+2025-05-02 15:27:31,054 - scrapers.google_maps - INFO - Extracted detailed lead information: {'business_name': '', 'rating': '4.0 stars ((36))', 'phone': '', 'address': '8M36+WCW, Sillod, Maharashtra 431112', 'website': '', 'notes': 'merchant: https://business.google.com/create?fp=18168580290174841026&hl=en&authuser=0&gmbsrc=in-en-et-ip-z-gmb-s-z-l~mrc%7Cclaimbz%7Cu&ppsrc=GMBMI&utm_campaign=in-en-et-ip-z-gmb-s-z-l~mrc%7Cclaimbz%7Cu&utm_source=gmb_mrc81&utm_medium=et&getstarted&lis=0'}
+2025-05-02 15:27:34,264 - scrapers.google_maps - WARNING - Timeout waiting for element: button[jsaction*="back"]
+2025-05-02 15:27:35,439 - scrapers.google_maps - INFO - Found 21 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-02 15:27:35,439 - scrapers.google_maps - INFO - Added lead: Oxford English School ,sillod
+2025-05-02 15:27:35,440 - scrapers.google_maps - INFO - Processing result 11/21
+2025-05-02 15:27:35,697 - scrapers.google_maps - WARNING - Skipped result 11 - no usable data found
+2025-05-02 15:27:35,698 - scrapers.google_maps - INFO - Processing result 12/21
+2025-05-02 15:27:35,897 - scrapers.google_maps - INFO - Added lead: Oxford English School ,sillod
+2025-05-02 15:27:35,898 - scrapers.google_maps - INFO - Processing result 13/21
+2025-05-02 15:27:37,257 - scrapers.google_maps - INFO - Clicked on result for detailed view
+2025-05-02 15:27:39,671 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '3.7 stars ((36))', 'address': '7MW4+VH2, Sillod - Bhokardan Rd, Sillod Noorani Mohalla, Sillod, Maharashtra 431112', 'phone:tel:08329504059': '083295 04059', 'merchant': 'https://business.google.com/create?fp=5902927538871833616&hl=en&authuser=0&gmbsrc=in-en-et-ip-z-gmb-s-z-l~mrc%7Cclaimbz%7Cu&ppsrc=GMBMI&utm_campaign=in-en-et-ip-z-gmb-s-z-l~mrc%7Cclaimbz%7Cu&utm_source=gmb_mrc81&utm_medium=et&getstarted&lis=0'}
+2025-05-02 15:27:39,673 - scrapers.google_maps - INFO - Extracted detailed lead information: {'business_name': '', 'rating': '3.7 stars ((36))', 'phone': '083295 04059', 'address': '7MW4+VH2, Sillod - Bhokardan Rd, Sillod Noorani Mohalla, Sillod, Maharashtra 431112', 'website': '', 'notes': 'merchant: https://business.google.com/create?fp=5902927538871833616&hl=en&authuser=0&gmbsrc=in-en-et-ip-z-gmb-s-z-l~mrc%7Cclaimbz%7Cu&ppsrc=GMBMI&utm_campaign=in-en-et-ip-z-gmb-s-z-l~mrc%7Cclaimbz%7Cu&utm_source=gmb_mrc81&utm_medium=et&getstarted&lis=0'}
+2025-05-02 15:27:42,825 - scrapers.google_maps - WARNING - Timeout waiting for element: button[jsaction*="back"]
+2025-05-02 15:27:44,578 - scrapers.google_maps - INFO - Found 21 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-02 15:27:44,580 - scrapers.google_maps - INFO - Added lead: Deccan International School
+2025-05-02 15:27:44,581 - scrapers.google_maps - INFO - Processing result 14/21
+2025-05-02 15:27:44,892 - scrapers.google_maps - WARNING - Skipped result 14 - no usable data found
+2025-05-02 15:27:44,893 - scrapers.google_maps - INFO - Processing result 15/21
+2025-05-02 15:27:45,085 - scrapers.google_maps - INFO - Added lead: Deccan International School
+2025-05-02 15:27:45,085 - scrapers.google_maps - INFO - Processing result 16/21
+2025-05-02 15:27:46,006 - scrapers.google_maps - INFO - Clicked on result for detailed view
+2025-05-02 15:27:48,455 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '3.9 stars ((36))', 'address': 'Shivaji Nagar, Sillod, Maharashtra 431112', 'oloc': '8M64+XQ Sillod, Maharashtra', 'merchant': 'https://business.google.com/create?fp=14351739255395964243&hl=en&authuser=0&gmbsrc=in-en-et-ip-z-gmb-s-z-l~mrc%7Cclaimbz%7Cu&ppsrc=GMBMI&utm_campaign=in-en-et-ip-z-gmb-s-z-l~mrc%7Cclaimbz%7Cu&utm_source=gmb_mrc81&utm_medium=et&getstarted&lis=0'}
+2025-05-02 15:27:48,456 - scrapers.google_maps - INFO - Extracted detailed lead information: {'business_name': '', 'rating': '3.9 stars ((36))', 'phone': '', 'address': 'Shivaji Nagar, Sillod, Maharashtra 431112', 'website': '', 'notes': 'oloc: 8M64+XQ Sillod, Maharashtra; merchant: https://business.google.com/create?fp=14351739255395964243&hl=en&authuser=0&gmbsrc=in-en-et-ip-z-gmb-s-z-l~mrc%7Cclaimbz%7Cu&ppsrc=GMBMI&utm_campaign=in-en-et-ip-z-gmb-s-z-l~mrc%7Cclaimbz%7Cu&utm_source=gmb_mrc81&utm_medium=et&getstarted&lis=0'}
+2025-05-02 15:27:51,567 - scrapers.google_maps - WARNING - Timeout waiting for element: button[jsaction*="back"]
+2025-05-02 15:27:52,876 - scrapers.google_maps - INFO - Found 21 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-02 15:27:52,876 - scrapers.google_maps - INFO - Added lead: Sparkle English School
+2025-05-02 15:27:52,877 - scrapers.google_maps - INFO - Processing result 17/21
+2025-05-02 15:27:53,095 - scrapers.google_maps - WARNING - Skipped result 17 - no usable data found
+2025-05-02 15:27:53,095 - scrapers.google_maps - INFO - Processing result 18/21
+2025-05-02 15:27:53,277 - scrapers.google_maps - INFO - Added lead: Sparkle English School
+2025-05-02 15:27:53,278 - scrapers.google_maps - INFO - Processing result 19/21
+2025-05-02 15:27:54,240 - scrapers.google_maps - INFO - Clicked on result for detailed view
+2025-05-02 15:27:56,593 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.4 stars ((36))', 'address': '7MX3+6CR, Jalna Rd, Sillod, Maharashtra 431112', 'merchant': 'https://business.google.com/create?fp=7638903592695824679&hl=en&authuser=0&gmbsrc=in-en-et-ip-z-gmb-s-z-l~mrc%7Cclaimbz%7Cu&ppsrc=GMBMI&utm_campaign=in-en-et-ip-z-gmb-s-z-l~mrc%7Cclaimbz%7Cu&utm_source=gmb_mrc81&utm_medium=et&getstarted&lis=0'}
+2025-05-02 15:27:56,594 - scrapers.google_maps - INFO - Extracted detailed lead information: {'business_name': '', 'rating': '4.4 stars ((36))', 'phone': '', 'address': '7MX3+6CR, Jalna Rd, Sillod, Maharashtra 431112', 'website': '', 'notes': 'merchant: https://business.google.com/create?fp=7638903592695824679&hl=en&authuser=0&gmbsrc=in-en-et-ip-z-gmb-s-z-l~mrc%7Cclaimbz%7Cu&ppsrc=GMBMI&utm_campaign=in-en-et-ip-z-gmb-s-z-l~mrc%7Cclaimbz%7Cu&utm_source=gmb_mrc81&utm_medium=et&getstarted&lis=0'}
+2025-05-02 15:27:59,735 - scrapers.google_maps - WARNING - Timeout waiting for element: button[jsaction*="back"]
+2025-05-02 15:28:01,661 - scrapers.google_maps - INFO - Found 21 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-02 15:28:01,662 - scrapers.google_maps - INFO - Added lead: National Urdu high school and jr.college sillod
+2025-05-02 15:28:01,663 - scrapers.google_maps - INFO - Processing result 20/21
+2025-05-02 15:28:01,915 - scrapers.google_maps - WARNING - Skipped result 20 - no usable data found
+2025-05-02 15:28:01,916 - scrapers.google_maps - INFO - Processing result 21/21
+2025-05-02 15:28:02,103 - scrapers.google_maps - INFO - Added lead: National Urdu high school and jr.college sillod
+2025-05-02 15:28:02,191 - scrapers.google_maps - INFO - Scrolled down results pane from 0 to 500
+2025-05-02 15:28:05,080 - scrapers.google_maps - INFO - Processing page 2/5
+2025-05-02 15:28:05,098 - scrapers.google_maps - INFO - Found 21 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-02 15:28:05,112 - scrapers.google_maps - INFO - Processing result 1/21
+2025-05-02 15:28:06,043 - scrapers.google_maps - INFO - Clicked on result for detailed view
+2025-05-02 15:28:08,635 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.0 stars ((36))', 'address': '8MC4 M2 Survey No 373. Jalgaon Road, Sillod, Maharashtra 431112', 'phone:tel:09423149766': '094231 49766', 'oloc': '8MF4+24 Sillod, Maharashtra'}
+2025-05-02 15:28:08,636 - scrapers.google_maps - INFO - Extracted detailed lead information: {'business_name': '', 'rating': '4.0 stars ((36))', 'phone': '094231 49766', 'address': '8MC4 M2 Survey No 373. Jalgaon Road, Sillod, Maharashtra 431112', 'website': '', 'notes': 'oloc: 8MF4+24 Sillod, Maharashtra'}
+2025-05-02 15:28:11,751 - scrapers.google_maps - WARNING - Timeout waiting for element: button[jsaction*="back"]
+2025-05-02 15:28:12,954 - scrapers.google_maps - INFO - Found 21 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-02 15:28:12,955 - scrapers.google_maps - INFO - Added lead: Little Wonders English School
+2025-05-02 15:28:12,956 - scrapers.google_maps - INFO - Processing result 2/21
+2025-05-02 15:28:13,208 - scrapers.google_maps - WARNING - Skipped result 2 - no usable data found
+2025-05-02 15:28:13,210 - scrapers.google_maps - INFO - Processing result 3/21
+2025-05-02 15:28:13,402 - scrapers.google_maps - INFO - Added lead: Little Wonders English School
+2025-05-02 15:28:13,402 - scrapers.google_maps - INFO - Processing result 4/21
+2025-05-02 15:28:13,427 - scrapers.google_maps - INFO - Skipping duplicate result: https://www.google.com/maps/place/ERA+INTERNATIONAL+SCHOOL+SILLOD/data=!4m7!3m6!1s0x3bdbd3f17718a8b3:0x2cb661bba24101b4!8m2!3d20.3113259!4d75.6544153!16s%2Fg%2F11rc0dnc9h!19sChIJs6gYd_HT2zsRtAFBorthtiw?authuser=0&hl=en&rclk=1
+2025-05-02 15:28:13,428 - scrapers.google_maps - INFO - Processing result 5/21
+2025-05-02 15:28:13,653 - scrapers.google_maps - WARNING - Skipped result 5 - no usable data found
+2025-05-02 15:28:13,653 - scrapers.google_maps - INFO - Found 15 leads, which meets our target of 15
+2025-05-02 15:28:13,654 - scrapers.google_maps - INFO - Found 15 leads, stopping early
+2025-05-02 15:28:16,852 - controllers.main_controller - INFO - Found 15 leads from Google Maps
+2025-05-02 15:28:17,415 - controllers.main_controller - INFO - Exported 15 leads to data/output/leads_schools_sillod_20250502_152816.csv and data/output/leads_schools_sillod_20250502_152816.xlsx
+2025-05-02 15:32:30,264 - controllers.main_controller - INFO - Starting scraping for real estate in pune
+2025-05-02 15:32:30,271 - controllers.main_controller - INFO - Starting Google Maps scraping
+2025-05-02 15:32:30,275 - utils.web - INFO - Setting up Chrome driver (headless=False)
+2025-05-02 15:32:34,164 - scrapers.google_maps - INFO - Navigating to Google Maps to search for real estate in pune
+2025-05-02 15:32:42,197 - scrapers.google_maps - INFO - Clicked search button
+2025-05-02 15:32:50,409 - scrapers.google_maps - INFO - Processing page 1/5
+2025-05-02 15:32:50,433 - scrapers.google_maps - INFO - Found 21 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-02 15:32:50,437 - scrapers.google_maps - INFO - Processing result 1/21
+2025-05-02 15:32:51,863 - scrapers.google_maps - INFO - Clicked on result for detailed view
+2025-05-02 15:32:54,829 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.2 stars ((165))', 'address': 'near YOO VILLAS, Kharadi, Pune, Maharashtra 412307', 'action:3': 'https://vtpextraordinaire.com/', 'authority': 'https://vtprealty.in/', 'phone:tel:08065206012': '080 6520 6012', 'oloc': 'GXXC+87 Pune, Maharashtra'}
+2025-05-02 15:32:54,830 - scrapers.google_maps - INFO - Extracted detailed lead information: {'business_name': '', 'rating': '4.2 stars ((165))', 'phone': '080 6520 6012', 'address': 'near YOO VILLAS, Kharadi, Pune, Maharashtra 412307', 'website': 'https://vtprealty.in/', 'notes': 'action:3: https://vtpextraordinaire.com/; oloc: GXXC+87 Pune, Maharashtra'}
+2025-05-02 15:32:57,961 - scrapers.google_maps - WARNING - Timeout waiting for element: button[jsaction*="back"]
+2025-05-02 15:32:59,949 - scrapers.google_maps - INFO - Found 21 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-02 15:32:59,952 - scrapers.google_maps - INFO - Added lead: VTP Township Pegasus Homes - Kharadi Sales Office
+2025-05-02 15:32:59,954 - scrapers.google_maps - INFO - Processing result 2/21
+2025-05-02 15:33:01,497 - scrapers.google_maps - WARNING - Skipped result 2 - no usable data found
+2025-05-02 15:33:01,498 - scrapers.google_maps - INFO - Processing result 3/21
+2025-05-02 15:33:01,862 - scrapers.google_maps - INFO - Added lead: Rohan Viti
+2025-05-02 15:33:01,862 - scrapers.google_maps - INFO - Processing result 4/21
+2025-05-02 15:33:03,569 - scrapers.google_maps - INFO - Clicked on result for detailed view
+2025-05-02 15:33:06,316 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '3.5 stars ((41))', 'address': 'Sutarwadi Baner Gaon Rd, Baner, Pune, Maharashtra 411045', 'action:3': 'skyi.com', 'authority': 'https://www.skyi.com/5-maidan-by-skyi-baner-pune/', 'oloc': 'HQ5H+MF Pune, Maharashtra'}
+2025-05-02 15:33:06,316 - scrapers.google_maps - INFO - Extracted detailed lead information: {'business_name': '', 'rating': '3.5 stars ((41))', 'phone': '', 'address': 'Sutarwadi Baner Gaon Rd, Baner, Pune, Maharashtra 411045', 'website': 'https://www.skyi.com/5-maidan-by-skyi-baner-pune/', 'notes': 'action:3: skyi.com; oloc: HQ5H+MF Pune, Maharashtra'}
+2025-05-02 15:33:09,416 - scrapers.google_maps - WARNING - Timeout waiting for element: button[jsaction*="back"]
+2025-05-02 15:33:11,390 - scrapers.google_maps - INFO - Found 21 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-02 15:33:11,392 - scrapers.google_maps - INFO - Added lead: Skyi 5 Maidan, Baner, Pune
+2025-05-02 15:33:11,394 - scrapers.google_maps - INFO - Processing result 5/21
+2025-05-02 15:33:11,680 - scrapers.google_maps - WARNING - Skipped result 5 - no usable data found
+2025-05-02 15:33:11,681 - scrapers.google_maps - INFO - Processing result 6/21
+2025-05-02 15:33:12,151 - scrapers.google_maps - INFO - Added lead: Pune Realty in Pune
+2025-05-02 15:33:12,152 - scrapers.google_maps - INFO - Processing result 7/21
+2025-05-02 15:33:13,853 - scrapers.google_maps - INFO - Clicked on result for detailed view
+2025-05-02 15:33:16,953 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.7 stars ((36))', 'address': 'F No 4, Shweta Terrace, Ravi Sharma, 40/29, Nanasaheb Bhonde Path, Pune, Maharashtra 411004', 'authority': 'https://www.rudraestate.in/', 'phone:tel:09822842933': '098228 42933', 'oloc': 'GR6M+QR Pune, Maharashtra', 'place-info-links:': 'LGBTQ+ friendly'}
+2025-05-02 15:33:16,955 - scrapers.google_maps - INFO - Extracted detailed lead information: {'business_name': '', 'rating': '4.7 stars ((36))', 'phone': '098228 42933', 'address': 'F No 4, Shweta Terrace, Ravi Sharma, 40/29, Nanasaheb Bhonde Path, Pune, Maharashtra 411004', 'website': 'https://www.rudraestate.in/', 'notes': 'oloc: GR6M+QR Pune, Maharashtra; place-info-links:: LGBTQ+ friendly'}
+2025-05-02 15:33:20,060 - scrapers.google_maps - WARNING - Timeout waiting for element: button[jsaction*="back"]
+2025-05-02 15:33:21,758 - scrapers.google_maps - INFO - Found 21 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-02 15:33:21,760 - scrapers.google_maps - INFO - Added lead: Rudra Estate. MAHA RERA REGISTERED PROPERTY CONSULTANT
+2025-05-02 15:33:21,760 - scrapers.google_maps - INFO - Processing result 8/21
+2025-05-02 15:33:22,004 - scrapers.google_maps - WARNING - Skipped result 8 - no usable data found
+2025-05-02 15:33:22,005 - scrapers.google_maps - INFO - Processing result 9/21
+2025-05-02 15:33:22,620 - scrapers.google_maps - INFO - Added lead: Pune Realty in Pune
+2025-05-02 15:33:22,620 - scrapers.google_maps - INFO - Processing result 10/21
+2025-05-02 15:33:22,676 - scrapers.google_maps - INFO - Skipping duplicate result: https://www.google.com/maps/place/Rudra+Estate.+MAHA+RERA+REGISTERED+PROPERTY+CONSULTANT/data=!4m7!3m6!1s0x3bc2bf8ebfc0571d:0x67ab92deff3f05fe!8m2!3d18.5119209!4d73.8346143!16s%2Fg%2F1tgcwhyx!19sChIJHVfAv46_wjsR_gU__96Sq2c?authuser=0&hl=en&rclk=1
+2025-05-02 15:33:22,676 - scrapers.google_maps - INFO - Processing result 11/21
+2025-05-02 15:33:22,977 - scrapers.google_maps - WARNING - Skipped result 11 - no usable data found
+2025-05-02 15:33:22,978 - scrapers.google_maps - INFO - Processing result 12/21
+2025-05-02 15:33:23,193 - scrapers.google_maps - INFO - Added lead: Rudra Estate. MAHA RERA REGISTERED PROPERTY CONSULTANT
+2025-05-02 15:33:23,194 - scrapers.google_maps - INFO - Processing result 13/21
+2025-05-02 15:33:24,386 - scrapers.google_maps - INFO - Clicked on result for detailed view
+2025-05-02 15:33:26,971 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.7 stars ((41))', 'address': 'Ekta Park, First Floor, 4, Law College Rd, above Nirmiti Showroom, near Nal Stop, Erandwane, Pune, Maharashtra 411004', 'authority': 'https://abhijitpatilpune.in/', 'phone:tel:09822148521': '098221 48521', 'oloc': 'GR5H+XW Pune, Maharashtra'}
+2025-05-02 15:33:26,973 - scrapers.google_maps - INFO - Extracted detailed lead information: {'business_name': '', 'rating': '4.7 stars ((41))', 'phone': '098221 48521', 'address': 'Ekta Park, First Floor, 4, Law College Rd, above Nirmiti Showroom, near Nal Stop, Erandwane, Pune, Maharashtra 411004', 'website': 'https://abhijitpatilpune.in/', 'notes': 'oloc: GR5H+XW Pune, Maharashtra'}
+2025-05-02 15:33:30,082 - scrapers.google_maps - WARNING - Timeout waiting for element: button[jsaction*="back"]
+2025-05-02 15:33:31,519 - scrapers.google_maps - INFO - Found 21 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-02 15:33:31,520 - scrapers.google_maps - INFO - Added lead: Authentic Properties - Commercial & Industrial Property Consultant, Pune.
+2025-05-02 15:33:31,520 - scrapers.google_maps - INFO - Processing result 14/21
+2025-05-02 15:33:31,900 - scrapers.google_maps - WARNING - Skipped result 14 - no usable data found
+2025-05-02 15:33:31,901 - scrapers.google_maps - INFO - Processing result 15/21
+2025-05-02 15:33:32,125 - scrapers.google_maps - INFO - Added lead: Authentic Properties - Commercial & Industrial Property Consultant, Pune.
+2025-05-02 15:33:32,126 - scrapers.google_maps - INFO - Processing result 16/21
+2025-05-02 15:33:33,638 - scrapers.google_maps - INFO - Clicked on result for detailed view
+2025-05-02 15:33:36,464 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.8 stars ((41))', 'address': '302, Fortune Plaza, NDA Pashan Rd, opp. Bank of Maharashtra, Sagar Co-Operative Housing Society, Bavdhan, Pune, Maharashtra 411021', 'locatedin': 'Located in: Fortune Plaza', 'action:3': 'https://wa.me/message/GRCE7DCNJJZDK1', 'authority': 'http://propertyconnectpune.com/', 'phone:tel:09822338007': '098223 38007', 'oloc': 'GQ8J+7G Pune, Maharashtra'}
+2025-05-02 15:33:36,464 - scrapers.google_maps - INFO - Extracted detailed lead information: {'business_name': '', 'rating': '4.8 stars ((41))', 'phone': '098223 38007', 'address': '302, Fortune Plaza, NDA Pashan Rd, opp. Bank of Maharashtra, Sagar Co-Operative Housing Society, Bavdhan, Pune, Maharashtra 411021', 'website': 'http://propertyconnectpune.com/', 'notes': 'locatedin: Located in: Fortune Plaza; action:3: https://wa.me/message/GRCE7DCNJJZDK1; oloc: GQ8J+7G Pune, Maharashtra'}
+2025-05-02 15:33:39,563 - scrapers.google_maps - WARNING - Timeout waiting for element: button[jsaction*="back"]
+2025-05-02 15:33:41,329 - scrapers.google_maps - INFO - Found 21 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-02 15:33:41,330 - scrapers.google_maps - INFO - Added lead: Property Connect Pune
+2025-05-02 15:33:41,331 - scrapers.google_maps - INFO - Processing result 17/21
+2025-05-02 15:33:41,897 - scrapers.google_maps - WARNING - Skipped result 17 - no usable data found
+2025-05-02 15:33:41,898 - scrapers.google_maps - INFO - Processing result 18/21
+2025-05-02 15:33:42,309 - scrapers.google_maps - INFO - Added lead: Property Connect Pune
+2025-05-02 15:33:42,314 - scrapers.google_maps - INFO - Processing result 19/21
+2025-05-02 15:33:43,557 - scrapers.google_maps - INFO - Clicked on result for detailed view
+2025-05-02 15:33:46,738 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.9 stars ((41))', 'address': 'Office no. 225, 2nd floor, Sterling Centre, MG Road, opp. Punjab National Bank, Camp, Pune, Maharashtra 411001', 'authority': 'http://www.dealwelproperty.com/', 'phone:tel:08888600050': '088886 00050', 'oloc': 'GV9H+4M Pune, Maharashtra'}
+2025-05-02 15:33:46,739 - scrapers.google_maps - INFO - Extracted detailed lead information: {'business_name': '', 'rating': '4.9 stars ((41))', 'phone': '088886 00050', 'address': 'Office no. 225, 2nd floor, Sterling Centre, MG Road, opp. Punjab National Bank, Camp, Pune, Maharashtra 411001', 'website': 'http://www.dealwelproperty.com/', 'notes': 'oloc: GV9H+4M Pune, Maharashtra'}
+2025-05-02 15:33:49,842 - scrapers.google_maps - WARNING - Timeout waiting for element: button[jsaction*="back"]
+2025-05-02 15:33:51,236 - scrapers.google_maps - INFO - Found 21 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-02 15:33:51,237 - scrapers.google_maps - INFO - Added lead: Dealwel Property I Commercial Real Estate Consultant in Pune I Commercial Properties Broker for Lease, Buy and Sale
+2025-05-02 15:33:51,237 - scrapers.google_maps - INFO - Processing result 20/21
+2025-05-02 15:33:52,195 - scrapers.google_maps - WARNING - Skipped result 20 - no usable data found
+2025-05-02 15:33:52,195 - scrapers.google_maps - INFO - Processing result 21/21
+2025-05-02 15:33:52,633 - scrapers.google_maps - INFO - Added lead: Dealwel Property I Commercial Real Estate Consultant in Pune I Commercial Properties Broker for Lease, Buy and Sale
+2025-05-02 15:33:52,735 - scrapers.google_maps - INFO - Scrolled down results pane from 0 to 500
+2025-05-02 15:33:54,814 - scrapers.google_maps - INFO - Processing page 2/5
+2025-05-02 15:33:54,831 - scrapers.google_maps - INFO - Found 21 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-02 15:33:54,835 - scrapers.google_maps - INFO - Processing result 1/21
+2025-05-02 15:33:56,318 - scrapers.google_maps - INFO - Clicked on result for detailed view
+2025-05-02 15:33:59,216 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '3.6 stars ((41))', 'address': 'Survey No.1(P), Hissa No. 3/3, Wakad, Pune, Maharashtra 411057', 'action:3': 'https://www.rohanbuilders.com/contactus.html', 'authority': 'https://rohanbuilders.com/pune-homes/viti/', 'phone:tel:02066669999': '020 6666 9999', 'oloc': 'HQR6+GQ Pune, Maharashtra'}
+2025-05-02 15:33:59,217 - scrapers.google_maps - INFO - Extracted detailed lead information: {'business_name': '', 'rating': '3.6 stars ((41))', 'phone': '020 6666 9999', 'address': 'Survey No.1(P), Hissa No. 3/3, Wakad, Pune, Maharashtra 411057', 'website': 'https://rohanbuilders.com/pune-homes/viti/', 'notes': 'action:3: https://www.rohanbuilders.com/contactus.html; oloc: HQR6+GQ Pune, Maharashtra'}
+2025-05-02 15:34:02,316 - scrapers.google_maps - WARNING - Timeout waiting for element: button[jsaction*="back"]
+2025-05-02 15:34:04,235 - scrapers.google_maps - INFO - Found 21 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-02 15:34:04,237 - scrapers.google_maps - INFO - Added lead: Rohan Viti
+2025-05-02 15:34:04,239 - scrapers.google_maps - INFO - Processing result 2/21
+2025-05-02 15:34:04,960 - scrapers.google_maps - WARNING - Skipped result 2 - no usable data found
+2025-05-02 15:34:04,961 - scrapers.google_maps - INFO - Processing result 3/21
+2025-05-02 15:34:05,348 - scrapers.google_maps - INFO - Added lead: Rohan Viti
+2025-05-02 15:34:05,349 - scrapers.google_maps - INFO - Processing result 4/21
+2025-05-02 15:34:05,376 - scrapers.google_maps - INFO - Skipping duplicate result: https://www.google.com/maps/place/Skyi+5+Maidan,+Baner,+Pune/data=!4m7!3m6!1s0x3bc2becf3f51eab1:0xa094f23ecb63960e!8m2!3d18.559136!4d73.778717!16s%2Fg%2F11y1f8nn2_!19sChIJsepRP8--wjsRDpZjyz7ylKA?authuser=0&hl=en&rclk=1
+2025-05-02 15:34:05,377 - scrapers.google_maps - INFO - Processing result 5/21
+2025-05-02 15:34:05,758 - scrapers.google_maps - WARNING - Skipped result 5 - no usable data found
+2025-05-02 15:34:05,759 - scrapers.google_maps - INFO - Found 15 leads, which meets our target of 15
+2025-05-02 15:34:05,760 - scrapers.google_maps - INFO - Found 15 leads, stopping early
+2025-05-02 15:34:09,148 - controllers.main_controller - INFO - Found 15 leads from Google Maps
+2025-05-02 15:34:09,209 - controllers.main_controller - INFO - Exported 15 leads to data/output/leads_real estate_pune_20250502_153409.csv and data/output/leads_real estate_pune_20250502_153409.xlsx

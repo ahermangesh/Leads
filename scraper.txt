@@ -1,0 +1,441 @@
+﻿Lead Scraper Project Documentation
+This file contains two separate documents:
+________________
+
+
+Document 1: Comprehensive Project Specification
+1. Purpose & Goals
+1. Purpose: Design and build a robust, modular Multi-Platform Lead Scraper with a simple graphical user interface, empowering non-technical users to generate high-quality sales leads by automating data extraction.
+
+2. Primary Goals:
+
+   * Contact Extraction: Programmatically collect phone numbers and email addresses for each business lead.
+
+   * Contextual Data: Gather business name, website URL, full address, customer ratings, and primary social media profiles.
+
+   * Usability: Offer a minimal learning curve UI that guides users through filter selection and scraping execution.
+
+      3. Secondary Goals:
+
+         * Cost Efficiency: Avoid paid API quotas by leveraging browser automation (Selenium) and open-source tools.
+
+         * Modularity & Extensibility: Architect code so new scrapers (e.g., LinkedIn, Reddit) can be added without refactoring core logic.
+
+         * Reporting & Logging: Provide real-time progress feedback, detailed logs, and exportable CSV/XLSX reports with timestamped filenames.
+
+2. Detailed Feature Breakdown
+Component
+	Specification
+	UI (Streamlit)
+	- Inputs:
+	
+
+	- keyword text input field (e.g., "Cafe").
+	
+
+	- location text input field (e.g., "New York, NY").
+	
+
+	- platforms multi-select checkboxes (Google Maps, Website Scraper).
+	
+
+	- mode radio buttons: Contacts Only vs Full Data.
+	
+
+	- Controls & Feedback:
+	
+
+	- Start Scraping button to initiate process.
+	
+
+	- Clear Results button resets UI state.
+	
+
+	- Progress bar showing percent completion of each module.
+	
+
+	- Log window area streaming status messages and errors.
+	
+
+	- Output:
+	
+
+	- Download link for CSV/XLSX visible upon completion.
+	Controller Layer
+	- Input Validation:
+	
+
+	- Ensure keyword and location are not empty.
+	
+
+	- Validate mode selection.
+	
+
+	- Module Orchestration:
+	
+
+	- Map selected platforms to module functions.
+	
+
+	- Manage execution order: Google Maps → Website Scraper.
+	
+
+	- Error Handling & Retries:
+	
+
+	- Wrap calls in retry decorator with exponential backoff (max 3 retries).
+	
+
+	- Capture exceptions, log stack traces, continue on non-fatal errors.
+	Google Maps Scraper
+	- Tech Stack: Python, Selenium WebDriver, webdriver-manager.
+	
+
+	- Detailed Steps:
+	
+
+	1. Launch headless Chrome with randomly selected user-agent.
+	
+
+	2. Navigate to https://www.google.com/maps.
+	
+
+	3. Locate search box via CSS selector input#searchboxinput.
+	
+
+	4. Type "{keyword} in {location}", press Enter.
+	
+
+	5. Wait for results container div.section-result to appear.
+	
+
+	6. Loop: Scroll results pane to bottom, wait 2s, break after N pages.
+	
+
+	7. For each div.section-result:
+	
+
+	- Extract name from h3.section-result-title.
+	
+
+	- Click listing to open details panel.
+	
+
+	- Extract phone from button[data-tooltip="Copy phone number"].
+	
+
+	- Extract website URL from anchor with aria-label="Open website".
+	
+
+	- Extract address, rating, and hours.
+	
+
+	- Extract profile link (place URL).
+	
+
+	8. Append each record as partial Lead dict.
+	Website Scraper
+	- Tech Stack: requests, BeautifulSoup4, regex, urllib.
+	
+
+	- Detailed Steps:
+	
+
+	1. For each website_url in Google Maps results, send GET with 5s timeout.
+	
+
+	2. If status code != 200, retry up to 2 times.
+	
+
+	3. Parse HTML with BeautifulSoup.
+	
+
+	4. Email Extraction: regex pattern \b[\w\.-]+@[\w\.-]+\.\w{2,4}\b applied to page text and mailto: links.
+	
+
+	5. Social Links: find all <a> tags where href contains instagram.com, facebook.com, or linkedin.com.
+	
+
+	6. Tech Tags: detect substrings in HTML (wp-content, Shopify, Magento).
+	
+
+	7. Pixel Detection: search <script> tags text for gtag(, fbq(, or pixelId.
+	
+
+	8. Return lists: emails[], social_links{} mapped by platform.
+	Data Export
+	- Tech Stack: pandas.
+	
+
+	- Detailed Steps:
+	
+
+	1. Convert list of Lead dicts to pandas.DataFrame.
+	
+
+	2. Ensure columns: business_name, phone, email, website, address, instagram, facebook, linkedin, rating, notes.
+	
+
+	3. Generate filename leads_{keyword}_{location}_{YYYYMMDD_HHMMSS}.csv.
+	
+
+	4. Save CSV and XLSX to data/output/.
+	
+
+	5. Return file paths to UI for download link.
+	3. Technical Architecture Diagram
+  
+
+
+
+4. Data Model (Schema)
+  
+
+
+
+5. Directory & Files
+lead_scraper/
+├── app.py                   # Streamlit UI application
+├── controllers/
+│   └── main_controller.py   # Coordinates UI and scrapers
+├── scrapers/
+│   ├── google_maps.py       # Selenium scraper for Google Maps
+│   └── website.py           # Requests/BS4 scraper for websites
+├── utils/
+│   └── helpers.py           # Logging, retry decorator, regex functions
+├── tests/
+│   ├── test_helpers.py      # Unit tests for helper functions
+│   └── test_scrapers.py     # Integration tests for scraper modules
+├── data/
+│   └── output/              # Directory for exported CSV/XLSX files
+└── requirements.txt         # List of dependencies and versions
+
+
+
+
+6. Non-Functional Requirements
+            * Performance: achieve ~50 businesses scraped per minute with headless mode and batching.
+
+            * Reliability: automatic retry logic (3 attempts) and exception logging without halting the pipeline.
+
+            * Maintainability: modular design, PEP8 compliance, comprehensive docstrings, unit tests coverage ≥80%.
+
+            * Security: sanitize all user inputs before use in URLs; no storage of sensitive credentials in code; HTTPS-only requests.
+
+            * Extensibility: clearly defined interfaces for adding new scraper modules and enrichment services.
+
+7. Risks & Mitigations
+Risk
+	Mitigation Strategy
+	Google Maps dynamic selectors change
+	Abstract selectors into config; write selector tests; update on failure.
+	CAPTCHA / Bot detection
+	Introduce randomized delays (1–3s), rotate user-agents, optional proxy support.
+	Missing or malformed emails
+	Use multiple regex patterns; fallback to Hunter.io free tier for critical leads.
+	________________
+
+
+Document 2: Detailed Task Sequence (Step-by-Step Plan)
+Phase 1: Setup & Infrastructure
+               1. Project Initialization
+
+                  * Actions:
+
+                     * Create new Git repository (git init lead_scraper).
+
+                     * Create and activate Python 3.9+ virtual environment (python -m venv venv).
+
+                     * Add .gitignore for venv, __pycache__, and data/output/.
+
+                     * Create requirements.txt with initial entries: streamlit, selenium, beautifulsoup4, pandas, requests, webdriver-manager.
+
+                        * Deliverables: Initialized repo with proper structure and dependency placeholder.
+
+                           2. Streamlit UI Skeleton
+
+                              * Actions:
+
+                                 * In app.py, import streamlit as st and define function main().
+
+                                 * Add st.title("Lead Scraper Dashboard").
+
+                                 * Add input widgets: st.text_input, st.multiselect, st.radio, st.button.
+
+                                 * Stub out callbacks for Start Scraping and results area.
+
+                                 * Run streamlit run app.py to verify UI loads without errors.
+
+                                    * Deliverables: Basic interactive page with filters and buttons.
+
+Phase 2: Controller & Helpers
+                                       3. Helpers Module (utils/helpers.py)
+
+                                          * Actions:
+
+                                             * Implement def retry(max_retries=3, delay=1): decorator with exponential backoff.
+
+                                             * Implement def extract_emails(text: str) -> List[str]: using regex patterns.
+
+                                             * Implement def setup_logger(name: str) -> logging.Logger: with console handler.
+
+                                                * Deliverables: Reusable helper functions with unit tests verifying retry and email extraction.
+
+                                                   4. Main Controller (controllers/main_controller.py)
+
+                                                      * Actions:
+
+                                                         * Create class LeadController: with method run(keyword, location, mode).
+
+                                                         * Validate inputs: raise ValueError if empty.
+
+                                                         * Based on mode, call google_maps_scraper.scrape(keyword, location) then optionally website_scraper.enrich(leads).
+
+                                                         * Collect and merge data into Python list of Lead dicts.
+
+                                                            * Deliverables: Controller orchestrating module calls, returning aggregated leads.
+
+Phase 3: Scraper Modules
+                                                               5. Google Maps Scraper (scrapers/google_maps.py)
+
+                                                                  * Actions:
+
+                                                                     * Initialize Selenium WebDriver with headless Chrome and webdriver-manager.
+
+                                                                     * Implement def scrape(keyword, location, max_pages=5) -> List[dict]: per Detailed Steps above.
+
+                                                                     * Use helpers.setup_logger to log page number and listings processed.
+
+                                                                     * Handle StaleElementReferenceException by retrying find and scroll methods.
+
+                                                                        * Deliverables: Function returning partial leads; local test script showing output of 10 listings.
+
+                                                                           6. Integration Test for Google Maps
+
+                                                                              * Actions:
+
+                                                                                 * Write test_google_maps_scraper() in tests/test_scrapers.py that mocks a simple Chrome session or uses a stub page.
+
+                                                                                 * Verify returned dict keys and sample values.
+
+                                                                                    * Deliverables: Passing integration test for Maps module.
+
+                                                                                       7. Website Scraper (scrapers/website.py)
+
+                                                                                          * Actions:
+
+                                                                                             * Implement def enrich(leads: List[dict]) -> List[dict]: that loops over each lead, fetches website, and adds emails, social_links.
+
+                                                                                             * Rate limit requests to 1 req/sec to avoid overloading servers.
+
+                                                                                             * Use helpers.retry decorator on GET requests.
+
+                                                                                                * Deliverables: Enriched lead dicts with email and social link fields populated.
+
+                                                                                                   8. Integration Test for Website Scraper
+
+                                                                                                      * Actions:
+
+                                                                                                         * In tests/test_scrapers.py, provide sample HTML file fixtures with known emails and social links.
+
+                                                                                                         * Assert enrich() correctly extracts expected outputs.
+
+                                                                                                            * Deliverables: Passing integration tests with fixture data.
+
+Phase 4: Data Export & UI Integration
+                                                                                                               9. Data Export
+
+                                                                                                                  * Actions:
+
+                                                                                                                     * In controllers/main_controller.py, implement def export_to_csv(leads, filepath).
+
+                                                                                                                     * Use pd.DataFrame.from_records() to convert leads list.
+
+                                                                                                                     * Save DataFrame via df.to_csv() and df.to_excel().
+
+                                                                                                                        * Deliverables: CSV and XLSX files in data/output/ with correct headers.
+
+                                                                                                                           10. UI Hook-Up
+
+                                                                                                                              * Actions:
+
+                                                                                                                                 * In app.py, import LeadController.
+
+                                                                                                                                 * On Start Scraping click, call controller.run(...).
+
+                                                                                                                                 * Stream logs to UI via st.empty() containers.
+
+                                                                                                                                 * Display download links using st.download_button() with file paths.
+
+                                                                                                                                    * Deliverables: End-to-end UI-driven scraping and file download.
+
+                                                                                                                                       11. Full End-to-End Test
+
+                                                                                                                                          * Actions:
+
+                                                                                                                                             * Execute streamlit run app.py, input Cafe, Delhi, run full flow.
+
+                                                                                                                                             * Inspect downloaded CSV for completeness (phone & email fields).
+
+                                                                                                                                                * Deliverables: Verified lead file meeting primary goal.
+
+Phase 5: Testing & Documentation
+                                                                                                                                                   12. Unit Tests
+
+                                                                                                                                                      * Actions:
+
+                                                                                                                                                         * Write pytest tests for helpers.extract_emails(), helpers.retry(), and small UI input validation.
+
+                                                                                                                                                            * Deliverables: 80%+ coverage, tests passing locally and via CI.
+
+                                                                                                                                                               13. Integration Tests
+
+                                                                                                                                                                  * Actions:
+
+                                                                                                                                                                     * Configure GitHub Actions or similar to run tests on push.
+
+                                                                                                                                                                     * Use mock servers or fixture HTML to simulate scraping without hitting live sites.
+
+                                                                                                                                                                        * Deliverables: Automated pipeline ensuring code integrity.
+
+                                                                                                                                                                           14. Documentation
+
+                                                                                                                                                                              * Actions:
+
+                                                                                                                                                                                 * Update README.md with installation steps, usage examples, troubleshooting tips.
+
+                                                                                                                                                                                 * Embed code snippets showing sample UI invocation.
+
+                                                                                                                                                                                 * Document environment variables (if any) for proxies.
+
+                                                                                                                                                                                    * Deliverables: Comprehensive README and inline docstrings.
+
+Phase 6: Future & Deployment Prep
+                                                                                                                                                                                       15. Optional Enhancements
+
+                                                                                                                                                                                          * Actions:
+
+                                                                                                                                                                                             * Integrate proxy pool support and CAPTCHA-solving services.
+
+                                                                                                                                                                                             * Add enrichment via free-tier APIs (Hunter.io, Clearbit).
+
+                                                                                                                                                                                             * Implement additional scrapers (LinkedIn, Reddit) following existing module pattern.
+
+                                                                                                                                                                                                * Deliverables: New modules and config flags for enrichment.
+
+                                                                                                                                                                                                   16. Packaging & Deployment
+
+                                                                                                                                                                                                      * Actions:
+
+                                                                                                                                                                                                         * Write Dockerfile installing Python deps, copying app, exposing Streamlit port.
+
+                                                                                                                                                                                                         * Create docker-compose.yml if needed.
+
+                                                                                                                                                                                                         * Prepare deployment docs for Heroku/AWS/GCP.
+
+                                                                                                                                                                                                            * Deliverables: Containerized application ready for cloud deployment.
+
+________________
+
+
+End of both documents.
