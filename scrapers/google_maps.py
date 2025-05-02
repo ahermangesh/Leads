@@ -520,6 +520,43 @@ def extract_data_from_side_panel(driver) -> Dict:
     logger.info(f"Extracted detailed lead information: {lead}")
     return lead
 
+def is_duplicate_lead(leads, new_lead):
+    """
+    Check if a lead is a duplicate of an existing lead based on business name and address.
+    
+    Args:
+        leads: List of existing leads
+        new_lead: New lead to check
+    
+    Returns:
+        True if the lead is a duplicate, False otherwise
+    """
+    # If we don't have enough info to compare, treat as not duplicate
+    if not new_lead.get('business_name') and not new_lead.get('address'):
+        return False
+    
+    for lead in leads:
+        # If both business names exist and match
+        if (new_lead.get('business_name') and lead.get('business_name') and 
+            new_lead['business_name'].lower() == lead['business_name'].lower()):
+            return True
+        
+        # If both addresses exist and match substantially (allow for minor differences)
+        if (new_lead.get('address') and lead.get('address') and
+            # Check if at least 70% of the words match between addresses
+            len(set(new_lead['address'].lower().split()) & 
+                set(lead['address'].lower().split())) / 
+            max(len(new_lead['address'].split()), len(lead['address'].split())) > 0.7):
+            return True
+            
+        # If phone numbers match
+        if (new_lead.get('phone') and lead.get('phone') and
+            ''.join(filter(str.isdigit, new_lead['phone'])) == 
+            ''.join(filter(str.isdigit, lead['phone']))):
+            return True
+    
+    return False
+
 @retry_with_backoff
 def scrape(
     keyword: str, 
@@ -596,17 +633,16 @@ def scrape(
         
         # Process each page
         processed_urls = set()
-        min_leads_to_collect = min(max_results, 15)  # Target minimum number of leads to collect
-        max_results_to_process = max_results  # Maximum number of results to process in total
-        results_processed = 0
+        processed_count = 0  # Track total number of results processed
+        target_count = max_results  # Target number of unique leads to collect
         backoff_time = 1  # Initial backoff time for scrolling
         
         for page in range(max_pages):
             logger.info(f"Processing page {page + 1}/{max_pages}")
             
             # Check if we've reached the maximum number of leads
-            if len(leads) >= max_results:
-                logger.info(f"Reached maximum number of leads ({max_results})")
+            if len(leads) >= target_count:
+                logger.info(f"Reached maximum number of leads ({target_count})")
                 break
             
             # Get results with retries
@@ -628,7 +664,7 @@ def scrape(
             start_idx = 0
             batch_size = 5
             
-            while start_idx < len(results) and results_processed < max_results_to_process:
+            while start_idx < len(results) and processed_count < max_results * 2:  # Process up to 2x max_results to account for duplicates
                 end_idx = min(start_idx + batch_size, len(results))
                 batch = results[start_idx:end_idx]
                 
@@ -636,8 +672,8 @@ def scrape(
                     overall_idx = start_idx + idx
                     
                     # Check if we've reached the maximum number of leads
-                    if len(leads) >= max_results:
-                        logger.info(f"Reached maximum number of leads ({max_results})")
+                    if len(leads) >= target_count:
+                        logger.info(f"Reached target of {target_count} unique leads")
                         break
                     
                     try:
@@ -658,9 +694,9 @@ def scrape(
                         except Exception as e:
                             logger.debug(f"Error getting place URL: {str(e)}")
                         
-                        # Skip if we've seen this place before
+                        # Skip if we've seen this URL before
                         if place_url and place_url in processed_urls:
-                            logger.info(f"Skipping duplicate result: {place_url}")
+                            logger.info(f"Skipping duplicate result by URL: {place_url}")
                             continue
                         
                         if place_url:
@@ -716,14 +752,18 @@ def scrape(
                                 except Exception as e:
                                     logger.error(f"Error getting details: {str(e)}")
                         
-                        # If we have meaningful data, add the lead
+                        # If we have meaningful data, check if it's a duplicate before adding
                         if lead.get("business_name") or lead.get("phone") or lead.get("website") or lead.get("address"):
-                            leads.append(lead)
-                            logger.info(f"Added lead: {lead.get('business_name') or lead.get('address') or 'Unnamed business'}")
-                            
-                            # Call the callback if provided
-                            if on_lead_callback:
-                                on_lead_callback(lead)
+                            # Check if this lead is a duplicate of one we've already found
+                            if not is_duplicate_lead(leads, lead):
+                                leads.append(lead)
+                                logger.info(f"Added lead: {lead.get('business_name') or lead.get('address') or 'Unnamed business'}")
+                                
+                                # Call the callback if provided
+                                if on_lead_callback:
+                                    on_lead_callback(lead)
+                            else:
+                                logger.info(f"Skipping duplicate lead: {lead.get('business_name') or lead.get('address') or 'Unnamed business'}")
                         else:
                             logger.warning(f"Skipped result {overall_idx + 1} - no usable data found")
                         
@@ -735,19 +775,19 @@ def scrape(
                         logger.error(f"Error processing result {overall_idx + 1}: {str(e)}")
                         continue
                     
-                    results_processed += 1
+                    processed_count += 1
                 
                 # Move to the next batch
                 start_idx = end_idx
                 
                 # Break if we have enough leads
-                if len(leads) >= min_leads_to_collect:
-                    logger.info(f"Found {len(leads)} leads, which meets our target of {min_leads_to_collect}")
+                if len(leads) >= target_count:
+                    logger.info(f"Found {len(leads)} leads, which meets our target of {target_count}")
                     break
             
             # Break out of page loop if we've collected enough leads
-            if len(leads) >= min_leads_to_collect or results_processed >= max_results_to_process:
-                logger.info(f"Found {len(leads)} leads, stopping early")
+            if len(leads) >= target_count:
+                logger.info(f"Found {len(leads)} unique leads, stopping early")
                 break
                 
             # Scroll to load more results with exponential backoff to avoid rate limiting

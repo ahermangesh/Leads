@@ -1,47 +1,51 @@
-"""Logger utility for the lead scraper project."""
-import logging
+"""Logging utilities for the Lead Scraper project."""
 import os
-from typing import Optional
-import yaml
+import logging
+from datetime import datetime
+from pathlib import Path
 
-def setup_logger(name: str = "lead_scraper") -> logging.Logger:
+def setup_logger(name, level=logging.INFO):
     """
-    Set up a logger with configured settings from config.yaml.
+    Set up a logger with file and console handlers.
     
     Args:
-        name: The name of the logger instance
-        
+        name: Logger name (typically __name__)
+        level: Logging level
+    
     Returns:
-        A configured logger instance
+        Configured logger instance
     """
-    # Load config
-    with open("config.yaml", "r") as f:
-        config = yaml.safe_load(f)
-    
-    logger = logging.getLogger(name)
-    logger.setLevel(config["logging"]["level"])
-
     # Create logs directory if it doesn't exist
-    log_file = config["logging"]["file"]
-    os.makedirs(os.path.dirname(log_file), exist_ok=True)
+    log_dir = Path("data")
+    log_dir.mkdir(exist_ok=True)
     
-    # File handler
-    fh = logging.FileHandler(log_file)
-    fh.setLevel(logging.DEBUG)
+    # Create a logger
+    logger = logging.getLogger(name)
+    logger.setLevel(level)
     
-    # Console handler
-    ch = logging.StreamHandler()
-    ch.setLevel(logging.INFO)
+    # Return existing logger if handlers are already set up
+    if logger.handlers:
+        return logger
     
-    # Formatter
-    formatter = logging.Formatter(
-        '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
-    )
-    fh.setFormatter(formatter)
-    ch.setFormatter(formatter)
+    # Log file path with timestamp
+    log_file = log_dir / "scraper.log"
+
+    # Create formatter
+    formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
     
-    # Add handlers
-    logger.addHandler(fh)
-    logger.addHandler(ch)
+    # File handler with UTF-8 encoding to handle special characters
+    file_handler = logging.FileHandler(log_file, encoding='utf-8')
+    file_handler.setFormatter(formatter)
+    logger.addHandler(file_handler)
+    
+    # Console handler with utf-8 encoding if possible
+    try:
+        # Check if console supports UTF-8
+        console_handler = logging.StreamHandler()
+        console_handler.setFormatter(formatter)
+        console_handler.setLevel(level)
+        logger.addHandler(console_handler)
+    except Exception:
+        pass  # Silently skip console handler if it fails
     
     return logger

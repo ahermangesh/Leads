@@ -131,10 +131,9 @@ def display_results(results):
         for i, lead in enumerate(leads):
             # Create a unique key for each expander based on position and business name
             expander_label = f"{i+1}. {lead.get('business_name', 'Unnamed business')}"
-            expander_key = f"exp_{i}_{unique_id}"
             
-            # Use the key parameter with the expander to prevent duplicate key errors
-            with st.expander(expander_label, key=expander_key):
+            # Remove the key parameter which isn't supported in Streamlit 1.22.0
+            with st.expander(expander_label):
                 cols = st.columns(2)
                 with cols[0]:
                     st.markdown(f"**Business Name:** {lead.get('business_name', 'N/A')}")
@@ -155,8 +154,13 @@ def display_results(results):
                     st.markdown(f"**Notes:** {lead.get('notes', '')}")
     
     with tab3:
-        # Download buttons
+        # Download buttons - fix the duplicate ID issue by ensuring each button has a unique key
         col1, col2, col3 = st.columns(3)
+        
+        # Generate truly unique IDs for each button based on the timestamp, random number and button type
+        csv_key = f"csv_{unique_id}"
+        excel_key = f"excel_{unique_id}"
+        json_key = f"json_{unique_id}"
         
         with col1:
             if export_paths.get('csv'):
@@ -166,7 +170,7 @@ def display_results(results):
                         data=f,
                         file_name=os.path.basename(export_paths['csv']),
                         mime="text/csv",
-                        key=f"download_csv_{unique_id}"
+                        key=csv_key
                     )
         
         with col2:
@@ -177,19 +181,30 @@ def display_results(results):
                         data=f,
                         file_name=os.path.basename(export_paths['xlsx']),
                         mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-                        key=f"download_excel_{unique_id}"
+                        key=excel_key
                     )
         
         with col3:
             # Add JSON export option
-            json_data = json.dumps(leads, indent=2, default=str)
-            st.download_button(
-                label="Download JSON",
-                data=json_data,
-                file_name=f"leads_{results.get('keyword', 'data')}_{results.get('location', 'export')}_{time.strftime('%Y%m%d_%H%M%S')}.json",
-                mime="application/json",
-                key=f"download_json_{unique_id}"
-            )
+            if export_paths.get('json'):
+                with open(export_paths['json'], 'rb') as f:
+                    st.download_button(
+                        label="Download JSON",
+                        data=f,
+                        file_name=os.path.basename(export_paths['json']),
+                        mime="application/json",
+                        key=json_key
+                    )
+            # Fallback if json path doesn't exist but we have leads
+            elif leads:
+                json_data = json.dumps(leads, indent=2, default=str)
+                st.download_button(
+                    label="Download JSON",
+                    data=json_data,
+                    file_name=f"leads_{results.get('keyword', 'data')}_{results.get('location', 'export')}_{time.strftime('%Y%m%d_%H%M%S')}.json",
+                    mime="application/json",
+                    key=json_key
+                )
 
 def main():
     """Main application entry point."""
