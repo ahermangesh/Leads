@@ -384,7 +384,7 @@ def scroll_results_pane(driver, wait_time=3):
                 time.sleep(wait_time)
                 return True
             except Exception as body_e:
-                logger.debug(f"Body scroll fallback failed: {str(body_e)}")
+                logger.debug(f"Body scroll fallback failed: {body_e}")
                 
         except StaleElementReferenceException:
             if attempt < 2:
@@ -393,7 +393,7 @@ def scroll_results_pane(driver, wait_time=3):
             else:
                 logger.warning("Scroll pane went stale after multiple attempts")
         except Exception as e:
-            logger.error(f"Failed to scroll results pane: {str(e)}")
+            logger.error(f"Failed to scroll results pane: {e}")
             if attempt < 2:
                 time.sleep(1)
             
@@ -559,250 +559,197 @@ def is_duplicate_lead(leads, new_lead):
 
 @retry_with_backoff
 def scrape(
-    keyword: str, 
-    location: str, 
-    max_results: int = 15, 
-    max_pages: int = 5,
+    keyword: str,
+    location: str,
+    max_results: int = 15,
     on_lead_callback = None
 ) -> List[Dict[str, str]]:
-    """
-    Scrape Google Maps for business leads based on keyword and location.
-    
-    Args:
-        keyword: Type of business to search for (e.g., "Cafe")
-        location: Location to search in (e.g., "New York, NY")
-        max_results: Maximum number of results to return
-        max_pages: Maximum number of result pages to scrape
-        on_lead_callback: Optional callback function to call for each lead found
-        
-    Returns:
-        List of dictionaries containing business information
-    """
     leads: List[Dict[str, str]] = []
     driver = None
-    
+    processed_urls = set()
+    backoff_time = 1
+    consecutive_scroll_failures = 0
+    max_scroll_failures = 3
+
     try:
         # Initialize Chrome with a visible window for better interaction
         driver = setup_chrome_driver(headless=False)
         driver.set_window_size(1920, 1080)
         
-        # Set a random user agent
-        user_agent = random.choice(USER_AGENTS)
-        driver.execute_cdp_cmd('Network.setUserAgentOverride', {"userAgent": user_agent})
-        
-        # Navigate to Google Maps
+        # Navigate to Google Maps and wait for it to load
         logger.info(f"Navigating to Google Maps to search for {keyword} in {location}")
         driver.get("https://www.google.com/maps")
+        random_sleep(3, 5)  # Increased initial wait time
         
-        # Accept cookies if prompt appears
+        # Handle cookie consent if present
         try:
             cookie_buttons = driver.find_elements(By.CSS_SELECTOR, 'button')
             for button in cookie_buttons:
-                if any(text in button.text.lower() for text in ['accept', 'agree', 'consent']):
-                    button.click()
-                    random_sleep(1, 2)
-                    break
+                button_text = button.text.lower()
+                if any(text in button_text for text in ['accept', 'agree', 'consent']):
+                    try:
+                        button.click()
+                        random_sleep(1, 2)
+                        break
+                    except Exception as click_err:
+                        logger.debug(f"Could not click consent button: {click_err}")
         except Exception as e:
-            logger.debug(f"Cookie handling: {str(e)}")
-        
-        # Find and fill search box
-        search_box = wait_and_find_element(driver, SEARCH_BOX)
+            logger.debug(f"Cookie handling error: {str(e)}")
+
+        # Wait for and find search box with retry
+        search_box = None
+        for attempt in range(3):
+            try:
+                search_box = WebDriverWait(driver, 10).until(
+                    EC.element_to_be_clickable((By.CSS_SELECTOR, SEARCH_BOX))
+                )
+                break
+            except Exception as e:
+                logger.warning(f"Search box not found on attempt {attempt + 1}: {str(e)}")
+                if attempt < 2:
+                    random_sleep(2, 3)
+                    driver.refresh()
+
         if not search_box:
-            raise Exception("Could not find search box")
-        
+            raise Exception("Could not find search box after multiple attempts")
+
+        # Clear and fill search box
         search_box.clear()
+        random_sleep(0.5, 1)
         search_box.send_keys(f"{keyword} in {location}")
         random_sleep(1, 2)
-        
-        # Try clicking search button first, fall back to Enter key
-        search_button = wait_and_find_element(driver, SEARCH_BUTTON)
-        if search_button and safe_click(driver, search_button):
-            logger.info("Clicked search button")
-        else:
+
+        # Try clicking search button first
+        search_clicked = False
+        try:
+            search_button = WebDriverWait(driver, 5).until(
+                EC.element_to_be_clickable((By.CSS_SELECTOR, SEARCH_BUTTON))
+            )
+            if search_button:
+                search_button.click()
+                search_clicked = True
+                logger.info("Clicked search button")
+        except Exception as e:
+            logger.debug(f"Could not click search button: {str(e)}")
+
+        # If button click failed, use Enter key
+        if not search_clicked:
             search_box.send_keys(Keys.RETURN)
             logger.info("Used Enter key for search")
-        
-        # Wait for results with longer timeout
+
+        # Wait longer for initial results with multiple checks
         random_sleep(3, 5)
-        if not wait_for_results(driver, timeout=30):
-            logger.warning("No results found or results took too long to load")
+        results_found = False
+        for attempt in range(3):
+            if wait_for_results(driver, timeout=10):
+                results_found = True
+                break
+            else:
+                logger.warning(f"Results not found on attempt {attempt + 1}, retrying...")
+                random_sleep(2, 3)
+                # Try refreshing if results don't load
+                if attempt < 2:
+                    driver.refresh()
+                    random_sleep(2, 3)
+
+        if not results_found:
+            logger.warning("No results found after multiple attempts")
             return leads
-        
-        # Initial wait for results to stabilize
-        random_sleep(3, 5)
-        
-        # Process each page
-        processed_urls = set()
-        processed_count = 0  # Track total number of results processed
-        target_count = max_results  # Target number of unique leads to collect
-        backoff_time = 1  # Initial backoff time for scrolling
-        
-        for page in range(max_pages):
-            logger.info(f"Processing page {page + 1}/{max_pages}")
+
+        # Main scraping loop - continue until we have enough leads or can't find more
+        while len(leads) < max_results and consecutive_scroll_failures < max_scroll_failures:
+            logger.info(f"Current leads: {len(leads)}/{max_results}")
             
-            # Check if we've reached the maximum number of leads
-            if len(leads) >= target_count:
-                logger.info(f"Reached maximum number of leads ({target_count})")
-                break
-            
-            # Get results with retries
-            retry_count = 0
-            results = []
-            while retry_count < 3 and not results:
-                results = get_results(driver)
-                if results:
-                    break
-                random_sleep(1 + retry_count, 2 + retry_count)
-                retry_count += 1
-            
+            # Get current results
+            results = get_results(driver)
             if not results:
-                logger.warning("No results found on page")
-                break
-            
-            # Process results in batches to avoid processing too many at once
-            # which could lead to more stale element issues
-            start_idx = 0
-            batch_size = 5
-            
-            while start_idx < len(results) and processed_count < max_results * 2:  # Process up to 2x max_results to account for duplicates
-                end_idx = min(start_idx + batch_size, len(results))
-                batch = results[start_idx:end_idx]
-                
-                for idx, result in enumerate(batch):
-                    overall_idx = start_idx + idx
-                    
-                    # Check if we've reached the maximum number of leads
-                    if len(leads) >= target_count:
-                        logger.info(f"Reached target of {target_count} unique leads")
-                        break
-                    
+                consecutive_scroll_failures += 1
+                logger.warning(f"No results found. Failures: {consecutive_scroll_failures}/{max_scroll_failures}")
+                continue
+
+            # Process each result in the current view
+            for idx, result in enumerate(results):
+                try:
+                    # Check for duplicate URLs
+                    place_url = None
                     try:
-                        logger.info(f"Processing result {overall_idx + 1}/{len(results)}")
-                        
-                        # Try to get place URL to check if we've processed this result already
-                        place_url = ""
-                        try:
-                            for url_selector in ['a', 'a[href*="maps/place"]', 'div[jsaction*="placeCard"] a']:
-                                try:
-                                    anchor_elem = result.find_element(By.CSS_SELECTOR, url_selector)
-                                    temp_url = anchor_elem.get_attribute('href')
-                                    if temp_url and 'maps/place' in temp_url:
-                                        place_url = temp_url
-                                        break
-                                except (NoSuchElementException, StaleElementReferenceException):
-                                    continue
-                        except Exception as e:
-                            logger.debug(f"Error getting place URL: {str(e)}")
-                        
-                        # Skip if we've seen this URL before
-                        if place_url and place_url in processed_urls:
-                            logger.info(f"Skipping duplicate result by URL: {place_url}")
-                            continue
-                        
-                        if place_url:
-                            processed_urls.add(place_url)
-                        
-                        # Extract what we can from the result listing
-                        lead = extract_info_from_result(result, driver)
-                        
-                        # Only try to get detailed info if we need it and didn't get enough from list view
-                        missing_key_info = not lead.get("business_name") or not lead.get("address")
-                        click_for_details = (missing_key_info or not lead.get("phone") or not lead.get("website"))
-                        
-                        # If we got some basic info and need more details, consider clicking for more
-                        if (lead.get("business_name") or lead.get("address")) and click_for_details:
-                            # Apply a rate limit to how many results we click - only click every few results
-                            # to avoid excessive clicking which may trigger anti-scraping measures
-                            if overall_idx % 3 == 0:  # Only click on every 3rd result
-                                try:
-                                    if safe_click(driver, result):
-                                        logger.info("Clicked on result for detailed view")
-                                        random_sleep(2, 3)
-                                        
-                                        # Extract data from the opened side panel
-                                        detailed_lead = extract_data_from_side_panel(driver)
-                                        
-                                        # Merge the data, preferring detailed side panel data
-                                        for key, value in detailed_lead.items():
-                                            if value:  # Only overwrite if we got a value
-                                                lead[key] = value
-                                        
-                                        # Try to go back to results
-                                        try:
-                                            back_button = wait_and_find_element(driver, 'button[jsaction*="back"]', timeout=3)
-                                            if back_button:
-                                                safe_click(driver, back_button)
-                                                random_sleep(1, 2)
-                                            else:
-                                                # Use browser back as fallback
-                                                driver.execute_script("window.history.go(-1)")
-                                                random_sleep(1, 2)
-                                        except Exception as e:
-                                            logger.debug(f"Back button error: {str(e)}")
-                                            driver.execute_script("window.history.go(-1)")
-                                            random_sleep(1, 2)
-                                            
-                                        # Re-get the results and update the batch after navigation
-                                        # since elements may have gone stale
-                                        results = get_results(driver)
-                                        if results and overall_idx < len(results):
-                                            batch = results[start_idx:end_idx]
-                                    else:
-                                        logger.warning(f"Could not click result {overall_idx + 1}")
-                                except Exception as e:
-                                    logger.error(f"Error getting details: {str(e)}")
-                        
-                        # If we have meaningful data, check if it's a duplicate before adding
-                        if lead.get("business_name") or lead.get("phone") or lead.get("website") or lead.get("address"):
-                            # Check if this lead is a duplicate of one we've already found
-                            if not is_duplicate_lead(leads, lead):
-                                leads.append(lead)
-                                logger.info(f"Added lead: {lead.get('business_name') or lead.get('address') or 'Unnamed business'}")
-                                
-                                # Call the callback if provided
-                                if on_lead_callback:
-                                    on_lead_callback(lead)
-                            else:
-                                logger.info(f"Skipping duplicate lead: {lead.get('business_name') or lead.get('address') or 'Unnamed business'}")
-                        else:
-                            logger.warning(f"Skipped result {overall_idx + 1} - no usable data found")
-                        
-                    except StaleElementReferenceException:
-                        logger.warning(f"Stale element for result {overall_idx + 1}")
-                        continue
-                    
+                        anchor_elems = result.find_elements(By.CSS_SELECTOR, 'a[href*="maps/place"]')
+                        if anchor_elems:
+                            place_url = anchor_elems[0].get_attribute('href')
                     except Exception as e:
-                        logger.error(f"Error processing result {overall_idx + 1}: {str(e)}")
+                        logger.debug(f"Error getting URL: {str(e)}")
+
+                    if place_url and place_url in processed_urls:
                         continue
+                    if place_url:
+                        processed_urls.add(place_url)
+
+                    # Extract initial data from listing
+                    lead = extract_info_from_result(result, driver)
                     
-                    processed_count += 1
-                
-                # Move to the next batch
-                start_idx = end_idx
-                
-                # Break if we have enough leads
-                if len(leads) >= target_count:
-                    logger.info(f"Found {len(leads)} leads, which meets our target of {target_count}")
-                    break
-            
-            # Break out of page loop if we've collected enough leads
-            if len(leads) >= target_count:
-                logger.info(f"Found {len(leads)} unique leads, stopping early")
-                break
-                
-            # Scroll to load more results with exponential backoff to avoid rate limiting
-            scroll_results_pane(driver, wait_time=backoff_time)
-            random_sleep(backoff_time, backoff_time + 1)
-            backoff_time = min(backoff_time * 1.5, 5)  # Increase backoff time, but cap at 5 seconds
-    
+                    # Get detailed info by clicking if this is every 3rd result
+                    if idx % 3 == 0:
+                        if safe_click(driver, result):
+                            random_sleep(2, 3)
+                            detailed_lead = extract_data_from_side_panel(driver)
+                            
+                            # Merge data, preferring detailed info
+                            for key, value in detailed_lead.items():
+                                if value:
+                                    lead[key] = value
+                            
+                            # Return to results list
+                            try:
+                                back_button = wait_and_find_element(driver, 'button[jsaction*="back"]')
+                                if back_button and safe_click(driver, back_button):
+                                    random_sleep(1, 2)
+                                else:
+                                    driver.execute_script("window.history.go(-1)")
+                                    random_sleep(2, 3)
+                            except Exception:
+                                driver.execute_script("window.history.go(-1)")
+                                random_sleep(2, 3)
+
+                    # Only add lead if it has useful information and isn't a duplicate
+                    if (lead.get("business_name") or lead.get("phone") or 
+                        lead.get("website") or lead.get("address")):
+                        if not is_duplicate_lead(leads, lead):
+                            leads.append(lead)
+                            logger.info(f"Added lead #{len(leads)}: {lead.get('business_name') or 'Unnamed business'}")
+                            
+                            # Call callback if provided
+                            if on_lead_callback:
+                                try:
+                                    on_lead_callback(lead)
+                                except Exception as cb_err:
+                                    logger.error(f"Callback error: {cb_err}")
+                            
+                            # Only check max_results after successfully adding a lead
+                            if len(leads) >= max_results:
+                                logger.info(f"Reached target of {max_results} leads")
+                                return leads[:max_results]
+
+                except Exception as result_err:
+                    logger.error(f"Error processing result: {result_err}")
+                    continue
+
+            # Scroll for more results if we haven't reached our target
+            if len(leads) < max_results:
+                if scroll_results_pane(driver, wait_time=backoff_time):
+                    consecutive_scroll_failures = 0
+                    random_sleep(backoff_time, backoff_time + 1)
+                    backoff_time = min(backoff_time * 1.5, 5)
+                else:
+                    consecutive_scroll_failures += 1
+                    logger.warning(f"Scroll failed. Failures: {consecutive_scroll_failures}/{max_scroll_failures}")
+
     except Exception as e:
-        logger.error(f"Fatal error during scraping: {str(e)}")
-    
+        logger.error(f"Fatal error during scraping: {str(e)}", exc_info=True)
     finally:
         if driver:
             driver.quit()
-    
-    # Ensure we don't return more leads than requested
+
+    # Return exactly max_results leads if we have them
     return leads[:max_results]
 
 if __name__ == "__main__":
