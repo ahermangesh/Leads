@@ -4,6 +4,7 @@ import argparse
 import time
 import random
 import re
+from concurrent.futures import ProcessPoolExecutor, as_completed
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
@@ -474,38 +475,89 @@ def normalize_lead_data(lead: Dict) -> Dict:
         Normalized lead dictionary with standard keys
     """
     normalized = {
-        'business_name': lead.get('business_name', ''),
-        'rating': lead.get('rating', '')
+        'business_name': '',
+        'phone': '',
+        'website': '',
+        'address': '',
+        'rating': '',
+        'notes': ''
     }
     
-    # Extract phone
-    phone_keys = [k for k in lead if k.startswith('phone:tel')]
-    if phone_keys:
-        normalized['phone'] = lead.get(phone_keys[0], '')
+    # Extract business name - try multiple approaches
+    if lead.get('business_name'):
+        normalized['business_name'] = lead['business_name']
     else:
-        normalized['phone'] = ''
+        # Try to find business name in other fields
+        name_indicators = ['name:', 'place_name:', 'title:', 'heading:']
+        for key in lead:
+            if any(indicator in key.lower() for indicator in name_indicators):
+                if lead[key]:
+                    normalized['business_name'] = lead[key]
+                    break
         
-    # Extract address
-    normalized['address'] = lead.get('address', '')
+        # If still no name, try to extract from URL or menu link
+        if not normalized['business_name']:
+            for key in ['menu', 'authority']:
+                if key in lead and lead[key]:
+                    url = lead[key]
+                    # Extract from domain name
+                    domain = url.split('//')[-1].split('/')[0]
+                    if 'www.' in domain:
+                        domain = domain.split('www.')[1]
+                    if '.com' in domain:
+                        domain = domain.split('.com')[0]
+                    if domain and not any(x in domain.lower() for x in ['google', 'maps']):
+                        normalized['business_name'] = domain.replace('-', ' ').replace('.', ' ').title()
+                        break
+    
+    # Extract phone (look for phone:tel: prefix)
+    phone_keys = [k for k in lead if k.startswith('phone:tel:')]
+    if phone_keys:
+        # Get the number from the value if present, otherwise from the key
+        phone = lead[phone_keys[0]] if lead[phone_keys[0]] else phone_keys[0].replace('phone:tel:', '')
+        normalized['phone'] = f"+91 {phone}"
     
     # Extract website
-    normalized['website'] = lead.get('authority', '')
+    if 'authority' in lead:
+        normalized['website'] = lead['authority']
+    elif 'website' in lead:
+        normalized['website'] = lead['website']
     
-    # Add any additional information as notes
-    other_info = []
-    for k, v in lead.items():
-        if k not in ['business_name', 'rating', 'address'] and not k.startswith('phone:tel') and k != 'authority':
-            if v:  # Only include non-empty values
-                other_info.append(f"{k}: {v}")
+    # Extract address
+    if 'address' in lead and lead['address']:
+        normalized['address'] = lead['address']
+    elif 'oloc' in lead and lead['oloc']:
+        normalized['address'] = lead['oloc']
     
-    notes = "; ".join(other_info)
-    if 'notes' in lead and lead['notes']:
-        if notes:
-            notes = f"{lead['notes']}; {notes}"
-        else:
-            notes = lead['notes']
-            
-    normalized['notes'] = notes
+    # Extract rating
+    if 'rating' in lead:
+        normalized['rating'] = lead['rating']
+    
+    # Build notes with additional information
+    notes = []
+    
+    # Add menu link if available
+    if 'menu' in lead and lead['menu']:
+        notes.append(f"Menu: {lead['menu']}")
+    
+    # Add order links
+    for key in lead:
+        if key.startswith('action:4') and lead[key]:
+            notes.append(f"Order: {lead[key]}")
+    
+    # Add business hours if available
+    if 'oh' in lead and lead['oh']:
+        notes.append(f"Hours: {lead['oh']}")
+    
+    # Add any place info links
+    if 'place-info-links:' in lead and lead['place-info-links:']:
+        notes.append(f"Additional Info: {lead['place-info-links:']}")
+    
+    # Combine all notes
+    if notes:
+        normalized['notes'] = ' | '.join(notes)
+    elif 'notes' in lead and lead['notes']:
+        normalized['notes'] = lead['notes']
     
     return normalized
 
@@ -557,20 +609,315 @@ def is_duplicate_lead(leads, new_lead):
     
     return False
 
+def extract_listing_urls(driver, limit: int) -> List[str]:
+    """
+    Extract Google Maps listing URLs from loaded results.
+    
+    Args:
+        driver: Selenium WebDriver instance
+        limit: Maximum number of URLs to extract
+        
+    Returns:
+        List of Google Maps listing URLs
+    """
+    listing_urls = []
+    try:
+        # Try multiple selectors for result containers
+        selectors = [
+            '[role="article"]',  # New layout
+            'div.Nv2PK',        # Alternative layout
+            'a[href*="/place/"]',  # Direct place links
+            'div.bfdHYd'        # Older layout
+        ]
+        
+        results = []
+        for selector in selectors:
+            try:
+                elements = driver.find_elements(By.CSS_SELECTOR, selector)
+                if elements:
+                    logger.info(f"Found {len(elements)} elements with selector: {selector}")
+                    results = elements
+                    break
+            except Exception as e:
+                logger.debug(f"Selector {selector} failed: {str(e)}")
+        
+        if not results:
+            logger.error("No results found with any selector")
+            return []
+            
+        # Extract URLs from results
+        for result in results[:limit]:
+            try:
+                # Try different methods to get the URL
+                url = None
+                
+                # Method 1: Direct href if the element is an anchor
+                if result.tag_name == 'a':
+                    url = result.get_attribute('href')
+                    logger.debug(f"Method 1 - Direct href: {url}")
+                
+                # Method 2: Find anchor within the element
+                if not url:
+                    anchors = result.find_elements(By.CSS_SELECTOR, 'a[href*="/place/"]')
+                    if anchors:
+                        url = anchors[0].get_attribute('href')
+                        logger.debug(f"Method 2 - Inner anchor: {url}")
+                
+                # Method 3: Find any anchor and check href
+                if not url:
+                    all_anchors = result.find_elements(By.TAG_NAME, 'a')
+                    for anchor in all_anchors:
+                        href = anchor.get_attribute('href')
+                        if href and '/place/' in href:
+                            url = href
+                            logger.debug(f"Method 3 - Any anchor with place: {url}")
+                            break
+                
+                # Method 4: Try to get data attribute if available
+                if not url:
+                    place_id = result.get_attribute('data-place-id')
+                    if place_id:
+                        url = f"https://www.google.com/maps/place/?q=place_id:{place_id}"
+                        logger.debug(f"Method 4 - Place ID: {url}")
+                
+                # Validate and add URL
+                if url and '/place/' in url:
+                    listing_urls.append(url)
+                    logger.debug(f"Added URL: {url}")
+                else:
+                    logger.debug(f"Invalid or missing URL for result {len(listing_urls) + 1}")
+                
+            except Exception as e:
+                logger.warning(f"Failed to extract URL from result: {str(e)}")
+                continue
+        
+        # Log summary
+        logger.info(f"Successfully extracted {len(listing_urls)} URLs from {len(results)} results")
+        
+        # If we found no URLs but had results, dump HTML for debugging
+        if not listing_urls and results:
+            logger.debug("No URLs extracted. First result HTML:")
+            logger.debug(results[0].get_attribute('outerHTML'))
+        
+        return listing_urls
+        
+    except Exception as e:
+        logger.error(f"Error extracting listing URLs: {str(e)}")
+        return []
+
+def scrape_single_listing(url: str) -> Dict:
+    """
+    Scrape a single Google Maps listing using its URL.
+    
+    Args:
+        url: Google Maps listing URL
+        
+    Returns:
+        Dictionary containing extracted business information
+    """
+    driver = None
+    data = {
+        'url': url,
+        'business_name': '',
+        'phone': '',
+        'website': '',
+        'address': '',
+        'rating': '',
+        'review_count': ''
+    }
+    
+    try:
+        # Initialize Chrome with visible window
+        options = webdriver.ChromeOptions()
+        # Removed headless mode to make browser visible
+        options.add_argument('--no-sandbox')
+        options.add_argument('--disable-gpu')
+        options.add_argument(f'user-agent={random.choice(USER_AGENTS)}')
+        
+        # Create WebDriver with service
+        service = webdriver.ChromeService(ChromeDriverManager().install())
+        driver = webdriver.Chrome(service=service, options=options)
+        
+        driver.set_page_load_timeout(20)
+        
+        # Load the listing URL
+        driver.get(url)
+        time.sleep(random.uniform(1, 2))  # Random delay
+        
+        # Wait for main content to load and try multiple selectors for business name
+        try:
+            WebDriverWait(driver, 10).until(
+                EC.presence_of_element_located((By.CSS_SELECTOR, 'h1 span, div.fontHeadlineLarge'))
+            )
+            
+            # Enhanced business name extraction with multiple selectors
+            name_selectors = [
+                'h1.DUwDvf span',
+                'h1.DUwDvf.lfPIob span', 
+                'h1.fontHeadlineLarge',
+                'h1 span',
+                'div.fontHeadlineLarge'
+            ]
+            
+            for selector in name_selectors:
+                try:
+                    name_elem = driver.find_element(By.CSS_SELECTOR, selector)
+                    if name_elem and name_elem.text.strip():
+                        data['business_name'] = name_elem.text.strip()
+                        logger.info(f"Found business name: {data['business_name']}")
+                        break
+                except NoSuchElementException:
+                    continue
+                    
+        except TimeoutException:
+            logger.warning(f"Timeout waiting for content to load for {url}")
+        
+        # Use our comprehensive generic parser
+        raw_data = generic_parse_details(driver)
+        
+        # If business name wasn't found earlier, try to get it from raw_data
+        if not data['business_name'] and raw_data.get('business_name'):
+            data['business_name'] = raw_data['business_name']
+        
+        # Normalize the data using our existing function
+        normalized_data = normalize_lead_data(raw_data)
+        
+        # Update our data dictionary with normalized values, preserving business name if we found it
+        business_name = data['business_name']  # Save the business name we found
+        data.update(normalized_data)
+        if business_name:  # Restore our business name if we found it earlier
+            data['business_name'] = business_name
+        
+        # Additional extraction for review count if not captured
+        if not data.get('review_count'):
+            try:
+                reviews_text = driver.find_element(
+                    By.CSS_SELECTOR, 
+                    'span.UY7F9, button.fontTitleSmall span'
+                ).text
+                if reviews_text:
+                    review_match = re.search(r'(\d+)', reviews_text)
+                    if review_match:
+                        data['review_count'] = review_match.group(1)
+            except: pass
+        
+        # Additional social links extraction
+        social_links = []
+        try:
+            links = driver.find_elements(By.CSS_SELECTOR, 'a[data-item-id*="social"]')
+            for link in links:
+                href = link.get_attribute('href')
+                if href:
+                    social_links.append(href)
+        except: pass
+        
+        if social_links:
+            if data['notes']:
+                data['notes'] += f"; Social links: {', '.join(social_links)}"
+            else:
+                data['notes'] = f"Social links: {', '.join(social_links)}"
+        
+        # Extract business hours if available
+        try:
+            hours_button = driver.find_element(By.CSS_SELECTOR, 'button[data-item-id*="oh"]')
+            hours_text = hours_button.text
+            if hours_text and 'hours' in hours_text.lower():
+                if data['notes']:
+                    data['notes'] += f"; Hours: {hours_text}"
+                else:
+                    data['notes'] = f"Hours: {hours_text}"
+        except: pass
+        
+        logger.info(f"Successfully extracted data for {data.get('business_name', 'unknown business')}")
+        
+    except Exception as e:
+        logger.error(f"Error scraping listing {url}: {str(e)}")
+        data['error'] = str(e)
+    
+    finally:
+        if driver:
+            driver.quit()
+    
+    return data
+
+def scrape_listings_parallel(urls: List[str], max_workers: int = 8) -> List[Dict]:
+    """
+    Scrape multiple listings in parallel using ProcessPoolExecutor.
+    
+    Args:
+        urls: List of Google Maps listing URLs
+        max_workers: Maximum number of parallel processes
+        
+    Returns:
+        List of dictionaries containing business information
+    """
+    results = []
+    total_urls = len(urls)
+    processed = 0
+    
+    logger.info(f"Starting parallel processing of {total_urls} URLs with {max_workers} workers")
+    
+    # Split URLs into smaller batches to avoid overwhelming the system
+    batch_size = min(5, total_urls)
+    url_batches = [urls[i:i + batch_size] for i in range(0, len(urls), batch_size)]
+    
+    for batch in url_batches:
+        with ProcessPoolExecutor(max_workers=min(max_workers, len(batch))) as executor:
+            # Submit batch of URLs to the process pool
+            future_to_url = {executor.submit(scrape_single_listing, url): url for url in batch}
+            
+            # Collect results as they complete
+            for future in as_completed(future_to_url):
+                url = future_to_url[future]
+                try:
+                    result = future.result()
+                    if result:
+                        results.append(result)
+                        processed += 1
+                        logger.info(f"Processed {processed}/{total_urls}: {result.get('business_name', 'Unknown')}")
+                except Exception as e:
+                    logger.error(f"Error processing {url}: {str(e)}")
+                    # Add empty result with error note
+                    results.append({
+                        'business_name': '',
+                        'phone': '',
+                        'website': '',
+                        'address': '',
+                        'rating': '',
+                        'review_count': '',
+                        'notes': f"Error processing: {str(e)}; URL: {url}"
+                    })
+                    processed += 1
+        
+        # Small delay between batches
+        if len(url_batches) > 1:
+            time.sleep(2)
+    
+    logger.info(f"Parallel processing complete. Processed {len(results)}/{total_urls} listings")
+    return results
+
 @retry_with_backoff
 def scrape(
     keyword: str,
     location: str,
     max_results: int = 15,
-    on_lead_callback = None
+    on_lead_callback = None,
+    filters: Optional[Dict] = None
 ) -> List[Dict[str, str]]:
-    leads: List[Dict[str, str]] = []
+    """
+    Main scraping function that coordinates the process.
+    
+    Args:
+        keyword: Business type to search for
+        location: Location to search in
+        max_results: Maximum number of results to return
+        on_lead_callback: Optional callback for progress updates
+        filters: Optional dictionary of filters to apply
+        
+    Returns:
+        List of dictionaries containing business information
+    """
     driver = None
-    processed_urls = set()
-    backoff_time = 1
-    consecutive_scroll_failures = 0
-    max_scroll_failures = 3
-
     try:
         # Initialize Chrome with a visible window for better interaction
         driver = setup_chrome_driver(headless=False)
@@ -654,103 +1001,54 @@ def scrape(
 
         if not results_found:
             logger.warning("No results found after multiple attempts")
-            return leads
+            return []
 
-        # Main scraping loop - continue until we have enough leads or can't find more
-        while len(leads) < max_results and consecutive_scroll_failures < max_scroll_failures:
-            logger.info(f"Current leads: {len(leads)}/{max_results}")
-            
-            # Get current results
-            results = get_results(driver)
-            if not results:
+        # Scroll until we have enough results visible
+        consecutive_scroll_failures = 0
+        max_scroll_failures = 3
+        while consecutive_scroll_failures < max_scroll_failures:
+            if scroll_results_pane(driver):
+                consecutive_scroll_failures = 0
+                random_sleep(2, 3)
+            else:
                 consecutive_scroll_failures += 1
-                logger.warning(f"No results found. Failures: {consecutive_scroll_failures}/{max_scroll_failures}")
-                continue
-
-            # Process each result in the current view
-            for idx, result in enumerate(results):
-                try:
-                    # Check for duplicate URLs
-                    place_url = None
-                    try:
-                        anchor_elems = result.find_elements(By.CSS_SELECTOR, 'a[href*="maps/place"]')
-                        if anchor_elems:
-                            place_url = anchor_elems[0].get_attribute('href')
-                    except Exception as e:
-                        logger.debug(f"Error getting URL: {str(e)}")
-
-                    if place_url and place_url in processed_urls:
-                        continue
-                    if place_url:
-                        processed_urls.add(place_url)
-
-                    # Extract initial data from listing
-                    lead = extract_info_from_result(result, driver)
-                    
-                    # Get detailed info by clicking if this is every 3rd result
-                    if idx % 3 == 0:
-                        if safe_click(driver, result):
-                            random_sleep(2, 3)
-                            detailed_lead = extract_data_from_side_panel(driver)
-                            
-                            # Merge data, preferring detailed info
-                            for key, value in detailed_lead.items():
-                                if value:
-                                    lead[key] = value
-                            
-                            # Return to results list
-                            try:
-                                back_button = wait_and_find_element(driver, 'button[jsaction*="back"]')
-                                if back_button and safe_click(driver, back_button):
-                                    random_sleep(1, 2)
-                                else:
-                                    driver.execute_script("window.history.go(-1)")
-                                    random_sleep(2, 3)
-                            except Exception:
-                                driver.execute_script("window.history.go(-1)")
-                                random_sleep(2, 3)
-
-                    # Only add lead if it has useful information and isn't a duplicate
-                    if (lead.get("business_name") or lead.get("phone") or 
-                        lead.get("website") or lead.get("address")):
-                        if not is_duplicate_lead(leads, lead):
-                            leads.append(lead)
-                            logger.info(f"Added lead #{len(leads)}: {lead.get('business_name') or 'Unnamed business'}")
-                            
-                            # Call callback if provided
-                            if on_lead_callback:
-                                try:
-                                    on_lead_callback(lead)
-                                except Exception as cb_err:
-                                    logger.error(f"Callback error: {cb_err}")
-                            
-                            # Only check max_results after successfully adding a lead
-                            if len(leads) >= max_results:
-                                logger.info(f"Reached target of {max_results} leads")
-                                return leads[:max_results]
-
-                except Exception as result_err:
-                    logger.error(f"Error processing result: {result_err}")
-                    continue
-
-            # Scroll for more results if we haven't reached our target
-            if len(leads) < max_results:
-                if scroll_results_pane(driver, wait_time=backoff_time):
-                    consecutive_scroll_failures = 0
-                    random_sleep(backoff_time, backoff_time + 1)
-                    backoff_time = min(backoff_time * 1.5, 5)
-                else:
-                    consecutive_scroll_failures += 1
-                    logger.warning(f"Scroll failed. Failures: {consecutive_scroll_failures}/{max_scroll_failures}")
-
+                logger.warning(f"Scroll failed. Failures: {consecutive_scroll_failures}/{max_scroll_failures}")
+            
+            # Check if we have enough results
+            results = get_results(driver)
+            if len(results) >= max_results:
+                break
+        
+        # Extract listing URLs
+        listing_urls = extract_listing_urls(driver, max_results)
+        if not listing_urls:
+            logger.error("No listing URLs extracted")
+            return []
+            
+        # Close the main driver before parallel processing
+        driver.quit()
+        driver = None
+        
+        # Process listings in parallel
+        leads = scrape_listings_parallel(
+            listing_urls[:max_results],
+            max_workers=min(8, len(listing_urls))
+        )
+        
+        # Report progress through callback
+        if on_lead_callback:
+            for lead in leads:
+                on_lead_callback(lead)
+        
+        return leads
+        
     except Exception as e:
-        logger.error(f"Fatal error during scraping: {str(e)}", exc_info=True)
+        logger.error(f"Error in main scrape function: {str(e)}")
+        return []
+        
     finally:
         if driver:
             driver.quit()
-
-    # Return exactly max_results leads if we have them
-    return leads[:max_results]
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Scrape Google Maps for business leads")

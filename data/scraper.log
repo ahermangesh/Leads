@@ -4901,3 +4901,988 @@ TypeError: scrape() got an unexpected keyword argument 'max_results'
 2025-05-03 15:59:55,595 - scrapers.google_maps - WARNING - No results found. Failures: 3/3
 2025-05-03 15:59:58,004 - controllers.main_controller - INFO - Found 0 leads from Google Maps
 2025-05-03 15:59:58,451 - controllers.main_controller - INFO - Exported 0 leads to data/output/leads_physiotherapy clinics _nagpur_20250503_155958.csv, data/output/leads_physiotherapy clinics _nagpur_20250503_155958.xlsx, and data/output/leads_physiotherapy clinics _nagpur_20250503_155958.json
+2025-05-07 20:35:06,208 - controllers.main_controller - INFO - Starting scraping for clubs  in bhuvneshwar,odisha (Max leads: 30)
+2025-05-07 20:35:06,223 - controllers.main_controller - INFO - Starting parallel Google Maps scraping
+2025-05-07 20:35:06,223 - scrapers.parallel_maps - INFO - Starting parallel scrape for 30 leads using 8 workers
+2025-05-07 20:35:07,856 - __main__ - ERROR - Scraping failed: WebDriver.__init__() got multiple values for argument 'options'
+Traceback (most recent call last):
+  File "C:\Users\KIIT0001\cursor projects\Leads\app.py", line 277, in main
+    results = controller.run(keyword, location, platforms, mode)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\KIIT0001\cursor projects\Leads\controllers\main_controller.py", line 175, in run
+    leads = scrape_parallel(
+            ^^^^^^^^^^^^^^^^
+  File "C:\Users\KIIT0001\cursor projects\Leads\scrapers\parallel_maps.py", line 198, in scrape_parallel
+    urls = collect_listing_urls(keyword, location, limit)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\KIIT0001\cursor projects\Leads\scrapers\parallel_maps.py", line 43, in collect_listing_urls
+    driver = setup_driver(headless=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\KIIT0001\cursor projects\Leads\scrapers\parallel_maps.py", line 27, in setup_driver
+    driver = webdriver.Chrome(ChromeDriverManager().install(), options=options)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: WebDriver.__init__() got multiple values for argument 'options'
+2025-05-07 20:36:19,259 - controllers.main_controller - INFO - Starting scraping for clubs in bhuvneshwar,odisha (Max leads: 15)
+2025-05-07 20:36:19,272 - controllers.main_controller - INFO - Starting parallel Google Maps scraping
+2025-05-07 20:36:19,274 - scrapers.parallel_maps - INFO - Starting parallel scrape for 15 leads using 8 workers
+2025-05-07 20:36:38,475 - scrapers.parallel_maps - ERROR - Error collecting listing URLs: Message: 
+Stacktrace:
+	GetHandleVerifier [0x0112D363+60275]
+	GetHandleVerifier [0x0112D3A4+60340]
+	(No symbol) [0x00F606F3]
+	(No symbol) [0x00FA8690]
+	(No symbol) [0x00FA8A2B]
+	(No symbol) [0x00FF0EE2]
+	(No symbol) [0x00FCD0D4]
+	(No symbol) [0x00FEE6EB]
+	(No symbol) [0x00FCCE86]
+	(No symbol) [0x00F9C623]
+	(No symbol) [0x00F9D474]
+	GetHandleVerifier [0x01378FE3+2467827]
+	GetHandleVerifier [0x013745E6+2448886]
+	GetHandleVerifier [0x0138F80C+2560028]
+	GetHandleVerifier [0x01143DF5+153093]
+	GetHandleVerifier [0x0114A3BD+179149]
+	GetHandleVerifier [0x01134BB8+91080]
+	GetHandleVerifier [0x01134D60+91504]
+	GetHandleVerifier [0x0111FA10+4640]
+	BaseThreadInitThunk [0x75407BA9+25]
+	RtlInitializeExceptionChain [0x7774C2EB+107]
+	RtlClearBits [0x7774C26F+191]
+
+2025-05-07 20:36:40,702 - scrapers.parallel_maps - INFO - Collected 0 listing URLs
+2025-05-07 20:36:40,703 - scrapers.parallel_maps - WARNING - No listing URLs found
+2025-05-07 20:36:40,704 - controllers.main_controller - INFO - Found 0 leads from Google Maps
+2025-05-07 20:36:41,028 - controllers.main_controller - INFO - Exported 0 leads to data/output/leads_clubs_bhuvneshwar,odisha_20250507_203640.csv, data/output/leads_clubs_bhuvneshwar,odisha_20250507_203640.xlsx, and data/output/leads_clubs_bhuvneshwar,odisha_20250507_203640.json
+2025-05-07 20:38:13,741 - controllers.main_controller - INFO - Starting scraping for clubs in bhuvneshwar,odisha (Max leads: 15)
+2025-05-07 20:38:13,742 - controllers.main_controller - INFO - Starting parallel Google Maps scraping
+2025-05-07 20:38:13,742 - scrapers.parallel_maps - INFO - Starting parallel scrape for 15 leads using 8 workers
+2025-05-07 20:38:16,419 - scrapers.parallel_maps - INFO - Chrome driver initialized successfully
+2025-05-07 20:38:22,520 - scrapers.parallel_maps - INFO - Navigated to Google Maps
+2025-05-07 20:38:25,577 - scrapers.parallel_maps - INFO - Searching for: clubs in bhuvneshwar,odisha
+2025-05-07 20:38:30,346 - scrapers.parallel_maps - INFO - Waiting for results to load...
+2025-05-07 20:38:45,691 - scrapers.parallel_maps - ERROR - Error collecting listing URLs: Message: 
+Stacktrace:
+	GetHandleVerifier [0x0112D363+60275]
+	GetHandleVerifier [0x0112D3A4+60340]
+	(No symbol) [0x00F606F3]
+	(No symbol) [0x00FA8690]
+	(No symbol) [0x00FA8A2B]
+	(No symbol) [0x00FF0EE2]
+	(No symbol) [0x00FCD0D4]
+	(No symbol) [0x00FEE6EB]
+	(No symbol) [0x00FCCE86]
+	(No symbol) [0x00F9C623]
+	(No symbol) [0x00F9D474]
+	GetHandleVerifier [0x01378FE3+2467827]
+	GetHandleVerifier [0x013745E6+2448886]
+	GetHandleVerifier [0x0138F80C+2560028]
+	GetHandleVerifier [0x01143DF5+153093]
+	GetHandleVerifier [0x0114A3BD+179149]
+	GetHandleVerifier [0x01134BB8+91080]
+	GetHandleVerifier [0x01134D60+91504]
+	GetHandleVerifier [0x0111FA10+4640]
+	BaseThreadInitThunk [0x75407BA9+25]
+	RtlInitializeExceptionChain [0x7774C2EB+107]
+	RtlClearBits [0x7774C26F+191]
+
+2025-05-07 20:38:47,937 - scrapers.parallel_maps - INFO - Collected 0 listing URLs
+2025-05-07 20:38:47,937 - scrapers.parallel_maps - WARNING - No listing URLs found
+2025-05-07 20:38:47,938 - controllers.main_controller - INFO - Found 0 leads from Google Maps
+2025-05-07 20:38:47,941 - controllers.main_controller - INFO - Exported 0 leads to data/output/leads_clubs_bhuvneshwar,odisha_20250507_203847.csv, data/output/leads_clubs_bhuvneshwar,odisha_20250507_203847.xlsx, and data/output/leads_clubs_bhuvneshwar,odisha_20250507_203847.json
+2025-05-07 20:40:54,979 - controllers.main_controller - INFO - Starting scraping for clubs in bhuvneshwar,odisha (Max leads: 15)
+2025-05-07 20:40:54,980 - controllers.main_controller - INFO - Starting parallel Google Maps scraping
+2025-05-07 20:40:54,980 - scrapers.parallel_maps - INFO - Starting parallel scrape for 15 leads using 8 workers
+2025-05-07 20:40:57,533 - scrapers.parallel_maps - INFO - Chrome driver initialized successfully
+2025-05-07 20:40:57,546 - scrapers.parallel_maps - INFO - Attempt 1: Navigating to Google Maps
+2025-05-07 20:41:06,484 - scrapers.parallel_maps - INFO - Searching for: clubs in bhuvneshwar,odisha
+2025-05-07 20:41:11,331 - scrapers.parallel_maps - INFO - Waiting for results to load...
+2025-05-07 20:41:39,837 - scrapers.parallel_maps - ERROR - Error on attempt 1: HTTPConnectionPool(host='localhost', port=55019): Max retries exceeded with url: /session/bc9efc22a06996278a4f503d7a3992b6/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002547D8C7170>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-05-07 20:41:39,839 - scrapers.parallel_maps - INFO - Retrying... (attempt 2/3)
+2025-05-07 20:46:35,481 - utils.web - INFO - Setting up Chrome driver (headless=True)
+2025-05-07 20:46:49,385 - scrapers.google_maps - INFO - Scrolled down results pane from 0 to 500
+2025-05-07 20:47:02,596 - scrapers.google_maps - ERROR - Error extracting listing URLs: Message: 
+Stacktrace:
+	GetHandleVerifier [0x0112D363+60275]
+	GetHandleVerifier [0x0112D3A4+60340]
+	(No symbol) [0x00F606F3]
+	(No symbol) [0x00FA8690]
+	(No symbol) [0x00FA8A2B]
+	(No symbol) [0x00FF0EE2]
+	(No symbol) [0x00FCD0D4]
+	(No symbol) [0x00FEE6EB]
+	(No symbol) [0x00FCCE86]
+	(No symbol) [0x00F9C623]
+	(No symbol) [0x00F9D474]
+	GetHandleVerifier [0x01378FE3+2467827]
+	GetHandleVerifier [0x013745E6+2448886]
+	GetHandleVerifier [0x0138F80C+2560028]
+	GetHandleVerifier [0x01143DF5+153093]
+	GetHandleVerifier [0x0114A3BD+179149]
+	GetHandleVerifier [0x01134BB8+91080]
+	GetHandleVerifier [0x01134D60+91504]
+	GetHandleVerifier [0x0111FA10+4640]
+	BaseThreadInitThunk [0x75407BA9+25]
+	RtlInitializeExceptionChain [0x7774C2EB+107]
+	RtlClearBits [0x7774C26F+191]
+
+2025-05-07 20:47:02,596 - scrapers.google_maps - ERROR - No listing URLs found
+2025-05-07 20:47:52,547 - utils.web - INFO - Setting up Chrome driver (headless=True)
+2025-05-07 20:48:00,415 - scrapers.google_maps - INFO - Scrolled down results pane from 0 to 500
+2025-05-07 20:48:13,627 - scrapers.google_maps - INFO - Found results using selector: div.Nv2PK
+2025-05-07 20:48:13,713 - scrapers.google_maps - INFO - Successfully extracted 5 listing URLs
+2025-05-07 20:48:15,957 - scrapers.google_maps - INFO - Starting parallel scraping with 5 workers
+2025-05-07 20:48:19,107 - scrapers.google_maps - ERROR - Error scraping listing https://www.google.com/maps/place/In+Common+NYC+-+A+Breakfast+%26+Brunch+Restaurant/data=!4m7!3m6!1s0x89c259b52862a671:0xd50cb6d3dbcffc98!8m2!3d40.753835!4d-73.996243!16s%2Fg%2F11j2w8817l!19sChIJcaZiKLVZwokRmPzP29O2DNU?authuser=0&hl=en&rclk=1: WebDriver.__init__() got multiple values for argument 'options'
+2025-05-07 20:48:19,115 - scrapers.google_maps - ERROR - Error scraping listing https://www.google.com/maps/place/Buena+Vista+Restaurant+%26+Bar/data=!4m7!3m6!1s0x89c25852b433ffff:0x4bde1e9afa756c9b!8m2!3d40.756837!4d-73.993494!16s%2Fg%2F11fflztctz!19sChIJ__8ztFJYwokRm2x1-poe3ks?authuser=0&hl=en&rclk=1: WebDriver.__init__() got multiple values for argument 'options'
+2025-05-07 20:48:19,149 - scrapers.google_maps - ERROR - Error scraping listing https://www.google.com/maps/place/Charlotte+Cafe/data=!4m7!3m6!1s0x89c2595b6f576385:0xbaddfaa9b151bac8!8m2!3d40.744364!4d-73.9765009!16s%2Fg%2F11sh015_5x!19sChIJhWNXb1tZwokRyLpRsan63bo?authuser=0&hl=en&rclk=1: WebDriver.__init__() got multiple values for argument 'options'
+2025-05-07 20:48:19,174 - scrapers.google_maps - ERROR - Error scraping listing https://www.google.com/maps/place/Red+House+Roasters+Coffee/data=!4m7!3m6!1s0x89c25820dbe98c07:0x895b9b3600a4b2f1!8m2!3d40.750952!4d-74.168357!16s%2Fg%2F1tgm3s84!19sChIJB4zp2yBYwokR8bKkADabW4k?authuser=0&hl=en&rclk=1: WebDriver.__init__() got multiple values for argument 'options'
+2025-05-07 20:48:19,190 - scrapers.google_maps - ERROR - Error scraping listing https://www.google.com/maps/place/Park+Cafe/data=!4m7!3m6!1s0x89c2f7d38376ed99:0xb58b26028ee43b8b!8m2!3d40.7995421!4d-73.96117!16s%2Fg%2F11kr_vwxcj!19sChIJme12g9P3wokRizvkjgImi7U?authuser=0&hl=en&rclk=1: WebDriver.__init__() got multiple values for argument 'options'
+2025-05-07 20:48:30,262 - controllers.main_controller - INFO - Starting scraping for real estate in pune (Max leads: 15)
+2025-05-07 20:48:30,275 - controllers.main_controller - INFO - Starting Google Maps scraping
+2025-05-07 20:48:30,280 - utils.web - INFO - Setting up Chrome driver (headless=True)
+2025-05-07 20:48:39,000 - scrapers.google_maps - INFO - Scrolled down results pane from 0 to 500
+2025-05-07 20:48:49,047 - utils.web - INFO - Setting up Chrome driver (headless=True)
+2025-05-07 20:48:52,296 - scrapers.google_maps - INFO - Found results using selector: div.Nv2PK
+2025-05-07 20:48:52,415 - scrapers.google_maps - INFO - Successfully extracted 11 listing URLs
+2025-05-07 20:48:54,626 - scrapers.google_maps - INFO - Starting parallel scraping with 8 workers
+2025-05-07 20:48:54,626 - scrapers.google_maps - ERROR - Error in main scrape function: '__main__'
+2025-05-07 20:48:54,626 - controllers.main_controller - INFO - Found 0 leads from Google Maps
+2025-05-07 20:48:54,906 - controllers.main_controller - INFO - Exported 0 leads to data/output/leads_real estate_pune_20250507_204854.csv, data/output/leads_real estate_pune_20250507_204854.xlsx, and data/output/leads_real estate_pune_20250507_204854.json
+2025-05-07 20:48:59,011 - scrapers.google_maps - INFO - Scrolled down results pane from 0 to 500
+2025-05-07 20:49:12,237 - scrapers.google_maps - INFO - Found results using selector: div.Nv2PK
+2025-05-07 20:49:12,294 - scrapers.google_maps - INFO - Successfully extracted 5 listing URLs
+2025-05-07 20:49:14,520 - scrapers.google_maps - INFO - Starting parallel scraping with 5 workers
+2025-05-07 20:49:23,828 - scrapers.google_maps - INFO - Successfully scraped unnamed business
+2025-05-07 20:49:27,458 - scrapers.google_maps - INFO - Successfully scraped unnamed business
+2025-05-07 20:49:27,992 - scrapers.google_maps - INFO - Successfully scraped unnamed business
+2025-05-07 20:49:28,132 - scrapers.google_maps - INFO - Successfully scraped unnamed business
+2025-05-07 20:49:28,166 - scrapers.google_maps - INFO - Successfully scraped unnamed business
+2025-05-07 20:50:11,045 - utils.web - INFO - Setting up Chrome driver (headless=True)
+2025-05-07 20:50:22,044 - scrapers.google_maps - INFO - Scrolled down results pane from 0 to 500
+2025-05-07 20:50:31,030 - controllers.main_controller - INFO - Starting scraping for real estate in pune (Max leads: 15)
+2025-05-07 20:50:31,031 - controllers.main_controller - INFO - Starting Google Maps scraping
+2025-05-07 20:50:31,035 - utils.web - INFO - Setting up Chrome driver (headless=True)
+2025-05-07 20:50:35,323 - scrapers.google_maps - INFO - Found results using selector: div.Nv2PK
+2025-05-07 20:50:35,427 - scrapers.google_maps - INFO - Successfully extracted 5 listing URLs
+2025-05-07 20:50:37,795 - scrapers.google_maps - INFO - Starting parallel scraping with 5 workers
+2025-05-07 20:50:42,660 - scrapers.google_maps - INFO - Scrolled down results pane from 0 to 500
+2025-05-07 20:50:51,837 - scrapers.google_maps - INFO - Successfully scraped Park Cafe
+2025-05-07 20:50:52,418 - scrapers.google_maps - INFO - Successfully scraped Charlotte Cafe
+2025-05-07 20:50:52,736 - scrapers.google_maps - INFO - Successfully scraped Red House Roasters Coffee
+2025-05-07 20:50:53,230 - scrapers.google_maps - INFO - Successfully scraped In Common NYC - A Breakfast & Brunch Restaurant
+2025-05-07 20:50:54,297 - scrapers.google_maps - INFO - Successfully scraped Buena Vista Restaurant & Bar
+2025-05-07 20:50:56,251 - scrapers.google_maps - INFO - Found results using selector: div.Nv2PK
+2025-05-07 20:50:56,378 - scrapers.google_maps - INFO - Successfully extracted 11 listing URLs
+2025-05-07 20:50:58,676 - scrapers.google_maps - INFO - Starting parallel scraping with 8 workers
+2025-05-07 20:51:14,467 - scrapers.google_maps - INFO - Successfully scraped MultiBhk
+2025-05-07 20:51:14,810 - scrapers.google_maps - INFO - Successfully scraped VTP Township Pegasus Homes - Kharadi Sales Office
+2025-05-07 20:51:14,825 - scrapers.google_maps - INFO - Successfully scraped Property Market India - Best Real Estate Consultants Property Brokers in Pune
+2025-05-07 20:51:15,398 - scrapers.google_maps - INFO - Successfully scraped Dealwel Property I Commercial Real Estate Consultant in Pune I Commercial Properties Broker for Lease, Buy and Sale
+2025-05-07 20:51:17,103 - scrapers.google_maps - INFO - Successfully scraped Sunshine Properties and Property Consultant
+2025-05-07 20:51:17,724 - scrapers.google_maps - INFO - Successfully scraped PropEsta Realty Solutions - Top Rated Real Estate Consultant in Pune (BUY SELL RENT)
+2025-05-07 20:51:18,299 - scrapers.google_maps - INFO - Successfully scraped skyline properties
+2025-05-07 20:51:18,328 - scrapers.google_maps - INFO - Successfully scraped The Nature, Pune
+2025-05-07 20:51:25,723 - scrapers.google_maps - INFO - Successfully scraped Gemini Properties Academy
+2025-05-07 20:51:26,667 - scrapers.google_maps - INFO - Successfully scraped Tresco Realty Best Property Consultant in Pune I Property agents in Pune
+2025-05-07 20:51:27,265 - scrapers.google_maps - INFO - Successfully scraped Metropedia & Co - Pune Real Estate - NIBM Road Branch
+2025-05-07 20:51:29,813 - controllers.main_controller - INFO - Found 11 leads from Google Maps
+2025-05-07 20:51:29,851 - controllers.main_controller - INFO - Exported 11 leads to data/output/leads_real estate_pune_20250507_205129.csv, data/output/leads_real estate_pune_20250507_205129.xlsx, and data/output/leads_real estate_pune_20250507_205129.json
+2025-05-07 20:53:03,110 - utils.web - INFO - Setting up Chrome driver (headless=False)
+2025-05-07 20:53:17,453 - scrapers.google_maps - INFO - Scrolled down results pane from 0 to 471
+2025-05-07 20:53:30,795 - scrapers.google_maps - INFO - Found results using selector: div.Nv2PK
+2025-05-07 20:53:30,843 - scrapers.google_maps - INFO - Successfully extracted 5 listing URLs
+2025-05-07 20:53:33,146 - scrapers.google_maps - INFO - Starting parallel scraping with 5 workers
+2025-05-07 20:53:43,972 - scrapers.google_maps - INFO - Successfully scraped Red House Roasters Coffee
+2025-05-07 20:53:46,201 - scrapers.google_maps - INFO - Successfully scraped Little Collins
+2025-05-07 20:53:47,518 - scrapers.google_maps - INFO - Successfully scraped In Common NYC - A Breakfast & Brunch Restaurant
+2025-05-07 20:53:47,832 - scrapers.google_maps - INFO - Successfully scraped Bibble & Sip
+2025-05-07 20:53:49,464 - scrapers.google_maps - INFO - Successfully scraped Buena Vista Restaurant & Bar
+2025-05-07 20:54:35,590 - controllers.main_controller - INFO - Starting scraping for real estate in bhuvneshwar,odisha (Max leads: 15)
+2025-05-07 20:54:35,591 - controllers.main_controller - INFO - Starting Google Maps scraping
+2025-05-07 20:54:35,595 - utils.web - INFO - Setting up Chrome driver (headless=False)
+2025-05-07 20:54:48,502 - scrapers.google_maps - INFO - Scrolled down results pane from 0 to 471
+2025-05-07 20:55:01,811 - scrapers.google_maps - INFO - Found results using selector: div.Nv2PK
+2025-05-07 20:55:01,874 - scrapers.google_maps - INFO - Successfully extracted 7 listing URLs
+2025-05-07 20:55:04,162 - scrapers.google_maps - INFO - Starting parallel scraping with 7 workers
+2025-05-07 20:55:20,674 - scrapers.google_maps - INFO - Successfully scraped Odisha One - Property Management Service
+2025-05-07 20:55:20,985 - scrapers.google_maps - INFO - Successfully scraped Homedeal- Odisha's Largest No Commission Real-Estate Company
+2025-05-07 20:55:21,387 - scrapers.google_maps - INFO - Successfully scraped RAAN Properties Pvt. Ltd
+2025-05-07 20:55:21,508 - scrapers.google_maps - INFO - Successfully scraped MYSPACE REALTY PVT. LTD.
+2025-05-07 20:55:21,598 - scrapers.google_maps - INFO - Successfully scraped Springville Greens
+2025-05-07 20:55:22,101 - scrapers.google_maps - INFO - Successfully scraped RAINBOW ASSETS Pvt. Ltd.
+2025-05-07 20:55:23,159 - scrapers.google_maps - INFO - Successfully scraped Motwani Constructions Pvt Ltd
+2025-05-07 20:55:25,702 - controllers.main_controller - INFO - Found 7 leads from Google Maps
+2025-05-07 20:55:25,751 - controllers.main_controller - INFO - Exported 7 leads to data/output/leads_real estate_bhuvneshwar,odisha_20250507_205525.csv, data/output/leads_real estate_bhuvneshwar,odisha_20250507_205525.xlsx, and data/output/leads_real estate_bhuvneshwar,odisha_20250507_205525.json
+2025-05-07 20:58:10,187 - utils.web - INFO - Setting up Chrome driver (headless=False)
+2025-05-07 20:58:34,703 - scrapers.google_maps - INFO - Scrolled down results pane from 0 to 471
+2025-05-07 20:58:48,004 - scrapers.google_maps - INFO - Found results using selector: div.Nv2PK
+2025-05-07 20:58:48,066 - scrapers.google_maps - INFO - Successfully extracted 5 listing URLs
+2025-05-07 20:58:50,377 - scrapers.google_maps - INFO - Starting parallel scraping with 5 workers
+2025-05-07 20:59:03,647 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.6', 'address': '', 'locatedin': '', '0': '', '1': '', '2': '', 'action:4': '', 'menu': 'https://www.incommonnyc.com/menu-1', 'authority': 'https://www.incommonnyc.com/', 'phone:tel:+16463703099': '', 'oloc': ''}
+2025-05-07 20:59:03,648 - scrapers.google_maps - INFO - Successfully scraped 
+2025-05-07 20:59:04,228 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.7', 'address': '', '0': '', '1': '', '2': '', '3': '', 'action:1': 'https://www.opentable.com/restaurant/profile/1023658?ref=1068', 'action:4': '', 'authority': 'http://www.buenavistahellskitchen.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp-listing', 'phone:tel:+12123885040': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-07 20:59:04,229 - scrapers.google_maps - INFO - Successfully scraped 
+2025-05-07 20:59:04,651 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.9', 'address': '', '0': '', '1': '', '2': '', 'action:4': '', 'menu': 'https://www.grubhub.com/restaurant/park-cafe-153-manhattan-ave-new-york/6641424?classicAffiliateId=%2Fr%2Fw%2F6641424%2Frestaurant%2F6641424', 'phone:tel:+15167490697': '', 'oloc': ''}
+2025-05-07 20:59:04,651 - scrapers.google_maps - INFO - Successfully scraped 
+2025-05-07 20:59:04,711 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.9', 'address': '', '0': '', '1': '', '2': '', 'action:4': '', 'authority': 'http://www.charlottecafe.com/', 'phone:tel:+13473187107': '', 'oloc': ''}
+2025-05-07 20:59:04,711 - scrapers.google_maps - INFO - Successfully scraped 
+2025-05-07 20:59:06,600 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.4', 'address': '', 'locatedin': '', 'oh': '', 'action:1': 'https://www.opentable.com/restaurant/profile/2374?ref=1068', 'action:4': '', 'menu': 'https://nicematinnyc.com/', 'authority': 'https://nicematinnyc.com/', 'phone:tel:+12128736423': '', 'oloc': ''}
+2025-05-07 20:59:06,600 - scrapers.google_maps - INFO - Successfully scraped 
+2025-05-07 20:59:25,689 - controllers.main_controller - INFO - Starting scraping for real estate in bhuvneshwar,odisha (Max leads: 15)
+2025-05-07 20:59:25,691 - controllers.main_controller - INFO - Starting Google Maps scraping
+2025-05-07 20:59:25,694 - utils.web - INFO - Setting up Chrome driver (headless=False)
+2025-05-07 20:59:40,195 - scrapers.google_maps - INFO - Scrolled down results pane from 0 to 471
+2025-05-07 20:59:53,757 - scrapers.google_maps - INFO - Found results using selector: div.Nv2PK
+2025-05-07 20:59:53,937 - scrapers.google_maps - INFO - Successfully extracted 7 listing URLs
+2025-05-07 20:59:56,533 - scrapers.google_maps - INFO - Starting parallel scraping with 7 workers
+2025-05-07 21:00:15,367 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.4', 'address': '143, Saheed Nagar Rd, near Bishnu Temple, Saheed Nagar, Bhubaneswar, Odisha 751007', 'phone:tel:09238123456': '', 'oloc': ''}
+2025-05-07 21:00:15,372 - scrapers.google_maps - INFO - Successfully scraped 
+2025-05-07 21:00:16,462 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.6', 'address': 'First Floor, Plot No.1013, Nilakantha Nagar, Nayapalli, Bhubaneswar, Odisha 751012', 'action:3': 'https://wa.me/919437007071?text=Hi+I+contacted+you+through+your+Google!Page', 'authority': 'https://odishaoneproperty.com/', 'phone:tel:09437007071': '', 'oloc': ''}
+2025-05-07 21:00:16,465 - scrapers.google_maps - INFO - Successfully scraped 
+2025-05-07 21:00:16,641 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.7', 'address': 'S/O - 744, Esplanade One Ln, Rasulgarh Industrial Estate, Industrial Area Estate, Rasulgarh, Bhubaneswar, Odisha 751010', 'locatedin': '', 'authority': 'https://motwaniconstructions.com/', 'phone:tel:09090102626': '', 'oloc': ''}
+2025-05-07 21:00:16,644 - scrapers.google_maps - INFO - Successfully scraped 
+2025-05-07 21:00:16,679 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '5.0', 'address': 'First Floor Plot No: 15/2381, near KTM Bike Showroom, Bhubaneswar, Odisha 751030', 'authority': 'http://homedeal.ind.in/', 'phone:tel:08260500662': '', 'oloc': ''}
+2025-05-07 21:00:16,679 - scrapers.google_maps - INFO - Successfully scraped 
+2025-05-07 21:00:16,936 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.1', 'address': 'Plot No-55, Ln 2, Jagannath Vihar, Baramunda, Bhubaneswar, Odisha 751003', 'authority': 'http://www.utkalproperty.com/', 'phone:tel:07077600666': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-07 21:00:16,939 - scrapers.google_maps - INFO - Successfully scraped 
+2025-05-07 21:00:17,190 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.8', 'address': '634-A, 6th Floor, Nexus Esplanade, Rasulgarh, Bhubaneswar, Odisha 751010', 'locatedin': '', 'authority': 'https://www.rainbowassets.com/', 'phone:tel:09853011901': '', 'oloc': ''}
+2025-05-07 21:00:17,192 - scrapers.google_maps - INFO - Successfully scraped 
+2025-05-07 21:00:17,385 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.8', 'address': 'PS Plaza, KIIT Rd, Patia, Bhubaneswar, Odisha 751024', 'locatedin': 'Located in: PS Plaza', 'authority': 'https://raanproperties.com/', 'phone:tel:07381063634': '', 'oloc': ''}
+2025-05-07 21:00:17,387 - scrapers.google_maps - INFO - Successfully scraped 
+2025-05-07 21:00:22,029 - controllers.main_controller - INFO - Found 7 leads from Google Maps
+2025-05-07 21:00:22,206 - controllers.main_controller - INFO - Exported 7 leads to data/output/leads_real estate_bhuvneshwar,odisha_20250507_210022.csv, data/output/leads_real estate_bhuvneshwar,odisha_20250507_210022.xlsx, and data/output/leads_real estate_bhuvneshwar,odisha_20250507_210022.json
+2025-05-07 21:01:25,265 - utils.web - INFO - Setting up Chrome driver (headless=False)
+2025-05-07 21:01:42,016 - scrapers.google_maps - INFO - Scrolled down results pane from 0 to 471
+2025-05-07 21:01:55,357 - scrapers.google_maps - INFO - Found results using selector: div.Nv2PK
+2025-05-07 21:01:55,451 - scrapers.google_maps - INFO - Successfully extracted 5 listing URLs
+2025-05-07 21:01:58,232 - scrapers.google_maps - INFO - Starting parallel scraping with 5 workers
+2025-05-07 21:02:15,101 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': 'In Common NYC - A Breakfast & Brunch Restaurant', 'rating': '4.6 ((1,582))', 'address': '', 'locatedin': '', '0': '', '1': '', '2': '', 'action:4': '', 'menu': 'https://www.incommonnyc.com/menu-1', 'authority': 'https://www.incommonnyc.com/', 'phone:tel:+16463703099': '', 'oloc': '', 'website': 'https://www.incommonnyc.com/'}
+2025-05-07 21:02:15,101 - scrapers.google_maps - INFO - Successfully scraped In Common NYC - A Breakfast & Brunch Restaurant
+2025-05-07 21:02:15,145 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': 'Charlotte Cafe', 'rating': '4.9 ((812))', 'address': '', '0': '', '1': '', '2': '', 'action:4': '', 'authority': 'http://www.charlottecafe.com/', 'phone:tel:+13473187107': '', 'oloc': '', 'website': 'http://www.charlottecafe.com/'}
+2025-05-07 21:02:15,148 - scrapers.google_maps - INFO - Successfully scraped Charlotte Cafe
+2025-05-07 21:02:16,445 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': 'Buena Vista Restaurant & Bar', 'rating': '4.7 ((1,001))', 'address': '', '0': '', '1': '', '2': '', '3': '', 'action:1': 'https://www.opentable.com/restaurant/profile/1023658?ref=1068', 'action:4': '', 'authority': 'http://www.buenavistahellskitchen.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp-listing', 'phone:tel:+12123885040': '', 'oloc': '', 'place-info-links:': '', 'website': 'http://www.buenavistahellskitchen.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp-listing'}
+2025-05-07 21:02:16,450 - scrapers.google_maps - INFO - Successfully scraped Buena Vista Restaurant & Bar
+2025-05-07 21:02:16,988 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': 'Park Cafe', 'rating': '4.9 ((318))', 'address': '', '0': '', '1': '', '2': '', 'action:4': '', 'menu': 'https://www.grubhub.com/restaurant/park-cafe-153-manhattan-ave-new-york/6641424?classicAffiliateId=%2Fr%2Fw%2F6641424%2Frestaurant%2F6641424', 'phone:tel:+15167490697': '', 'oloc': ''}
+2025-05-07 21:02:16,989 - scrapers.google_maps - INFO - Successfully scraped Park Cafe
+2025-05-07 21:02:23,635 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': 'Red House Roasters Coffee', 'rating': '4.7 ((28))', 'address': '308 Mt Pleasant Ave, Newark, NJ 07104, United States', 'authority': 'https://redhouseroasters.com/', 'phone:tel:+19732307266': '', 'oloc': '', 'website': 'https://redhouseroasters.com/'}
+2025-05-07 21:02:23,635 - scrapers.google_maps - INFO - Successfully scraped Red House Roasters Coffee
+2025-05-07 21:07:33,694 - controllers.main_controller - INFO - Starting scraping for real estate in aurangabad (Max leads: 30)
+2025-05-07 21:07:33,723 - controllers.main_controller - INFO - Starting Google Maps scraping
+2025-05-07 21:07:33,739 - utils.web - INFO - Setting up Chrome driver (headless=True)
+2025-05-07 21:08:03,036 - scrapers.google_maps - WARNING - Could not find results container
+2025-05-07 21:08:03,036 - scrapers.google_maps - ERROR - No results found
+2025-05-07 21:08:05,382 - controllers.main_controller - INFO - Found 0 leads from Google Maps
+2025-05-07 21:08:05,848 - controllers.main_controller - INFO - Exported 0 leads to data/output/leads_real estate_aurangabad_20250507_210805.csv, data/output/leads_real estate_aurangabad_20250507_210805.xlsx, and data/output/leads_real estate_aurangabad_20250507_210805.json
+2025-05-07 21:11:09,681 - controllers.main_controller - INFO - Starting scraping for real estate in aurangabad (Max leads: 30)
+2025-05-07 21:11:09,705 - controllers.main_controller - INFO - Starting Google Maps scraping
+2025-05-07 21:11:09,715 - utils.web - INFO - Setting up Chrome driver (headless=True)
+2025-05-07 21:11:48,411 - controllers.main_controller - INFO - Starting scraping for real estate in aurangabad (Max leads: 15)
+2025-05-07 21:11:48,423 - controllers.main_controller - INFO - Starting Google Maps scraping
+2025-05-07 21:11:48,428 - utils.web - INFO - Setting up Chrome driver (headless=True)
+2025-05-07 21:12:16,251 - scrapers.google_maps - WARNING - Could not find results container
+2025-05-07 21:12:16,251 - scrapers.google_maps - ERROR - No results found
+2025-05-07 21:12:18,607 - controllers.main_controller - INFO - Found 0 leads from Google Maps
+2025-05-07 21:12:19,003 - controllers.main_controller - INFO - Exported 0 leads to data/output/leads_real estate_aurangabad_20250507_211218.csv, data/output/leads_real estate_aurangabad_20250507_211218.xlsx, and data/output/leads_real estate_aurangabad_20250507_211218.json
+2025-05-07 21:13:28,682 - controllers.main_controller - INFO - Starting scraping for real estate in aurangabad (Max leads: 15)
+2025-05-07 21:13:28,689 - controllers.main_controller - INFO - Starting Google Maps scraping
+2025-05-07 21:13:28,692 - utils.web - INFO - Setting up Chrome driver (headless=False)
+2025-05-07 21:13:32,760 - scrapers.google_maps - INFO - Navigating to Google Maps to search for real estate in aurangabad
+2025-05-07 21:13:46,143 - scrapers.google_maps - INFO - Clicked search button
+2025-05-07 21:13:49,350 - scrapers.google_maps - INFO - Scrolled down results pane from 0 to 500
+2025-05-07 21:13:54,472 - scrapers.google_maps - INFO - Found 21 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-07 21:13:54,491 - scrapers.google_maps - INFO - Extracted 0 listing URLs
+2025-05-07 21:13:54,491 - scrapers.google_maps - ERROR - No listing URLs extracted
+2025-05-07 21:13:56,904 - controllers.main_controller - INFO - Found 0 leads from Google Maps
+2025-05-07 21:13:56,936 - controllers.main_controller - INFO - Exported 0 leads to data/output/leads_real estate_aurangabad_20250507_211356.csv, data/output/leads_real estate_aurangabad_20250507_211356.xlsx, and data/output/leads_real estate_aurangabad_20250507_211356.json
+2025-05-07 21:15:44,450 - controllers.main_controller - INFO - Starting scraping for cafes in pune (Max leads: 15)
+2025-05-07 21:15:44,452 - controllers.main_controller - INFO - Starting Google Maps scraping
+2025-05-07 21:15:44,464 - utils.web - INFO - Setting up Chrome driver (headless=False)
+2025-05-07 21:15:49,369 - scrapers.google_maps - INFO - Navigating to Google Maps to search for cafes in pune
+2025-05-07 21:16:06,262 - scrapers.google_maps - INFO - Clicked search button
+2025-05-07 21:16:11,363 - scrapers.google_maps - INFO - Scrolled down results pane from 0 to 500
+2025-05-07 21:16:17,144 - scrapers.google_maps - INFO - Found 15 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-07 21:16:17,200 - scrapers.google_maps - INFO - Found 5 elements with selector: div.Nv2PK
+2025-05-07 21:16:17,402 - scrapers.google_maps - INFO - Successfully extracted 5 URLs from 5 results
+2025-05-07 21:16:26,223 - scrapers.google_maps - ERROR - Error scraping listing https://www.google.com/maps/place/Cafe+-+The+Voyage/data=!4m7!3m6!1s0x3bc2c1e516534ca9:0x6dd1b2112e4c4e04!8m2!3d18.5394855!4d73.8976045!16s%2Fg%2F11v3db28cd!19sChIJqUxTFuXBwjsRBE5MLhGy0W0?authuser=0&hl=en&rclk=1: WebDriver.__init__() got multiple values for argument 'options'
+2025-05-07 21:16:26,265 - scrapers.google_maps - ERROR - Error scraping listing https://www.google.com/maps/place/Zen+Cafe/data=!4m7!3m6!1s0x3bc2c16b78b3763d:0x9ba39123e9e04d69!8m2!3d18.538643!4d73.8865596!16s%2Fg%2F11gnpy4h5p!19sChIJPXazeGvBwjsRaU3g6SORo5s?authuser=0&hl=en&rclk=1: WebDriver.__init__() got multiple values for argument 'options'
+2025-05-07 21:16:26,272 - scrapers.google_maps - ERROR - Error scraping listing https://www.google.com/maps/place/Cafe+Goodluck/data=!4m7!3m6!1s0x3bc2bf87fad7cce1:0x782ac3a113379b17!8m2!3d18.5173131!4d73.8414923!16s%2Fm%2F0vpx53c!19sChIJ4czX-oe_wjsRF5s3E6HDKng?authuser=0&hl=en&rclk=1: WebDriver.__init__() got multiple values for argument 'options'
+2025-05-07 21:16:26,305 - scrapers.google_maps - ERROR - Error scraping listing https://www.google.com/maps/place/11+East+Street+Cafe/data=!4m7!3m6!1s0x3bc2c11122467bb1:0xf7da602ed178337a!8m2!3d18.5126242!4d73.8801956!16s%2Fg%2F11r8xj6cj!19sChIJsXtGIhHBwjsRejN40S5g2vc?authuser=0&hl=en&rclk=1: WebDriver.__init__() got multiple values for argument 'options'
+2025-05-07 21:16:26,312 - scrapers.google_maps - ERROR - Error scraping listing https://www.google.com/maps/place/Cafe+Kathaa/data=!4m7!3m6!1s0x3bc2bf8e9410e745:0x574bbc1234760774!8m2!3d18.520764!4d73.8405691!16s%2Fg%2F11f9vjwq1l!19sChIJRecQlI6_wjsRdAd2NBK8S1c?authuser=0&hl=en&rclk=1: WebDriver.__init__() got multiple values for argument 'options'
+2025-05-07 21:16:26,695 - controllers.main_controller - INFO - Found 5 leads from Google Maps
+2025-05-07 21:16:26,760 - controllers.main_controller - INFO - Exported 5 leads to data/output/leads_cafes_pune_20250507_211626.csv, data/output/leads_cafes_pune_20250507_211626.xlsx, and data/output/leads_cafes_pune_20250507_211626.json
+2025-05-07 21:18:48,087 - controllers.main_controller - INFO - Starting scraping for cafes in pune (Max leads: 15)
+2025-05-07 21:18:48,087 - controllers.main_controller - INFO - Starting Google Maps scraping
+2025-05-07 21:18:48,093 - utils.web - INFO - Setting up Chrome driver (headless=False)
+2025-05-07 21:18:51,791 - scrapers.google_maps - INFO - Navigating to Google Maps to search for cafes in pune
+2025-05-07 21:19:01,434 - scrapers.google_maps - INFO - Clicked search button
+2025-05-07 21:19:05,193 - scrapers.google_maps - INFO - Scrolled down results pane from 0 to 500
+2025-05-07 21:19:10,872 - scrapers.google_maps - INFO - Found 15 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-07 21:19:10,912 - scrapers.google_maps - INFO - Found 5 elements with selector: div.Nv2PK
+2025-05-07 21:19:11,052 - scrapers.google_maps - INFO - Successfully extracted 5 URLs from 5 results
+2025-05-07 21:19:13,663 - scrapers.google_maps - INFO - Starting parallel processing of 5 URLs with 5 workers
+2025-05-07 21:19:31,153 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.0', 'address': '', 'action:1': '', 'action:4': '', 'menu': 'https://www.zomato.com/pune/11-east-street-cafe-east-street/order', 'phone:tel:09960617811': '', 'oloc': ''}
+2025-05-07 21:19:31,473 - scrapers.google_maps - INFO - Successfully extracted data for 
+2025-05-07 21:19:31,819 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.8', 'address': '', 'action:1': '', 'action:4': '', 'menu': 'https://thevoyagecafe.dotpe.in/store/1/1/999', 'phone:tel:08596950267': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-07 21:19:31,881 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.3', 'address': '', 'action:4': 'https://www.swiggy.com/city/pune/zen-cafe-koregaon-park-kalyani-nagar-rest134883?utm_source=GooglePlaceOrder&utm_campaign=GoogleMap&is_retargeting=true&media_source=GooglePlaceOrder', 'menu': 'https://www.zencafe.co/themenu.html', 'authority': 'http://www.zencafe.co/', 'phone:tel:09021712312': '', 'oloc': ''}
+2025-05-07 21:19:31,897 - scrapers.google_maps - INFO - Successfully extracted data for 
+2025-05-07 21:19:31,976 - scrapers.google_maps - INFO - Successfully extracted data for 
+2025-05-07 21:19:32,438 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.2', 'address': '', 'oh': '', '0': '', '1': '', '2': '', '3': '', 'action:1': '', 'action:4': '', 'menu': 'https://www.flowcode.com/page/cafe.kathaa', 'authority': 'https://cafekathaa.com/?ec=c4c35f1a75d80ab8383016dd90e1e699:643514', 'phone:tel:09119496767': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-07 21:19:32,511 - scrapers.google_maps - INFO - Successfully extracted data for 
+2025-05-07 21:19:32,868 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.2', 'address': '', '0': '', '1': '', '2': '', 'action:4': '', 'phone:tel:09923364756': '', 'oloc': ''}
+2025-05-07 21:19:32,920 - scrapers.google_maps - INFO - Successfully extracted data for 
+2025-05-07 21:19:34,148 - scrapers.google_maps - INFO - Processed 1/5: 
+2025-05-07 21:19:34,419 - scrapers.google_maps - INFO - Processed 2/5: 
+2025-05-07 21:19:34,467 - scrapers.google_maps - INFO - Processed 3/5: 
+2025-05-07 21:19:34,785 - scrapers.google_maps - INFO - Processed 4/5: 
+2025-05-07 21:19:35,216 - scrapers.google_maps - INFO - Processed 5/5: 
+2025-05-07 21:19:35,635 - scrapers.google_maps - INFO - Parallel processing complete. Processed 5/5 listings
+2025-05-07 21:19:35,635 - controllers.main_controller - INFO - Found 5 leads from Google Maps
+2025-05-07 21:19:35,683 - controllers.main_controller - INFO - Exported 5 leads to data/output/leads_cafes_pune_20250507_211935.csv, data/output/leads_cafes_pune_20250507_211935.xlsx, and data/output/leads_cafes_pune_20250507_211935.json
+2025-05-07 21:23:59,133 - controllers.main_controller - INFO - Starting scraping for hotels in nyc (Max leads: 15)
+2025-05-07 21:23:59,133 - controllers.main_controller - INFO - Starting Google Maps scraping
+2025-05-07 21:23:59,145 - utils.web - INFO - Setting up Chrome driver (headless=False)
+2025-05-07 21:24:03,277 - scrapers.google_maps - INFO - Navigating to Google Maps to search for hotels in nyc
+2025-05-07 21:24:17,150 - scrapers.google_maps - INFO - Clicked search button
+2025-05-07 21:24:20,746 - scrapers.google_maps - INFO - Scrolled down results pane from 0 to 363
+2025-05-07 21:24:26,593 - scrapers.google_maps - INFO - Found 15 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-07 21:24:26,642 - scrapers.google_maps - INFO - Found 5 elements with selector: div.Nv2PK
+2025-05-07 21:24:26,799 - scrapers.google_maps - INFO - Successfully extracted 5 URLs from 5 results
+2025-05-07 21:24:29,356 - scrapers.google_maps - INFO - Starting parallel processing of 5 URLs with 5 workers
+2025-05-07 21:24:46,014 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.8 stars ((1,198))', 'address': '88 Wall St, New York, NY 10005, United States', 'authority': 'https://www.thewallsthotel.com/', 'phone:tel:+12126889255': '+1 212-688-9255', 'oloc': 'PX4R+6W New York, USA', 'place-info-links:': 'Check-in time: 3:00\u202fpm\nCheck-out time: 11:00\u202fam'}
+2025-05-07 21:24:46,127 - scrapers.google_maps - INFO - Successfully extracted data for 
+2025-05-07 21:24:46,743 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '2.5 stars ((87))', 'address': '38 W 31st St #110, New York, NY 10001, United States', 'authority': 'https://31streetbroadwayhotel.com/', 'phone:tel:+15167708751': '+1 516-770-8751', 'oloc': 'P2W6+VV New York, USA', 'place-info-links:': 'Check-in time: 4:00\u202fpm\nCheck-out time: 10:00\u202fam'}
+2025-05-07 21:24:46,898 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '3.1 stars ((208))', 'address': '790 7th Ave, New York, NY 10019, United States', 'authority': 'https://www.ihg.com/spnd/hotels/us/en/new-york/nycat/hoteldetail', 'phone:tel:+12125813300': '+1 212-581-3300', 'oloc': 'Q268+WW New York, USA', 'place-info-links:': 'Check-in time: 4:00\u202fpm\nCheck-out time: 12:00\u202fpm'}
+2025-05-07 21:24:46,981 - scrapers.google_maps - INFO - Successfully extracted data for 
+2025-05-07 21:24:46,999 - scrapers.google_maps - INFO - Successfully extracted data for 
+2025-05-07 21:24:48,468 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.4 stars ((5))', 'address': '33 Hudson Yards, New York, NY 10001, United States', 'authority': 'https://equinox-hotels.com/nyc/?utm_source=local-listings&utm_medium=organic&utm_campaign=local-listings', 'phone:tel:+12128129200': '+1 212-812-9200', 'oloc': 'QX3X+V4 New York, USA', 'place-info-links:': 'LGBTQ+ friendly'}
+2025-05-07 21:24:48,532 - scrapers.google_maps - INFO - Successfully extracted data for 
+2025-05-07 21:24:48,638 - scrapers.google_maps - INFO - Processed 1/5: 
+2025-05-07 21:24:49,394 - scrapers.google_maps - INFO - Processed 2/5: 
+2025-05-07 21:24:49,427 - scrapers.google_maps - INFO - Processed 3/5: 
+2025-05-07 21:24:50,810 - scrapers.google_maps - INFO - Processed 4/5: 
+2025-05-07 21:24:51,544 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.6 stars ((303))', 'address': '400 5th Ave, New York, NY 10018, United States', 'authority': 'http://www.langhamhotels.com/en/the-langham/new-york/?htl=tlnyc&src=organic&eng=google&size=na&cid=yext_profile&y_source=1_MTAwNjI1OTItNzE1LWxvY2F0aW9uLndlYnNpdGU%3D', 'phone:tel:+12126954005': '+1 212-695-4005', 'oloc': 'Q228+3F New York, USA', 'place-info-links:': 'LGBTQ+ friendly'}
+2025-05-07 21:24:51,593 - scrapers.google_maps - INFO - Successfully extracted data for 
+2025-05-07 21:24:53,945 - scrapers.google_maps - INFO - Processed 5/5: 
+2025-05-07 21:24:54,314 - scrapers.google_maps - INFO - Parallel processing complete. Processed 5/5 listings
+2025-05-07 21:24:54,314 - controllers.main_controller - INFO - Found 5 leads from Google Maps
+2025-05-07 21:24:54,376 - controllers.main_controller - INFO - Exported 5 leads to data/output/leads_hotels_nyc_20250507_212454.csv, data/output/leads_hotels_nyc_20250507_212454.xlsx, and data/output/leads_hotels_nyc_20250507_212454.json
+2025-05-07 21:31:08,127 - controllers.main_controller - INFO - Starting scraping for hospitals  in aurangabad (Max leads: 45)
+2025-05-07 21:31:08,127 - controllers.main_controller - INFO - Starting Google Maps scraping
+2025-05-07 21:31:08,127 - utils.web - INFO - Setting up Chrome driver (headless=False)
+2025-05-07 21:31:12,086 - scrapers.google_maps - INFO - Navigating to Google Maps to search for hospitals  in aurangabad
+2025-05-07 21:31:22,268 - scrapers.google_maps - INFO - Clicked search button
+2025-05-07 21:31:27,276 - scrapers.google_maps - INFO - Scrolled down results pane from 0 to 500
+2025-05-07 21:31:32,902 - scrapers.google_maps - INFO - Found 21 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-07 21:31:32,990 - scrapers.google_maps - INFO - Scrolled down results pane from 500 to 1000
+2025-05-07 21:31:38,245 - scrapers.google_maps - INFO - Found 21 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-07 21:31:38,347 - scrapers.google_maps - INFO - Scrolled down results pane from 1000 to 1500
+2025-05-07 21:31:39,356 - scrapers.google_maps - INFO - New content loaded, scroll height increased from 1791 to 3034
+2025-05-07 21:31:41,420 - scrapers.google_maps - INFO - Found 42 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-07 21:31:41,532 - scrapers.google_maps - INFO - Scrolled down results pane from 1256.6666259765625 to 1756.6666259765625
+2025-05-07 21:31:47,224 - scrapers.google_maps - INFO - Found 42 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-07 21:31:47,313 - scrapers.google_maps - INFO - Scrolled down results pane from 1756.6666259765625 to 2256.6666259765625
+2025-05-07 21:31:52,503 - scrapers.google_maps - INFO - Found 42 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-07 21:31:52,617 - scrapers.google_maps - INFO - Scrolled down results pane from 2256 to 2756
+2025-05-07 21:31:53,626 - scrapers.google_maps - INFO - New content loaded, scroll height increased from 3034 to 4110
+2025-05-07 21:31:55,995 - scrapers.google_maps - INFO - Found 60 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-07 21:31:56,037 - scrapers.google_maps - INFO - Found 20 elements with selector: div.Nv2PK
+2025-05-07 21:31:56,446 - scrapers.google_maps - INFO - Successfully extracted 20 URLs from 20 results
+2025-05-07 21:31:58,918 - scrapers.google_maps - INFO - Starting parallel processing of 20 URLs with 8 workers
+2025-05-07 21:32:16,893 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.8', 'address': '', 'action:3': 'https://www.krupamayihospitals.in/contact/', 'authority': 'https://www.krupamayihospitals.in/', 'phone:tel:02402335188': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-07 21:32:16,976 - scrapers.google_maps - INFO - Successfully extracted data for Krupamayihospitals In
+2025-05-07 21:32:17,076 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.9', 'address': '', 'authority': 'https://elitecarehospitals.whitecoats.com/', 'phone:tel:08275008484': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-07 21:32:17,093 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.9', 'address': 'Anandi Multispeciality Hospital, Shivaji Nagar Rd, opp. HDFC Bank, Sutgirni Chowk, Kasliwal Nagar, Garkheda, Chhatrapati Sambhaji Nagar, Maharashtra 431009', 'action:3': 'https://anandihospitals.com/contact/', 'authority': 'https://anandihospitals.com/?utm_source=google&utm_medium=organic&utm_campaign=google_my_business&utm_id=anandi_hospitals', 'phone:tel:08802218802': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-07 21:32:17,154 - scrapers.google_maps - INFO - Successfully extracted data for Elitecarehospitals Whitecoats
+2025-05-07 21:32:17,183 - scrapers.google_maps - INFO - Successfully extracted data for Anandihospitals
+2025-05-07 21:32:17,632 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.6', 'address': '', 'authority': 'https://www.carehospitals.com/hospital-detail/care-ciigma-hospitals', 'phone:tel:04068106589': '', 'oloc': ''}
+2025-05-07 21:32:17,696 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.9', 'address': '', 'action:3': '', 'services': 'https://www.medicoverhospitals.in/', 'authority': 'https://www.medicoverhospitals.in/hospitals/maharashtra/aurangabad/?utm_source=google&utm_medium=organic&utm_campaign=gmb-aurangabad', 'phone:tel:04068334455': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-07 21:32:17,775 - scrapers.google_maps - INFO - Successfully extracted data for Medicoverhospitals In
+2025-05-07 21:32:19,423 - scrapers.google_maps - INFO - Processed 1/20: Krupamayihospitals In
+2025-05-07 21:32:19,575 - scrapers.google_maps - INFO - Processed 2/20: Anandihospitals
+2025-05-07 21:32:19,576 - scrapers.google_maps - INFO - Processed 3/20: Elitecarehospitals Whitecoats
+2025-05-07 21:32:20,126 - scrapers.google_maps - INFO - Processed 4/20: Carehospitals
+2025-05-07 21:32:20,168 - scrapers.google_maps - INFO - Processed 5/20: Medicoverhospitals In
+2025-05-07 21:32:39,946 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.2', 'address': '', 'authority': 'http://sunshinehospital.org/', 'phone:tel:09130561222': '', 'oloc': ''}
+2025-05-07 21:32:39,959 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.0', 'address': '', 'authority': 'https://www.asianhospital.org/', 'phone:tel:09850588887': '', 'oloc': ''}
+2025-05-07 21:32:40,047 - scrapers.google_maps - INFO - Successfully extracted data for Sunshinehospital Org
+2025-05-07 21:32:40,063 - scrapers.google_maps - INFO - Successfully extracted data for Asianhospital Org
+2025-05-07 21:32:40,258 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.8', 'address': 'Manjeet Nagar, Plot no- 8 & 9, Opp. Akashwani, Chhatrapati Sambhaji Nagar, Maharashtra 431005', 'authority': 'https://kodlikerimemorialhospital.com/', 'phone:tel:02402335751': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-07 21:32:40,347 - scrapers.google_maps - INFO - Successfully extracted data for Kodlikerimemorialhospital
+2025-05-07 21:32:40,347 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.7', 'address': '', 'phone:tel:07709063732': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-07 21:32:40,521 - scrapers.google_maps - INFO - Successfully extracted data for 
+2025-05-07 21:32:40,630 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.0', 'address': '', 'authority': 'http://www.bajajhospital.com/', 'phone:tel:02406632111': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-07 21:32:40,717 - scrapers.google_maps - INFO - Successfully extracted data for Bajajhospital
+2025-05-07 21:32:42,825 - scrapers.google_maps - INFO - Processed 6/20: Asianhospital Org
+2025-05-07 21:32:42,825 - scrapers.google_maps - INFO - Processed 7/20: Sunshinehospital Org
+2025-05-07 21:32:42,987 - scrapers.google_maps - INFO - Processed 8/20: Kodlikerimemorialhospital
+2025-05-07 21:32:42,993 - scrapers.google_maps - INFO - Processed 9/20: 
+2025-05-07 21:32:43,097 - scrapers.google_maps - INFO - Processed 10/20: Bajajhospital
+2025-05-07 21:33:02,759 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.5', 'address': '', 'authority': 'http://www.jjplushospitals.com/', 'phone:tel:09112241201': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-07 21:33:02,865 - scrapers.google_maps - INFO - Successfully extracted data for Jjplushospitals
+2025-05-07 21:33:02,961 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.9', 'address': 'Survey No.22/P, Sharda Business Hub, Beed Bypass Rd, in front of Bembde Hospital, Chhatrapati Sambhaji Nagar, Maharashtra 431005', 'authority': 'http://pentagonhospital.in/', 'phone:tel:08421454555': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-07 21:33:02,986 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.5', 'address': 'Plot No. F-144, N-4 Near, Kamgar Chowk, Cidco, Chhatrapati Sambhaji Nagar, Maharashtra 431003', 'authority': 'https://www.mithospital.com/', 'phone:tel:07774047452': '', 'oloc': ''}
+2025-05-07 21:33:03,027 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.5', 'address': 'Sharad Hotel Chowk, Plot No.20 Sector A, Jalgaon Road, TV Centre Rd, Hudco, Sudarshan Nagar, N 11, Cidco, Chhatrapati Sambhaji Nagar, Maharashtra 431003', 'oloc': '', 'place-info-links:': ''}
+2025-05-07 21:33:03,084 - scrapers.google_maps - INFO - Successfully extracted data for Pentagonhospital In
+2025-05-07 21:33:03,175 - scrapers.google_maps - INFO - Successfully extracted data for 
+2025-05-07 21:33:03,311 - scrapers.google_maps - INFO - Successfully extracted data for Mithospital
+2025-05-07 21:33:03,499 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.7', 'address': '', 'locatedin': '', 'action:3': '', 'services': 'https://gionehospital.com/services/', 'authority': 'http://www.gionehospital.com/', 'phone:tel:09146035616': '', 'place-info-links:': ''}
+2025-05-07 21:33:03,577 - scrapers.google_maps - INFO - Successfully extracted data for Gionehospital
+2025-05-07 21:33:05,332 - scrapers.google_maps - INFO - Processed 11/20: Jjplushospitals
+2025-05-07 21:33:05,599 - scrapers.google_maps - INFO - Processed 12/20: Pentagonhospital In
+2025-05-07 21:33:05,615 - scrapers.google_maps - INFO - Processed 13/20: 
+2025-05-07 21:33:05,710 - scrapers.google_maps - INFO - Processed 14/20: Mithospital
+2025-05-07 21:33:05,932 - scrapers.google_maps - INFO - Processed 15/20: Gionehospital
+2025-05-07 21:33:25,653 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.5', 'address': '', 'phone:tel:09405302073': '', 'oloc': ''}
+2025-05-07 21:33:25,757 - scrapers.google_maps - INFO - Successfully extracted data for 
+2025-05-07 21:33:25,857 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.9', 'address': 'Plot No-9, Bajrang Chowk Rd, Opposite Nehru Garden, Shri Nagar Colony, N-6, Cidco, Chhatrapati Sambhaji Nagar, Maharashtra 431003', 'phone:tel:09552160215': '', 'oloc': ''}
+2025-05-07 21:33:25,933 - scrapers.google_maps - INFO - Successfully extracted data for 
+2025-05-07 21:33:25,939 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.4', 'address': '', 'authority': 'https://ikonhospital.org/', 'phone:tel:09823405777': '', 'oloc': ''}
+2025-05-07 21:33:26,080 - scrapers.google_maps - INFO - Successfully extracted data for Ikonhospital Org
+2025-05-07 21:33:27,140 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '3.9', 'address': '49, Bhagwant, Mayanagar, Behind Hotel Dipali Executive, Mayanagar Colony, N 2, Cidco, Chhatrapati Sambhaji Nagar, Maharashtra 431007', 'phone:tel:02402483456': '', 'oloc': '', 'merchant': 'https://business.google.com/create?fp=7629350355460372220&hl=en&authuser=0&gmbsrc=in-en-et-ip-z-gmb-s-z-l~mrc%7Cclaimbz%7Cu&ppsrc=GMBMI&utm_campaign=in-en-et-ip-z-gmb-s-z-l~mrc%7Cclaimbz%7Cu&utm_source=gmb_mrc81&utm_medium=et&getstarted&lis=0'}
+2025-05-07 21:33:27,227 - scrapers.google_maps - INFO - Successfully extracted data for 
+2025-05-07 21:33:28,209 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.8', 'address': 'Beed Bypass Rd, Sangram Nagar, Chhatrapati Sambhaji Nagar, Maharashtra 431005', 'authority': 'http://www.cosmeticsurgeryaurangabad.com/', 'phone:tel:08805013088': '', 'oloc': ''}
+2025-05-07 21:33:28,284 - scrapers.google_maps - INFO - Processed 16/20: 
+2025-05-07 21:33:28,290 - scrapers.google_maps - INFO - Successfully extracted data for Cosmeticsurgeryaurangabad
+2025-05-07 21:33:28,461 - scrapers.google_maps - INFO - Processed 17/20: 
+2025-05-07 21:33:28,524 - scrapers.google_maps - INFO - Processed 18/20: Ikonhospital Org
+2025-05-07 21:33:29,592 - scrapers.google_maps - INFO - Processed 19/20: 
+2025-05-07 21:33:32,363 - scrapers.google_maps - INFO - Processed 20/20: Cosmeticsurgeryaurangabad
+2025-05-07 21:33:34,781 - scrapers.google_maps - INFO - Parallel processing complete. Processed 20/20 listings
+2025-05-07 21:33:34,781 - controllers.main_controller - INFO - Found 20 leads from Google Maps
+2025-05-07 21:33:34,854 - controllers.main_controller - INFO - Exported 20 leads to data/output/leads_hospitals _aurangabad_20250507_213334.csv, data/output/leads_hospitals _aurangabad_20250507_213334.xlsx, and data/output/leads_hospitals _aurangabad_20250507_213334.json
+2025-05-07 21:35:12,831 - controllers.main_controller - INFO - Starting scraping for physiotherapy clinics  in pune (Max leads: 100)
+2025-05-07 21:35:12,831 - controllers.main_controller - INFO - Starting Google Maps scraping
+2025-05-07 21:35:12,836 - utils.web - INFO - Setting up Chrome driver (headless=False)
+2025-05-07 21:35:17,178 - scrapers.google_maps - INFO - Navigating to Google Maps to search for physiotherapy clinics  in pune
+2025-05-07 21:35:29,450 - scrapers.google_maps - INFO - Clicked search button
+2025-05-07 21:35:33,261 - scrapers.google_maps - INFO - Scrolled down results pane from 0 to 500
+2025-05-07 21:35:39,035 - scrapers.google_maps - INFO - Found 21 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-07 21:35:39,115 - scrapers.google_maps - INFO - Scrolled down results pane from 500 to 1000
+2025-05-07 21:35:44,796 - scrapers.google_maps - INFO - Found 21 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-07 21:35:44,880 - scrapers.google_maps - INFO - Scrolled down results pane from 1000 to 1500
+2025-05-07 21:35:45,895 - scrapers.google_maps - INFO - New content loaded, scroll height increased from 1971 to 3662
+2025-05-07 21:35:48,175 - scrapers.google_maps - INFO - Found 42 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-07 21:35:48,271 - scrapers.google_maps - INFO - Scrolled down results pane from 1436.6666259765625 to 1936.6666259765625
+2025-05-07 21:35:53,637 - scrapers.google_maps - INFO - Found 42 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-07 21:35:53,725 - scrapers.google_maps - INFO - Scrolled down results pane from 1936.6666259765625 to 2436.6666259765625
+2025-05-07 21:35:59,741 - scrapers.google_maps - INFO - Found 42 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-07 21:35:59,829 - scrapers.google_maps - INFO - Scrolled down results pane from 2436 to 2936
+2025-05-07 21:36:05,682 - scrapers.google_maps - INFO - Found 42 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-07 21:36:05,772 - scrapers.google_maps - INFO - Scrolled down results pane from 2936 to 3436
+2025-05-07 21:36:06,784 - scrapers.google_maps - INFO - New content loaded, scroll height increased from 3662 to 5432
+2025-05-07 21:36:09,550 - scrapers.google_maps - INFO - Found 63 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-07 21:36:09,638 - scrapers.google_maps - INFO - Scrolled down results pane from 3127.333251953125 to 3627.333251953125
+2025-05-07 21:36:15,612 - scrapers.google_maps - INFO - Found 63 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-07 21:36:15,681 - scrapers.google_maps - INFO - Scrolled down results pane from 3627.333251953125 to 4127.333251953125
+2025-05-07 21:36:21,593 - scrapers.google_maps - INFO - Found 63 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-07 21:36:21,685 - scrapers.google_maps - INFO - Scrolled down results pane from 4126.66650390625 to 4626.66650390625
+2025-05-07 21:36:27,351 - scrapers.google_maps - INFO - Found 63 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-07 21:36:27,459 - scrapers.google_maps - INFO - Scrolled down results pane from 4626.66650390625 to 5126.66650390625
+2025-05-07 21:36:29,641 - scrapers.google_maps - INFO - New content loaded, scroll height increased from 5432 to 7327
+2025-05-07 21:36:31,842 - scrapers.google_maps - INFO - Found 84 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-07 21:36:31,937 - scrapers.google_maps - INFO - Scrolled down results pane from 4962 to 5462
+2025-05-07 21:36:37,154 - scrapers.google_maps - INFO - Found 84 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-07 21:36:37,219 - scrapers.google_maps - INFO - Scrolled down results pane from 5462 to 5962
+2025-05-07 21:36:42,386 - scrapers.google_maps - INFO - Found 84 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-07 21:36:42,499 - scrapers.google_maps - INFO - Scrolled down results pane from 5962 to 6462
+2025-05-07 21:36:48,382 - scrapers.google_maps - INFO - Found 84 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-07 21:36:48,498 - scrapers.google_maps - INFO - Scrolled down results pane from 6462 to 6962
+2025-05-07 21:36:49,509 - scrapers.google_maps - INFO - New content loaded, scroll height increased from 7231 to 8890
+2025-05-07 21:36:51,674 - scrapers.google_maps - INFO - Found 105 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-07 21:36:51,732 - scrapers.google_maps - INFO - Found 35 elements with selector: div.Nv2PK
+2025-05-07 21:36:52,714 - scrapers.google_maps - INFO - Successfully extracted 35 URLs from 35 results
+2025-05-07 21:36:55,202 - scrapers.google_maps - INFO - Starting parallel processing of 35 URLs with 8 workers
+2025-05-07 21:37:12,384 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.8', 'address': '', 'locatedin': '', 'authority': 'http://www.healingtouchclinics.com/', 'phone:tel:08766040790': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-07 21:37:12,464 - scrapers.google_maps - INFO - Successfully extracted data for Healingtouchclinics
+2025-05-07 21:37:12,476 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.8', 'address': '', 'action:3': 'https://wa.link/qajdyo', 'services': 'https://thephysio9clinic.com/contact-us/', 'authority': 'https://thephysio9clinic.com/', 'phone:tel:09545966633': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-07 21:37:12,565 - scrapers.google_maps - INFO - Successfully extracted data for Thephysio9Clinic
+2025-05-07 21:37:12,807 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '5.0', 'address': '', 'action:3': 'https://impactclinic.co.in/contact-us/', 'authority': 'https://impactclinic.co.in/', 'phone:tel:09503060345': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-07 21:37:12,895 - scrapers.google_maps - INFO - Successfully extracted data for Impactclinic Co In
+2025-05-07 21:37:13,107 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.7', 'address': '', 'action:3': 'https://www.qispine.com/?utm_source=GooglePlaces&utm_medium=GoogleMaps&utm_campaign=AppointmentButton&utm_term=KoregaonParkPune&utm_content=AppointmentButton', 'authority': 'http://www.qispine.com/?utm_source=GooglePlaces&utm_medium=GoogleMaps&utm_campaign=QiSpine', 'phone:tel:08108008844': '', 'oloc': ''}
+2025-05-07 21:37:13,184 - scrapers.google_maps - INFO - Successfully extracted data for Qispine
+2025-05-07 21:37:13,528 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '5.0', 'address': '', 'phone:tel:09763648848': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-07 21:37:13,626 - scrapers.google_maps - INFO - Successfully extracted data for 
+2025-05-07 21:37:14,902 - scrapers.google_maps - INFO - Processed 1/35: Healingtouchclinics
+2025-05-07 21:37:14,999 - scrapers.google_maps - INFO - Processed 2/35: Thephysio9Clinic
+2025-05-07 21:37:15,286 - scrapers.google_maps - INFO - Processed 3/35: Impactclinic Co In
+2025-05-07 21:37:16,621 - scrapers.google_maps - INFO - Processed 4/35: Qispine
+2025-05-07 21:37:17,013 - scrapers.google_maps - INFO - Processed 5/35: 
+2025-05-07 21:37:35,816 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '5.0', 'address': 'Flat No. 1, Bldg no 39. Ground Floor, Hermes Paras 6 CHS, Hermes Paras, Central Ave, opp. Fortaleza Complex, Kalyani Nagar, Pune, Maharashtra 411014', 'authority': 'https://naikphysioclinic.com/', 'phone:tel:09822218899': '', 'oloc': ''}
+2025-05-07 21:37:35,964 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.5', 'address': 'Ground Floor, MIT Classic, North Ave, opp. to ICICI Bank, Kalyani Nagar, Pune, Maharashtra 411006', 'authority': 'https://www.acmephysiotherapy.com/', 'phone:tel:09890630358': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-07 21:37:36,054 - scrapers.google_maps - INFO - Successfully extracted data for Acmephysiotherapy
+2025-05-07 21:37:36,161 - scrapers.google_maps - INFO - Successfully extracted data for Naikphysioclinic
+2025-05-07 21:37:36,348 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.8', 'address': '', 'authority': 'http://www.centralpdh.com/', 'phone:tel:09090204747': '', 'oloc': ''}
+2025-05-07 21:37:36,439 - scrapers.google_maps - INFO - Successfully extracted data for Centralpdh
+2025-05-07 21:37:36,658 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '5.0', 'address': '', 'authority': 'https://mobilitymasters.in/', 'phone:tel:07276801763': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-07 21:37:36,721 - scrapers.google_maps - INFO - Successfully extracted data for Mobilitymasters In
+2025-05-07 21:37:36,788 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '5.0', 'address': 'Kasturba Hospital, Kasturba A, Kasturba Housing Society, Vishrantwadi, Pune, Maharashtra 411006', 'action:3': 'https://wa.me/918999160242?text=Hello%20I%20would%20like%20to%20book%20an%20appointment', 'authority': 'https://kasturbahospital.in/', 'phone:tel:08999160242': '', 'oloc': ''}
+2025-05-07 21:37:36,867 - scrapers.google_maps - INFO - Successfully extracted data for Kasturbahospital In
+2025-05-07 21:37:38,655 - scrapers.google_maps - INFO - Processed 6/35: Acmephysiotherapy
+2025-05-07 21:37:38,718 - scrapers.google_maps - INFO - Processed 7/35: Naikphysioclinic
+2025-05-07 21:37:38,929 - scrapers.google_maps - INFO - Processed 8/35: Centralpdh
+2025-05-07 21:37:39,161 - scrapers.google_maps - INFO - Processed 9/35: Mobilitymasters In
+2025-05-07 21:37:39,227 - scrapers.google_maps - INFO - Processed 10/35: Kasturbahospital In
+2025-05-07 21:37:58,880 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '5.0', 'address': '', 'action:3': 'https://humanmechanic.in/contact-us/', 'authority': 'https://humanmechanic.in/', 'phone:tel:08956699060': '', 'oloc': ''}
+2025-05-07 21:37:58,880 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.6', 'address': 'Town Square, 201-B, Airport Rd, above Dorabjee, Mhada Colony, Viman Nagar, Pune, Maharashtra 411014', 'locatedin': '', 'action:3': 'https://wa.link/qajdyo', 'authority': 'https://physio9clinic.com/', 'phone:tel:08551006633': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-07 21:37:58,957 - scrapers.google_maps - INFO - Successfully extracted data for Humanmechanic In
+2025-05-07 21:37:58,957 - scrapers.google_maps - INFO - Successfully extracted data for Physio9Clinic
+2025-05-07 21:37:58,978 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '5.0', 'address': '', 'authority': 'https://drmuditraka.com/', 'phone:tel:07020972297': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-07 21:37:59,092 - scrapers.google_maps - INFO - Successfully extracted data for Drmuditraka
+2025-05-07 21:37:59,233 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '5.0', 'address': "H4-1A/B, opposite to Rohit kamra's-men fashion boutique, Pluto Society, Kalyani Nagar, Pune, Maharashtra 411012", 'action:3': 'https://www.medroid.in/dr-vishakha-hipparge', 'authority': 'https://www.thehealingtouchclinic.com/', 'phone:tel:09049816492': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-07 21:37:59,329 - scrapers.google_maps - INFO - Successfully extracted data for Thehealingtouchclinic
+2025-05-07 21:37:59,466 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.9', 'address': '', 'authority': 'https://curenow.in/', 'phone:tel:09545345300': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-07 21:37:59,553 - scrapers.google_maps - INFO - Successfully extracted data for Curenow In
+2025-05-07 21:38:01,677 - scrapers.google_maps - INFO - Processed 11/35: Physio9Clinic
+2025-05-07 21:38:01,693 - scrapers.google_maps - INFO - Processed 12/35: Humanmechanic In
+2025-05-07 21:38:01,726 - scrapers.google_maps - INFO - Processed 13/35: Drmuditraka
+2025-05-07 21:38:01,855 - scrapers.google_maps - INFO - Processed 14/35: Thehealingtouchclinic
+2025-05-07 21:38:02,021 - scrapers.google_maps - INFO - Processed 15/35: Curenow In
+2025-05-07 21:38:20,807 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.8', 'address': '', 'phone:tel:09011674377': '', 'oloc': ''}
+2025-05-07 21:38:20,957 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.8', 'address': 'A2/8 Rakshalekha Society Ground floor, Lane No. 6, Koregaon Park, Pune, Maharashtra 411001', 'phone:tel:09881327328': '', 'oloc': ''}
+2025-05-07 21:38:21,066 - scrapers.google_maps - INFO - Successfully extracted data for 
+2025-05-07 21:38:21,109 - scrapers.google_maps - INFO - Successfully extracted data for 
+2025-05-07 21:38:21,597 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.9', 'address': '', 'authority': 'https://drsiddhikale.blogspot.com/?m=1', 'phone:tel:07083541822': '', 'oloc': ''}
+2025-05-07 21:38:21,655 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.9', 'address': '', 'authority': 'https://www.acmephysiotherapy.com/', 'phone:tel:09890630358': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-07 21:38:21,741 - scrapers.google_maps - INFO - Successfully extracted data for Acmephysiotherapy
+2025-05-07 21:38:21,805 - scrapers.google_maps - INFO - Successfully extracted data for Drsiddhikale Blogspot
+2025-05-07 21:38:21,892 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.9', 'address': '', 'locatedin': '', 'authority': 'http://abtp.co.in/', 'phone:tel:02048626588': '', 'oloc': ''}
+2025-05-07 21:38:22,060 - scrapers.google_maps - INFO - Successfully extracted data for Abtp Co In
+2025-05-07 21:38:23,739 - scrapers.google_maps - INFO - Processed 16/35: 
+2025-05-07 21:38:23,756 - scrapers.google_maps - INFO - Processed 17/35: 
+2025-05-07 21:38:24,192 - scrapers.google_maps - INFO - Processed 18/35: Acmephysiotherapy
+2025-05-07 21:38:24,284 - scrapers.google_maps - INFO - Processed 19/35: Drsiddhikale Blogspot
+2025-05-07 21:38:24,519 - scrapers.google_maps - INFO - Processed 20/35: Abtp Co In
+2025-05-07 21:38:43,361 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.9', 'address': 'BMCC Rd, Deccan Gymkhana, Pune, Maharashtra 411004', 'authority': 'http://fullcrumphysioclinic.com/', 'phone:tel:09405015813': '', 'oloc': ''}
+2025-05-07 21:38:43,443 - scrapers.google_maps - INFO - Successfully extracted data for Fullcrumphysioclinic
+2025-05-07 21:38:43,620 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.9', 'address': '', 'oh': '', 'authority': 'https://health-harmonii.com/', 'phone:tel:09864159999': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-07 21:38:43,717 - scrapers.google_maps - INFO - Successfully extracted data for Health Harmonii
+2025-05-07 21:38:43,858 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '5.0', 'address': '121, opposite Agarwal Plywood, New Nana Peth, Ganesh Peth, Pune, Maharashtra 411002', 'phone:tel:08551855255': '', 'oloc': ''}
+2025-05-07 21:38:43,913 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '5.0', 'address': '', 'authority': 'https://www.iphysiopune.in/', 'phone:tel:09175937328': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-07 21:38:43,958 - scrapers.google_maps - INFO - Successfully extracted data for 
+2025-05-07 21:38:43,997 - scrapers.google_maps - INFO - Successfully extracted data for Iphysiopune In
+2025-05-07 21:38:44,295 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.9', 'address': '', 'action:3': 'https://drmanishaphysio.com/', 'authority': 'https://business.google.com/v/dr-manishas-physiotherapy-an-advanced-laser-center/016742035197242186316/0706/_', 'phone:tel:09881912065': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-07 21:38:44,375 - scrapers.google_maps - INFO - Successfully extracted data for 
+2025-05-07 21:38:45,850 - scrapers.google_maps - INFO - Processed 21/35: Fullcrumphysioclinic
+2025-05-07 21:38:46,226 - scrapers.google_maps - INFO - Processed 22/35: Health Harmonii
+2025-05-07 21:38:46,377 - scrapers.google_maps - INFO - Processed 23/35: 
+2025-05-07 21:38:46,422 - scrapers.google_maps - INFO - Processed 24/35: Iphysiopune In
+2025-05-07 21:38:46,684 - scrapers.google_maps - INFO - Processed 25/35: 
+2025-05-07 21:39:05,594 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.9', 'address': 'Flat No 103,1st floor,Inna Apartment, above Mahalakshmi Medical, Parvati, Parvati Paytha, Pune, Maharashtra 411009', 'authority': 'http://www.drsarodesclinic.in/', 'phone:tel:09970301065': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-07 21:39:05,661 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.7', 'address': '', 'action:3': 'https://www.qispine.com/?utm_source=GooglePlaces&utm_medium=GoogleMaps&utm_campaign=AppointmentButton&utm_term=KoregaonParkPune&utm_content=AppointmentButton', 'authority': 'http://www.qispine.com/?utm_source=GooglePlaces&utm_medium=GoogleMaps&utm_campaign=QiSpine', 'phone:tel:08108008844': '', 'oloc': ''}
+2025-05-07 21:39:05,671 - scrapers.google_maps - INFO - Successfully extracted data for Drsarodesclinic In
+2025-05-07 21:39:05,744 - scrapers.google_maps - INFO - Successfully extracted data for Qispine
+2025-05-07 21:39:05,864 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '5.0', 'address': '', 'authority': 'http://www.physiolife.co.in/', 'phone:tel:09730470839': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-07 21:39:05,868 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.9', 'address': 'Office No.111, 1st Floor, GRAN EXITO SOCIETY Above Axis Bank in front of Palm Groves Society, Bhagwan Tatyasaheb Kawade Rd, Ghorpadi, Pune, Maharashtra 411001', 'action:3': 'http://m.me/Physioforyou99', 'phone:tel:08805077317': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-07 21:39:05,943 - scrapers.google_maps - INFO - Successfully extracted data for Physiolife Co In
+2025-05-07 21:39:05,956 - scrapers.google_maps - INFO - Successfully extracted data for 
+2025-05-07 21:39:05,972 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '5.0', 'address': '', 'action:3': 'https://impactclinic.co.in/contact-us/', 'authority': 'https://impactclinic.co.in/', 'phone:tel:09503060345': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-07 21:39:06,059 - scrapers.google_maps - INFO - Successfully extracted data for Impactclinic Co In
+2025-05-07 21:39:08,134 - scrapers.google_maps - INFO - Processed 26/35: Drsarodesclinic In
+2025-05-07 21:39:08,201 - scrapers.google_maps - INFO - Processed 27/35: Qispine
+2025-05-07 21:39:08,417 - scrapers.google_maps - INFO - Processed 28/35: Physiolife Co In
+2025-05-07 21:39:08,472 - scrapers.google_maps - INFO - Processed 29/35: 
+2025-05-07 21:39:08,505 - scrapers.google_maps - INFO - Processed 30/35: Impactclinic Co In
+2025-05-07 21:39:26,860 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '5.0', 'address': '', 'action:3': 'http://wcts.plus/WP18848270', 'authority': 'https://www.shubanphysiotherapyclinic.com/', 'phone:tel:09764535215': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-07 21:39:26,925 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.9', 'address': '', 'phone:tel:07499729321': '', 'oloc': ''}
+2025-05-07 21:39:26,930 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.9', 'address': '', 'action:3': '', 'authority': 'https://www.drsoumyaphysio.in/', 'phone:tel:09438242670': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-07 21:39:26,953 - scrapers.google_maps - INFO - Successfully extracted data for Shubanphysiotherapyclinic
+2025-05-07 21:39:27,042 - scrapers.google_maps - INFO - Successfully extracted data for Drsoumyaphysio In
+2025-05-07 21:39:27,051 - scrapers.google_maps - INFO - Successfully extracted data for 
+2025-05-07 21:39:27,322 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.9', 'address': '1314, Limayewadi Rd, opposite Bharatnatya mandir, Perugate, Sadashiv Peth, Pune, Maharashtra 411030', 'authority': 'https://vikalpphysiotherapy.com/', 'phone:tel:09049733295': '', 'oloc': ''}
+2025-05-07 21:39:27,397 - scrapers.google_maps - INFO - Successfully extracted data for Vikalpphysiotherapy
+2025-05-07 21:39:27,481 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '5.0', 'address': '', 'action:3': 'https://humanmechanic.in/contact-us/', 'authority': 'https://humanmechanic.in/', 'phone:tel:08956699060': '', 'oloc': ''}
+2025-05-07 21:39:27,564 - scrapers.google_maps - INFO - Successfully extracted data for Humanmechanic In
+2025-05-07 21:39:29,506 - scrapers.google_maps - INFO - Processed 31/35: Shubanphysiotherapyclinic
+2025-05-07 21:39:29,572 - scrapers.google_maps - INFO - Processed 32/35: 
+2025-05-07 21:39:29,616 - scrapers.google_maps - INFO - Processed 33/35: Drsoumyaphysio In
+2025-05-07 21:39:29,833 - scrapers.google_maps - INFO - Processed 34/35: Vikalpphysiotherapy
+2025-05-07 21:39:29,931 - scrapers.google_maps - INFO - Processed 35/35: Humanmechanic In
+2025-05-07 21:39:32,362 - scrapers.google_maps - INFO - Parallel processing complete. Processed 35/35 listings
+2025-05-07 21:39:32,362 - controllers.main_controller - INFO - Found 35 leads from Google Maps
+2025-05-07 21:39:32,907 - controllers.main_controller - INFO - Exported 35 leads to data/output/leads_physiotherapy clinics _pune_20250507_213932.csv, data/output/leads_physiotherapy clinics _pune_20250507_213932.xlsx, and data/output/leads_physiotherapy clinics _pune_20250507_213932.json
+2025-05-07 21:55:54,327 - controllers.main_controller - INFO - Starting scraping for cafes  in mumbai (Max leads: 15)
+2025-05-07 21:55:54,329 - controllers.main_controller - INFO - Starting Google Maps scraping
+2025-05-07 21:55:54,333 - utils.web - INFO - Setting up Chrome driver (headless=False)
+2025-05-07 21:55:58,853 - scrapers.google_maps - INFO - Navigating to Google Maps to search for cafes  in mumbai
+2025-05-07 21:56:12,671 - scrapers.google_maps - INFO - Clicked search button
+2025-05-07 21:56:17,345 - scrapers.google_maps - INFO - Scrolled down results pane from 0 to 500
+2025-05-07 21:56:22,689 - scrapers.google_maps - INFO - Found 15 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-07 21:56:22,736 - scrapers.google_maps - INFO - Found 5 elements with selector: div.Nv2PK
+2025-05-07 21:56:22,872 - scrapers.google_maps - INFO - Successfully extracted 5 URLs from 5 results
+2025-05-07 21:56:25,536 - scrapers.google_maps - INFO - Starting parallel processing of 5 URLs with 5 workers
+2025-05-07 21:56:50,311 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.3', 'address': '', 'oh': '', 'menu': 'https://kalaghodacafe.petpooja.com/', 'authority': 'https://kgcafe.in/', 'phone:tel:09833803418': '', 'oloc': ''}
+2025-05-07 21:56:50,413 - scrapers.google_maps - INFO - Successfully extracted data for Kalaghodacafe Petpooja
+2025-05-07 21:56:50,937 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.1', 'address': '', 'action:1': '', 'action:4': 'https://www.swiggy.com/city/mumbai/grandmama%27s-cafe-dadar-east-parel-rest177739?utm_source=GooglePlaceOrder&utm_campaign=GoogleMap&is_retargeting=true&media_source=GooglePlaceOrder', 'authority': 'http://www.grandmamascafe.com/', 'phone:tel:08591075473': '', 'oloc': ''}
+2025-05-07 21:56:51,035 - scrapers.google_maps - INFO - Successfully extracted data for Grandmamascafe
+2025-05-07 21:56:51,182 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.2', 'address': '', 'locatedin': '', 'action:1': 'https://swiggy.onelink.me/BVRZ?af_dp=swiggydiners://details/3740?source=GoogleReserve&af_ios_url=https://www.swiggy.com/restaurants/leopold-cafe-and-bar-colaba-fort-colaba-mumbai-3740/dineout?is_retargeting=true&media_source=GoogleReserve&utm_campaign=GoogleMap&utm_source=GoogleReserve&af_android_url=https://www.swiggy.com/restaurants/leopold-cafe-and-bar-colaba-fort-colaba-mumbai-3740/dineout?is_retargeting=true&media_source=GoogleReserve&utm_campaign=GoogleMap&utm_source=GoogleReserve&af_web_dp=https://www.swiggy.com/restaurants/leopold-cafe-and-bar-colaba-fort-colaba-mumbai-3740/dineout?is_retargeting=true&media_source=GoogleReserve&utm_campaign=GoogleMap&utm_source=GoogleReserve', 'action:4': 'https://www.swiggy.com/city/mumbai/leopold-cafe-&-bar-colaba-fort-colaba-rest3740?utm_source=GooglePlaceOrder&utm_campaign=GoogleMap&is_retargeting=true&media_source=GooglePlaceOrder', 'phone:tel:08585828201': '', 'oloc': ''}
+2025-05-07 21:56:51,261 - scrapers.google_maps - INFO - Successfully extracted data for 
+2025-05-07 21:56:51,936 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.6', 'address': '', 'action:1': '', 'action:4': 'https://www.swiggy.com/city/mumbai/leaping-windows-versova-andheri-west-rest35099?utm_source=GooglePlaceOrder&utm_campaign=GoogleMap&is_retargeting=true&media_source=GooglePlaceOrder', 'authority': 'http://www.leapingwindows.com/', 'phone:tel:09769998972': '', 'oloc': ''}
+2025-05-07 21:56:52,009 - scrapers.google_maps - INFO - Successfully extracted data for Leapingwindows
+2025-05-07 21:56:52,908 - scrapers.google_maps - INFO - Processed 1/5: Kalaghodacafe Petpooja
+2025-05-07 21:56:53,432 - scrapers.google_maps - INFO - Processed 2/5: Grandmamascafe
+2025-05-07 21:56:53,551 - scrapers.google_maps - INFO - Processed 3/5: 
+2025-05-07 21:56:54,271 - scrapers.google_maps - INFO - Processed 4/5: Leapingwindows
+2025-05-07 21:56:55,241 - scrapers.google_maps - ERROR - Error scraping listing https://www.google.com/maps/place/Prithvi+Cafe/data=!4m7!3m6!1s0x3be7c9ea57688fa3:0xefc0e4027133d0bc!8m2!3d19.1061292!4d72.8257094!16s%2Fg%2F11r902nyx!19sChIJo49oV-rJ5zsRvNAzcQLkwO8?authuser=0&hl=en&rclk=1: Message: timeout: Timed out receiving message from renderer: 15.777
+  (Session info: chrome=135.0.7049.115)
+Stacktrace:
+	GetHandleVerifier [0x0112D363+60275]
+	GetHandleVerifier [0x0112D3A4+60340]
+	(No symbol) [0x00F606F3]
+	(No symbol) [0x00F5126B]
+	(No symbol) [0x00F50FA1]
+	(No symbol) [0x00F4EF80]
+	(No symbol) [0x00F4FA3D]
+	(No symbol) [0x00F5BFE9]
+	(No symbol) [0x00F6D745]
+	(No symbol) [0x00F72FE6]
+	(No symbol) [0x00F5004D]
+	(No symbol) [0x00F6D4EE]
+	(No symbol) [0x00FEEA07]
+	(No symbol) [0x00FCCE86]
+	(No symbol) [0x00F9C623]
+	(No symbol) [0x00F9D474]
+	GetHandleVerifier [0x01378FE3+2467827]
+	GetHandleVerifier [0x013745E6+2448886]
+	GetHandleVerifier [0x0138F80C+2560028]
+	GetHandleVerifier [0x01143DF5+153093]
+	GetHandleVerifier [0x0114A3BD+179149]
+	GetHandleVerifier [0x01134BB8+91080]
+	GetHandleVerifier [0x01134D60+91504]
+	GetHandleVerifier [0x0111FA10+4640]
+	BaseThreadInitThunk [0x75407BA9+25]
+	RtlInitializeExceptionChain [0x7774C2EB+107]
+	RtlClearBits [0x7774C26F+191]
+
+2025-05-07 21:56:57,597 - scrapers.google_maps - INFO - Processed 5/5: 
+2025-05-07 21:56:57,933 - scrapers.google_maps - INFO - Parallel processing complete. Processed 5/5 listings
+2025-05-07 21:56:57,933 - controllers.main_controller - INFO - Found 5 leads from Google Maps
+2025-05-07 21:56:57,969 - controllers.main_controller - INFO - Exported 5 leads to data/output/leads_cafes _mumbai_20250507_215657.csv, data/output/leads_cafes _mumbai_20250507_215657.xlsx, and data/output/leads_cafes _mumbai_20250507_215657.json
+2025-05-07 22:00:53,255 - controllers.main_controller - INFO - Starting scraping for physiotherapy clinics  in nagpur (Max leads: 50, Batch size: 10)
+2025-05-07 22:00:53,258 - controllers.main_controller - INFO - Starting Google Maps scraping
+2025-05-07 22:00:53,285 - utils.web - INFO - Setting up Chrome driver (headless=False)
+2025-05-07 22:00:56,905 - scrapers.google_maps - INFO - Navigating to Google Maps to search for physiotherapy clinics  in nagpur
+2025-05-07 22:01:05,995 - scrapers.google_maps - INFO - Clicked search button
+2025-05-07 22:01:09,627 - scrapers.google_maps - INFO - Extracting up to 50 listing URLs...
+2025-05-07 22:01:09,675 - scrapers.google_maps - INFO - Found 7 elements with selector: div.Nv2PK
+2025-05-07 22:01:10,252 - scrapers.google_maps - INFO - Scrolled down results pane from 0 to 500
+2025-05-07 22:01:13,774 - scrapers.google_maps - INFO - Found 7 elements with selector: div.Nv2PK
+2025-05-07 22:01:14,057 - scrapers.google_maps - INFO - Scrolled down results pane from 500 to 1000
+2025-05-07 22:01:14,732 - scrapers.google_maps - INFO - New content loaded, scroll height increased from 1563 to 3346
+2025-05-07 22:01:16,706 - scrapers.google_maps - INFO - Found 14 elements with selector: div.Nv2PK
+2025-05-07 22:01:17,265 - scrapers.google_maps - INFO - Scrolled down results pane from 1000 to 1500
+2025-05-07 22:01:21,229 - scrapers.google_maps - INFO - Found 14 elements with selector: div.Nv2PK
+2025-05-07 22:01:21,763 - scrapers.google_maps - INFO - Scrolled down results pane from 1500 to 2000
+2025-05-07 22:01:25,765 - scrapers.google_maps - INFO - Found 14 elements with selector: div.Nv2PK
+2025-05-07 22:01:26,555 - scrapers.google_maps - INFO - Scrolled down results pane from 2000 to 2500
+2025-05-07 22:01:29,768 - scrapers.google_maps - INFO - Found 14 elements with selector: div.Nv2PK
+2025-05-07 22:01:30,494 - scrapers.google_maps - INFO - Scrolled down results pane from 2500 to 3000
+2025-05-07 22:01:31,166 - scrapers.google_maps - INFO - New content loaded, scroll height increased from 3346 to 4562
+2025-05-07 22:01:33,046 - scrapers.google_maps - INFO - Found 20 elements with selector: div.Nv2PK
+2025-05-07 22:01:34,055 - scrapers.google_maps - INFO - Scrolled down results pane from 2811.333251953125 to 3311.333251953125
+2025-05-07 22:01:37,677 - scrapers.google_maps - INFO - Found 20 elements with selector: div.Nv2PK
+2025-05-07 22:01:38,409 - scrapers.google_maps - INFO - Scrolled down results pane from 3311.333251953125 to 3811.333251953125
+2025-05-07 22:01:42,385 - scrapers.google_maps - INFO - Found 20 elements with selector: div.Nv2PK
+2025-05-07 22:01:43,189 - scrapers.google_maps - INFO - Scrolled down results pane from 3811.333251953125 to 4311.333251953125
+2025-05-07 22:01:45,259 - scrapers.google_maps - INFO - New content loaded, scroll height increased from 4562 to 6021
+2025-05-07 22:01:46,371 - scrapers.google_maps - INFO - Found 27 elements with selector: div.Nv2PK
+2025-05-07 22:01:47,408 - scrapers.google_maps - INFO - Scrolled down results pane from 4027.333251953125 to 4527.333251953125
+2025-05-07 22:01:51,302 - scrapers.google_maps - INFO - Found 27 elements with selector: div.Nv2PK
+2025-05-07 22:01:52,195 - scrapers.google_maps - INFO - Scrolled down results pane from 4526.66650390625 to 5026.66650390625
+2025-05-07 22:01:56,232 - scrapers.google_maps - INFO - Found 27 elements with selector: div.Nv2PK
+2025-05-07 22:01:57,952 - scrapers.google_maps - INFO - Scrolled down results pane from 5026.66650390625 to 5526.66650390625
+2025-05-07 22:01:58,628 - scrapers.google_maps - INFO - New content loaded, scroll height increased from 6021 to 7419
+2025-05-07 22:01:59,890 - scrapers.google_maps - INFO - Found 34 elements with selector: div.Nv2PK
+2025-05-07 22:02:01,220 - scrapers.google_maps - INFO - Scrolled down results pane from 5486 to 5986
+2025-05-07 22:02:04,614 - scrapers.google_maps - INFO - Found 34 elements with selector: div.Nv2PK
+2025-05-07 22:02:06,645 - scrapers.google_maps - INFO - Scrolled down results pane from 5986 to 6486
+2025-05-07 22:02:10,558 - scrapers.google_maps - INFO - Found 34 elements with selector: div.Nv2PK
+2025-05-07 22:02:11,638 - scrapers.google_maps - INFO - Scrolled down results pane from 6486 to 6986
+2025-05-07 22:02:12,320 - scrapers.google_maps - INFO - New content loaded, scroll height increased from 7419 to 8615
+2025-05-07 22:02:14,242 - scrapers.google_maps - INFO - Found 40 elements with selector: div.Nv2PK
+2025-05-07 22:02:15,881 - scrapers.google_maps - INFO - Scrolled down results pane from 6884.66650390625 to 7384.66650390625
+2025-05-07 22:02:19,026 - scrapers.google_maps - INFO - Found 40 elements with selector: div.Nv2PK
+2025-05-07 22:02:20,817 - scrapers.google_maps - INFO - Scrolled down results pane from 7384.66650390625 to 7884.66650390625
+2025-05-07 22:02:24,340 - scrapers.google_maps - INFO - Found 40 elements with selector: div.Nv2PK
+2025-05-07 22:02:26,070 - scrapers.google_maps - INFO - Scrolled down results pane from 7884.66650390625 to 8384.66650390625
+2025-05-07 22:02:28,157 - scrapers.google_maps - INFO - New content loaded, scroll height increased from 8615 to 10006
+2025-05-07 22:02:29,250 - scrapers.google_maps - INFO - Found 47 elements with selector: div.Nv2PK
+2025-05-07 22:02:31,760 - scrapers.google_maps - INFO - Scrolled down results pane from 8080.66650390625 to 8580.66650390625
+2025-05-07 22:02:35,561 - scrapers.google_maps - INFO - Found 47 elements with selector: div.Nv2PK
+2025-05-07 22:02:37,437 - scrapers.google_maps - INFO - Scrolled down results pane from 8580 to 9080
+2025-05-07 22:02:40,767 - scrapers.google_maps - INFO - Found 47 elements with selector: div.Nv2PK
+2025-05-07 22:02:42,475 - scrapers.google_maps - INFO - Scrolled down results pane from 9080 to 9580
+2025-05-07 22:02:43,159 - scrapers.google_maps - INFO - New content loaded, scroll height increased from 10006 to 11365
+2025-05-07 22:02:44,968 - scrapers.google_maps - INFO - Found 54 elements with selector: div.Nv2PK
+2025-05-07 22:02:46,521 - scrapers.google_maps - INFO - Reached target limit of 50 URLs
+2025-05-07 22:02:46,521 - scrapers.google_maps - INFO - Found 50 listing URLs
+2025-05-07 22:02:46,521 - scrapers.google_maps - INFO - Starting parallel processing of 50 URLs with 8 workers and batch size 10
+2025-05-07 22:02:46,521 - scrapers.google_maps - INFO - Processing batch 1/5 (10 URLs)
+2025-05-07 22:03:10,781 - scrapers.google_maps - INFO - Found business name using JavaScript: Physiotherapy And Sports Injury Clinic
+2025-05-07 22:03:10,868 - scrapers.google_maps - INFO - Found business name using JavaScript: Dr. Tejaswini’s : Physiotherapy, Rehabilitation & Fitness Clinic
+2025-05-07 22:03:10,997 - scrapers.google_maps - INFO - Found business name using JavaScript: Dr Suwarna S Physiotherapy Clinic | Osteopathy | Hijama Specialist | Accupuncture
+2025-05-07 22:03:11,509 - scrapers.google_maps - INFO - Found business name using JavaScript: Mundhada's Physiotherapy
+2025-05-07 22:03:11,552 - scrapers.google_maps - INFO - Found business name using JavaScript: Sparsh Physiotherapy Clinic
+2025-05-07 22:03:12,069 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '5.0', 'address': '', 'phone:tel:09890555394': '', 'oloc': ''}
+2025-05-07 22:03:12,116 - scrapers.google_maps - INFO - Found business name using JavaScript: Pain Care Advance Physiotherapy Best Physiotherapy Clinic In Nagpur
+2025-05-07 22:03:12,158 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.8', 'address': '', 'phone:tel:09096212123': '', 'oloc': ''}
+2025-05-07 22:03:12,217 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.8', 'address': 'MPRC Tower, Near Hanuman Mandir, Opposite Chaoni Masjid Lane, Nagpur, Maharashtra 440013', 'phone:tel:09607788798': '', 'oloc': ''}
+2025-05-07 22:03:12,286 - scrapers.google_maps - INFO - Successfully extracted data for Dr Suwarna S Physiotherapy Clinic | Osteopathy | Hijama Specialist | Accupuncture
+2025-05-07 22:03:12,360 - scrapers.google_maps - INFO - Successfully extracted data for Physiotherapy And Sports Injury Clinic
+2025-05-07 22:03:12,421 - scrapers.google_maps - INFO - Successfully extracted data for Mundhada's Physiotherapy
+2025-05-07 22:03:12,577 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '5.0', 'address': 'Anjalis’s boutique, Haldiram’s Besides, West high court road, Dharampeth Besides The Iconic Sudama, and, Nagpur, Maharashtra 440010', 'locatedin': '', 'oh': '', 'action:3': 'https://bookyourappointment.com/', 'phone:tel:09326907204': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-07 22:03:12,631 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.9', 'address': 'Manewada Road, cement road, opposite Rakshak bandhu, beside vighnaharta hospital, Manewada, Nagpur, Maharashtra 440027', 'action:3': 'http://wa.me/+919823493303', 'phone:tel:09823493303': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-07 22:03:12,741 - scrapers.google_maps - INFO - Successfully extracted data for Sparsh Physiotherapy Clinic
+2025-05-07 22:03:12,772 - scrapers.google_maps - INFO - Successfully extracted data for Dr. Tejaswini’s : Physiotherapy, Rehabilitation & Fitness Clinic
+2025-05-07 22:03:12,887 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.9', 'address': '', 'phone:tel:07709273391': '', 'oloc': ''}
+2025-05-07 22:03:12,932 - scrapers.google_maps - INFO - Found business name using JavaScript: GoWell Physiotherapy Clinic and Pregnancy Exercise Specialist Clinic
+2025-05-07 22:03:12,989 - scrapers.google_maps - INFO - Successfully extracted data for Pain Care Advance Physiotherapy Best Physiotherapy Clinic In Nagpur
+2025-05-07 22:03:13,318 - scrapers.google_maps - INFO - Found business name using JavaScript: RIVULET - The Physiotherapy Clinic and Rehabilitation Centre
+2025-05-07 22:03:13,487 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.8', 'address': '', 'authority': 'http://gowellphysio.co.in/', 'phone:tel:09158028666': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-07 22:03:13,578 - scrapers.google_maps - INFO - Successfully extracted data for GoWell Physiotherapy Clinic and Pregnancy Exercise Specialist Clinic
+2025-05-07 22:03:13,870 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '5.0', 'address': '', 'locatedin': '', 'oh': '', 'phone:tel:09920096686': '', 'oloc': ''}
+2025-05-07 22:03:13,997 - scrapers.google_maps - INFO - Successfully extracted data for RIVULET - The Physiotherapy Clinic and Rehabilitation Centre
+2025-05-07 22:03:15,497 - scrapers.google_maps - INFO - Processed 1/50: Physiotherapy And Sports Injury Clinic
+2025-05-07 22:03:15,555 - scrapers.google_maps - INFO - Processed 2/50: Dr Suwarna S Physiotherapy Clinic | Osteopathy | Hijama Specialist | Accupuncture
+2025-05-07 22:03:15,733 - scrapers.google_maps - INFO - Processed 3/50: Mundhada's Physiotherapy
+2025-05-07 22:03:15,980 - scrapers.google_maps - INFO - Processed 4/50: Pain Care Advance Physiotherapy Best Physiotherapy Clinic In Nagpur
+2025-05-07 22:03:16,004 - scrapers.google_maps - INFO - Processed 5/50: Dr. Tejaswini’s : Physiotherapy, Rehabilitation & Fitness Clinic
+2025-05-07 22:03:16,081 - scrapers.google_maps - INFO - Processed 6/50: Sparsh Physiotherapy Clinic
+2025-05-07 22:03:16,266 - scrapers.google_maps - INFO - Processed 7/50: GoWell Physiotherapy Clinic and Pregnancy Exercise Specialist Clinic
+2025-05-07 22:03:16,407 - scrapers.google_maps - INFO - Processed 8/50: RIVULET - The Physiotherapy Clinic and Rehabilitation Centre
+2025-05-07 22:03:23,913 - scrapers.google_maps - INFO - Found business name using JavaScript: Dr. Angelina Dias' LIVE WELL
+2025-05-07 22:03:24,366 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.9', 'address': '', 'authority': 'http://www.livewellphysio.in/', 'phone:tel:07124032560': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-07 22:03:24,373 - scrapers.google_maps - INFO - Found business name using JavaScript: YourPhysio
+2025-05-07 22:03:24,422 - scrapers.google_maps - INFO - Successfully extracted data for Dr. Angelina Dias' LIVE WELL
+2025-05-07 22:03:24,670 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.7', 'address': 'Ground Floor, Venkatesh Apartments, Plot No 193, Mankapur Ring Rd, Parsodi, Trimurtee Nagar, Nagpur, Maharashtra 440022', 'action:3': 'http://www.your-physio.in/clinics/nagpur/trimurti-nagar', 'oloc': '', 'place-info-links:': ''}
+2025-05-07 22:03:24,719 - scrapers.google_maps - INFO - Successfully extracted data for YourPhysio
+2025-05-07 22:03:26,723 - scrapers.google_maps - INFO - Processed 9/50: Dr. Angelina Dias' LIVE WELL
+2025-05-07 22:03:26,971 - scrapers.google_maps - INFO - Processed 10/50: YourPhysio
+2025-05-07 22:03:27,419 - scrapers.google_maps - INFO - Waiting 4.0 seconds before next batch...
+2025-05-07 22:03:31,428 - scrapers.google_maps - INFO - Processing batch 2/5 (10 URLs)
+2025-05-07 22:03:52,425 - scrapers.google_maps - INFO - Found business name using JavaScript: ProClinica Physiotherapy Clinic
+2025-05-07 22:03:54,558 - scrapers.google_maps - INFO - Found business name using JavaScript: Sai Sparsh Physiotherapy Chiropractic Osteopathy Clinic
+2025-05-07 22:03:54,811 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.9', 'address': '90 opp. St. Vincent school Uday Nagar, tapasya square, Outer Ring Rd, Manewada, Nagpur, Maharashtra 440021', 'phone:tel:07888001188': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-07 22:03:55,072 - scrapers.google_maps - INFO - Found business name using JavaScript: Rachana Physiotherapy Clinic/Osteopathy/Matrix Rhythm Therapy/Needling/Hijama clinic
+2025-05-07 22:03:55,211 - scrapers.google_maps - INFO - Found business name using JavaScript: DILIGENT PHYSIOTHERAPY & FITNESS CLINIC
+2025-05-07 22:03:55,211 - scrapers.google_maps - INFO - Successfully extracted data for ProClinica Physiotherapy Clinic
+2025-05-07 22:03:56,208 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '5.0', 'address': '', 'action:3': 'https://wa.me/919765392603', 'authority': 'https://saisparshphysiotherapyclinic.mystrikingly.com/', 'phone:tel:09765392603': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-07 22:03:56,250 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.9', 'address': '', 'phone:tel:09209291738': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-07 22:03:56,288 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '5.0', 'address': '', 'phone:tel:09172995720': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-07 22:03:56,294 - scrapers.google_maps - INFO - Successfully extracted data for Sai Sparsh Physiotherapy Chiropractic Osteopathy Clinic
+2025-05-07 22:03:56,343 - scrapers.google_maps - INFO - Successfully extracted data for Rachana Physiotherapy Clinic/Osteopathy/Matrix Rhythm Therapy/Needling/Hijama clinic
+2025-05-07 22:03:56,383 - scrapers.google_maps - INFO - Successfully extracted data for DILIGENT PHYSIOTHERAPY & FITNESS CLINIC
+2025-05-07 22:03:57,042 - scrapers.google_maps - INFO - Found business name using JavaScript: Back To Life Physiotherapy & Chiropractic Centre -Spondylolysis | headache | Migraine Treatment In Nagpur,Maharashtra
+2025-05-07 22:03:57,398 - scrapers.google_maps - INFO - Found business name using JavaScript: Phoenix Physiotherapy Clinic - Best Physiotherapy Clinic in Nagpur. Physiotherapy in Ganeshpeth. Home Visit Physiotherapy.
+2025-05-07 22:03:57,445 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.7', 'address': '', 'services': 'https://backtolifecenter.in/', 'authority': 'https://backtolifecenter.in/', 'phone:tel:08668904689': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-07 22:03:57,483 - scrapers.google_maps - INFO - Found business name using JavaScript: Revive Physiotherapy and wellness centre
+2025-05-07 22:03:57,516 - scrapers.google_maps - INFO - Successfully extracted data for Back To Life Physiotherapy & Chiropractic Centre -Spondylolysis | headache | Migraine Treatment In Nagpur,Maharashtra
+2025-05-07 22:03:57,747 - scrapers.google_maps - INFO - Found business name using JavaScript: Good Well Physiotherapy Clinic,Nagpur, By Dr Bhairavi Maske
+2025-05-07 22:03:57,801 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.9', 'address': '', 'action:3': 'https://wa.me/message/Z4YFSPFH7YMHG1', 'oloc': '', 'place-info-links:': ''}
+2025-05-07 22:03:57,838 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.7', 'address': '', 'phone:tel:09607788748': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-07 22:03:57,877 - scrapers.google_maps - INFO - Successfully extracted data for Phoenix Physiotherapy Clinic - Best Physiotherapy Clinic in Nagpur. Physiotherapy in Ganeshpeth. Home Visit Physiotherapy.
+2025-05-07 22:03:57,939 - scrapers.google_maps - INFO - Successfully extracted data for Revive Physiotherapy and wellness centre
+2025-05-07 22:03:58,308 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '5.0', 'address': '', 'oh': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-07 22:03:58,436 - scrapers.google_maps - INFO - Successfully extracted data for Good Well Physiotherapy Clinic,Nagpur, By Dr Bhairavi Maske
+2025-05-07 22:03:58,789 - scrapers.google_maps - INFO - Processed 11/50: ProClinica Physiotherapy Clinic
+2025-05-07 22:03:59,196 - scrapers.google_maps - INFO - Processed 12/50: Rachana Physiotherapy Clinic/Osteopathy/Matrix Rhythm Therapy/Needling/Hijama clinic
+2025-05-07 22:03:59,199 - scrapers.google_maps - INFO - Processed 13/50: Sai Sparsh Physiotherapy Chiropractic Osteopathy Clinic
+2025-05-07 22:03:59,293 - scrapers.google_maps - INFO - Processed 14/50: DILIGENT PHYSIOTHERAPY & FITNESS CLINIC
+2025-05-07 22:04:00,013 - scrapers.google_maps - INFO - Processed 15/50: Back To Life Physiotherapy & Chiropractic Centre -Spondylolysis | headache | Migraine Treatment In Nagpur,Maharashtra
+2025-05-07 22:04:00,405 - scrapers.google_maps - INFO - Processed 16/50: Phoenix Physiotherapy Clinic - Best Physiotherapy Clinic in Nagpur. Physiotherapy in Ganeshpeth. Home Visit Physiotherapy.
+2025-05-07 22:04:00,461 - scrapers.google_maps - INFO - Processed 17/50: Revive Physiotherapy and wellness centre
+2025-05-07 22:04:00,758 - scrapers.google_maps - INFO - Processed 18/50: Good Well Physiotherapy Clinic,Nagpur, By Dr Bhairavi Maske
+2025-05-07 22:04:07,413 - scrapers.google_maps - INFO - Found business name using JavaScript: Dr Vivek Chourasia Physiotherapy Clinic Nagpur
+2025-05-07 22:04:07,506 - scrapers.google_maps - INFO - Found business name using JavaScript: Riva Clinic and Physiotherapy
+2025-05-07 22:04:07,947 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '5.0', 'address': '', 'phone:tel:09890830005': '', 'oloc': ''}
+2025-05-07 22:04:07,974 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.9', 'address': 'New Gadgebaba Nagar, Plot No. 74, Kharbi Rd, near Hanuman Mandir, New Diamond Nagar, New Sahakar Nagar, Kharbi, Nagpur, Maharashtra 440024', 'oloc': ''}
+2025-05-07 22:04:08,034 - scrapers.google_maps - INFO - Successfully extracted data for Riva Clinic and Physiotherapy
+2025-05-07 22:04:08,125 - scrapers.google_maps - INFO - Successfully extracted data for Dr Vivek Chourasia Physiotherapy Clinic Nagpur
+2025-05-07 22:04:10,427 - scrapers.google_maps - INFO - Processed 19/50: Riva Clinic and Physiotherapy
+2025-05-07 22:04:10,427 - scrapers.google_maps - INFO - Processed 20/50: Dr Vivek Chourasia Physiotherapy Clinic Nagpur
+2025-05-07 22:04:10,906 - scrapers.google_maps - INFO - Waiting 3.5 seconds before next batch...
+2025-05-07 22:04:14,410 - scrapers.google_maps - INFO - Processing batch 3/5 (10 URLs)
+2025-05-07 22:04:39,575 - scrapers.google_maps - INFO - Found business name using JavaScript: Shifa Advance Physiotherapy Clinic and Rehabilitation Centre
+2025-05-07 22:04:39,610 - scrapers.google_maps - INFO - Found business name using JavaScript: Bhargavi Physiotherapy Clinic
+2025-05-07 22:04:39,648 - scrapers.google_maps - INFO - Found business name using JavaScript: Active Care Physiotherapy (NON-SURGICAL SPINE TREATMENT) NECK & BACKPAIN CLINIC.
+2025-05-07 22:04:40,569 - scrapers.google_maps - INFO - Found business name using JavaScript: Dr Ssuhana Madnani’s Carewell Physiotherapy and Fitness clinic
+2025-05-07 22:04:40,845 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.9', 'address': '', 'phone:tel:09209894949': '', 'oloc': ''}
+2025-05-07 22:04:40,928 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '5.0', 'address': '', 'phone:tel:09922501657': '', 'oloc': ''}
+2025-05-07 22:04:41,013 - scrapers.google_maps - INFO - Successfully extracted data for Active Care Physiotherapy (NON-SURGICAL SPINE TREATMENT) NECK & BACKPAIN CLINIC.
+2025-05-07 22:04:41,076 - scrapers.google_maps - INFO - Successfully extracted data for Shifa Advance Physiotherapy Clinic and Rehabilitation Centre
+2025-05-07 22:04:41,219 - scrapers.google_maps - INFO - Found business name using JavaScript: Humanity Physiotherapy Clinic & Fitness Studio
+2025-05-07 22:04:41,710 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '5.0', 'address': 'Plot number 3, Mahalaxmi Housing Society, Manish Nagar, Somalwada, Nagpur, Maharashtra 440015', 'oloc': '', 'place-info-links:': ''}
+2025-05-07 22:04:41,733 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.9', 'address': '', 'authority': 'http://www.drsuhana.com/', 'phone:tel:09561092937': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-07 22:04:41,835 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '5.0', 'address': '', 'phone:tel:08208529141': '', 'oloc': ''}
+2025-05-07 22:04:41,842 - scrapers.google_maps - INFO - Successfully extracted data for Dr Ssuhana Madnani’s Carewell Physiotherapy and Fitness clinic
+2025-05-07 22:04:41,843 - scrapers.google_maps - INFO - Successfully extracted data for Bhargavi Physiotherapy Clinic
+2025-05-07 22:04:41,871 - scrapers.google_maps - INFO - Found business name using JavaScript: Dphysiiocare - Advanced Physiotherapy & Fitness Clinic
+2025-05-07 22:04:41,987 - scrapers.google_maps - INFO - Successfully extracted data for Humanity Physiotherapy Clinic & Fitness Studio
+2025-05-07 22:04:42,161 - scrapers.google_maps - INFO - Found business name using JavaScript: Realign Physiotherapy
+2025-05-07 22:04:42,468 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '5.0', 'address': '', 'phone:tel:07385936686': '', 'oloc': ''}
+2025-05-07 22:04:42,581 - scrapers.google_maps - INFO - Successfully extracted data for Dphysiiocare - Advanced Physiotherapy & Fitness Clinic
+2025-05-07 22:04:42,744 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '5.0', 'address': 'Plot no G-16, opposite Purti Bazar, Laxminagar, Nagpur, Maharashtra 440022', 'phone:tel:09340952907': '', 'oloc': ''}
+2025-05-07 22:04:42,870 - scrapers.google_maps - INFO - Successfully extracted data for Realign Physiotherapy
+2025-05-07 22:04:43,099 - scrapers.google_maps - INFO - Found business name using JavaScript: HEALING POINT ADVANCE PHYSIOTHERAPY AND CHIROPRACTIC CLINIC
+2025-05-07 22:04:43,386 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.9', 'address': '', 'phone:tel:09175629544': '', 'oloc': ''}
+2025-05-07 22:04:43,442 - scrapers.google_maps - INFO - Successfully extracted data for HEALING POINT ADVANCE PHYSIOTHERAPY AND CHIROPRACTIC CLINIC
+2025-05-07 22:04:44,531 - scrapers.google_maps - INFO - Processed 21/50: Shifa Advance Physiotherapy Clinic and Rehabilitation Centre
+2025-05-07 22:04:44,676 - scrapers.google_maps - INFO - Processed 22/50: Dr Ssuhana Madnani’s Carewell Physiotherapy and Fitness clinic
+2025-05-07 22:04:44,690 - scrapers.google_maps - INFO - Processed 23/50: Active Care Physiotherapy (NON-SURGICAL SPINE TREATMENT) NECK & BACKPAIN CLINIC.
+2025-05-07 22:04:45,048 - scrapers.google_maps - INFO - Processed 24/50: Bhargavi Physiotherapy Clinic
+2025-05-07 22:04:45,064 - scrapers.google_maps - INFO - Processed 25/50: Humanity Physiotherapy Clinic & Fitness Studio
+2025-05-07 22:04:45,171 - scrapers.google_maps - INFO - Processed 26/50: Dphysiiocare - Advanced Physiotherapy & Fitness Clinic
+2025-05-07 22:04:45,389 - scrapers.google_maps - INFO - Processed 27/50: Realign Physiotherapy
+2025-05-07 22:04:45,787 - scrapers.google_maps - INFO - Processed 28/50: HEALING POINT ADVANCE PHYSIOTHERAPY AND CHIROPRACTIC CLINIC
+2025-05-07 22:04:56,309 - scrapers.google_maps - INFO - Found business name using JavaScript: Osteorehab curve's physiotherapy Clinic- Physiotherapist In Nagpur
+2025-05-07 22:04:56,758 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.7', 'address': '', 'action:3': 'http://physiotherapynagpur.com/', 'authority': 'http://physiotherapynagpur.com/', 'phone:tel:09423534551': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-07 22:04:56,840 - scrapers.google_maps - INFO - Successfully extracted data for Osteorehab curve's physiotherapy Clinic- Physiotherapist In Nagpur
+2025-05-07 22:04:57,051 - scrapers.google_maps - INFO - Found business name using JavaScript: Dr. Shabbir Hussain (Best Physiotherapist in Nagpur)
+2025-05-07 22:04:57,330 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '5.0', 'address': '', 'authority': 'https://physiotalkofficial.com/', 'phone:tel:07737386752': '', 'oloc': ''}
+2025-05-07 22:04:57,390 - scrapers.google_maps - INFO - Successfully extracted data for Dr. Shabbir Hussain (Best Physiotherapist in Nagpur)
+2025-05-07 22:04:59,181 - scrapers.google_maps - INFO - Processed 29/50: Osteorehab curve's physiotherapy Clinic- Physiotherapist In Nagpur
+2025-05-07 22:04:59,691 - scrapers.google_maps - INFO - Processed 30/50: Dr. Shabbir Hussain (Best Physiotherapist in Nagpur)
+2025-05-07 22:05:00,170 - scrapers.google_maps - INFO - Waiting 3.0 seconds before next batch...
+2025-05-07 22:05:03,175 - scrapers.google_maps - INFO - Processing batch 4/5 (10 URLs)
+2025-05-07 22:05:24,837 - scrapers.google_maps - INFO - Found business name using JavaScript: Apex Physiotherapy Clinic
+2025-05-07 22:05:26,765 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '5.0', 'address': 'Plot no.82, Near Allahabad Bank, Manish Nagar, Nagpur, Maharashtra 440015', 'phone:tel:09970277417': '', 'oloc': ''}
+2025-05-07 22:05:26,966 - scrapers.google_maps - INFO - Found business name using JavaScript: Physio Planet
+2025-05-07 22:05:27,007 - scrapers.google_maps - INFO - Found business name using JavaScript: Pain Relief Physiotherapy Clinic, Dr. Shweta Mandhanaa
+2025-05-07 22:05:27,051 - scrapers.google_maps - INFO - Found business name using JavaScript: Raut Physiotherapy Clinic & Home Visit
+2025-05-07 22:05:27,197 - scrapers.google_maps - INFO - Successfully extracted data for Apex Physiotherapy Clinic
+2025-05-07 22:05:27,227 - scrapers.google_maps - INFO - Found business name using JavaScript: Dr. Neena's - Fitness & Physiotherapy
+2025-05-07 22:05:27,506 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '5.0', 'address': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-07 22:05:27,601 - scrapers.google_maps - INFO - Successfully extracted data for Pain Relief Physiotherapy Clinic, Dr. Shweta Mandhanaa
+2025-05-07 22:05:27,772 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.9', 'address': '', 'phone:tel:09021039668': '', 'place-info-links:': ''}
+2025-05-07 22:05:27,875 - scrapers.google_maps - INFO - Successfully extracted data for Raut Physiotherapy Clinic & Home Visit
+2025-05-07 22:05:27,877 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.7', 'address': '', 'phone:tel:07122530529': '', 'oloc': ''}
+2025-05-07 22:05:28,007 - scrapers.google_maps - INFO - Successfully extracted data for Dr. Neena's - Fitness & Physiotherapy
+2025-05-07 22:05:28,121 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '5.0', 'address': '1st Floor, Pali Bhawan, 581/A, 75/B, Kale Layout, Zingabai Takli, Nagpur, Maharashtra 440030', 'oh': '', 'action:3': 'https://wa.link/uwufc1', 'authority': 'https://bit.ly/3PHJLXC', 'phone:tel:08461003380': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-07 22:05:28,128 - scrapers.google_maps - INFO - Found business name using JavaScript: Stay Cure Physiotherapy Clinic
+2025-05-07 22:05:28,184 - scrapers.google_maps - INFO - Found business name using JavaScript: Dr. Neena's physio to fitness
+2025-05-07 22:05:28,246 - scrapers.google_maps - INFO - Successfully extracted data for Physio Planet
+2025-05-07 22:05:28,468 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.9', 'address': 'Fourth Floor, Shyam Arcade, Gangabai Ghat Rd, opp. Ajmera Tyres, Near Telephone Exchange Square, Mangalwari, Nagpur, Maharashtra 440008', 'oloc': ''}
+2025-05-07 22:05:28,502 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '5.0', 'address': "Tathagat chowk, Mankapur Ring Rd, opp. King's Kitchen, Jagrut Nagar, Angulimal Nagar, Nagpur, Maharashtra 440026", 'phone:tel:08956016847': '', 'oloc': ''}
+2025-05-07 22:05:28,557 - scrapers.google_maps - INFO - Successfully extracted data for Dr. Neena's physio to fitness
+2025-05-07 22:05:28,614 - scrapers.google_maps - INFO - Successfully extracted data for Stay Cure Physiotherapy Clinic
+2025-05-07 22:05:28,836 - scrapers.google_maps - INFO - Found business name using JavaScript: Dr Jubin Thomas
+2025-05-07 22:05:29,244 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.9', 'address': '5X2Q+J9R, Duttawadi, Nagpur, Maharashtra 440023', 'action:3': 'https://book-appointment.healthplix.com/dr-jubin-thomas-orthopaedic---neurology-kamptee-road-nagpur', 'services': 'https://book-appointment.healthplix.com/dr-jubin-thomas-orthopaedic---neurology-kamptee-road-nagpur', 'phone:tel:07058172481': '', 'merchant': 'https://business.google.com/create?fp=5370225779271911444&hl=en&authuser=0&gmbsrc=in-en-et-ip-z-gmb-s-z-l~mrc%7Cclaimbz%7Cu&ppsrc=GMBMI&utm_campaign=in-en-et-ip-z-gmb-s-z-l~mrc%7Cclaimbz%7Cu&utm_source=gmb_mrc81&utm_medium=et&getstarted&lis=0'}
+2025-05-07 22:05:29,322 - scrapers.google_maps - INFO - Successfully extracted data for Dr Jubin Thomas
+2025-05-07 22:05:30,917 - scrapers.google_maps - INFO - Processed 31/50: Apex Physiotherapy Clinic
+2025-05-07 22:05:30,933 - scrapers.google_maps - INFO - Processed 32/50: Pain Relief Physiotherapy Clinic, Dr. Shweta Mandhanaa
+2025-05-07 22:05:30,936 - scrapers.google_maps - INFO - Processed 33/50: Dr. Neena's - Fitness & Physiotherapy
+2025-05-07 22:05:31,138 - scrapers.google_maps - INFO - Processed 34/50: Raut Physiotherapy Clinic & Home Visit
+2025-05-07 22:05:31,246 - scrapers.google_maps - INFO - Processed 35/50: Dr. Neena's physio to fitness
+2025-05-07 22:05:31,294 - scrapers.google_maps - INFO - Processed 36/50: Stay Cure Physiotherapy Clinic
+2025-05-07 22:05:31,646 - scrapers.google_maps - INFO - Processed 37/50: Dr Jubin Thomas
+2025-05-07 22:05:32,703 - scrapers.google_maps - INFO - Processed 38/50: Physio Planet
+2025-05-07 22:05:38,722 - scrapers.google_maps - INFO - Found business name using JavaScript: Dr. Shubham Jaiswal - Best Orthopedic and Sports Physiotherapist
+2025-05-07 22:05:39,493 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.9', 'address': '', 'phone:tel:07304446969': '', 'oloc': ''}
+2025-05-07 22:05:39,584 - scrapers.google_maps - INFO - Successfully extracted data for Dr. Shubham Jaiswal - Best Orthopedic and Sports Physiotherapist
+2025-05-07 22:05:40,060 - scrapers.google_maps - INFO - Found business name using JavaScript: PHYSIO FIX Rehab & Research
+2025-05-07 22:05:40,332 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '5.0', 'address': 'Gandhi Putla, Garud Khamb, Krushna Ganga, Central Ave, Itwari, Nagpur, Maharashtra 440002', 'action:3': 'https://www.physiofixrr.com/book-online', 'authority': 'https://www.physiofixrr.com/', 'phone:tel:07276212399': '', 'oloc': ''}
+2025-05-07 22:05:40,379 - scrapers.google_maps - INFO - Successfully extracted data for PHYSIO FIX Rehab & Research
+2025-05-07 22:05:41,887 - scrapers.google_maps - INFO - Processed 39/50: Dr. Shubham Jaiswal - Best Orthopedic and Sports Physiotherapist
+2025-05-07 22:05:42,655 - scrapers.google_maps - INFO - Processed 40/50: PHYSIO FIX Rehab & Research
+2025-05-07 22:05:43,268 - scrapers.google_maps - INFO - Waiting 2.5 seconds before next batch...
+2025-05-07 22:05:45,784 - scrapers.google_maps - INFO - Processing batch 5/5 (10 URLs)
+2025-05-07 22:06:10,572 - scrapers.google_maps - INFO - Found business name using JavaScript: U.N. Physiotherapy and Rehab Clinic and cosmo skin clinic dry needling ,cupping,
+2025-05-07 22:06:10,799 - scrapers.google_maps - INFO - Found business name using JavaScript: Dr. Deepali Physiotherapy and Rehabilitation Clinic
+2025-05-07 22:06:11,097 - scrapers.google_maps - INFO - Found business name using JavaScript: SaiKrupa Preventive Medicine
+2025-05-07 22:06:11,362 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.9', 'address': '', 'phone:tel:09561593990': '', 'oloc': ''}
+2025-05-07 22:06:11,453 - scrapers.google_maps - INFO - Found business name using JavaScript: Physiotherapy Clinic I Dr Atul Dekate
+2025-05-07 22:06:11,455 - scrapers.google_maps - INFO - Successfully extracted data for Dr. Deepali Physiotherapy and Rehabilitation Clinic
+2025-05-07 22:06:11,458 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.7', 'address': '', 'action:3': '', 'phone:tel:08956240285': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-07 22:06:11,575 - scrapers.google_maps - INFO - Successfully extracted data for U.N. Physiotherapy and Rehab Clinic and cosmo skin clinic dry needling ,cupping,
+2025-05-07 22:06:11,654 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '5.0', 'address': 'Rachna society, Farmland Rd, opp. Arneja hospital, layout, Ramdaspeth, Nagpur, Maharashtra 440010', 'phone:tel:09145654111': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-07 22:06:11,670 - scrapers.google_maps - INFO - Found business name using JavaScript: Shashank Physiotherapy & Stress Management clinic
+2025-05-07 22:06:11,714 - scrapers.google_maps - INFO - Found business name using JavaScript: Holistic Lifestyle Physiotherapy Clinic || Best Physiotherapy Clinic ||
+2025-05-07 22:06:11,765 - scrapers.google_maps - INFO - Successfully extracted data for SaiKrupa Preventive Medicine
+2025-05-07 22:06:11,880 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.9', 'address': '15, MOON CORNER, Plot no.14, near Petrol Pump, beside 4 Pillers Building, Besa, Nagpur, Maharashtra 440037', 'oloc': ''}
+2025-05-07 22:06:11,978 - scrapers.google_maps - INFO - Successfully extracted data for Physiotherapy Clinic I Dr Atul Dekate
+2025-05-07 22:06:12,096 - scrapers.google_maps - INFO - Found business name using JavaScript: PhysioPhy - Physiotherapist near me, Best Physiotherapy Clinic in Nagpur, Neurophysiotherapy Centre.
+2025-05-07 22:06:12,145 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '5.0', 'address': '', 'oloc': ''}
+2025-05-07 22:06:12,199 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.8', 'address': '', 'phone:tel:09860423258': '', 'oloc': ''}
+2025-05-07 22:06:12,241 - scrapers.google_maps - INFO - Successfully extracted data for Holistic Lifestyle Physiotherapy Clinic || Best Physiotherapy Clinic ||
+2025-05-07 22:06:12,328 - scrapers.google_maps - INFO - Successfully extracted data for Shashank Physiotherapy & Stress Management clinic
+2025-05-07 22:06:12,687 - scrapers.google_maps - INFO - Found business name using JavaScript: Samartha Physiotherapy Rehab Clinic
+2025-05-07 22:06:12,713 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '5.0', 'address': '', 'action:3': 'https://physiophy.pdigiworld.in/', 'authority': 'https://physiophy.pdigiworld.in/', 'phone:tel:09970127614': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-07 22:06:12,794 - scrapers.google_maps - INFO - Successfully extracted data for PhysioPhy - Physiotherapist near me, Best Physiotherapy Clinic in Nagpur, Neurophysiotherapy Centre.
+2025-05-07 22:06:13,045 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.9', 'address': '', 'phone:tel:09130405697': '', 'oloc': ''}
+2025-05-07 22:06:13,122 - scrapers.google_maps - INFO - Successfully extracted data for Samartha Physiotherapy Rehab Clinic
+2025-05-07 22:06:14,546 - scrapers.google_maps - INFO - Processed 41/50: Dr. Deepali Physiotherapy and Rehabilitation Clinic
+2025-05-07 22:06:14,579 - scrapers.google_maps - INFO - Processed 42/50: U.N. Physiotherapy and Rehab Clinic and cosmo skin clinic dry needling ,cupping,
+2025-05-07 22:06:14,837 - scrapers.google_maps - INFO - Processed 43/50: Physiotherapy Clinic I Dr Atul Dekate
+2025-05-07 22:06:14,889 - scrapers.google_maps - INFO - Processed 44/50: Shashank Physiotherapy & Stress Management clinic
+2025-05-07 22:06:14,924 - scrapers.google_maps - INFO - Processed 45/50: SaiKrupa Preventive Medicine
+2025-05-07 22:06:14,963 - scrapers.google_maps - INFO - Processed 46/50: Holistic Lifestyle Physiotherapy Clinic || Best Physiotherapy Clinic ||
+2025-05-07 22:06:15,281 - scrapers.google_maps - INFO - Processed 47/50: PhysioPhy - Physiotherapist near me, Best Physiotherapy Clinic in Nagpur, Neurophysiotherapy Centre.
+2025-05-07 22:06:17,155 - scrapers.google_maps - INFO - Processed 48/50: Samartha Physiotherapy Rehab Clinic
+2025-05-07 22:06:22,673 - scrapers.google_maps - INFO - Found business name using JavaScript: REMEDIC, Physiotherapy and Research Centre
+2025-05-07 22:06:22,688 - scrapers.google_maps - INFO - Found business name using JavaScript: Dr. Varsha's Physiotherapy Clinic - Trusted Physiotherapy Center & Physiotherapist
+2025-05-07 22:06:22,990 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.6', 'address': '', 'phone:tel:07122429511': '', 'oloc': ''}
+2025-05-07 22:06:23,048 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '5.0', 'address': '', 'action:3': 'https://wa.link/bhk7ry', 'phone:tel:07720047663': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-07 22:06:23,097 - scrapers.google_maps - INFO - Successfully extracted data for Dr. Varsha's Physiotherapy Clinic - Trusted Physiotherapy Center & Physiotherapist
+2025-05-07 22:06:23,159 - scrapers.google_maps - INFO - Successfully extracted data for REMEDIC, Physiotherapy and Research Centre
+2025-05-07 22:06:25,412 - scrapers.google_maps - INFO - Processed 49/50: Dr. Varsha's Physiotherapy Clinic - Trusted Physiotherapy Center & Physiotherapist
+2025-05-07 22:06:25,437 - scrapers.google_maps - INFO - Processed 50/50: REMEDIC, Physiotherapy and Research Centre
+2025-05-07 22:06:25,946 - scrapers.google_maps - INFO - Parallel processing complete. Processed 50/50 listings
+2025-05-07 22:06:25,946 - scrapers.google_maps - ERROR - Error during scraping: 'bool' object is not iterable
+2025-05-07 22:06:28,425 - controllers.main_controller - INFO - Found 0 leads from Google Maps
+2025-05-07 22:11:47,012 - controllers.main_controller - INFO - Starting scraping for real estate in aurangabad (Max leads: 40)
+2025-05-07 22:11:47,016 - controllers.main_controller - INFO - Starting Google Maps scraping
+2025-05-07 22:11:47,021 - utils.web - INFO - Setting up Chrome driver (headless=False)
+2025-05-07 22:11:50,686 - scrapers.google_maps - INFO - Navigating to Google Maps to search for real estate in aurangabad
+2025-05-07 22:12:03,157 - scrapers.google_maps - INFO - Clicked search button
+2025-05-07 22:12:08,242 - scrapers.google_maps - INFO - Scrolled down results pane from 0 to 500
+2025-05-07 22:12:14,220 - scrapers.google_maps - INFO - Found 21 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-07 22:12:14,277 - scrapers.google_maps - INFO - Scrolled down results pane from 500 to 1000
+2025-05-07 22:12:15,291 - scrapers.google_maps - INFO - New content loaded, scroll height increased from 1463 to 2774
+2025-05-07 22:12:17,546 - scrapers.google_maps - INFO - Found 42 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-07 22:12:17,581 - scrapers.google_maps - INFO - Found 14 elements with selector: div.Nv2PK
+2025-05-07 22:12:17,874 - scrapers.google_maps - INFO - Successfully extracted 14 URLs from 14 results
+2025-05-07 22:12:20,373 - scrapers.google_maps - INFO - Starting parallel processing of 14 URLs with 8 workers
+2025-05-07 22:12:37,983 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.5', 'address': 'Indian oil petrol pump, Tilak Nagar, Basant Bahar, Ulkanagari, Chhatrapati Sambhaji Nagar, Maharashtra 431005', 'phone:tel:09158444188': '', 'oloc': ''}
+2025-05-07 22:12:38,077 - scrapers.google_maps - INFO - Successfully extracted data for 
+2025-05-07 22:12:38,265 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.6', 'address': 'G-10, Ground floor, Khivansara August High Street, Ulkanagari, Chhatrapati Sambhaji Nagar, Maharashtra 431005', 'authority': 'http://www.aurangabadproperty.com/', 'phone:tel:09823051811': '', 'oloc': ''}
+2025-05-07 22:12:38,376 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.6', 'address': '15-B, Kailash Housing Society,, Opp Chate School, N-3 Cidco, Kamgaar Chowk., Chhatrapati Sambhaji Nagar, Maharashtra 431003', 'oloc': ''}
+2025-05-07 22:12:38,376 - scrapers.google_maps - INFO - Successfully extracted data for Aurangabadproperty
+2025-05-07 22:12:38,522 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '5.0', 'address': '', 'phone:tel:09404988451': '', 'oloc': ''}
+2025-05-07 22:12:38,538 - scrapers.google_maps - INFO - Successfully extracted data for 
+2025-05-07 22:12:38,656 - scrapers.google_maps - INFO - Successfully extracted data for 
+2025-05-07 22:12:38,851 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.1', 'address': 'Beed Bypass Rd, Gandheli, Bagtalab, Maharashtra 431007', 'phone:tel:08459984599': '', 'oloc': ''}
+2025-05-07 22:12:38,943 - scrapers.google_maps - INFO - Successfully extracted data for 
+2025-05-07 22:12:40,876 - scrapers.google_maps - INFO - Processed 1/14: 
+2025-05-07 22:12:41,148 - scrapers.google_maps - INFO - Processed 2/14: 
+2025-05-07 22:12:41,164 - scrapers.google_maps - INFO - Processed 3/14: 
+2025-05-07 22:12:41,189 - scrapers.google_maps - INFO - Processed 4/14: Aurangabadproperty
+2025-05-07 22:12:41,340 - scrapers.google_maps - INFO - Processed 5/14: 
+2025-05-07 22:13:01,933 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '5.0', 'address': 'Plot No.61, Nirala Bazar, to, Nageshwarwadi - Nirala Bazar Rd, Swatantrya Sainik Colony, Aurangpura, Chhatrapati Sambhaji Nagar, Maharashtra 431001', 'action:3': 'https://calendly.com/onlinesams', 'phone:tel:09923228399': '', 'oloc': ''}
+2025-05-07 22:13:01,999 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.9', 'address': 'Gut No. 160, Beed By Pass, next to Umrikar lawns, Satara Parisar, Chhatrapati Sambhaji Nagar, Maharashtra 431010', 'authority': 'https://creative-groups.in/', 'phone:tel:09637799777': '', 'oloc': ''}
+2025-05-07 22:13:02,255 - scrapers.google_maps - INFO - Successfully extracted data for 
+2025-05-07 22:13:02,419 - scrapers.google_maps - INFO - Successfully extracted data for Creative Groups In
+2025-05-07 22:13:02,557 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '5.0', 'address': 'Manjusha Typing, near Shani Mandir, Hudco, Navjivan Colony, N 11, Aurangpura, Chhatrapati Sambhaji Nagar, Maharashtra 431003', 'authority': 'https://www.hariomrealestate.in/', 'oloc': ''}
+2025-05-07 22:13:02,623 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.7', 'address': 'Akashwani, Chowk, Jalna Road, Chhatrapati Sambhaji Nagar, Maharashtra 431001', 'oloc': ''}
+2025-05-07 22:13:02,662 - scrapers.google_maps - INFO - Successfully extracted data for Hariomrealestate In
+2025-05-07 22:13:02,750 - scrapers.google_maps - INFO - Successfully extracted data for 
+2025-05-07 22:13:02,782 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.1', 'address': 'Plot No 29, 45, Kamgar Chowk, Prabodhankar Thakare Nagar, N 2, Cidco, Chhatrapati Sambhaji Nagar, Maharashtra 431007', 'authority': 'https://bhaishreerealty.com/', 'phone:tel:07875105105': '', 'oloc': ''}
+2025-05-07 22:13:02,919 - scrapers.google_maps - INFO - Successfully extracted data for Bhaishreerealty
+2025-05-07 22:13:05,125 - scrapers.google_maps - INFO - Processed 6/14: Creative Groups In
+2025-05-07 22:13:05,125 - scrapers.google_maps - INFO - Processed 7/14: 
+2025-05-07 22:13:05,381 - scrapers.google_maps - INFO - Processed 8/14: Hariomrealestate In
+2025-05-07 22:13:05,438 - scrapers.google_maps - INFO - Processed 9/14: 
+2025-05-07 22:13:05,568 - scrapers.google_maps - INFO - Processed 10/14: Bhaishreerealty
+2025-05-07 22:13:20,343 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.5', 'address': 'MIDC Industrial Area, Chilkalthana, Chhatrapati Sambhaji Nagar, Maharashtra 431006', 'phone:tel:02406050607': '', 'oloc': ''}
+2025-05-07 22:13:20,633 - scrapers.google_maps - INFO - Successfully extracted data for 
+2025-05-07 22:13:22,296 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.9', 'address': 'Shop No 25, August Homes Shopping Complex, Basant Bahar, Ulkanagari, Chhatrapati Sambhaji Nagar, Maharashtra 431005', 'locatedin': '', 'phone:tel:09822345444': '', 'oloc': ''}
+2025-05-07 22:13:22,378 - scrapers.google_maps - INFO - Successfully extracted data for 
+2025-05-07 22:13:22,504 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.9', 'address': 'Shinde Properties Pvt. Ltd, Sulochana Vihar, Nageshwarwadi, Chhatrapati Sambhaji Nagar, Maharashtra 431001', 'phone:tel:08806090009': '', 'oloc': ''}
+2025-05-07 22:13:22,583 - scrapers.google_maps - INFO - Successfully extracted data for 
+2025-05-07 22:13:23,094 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.9', 'address': "101, First Floor, Pride Group, Sai Trade Center, Railway Station, Road, beside Mayor's Bungalow, R.T.O, MIDC, Chhatrapati Sambhaji Nagar, Maharashtra 431005", 'locatedin': '', 'action:3': 'https://manjeetpridegroup.com/', 'authority': 'https://manjeetpridegroup.com/', 'phone:tel:09168143690': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-07 22:13:23,166 - scrapers.google_maps - INFO - Successfully extracted data for Manjeetpridegroup
+2025-05-07 22:13:23,432 - scrapers.google_maps - INFO - Processed 11/14: 
+2025-05-07 22:13:24,771 - scrapers.google_maps - INFO - Processed 12/14: 
+2025-05-07 22:13:24,920 - scrapers.google_maps - INFO - Processed 13/14: 
+2025-05-07 22:13:25,567 - scrapers.google_maps - INFO - Processed 14/14: Manjeetpridegroup
+2025-05-07 22:13:28,242 - scrapers.google_maps - INFO - Parallel processing complete. Processed 14/14 listings
+2025-05-07 22:13:28,245 - controllers.main_controller - INFO - Found 14 leads from Google Maps
+2025-05-07 22:13:28,735 - controllers.main_controller - INFO - Exported 14 leads to data/output/leads_real estate_aurangabad_20250507_221328.csv, data/output/leads_real estate_aurangabad_20250507_221328.xlsx, and data/output/leads_real estate_aurangabad_20250507_221328.json
