@@ -1,0 +1,161 @@
+understand and implement the full system for fast, parallel scraping using multiple headless Chrome instances.
+
+---
+
+## 📄 AI INSTRUCTION: Parallel Google Maps Scraping Using Multiprocessing
+
+You are enhancing a Google Maps scraper written in Python using Selenium. The current setup scrapes one listing at a time by:
+
+* Searching Google Maps with a keyword and location
+* Clicking on each business result
+* Extracting details (phone, website, address, etc.)
+* Doing this in sequence — which is slow
+
+You need to **redesign it to support parallel scraping** using Python's multiprocessing module. Here’s everything you need to know and do:
+
+---
+
+### 🎯 GOAL
+
+Redesign the scraper so that:
+
+* The user provides a lead limit, e.g., 68
+* The program scrolls through Google Maps results until at least 68 listings are visible
+* The scraper collects links to each of these listings
+* Then launches multiple ChromeDriver instances in parallel (e.g., 8 at a time)
+* Each instance scrapes 1 business’s data in headless mode
+* All results are merged and returned/exported
+
+This improves performance from 1–3 minutes (serial) to \~30–60 seconds (parallel).
+
+---
+
+### 🧠 LOGIC FLOW
+
+1. **Main thread** loads Google Maps using Selenium
+2. It scrolls the results pane until at least `limit` results are loaded
+3. It extracts the individual **Google Maps listing URLs** (each clickable business)
+4. It passes these URLs into a multiprocessing pool with `max_workers` (e.g., 8)
+5. Each worker spins up its own **headless Chrome browser**, loads one listing URL, extracts the required fields, and returns the result
+6. The controller collects all the individual results into one list and returns it
+
+---
+
+### ⚙️ IMPLEMENTATION INSTRUCTIONS
+
+#### 1. Extract Listing URLs
+
+After you scroll enough in the main browser:
+
+```python
+results = driver.find_elements(By.CSS_SELECTOR, '[role=\"article\"]')  # or adjust as needed
+
+listing_urls = []
+for r in results[:limit]:
+    try:
+        link = r.find_element(By.TAG_NAME, 'a').get_attribute('href')
+        if link and \"/place/\" in link:
+            listing_urls.append(link)
+    except:
+        continue
+```
+
+#### 2. Write a Single Listing Scraper
+
+```python
+def scrape_listing(url: str) -> dict:
+    options = Options()
+    options.add_argument('--headless')
+    options.add_argument('--no-sandbox')
+    options.add_argument('--disable-gpu')
+    driver = webdriver.Chrome(ChromeDriverManager().install(), options=options)
+
+    data = {
+        'url': url,
+        'business_name': '',
+        'phone': '',
+        'website': '',
+        'address': '',
+        'rating': ''
+    }
+
+    try:
+        driver.get(url)
+        time.sleep(2)  # Replace with WebDriverWait if needed
+
+        # Extract fields (with fallbacks)
+        try:
+            data['business_name'] = driver.find_element(By.CSS_SELECTOR, 'h1 span').text
+        except: pass
+        try:
+            data['phone'] = driver.find_element(By.CSS_SELECTOR, 'button[data-item-id^=\"phone:tel:\"] div').text
+        except: pass
+        try:
+            data['website'] = driver.find_element(By.CSS_SELECTOR, 'a[data-item-id=\"authority\"]').get_attribute('href')
+        except: pass
+        try:
+            data['address'] = driver.find_element(By.CSS_SELECTOR, 'button[data-item-id=\"address\"] div').text
+        except: pass
+        try:
+            data['rating'] = driver.find_element(By.CSS_SELECTOR, 'div.F7nice span[aria-hidden=\"true\"]').text
+        except: pass
+
+    except Exception as e:
+        data['error'] = str(e)
+
+    driver.quit()
+    return data
+```
+
+#### 3. Use Multiprocessing to Run All in Parallel
+
+```python
+from concurrent.futures import ProcessPoolExecutor, as_completed
+
+def scrape_all_listings_parallel(urls: list, max_workers=8) -> list:
+    results = []
+    with ProcessPoolExecutor(max_workers=max_workers) as executor:
+        futures = [executor.submit(scrape_listing, url) for url in urls]
+        for f in as_completed(futures):
+            try:
+                results.append(f.result())
+            except Exception as e:
+                results.append({'error': str(e)})
+    return results
+```
+
+---
+
+### 🛠 USAGE EXAMPLE
+
+```python
+# After collecting listing_urls
+urls = listing_urls[:68]  # Limit to user input
+results = scrape_all_listings_parallel(urls, max_workers=8)
+
+# Save to CSV
+import pandas as pd
+pd.DataFrame(results).to_csv(\"leads_68.csv\", index=False)
+```
+
+---
+
+### 💡 BEST PRACTICES
+
+* Use `driver.set_page_load_timeout(20)` to prevent freezing tabs
+* Use `time.sleep(2)` OR `WebDriverWait` when opening detail pages
+* Randomize user agents if you're scraping a lot (optional)
+* Use batching if system has low RAM (e.g., do 2 rounds of 34 leads)
+
+---
+
+### 🚀 OUTCOME
+
+With this logic in place:
+
+* You can scrape **68 full listings** in **\~30–60 seconds**
+* Chrome tabs don’t freeze each other
+* You can scale this up to hundreds of listings (with proper throttling and memory management)
+
+---
+
