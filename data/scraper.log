@@ -5886,3 +5886,603 @@ Stacktrace:
 2025-05-07 22:13:28,242 - scrapers.google_maps - INFO - Parallel processing complete. Processed 14/14 listings
 2025-05-07 22:13:28,245 - controllers.main_controller - INFO - Found 14 leads from Google Maps
 2025-05-07 22:13:28,735 - controllers.main_controller - INFO - Exported 14 leads to data/output/leads_real estate_aurangabad_20250507_221328.csv, data/output/leads_real estate_aurangabad_20250507_221328.xlsx, and data/output/leads_real estate_aurangabad_20250507_221328.json
+2025-05-11 21:15:29,977 - controllers.main_controller - INFO - Starting scraping for physiotherapy clinics  in aurangabad (Max leads: 25)
+2025-05-11 21:15:29,977 - controllers.main_controller - INFO - Starting Google Maps scraping
+2025-05-11 21:15:29,987 - utils.web - INFO - Setting up Chrome driver (headless=False)
+2025-05-11 21:15:34,199 - scrapers.google_maps - INFO - Navigating to Google Maps to search for physiotherapy clinics  in aurangabad
+2025-05-11 21:15:45,726 - scrapers.google_maps - INFO - Clicked search button
+2025-05-11 21:15:49,388 - scrapers.google_maps - INFO - Scrolled down results pane from 0 to 500
+2025-05-11 21:15:54,760 - scrapers.google_maps - INFO - Found 21 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-11 21:15:54,875 - scrapers.google_maps - INFO - Scrolled down results pane from 500 to 1000
+2025-05-11 21:16:00,148 - scrapers.google_maps - INFO - Found 21 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-11 21:16:00,271 - scrapers.google_maps - INFO - Scrolled down results pane from 1000 to 1500
+2025-05-11 21:16:01,287 - scrapers.google_maps - INFO - New content loaded, scroll height increased from 1743 to 3162
+2025-05-11 21:16:04,317 - scrapers.google_maps - INFO - Found 42 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-11 21:16:04,356 - scrapers.google_maps - INFO - Found 14 elements with selector: div.Nv2PK
+2025-05-11 21:16:04,966 - scrapers.google_maps - INFO - Successfully extracted 14 URLs from 14 results
+2025-05-11 21:16:07,702 - scrapers.google_maps - INFO - Starting parallel processing of 14 URLs with 8 workers
+2025-05-11 21:16:29,868 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.9', 'address': '1st (first) floor, Tirumala Heights, Shivaji Nagar Rd, above Girija Salon, opposite Water Tank ( pani taki, Garkheda, Chhatrapati Sambhaji Nagar, Maharashtra 431001', 'phone:tel:09011927410': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-11 21:16:30,000 - scrapers.google_maps - INFO - Successfully extracted data for 
+2025-05-11 21:16:30,638 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.9', 'address': '', 'authority': 'https://shreephysiorehab.wixsite.com/website-1', 'phone:tel:08275238369': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-11 21:16:30,812 - scrapers.google_maps - INFO - Successfully extracted data for Shreephysiorehab Wixsite
+2025-05-11 21:16:31,400 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.8', 'address': '', 'locatedin': '', 'phone:tel:08208818409': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-11 21:16:31,486 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.8', 'address': '', 'phone:tel:08087098774': '', 'oloc': ''}
+2025-05-11 21:16:31,602 - scrapers.google_maps - INFO - Successfully extracted data for 
+2025-05-11 21:16:31,736 - scrapers.google_maps - INFO - Successfully extracted data for 
+2025-05-11 21:16:34,694 - scrapers.google_maps - INFO - Processed 1/14: 
+2025-05-11 21:16:34,818 - scrapers.google_maps - INFO - Processed 2/14: 
+2025-05-11 21:16:34,826 - scrapers.google_maps - INFO - Processed 3/14: Shreephysiorehab Wixsite
+2025-05-11 21:16:34,857 - scrapers.google_maps - INFO - Processed 4/14: 
+2025-05-11 21:16:35,624 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.9', 'address': 'Gajanmaharaj Mandir, Plot no 73, 7 Hills Road, below Natkhat Shop, Motiwala Nagar, Vijay Nagar, Nyay Nagar, Chhatrapati Sambhaji Nagar, Maharashtra 431009', 'oh': '', 'action:3': 'http://wa.link/tb219q', 'authority': 'https://advancephysiotherapyclinics.in/', 'phone:tel:08408999939': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-11 21:16:35,736 - scrapers.google_maps - INFO - Successfully extracted data for Advancephysiotherapyclinics In
+2025-05-11 21:16:38,227 - scrapers.google_maps - INFO - Processed 5/14: Advancephysiotherapyclinics In
+2025-05-11 21:17:02,120 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.8', 'address': '', 'phone:tel:08087515735': '', 'oloc': ''}
+2025-05-11 21:17:02,147 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.9', 'address': '', 'phone:tel:09822552780': '', 'oloc': ''}
+2025-05-11 21:17:02,208 - scrapers.google_maps - INFO - Successfully extracted data for 
+2025-05-11 21:17:02,222 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.8', 'address': 'MAHI Cloth Store, Road, opp. :, next to Old Utsav Mangal Karyalaya, New Usmanpura, Pannalal Nagar, New Usmanpura, Chhatrapati Sambhaji Nagar, Maharashtra 431005', 'authority': 'https://www.induphysiotherapy.in/', 'oloc': ''}
+2025-05-11 21:17:02,250 - scrapers.google_maps - INFO - Successfully extracted data for 
+2025-05-11 21:17:02,397 - scrapers.google_maps - INFO - Successfully extracted data for Induphysiotherapy In
+2025-05-11 21:17:02,519 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.7', 'address': '', 'phone:tel:07823870063': '', 'oloc': ''}
+2025-05-11 21:17:02,713 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.9', 'address': '', 'action:3': '', 'authority': 'https://reliva.in/physiotherapy-clinics/reliva-physiotherapy-in-aurangabad-beed-bypass-road//?utm_campaign=gmb', 'phone:tel:09920991584': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-11 21:17:02,783 - scrapers.google_maps - INFO - Successfully extracted data for 
+2025-05-11 21:17:02,850 - scrapers.google_maps - INFO - Successfully extracted data for ?Utm_Campaign=Gmb
+2025-05-11 21:17:05,356 - scrapers.google_maps - INFO - Processed 6/14: Induphysiotherapy In
+2025-05-11 21:17:05,357 - scrapers.google_maps - INFO - Processed 7/14: 
+2025-05-11 21:17:05,357 - scrapers.google_maps - INFO - Processed 8/14: 
+2025-05-11 21:17:05,545 - scrapers.google_maps - INFO - Processed 9/14: ?Utm_Campaign=Gmb
+2025-05-11 21:17:05,549 - scrapers.google_maps - INFO - Processed 10/14: 
+2025-05-11 21:17:26,156 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '5.0', 'address': 'near Salim Ali Lake Rashidpura, Rashidpura, Ganesh Colony, Chhatrapati Sambhaji Nagar, Maharashtra 431003', 'phone:tel:07387761400': '', 'oloc': ''}
+2025-05-11 21:17:26,262 - scrapers.google_maps - INFO - Successfully extracted data for 
+2025-05-11 21:17:26,566 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.9', 'address': 'RX 1/18, Datta Mandir Rd, Mahavir Colony, Bajaj Nagar, Waluj, Chhatrapati Sambhaji Nagar, Wadgaon Kolhati, Maharashtra 431136', 'action:3': 'https://forms.gle/iv3WJX4xRaV5tnw29', 'authority': 'https://navkarphysiopainclinic.wordpress.com/', 'phone:tel:09923424108': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-11 21:17:26,566 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '5.0', 'address': 'Take Away Restaurant, Building SHIVKRUPA, Plot No.245, Ulkanagari Rd, above GREEN LEAF, shreenagar, Garkheda Area, Ulkanagari, Chhatrapati Sambhaji Nagar, Maharashtra 431001', 'authority': 'https://pelvihealacademy.com/', 'phone:tel:07263891882': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-11 21:17:26,627 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '5.0', 'address': 'SHOP NO. 03 PUNARAMA HEIGHTS, M2 Rd, near NIMAI HOSPITAL, Cidco, Chhatrapati Sambhaji Nagar, Maharashtra 431001', 'oloc': ''}
+2025-05-11 21:17:26,667 - scrapers.google_maps - INFO - Successfully extracted data for Navkarphysiopainclinic Wordpress
+2025-05-11 21:17:26,695 - scrapers.google_maps - INFO - Successfully extracted data for Pelvihealacademy
+2025-05-11 21:17:26,851 - scrapers.google_maps - INFO - Successfully extracted data for 
+2025-05-11 21:17:29,176 - scrapers.google_maps - INFO - Processed 11/14: 
+2025-05-11 21:17:29,382 - scrapers.google_maps - INFO - Processed 12/14: Navkarphysiopainclinic Wordpress
+2025-05-11 21:17:29,408 - scrapers.google_maps - INFO - Processed 13/14: Pelvihealacademy
+2025-05-11 21:17:29,465 - scrapers.google_maps - INFO - Processed 14/14: 
+2025-05-11 21:17:32,512 - scrapers.google_maps - INFO - Parallel processing complete. Processed 14/14 listings
+2025-05-11 21:17:32,512 - controllers.main_controller - INFO - Found 14 leads from Google Maps
+2025-05-11 21:17:33,156 - controllers.main_controller - INFO - Exported 14 leads to data/output/leads_physiotherapy clinics _aurangabad_20250511_211732.csv, data/output/leads_physiotherapy clinics _aurangabad_20250511_211732.xlsx, and data/output/leads_physiotherapy clinics _aurangabad_20250511_211732.json
+2025-05-17 16:27:17,433 - controllers.main_controller - INFO - Starting scraping for cafes  in sydney (Max leads: 100)
+2025-05-17 16:27:17,434 - controllers.main_controller - INFO - Starting Google Maps scraping
+2025-05-17 16:27:17,548 - utils.web - INFO - Setting up Chrome driver (headless=False)
+2025-05-17 16:27:33,132 - scrapers.google_maps - INFO - Navigating to Google Maps to search for cafes  in sydney
+2025-05-17 16:27:48,509 - scrapers.google_maps - INFO - Clicked search button
+2025-05-17 16:27:53,493 - scrapers.google_maps - INFO - Scrolled down results pane from 0 to 500
+2025-05-17 16:27:59,393 - scrapers.google_maps - INFO - Found 15 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-17 16:27:59,536 - scrapers.google_maps - INFO - Scrolled down results pane from 500 to 1000
+2025-05-17 16:28:00,556 - scrapers.google_maps - INFO - New content loaded, scroll height increased from 1096 to 2075
+2025-05-17 16:28:02,684 - scrapers.google_maps - INFO - Found 30 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-17 16:28:02,824 - scrapers.google_maps - INFO - Scrolled down results pane from 561.3333129882812 to 1061.3333129882812
+2025-05-17 16:28:08,181 - scrapers.google_maps - INFO - Found 30 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-17 16:28:08,295 - scrapers.google_maps - INFO - Scrolled down results pane from 1061.3333740234375 to 1561.3333740234375
+2025-05-17 16:28:09,316 - scrapers.google_maps - INFO - New content loaded, scroll height increased from 2075 to 2922
+2025-05-17 16:28:11,748 - scrapers.google_maps - INFO - Found 45 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-17 16:28:11,871 - scrapers.google_maps - INFO - Scrolled down results pane from 1540.6666259765625 to 2040.6666259765625
+2025-05-17 16:28:17,071 - scrapers.google_maps - INFO - Found 45 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-17 16:28:17,204 - scrapers.google_maps - INFO - Scrolled down results pane from 2040.6666259765625 to 2540.6666259765625
+2025-05-17 16:28:18,221 - scrapers.google_maps - INFO - New content loaded, scroll height increased from 2922 to 3804
+2025-05-17 16:28:20,616 - scrapers.google_maps - INFO - Found 60 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-17 16:28:20,756 - scrapers.google_maps - INFO - Scrolled down results pane from 2388 to 2888
+2025-05-17 16:28:25,836 - scrapers.google_maps - INFO - Found 60 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-17 16:28:25,967 - scrapers.google_maps - INFO - Scrolled down results pane from 2888 to 3388
+2025-05-17 16:28:26,984 - scrapers.google_maps - INFO - New content loaded, scroll height increased from 3804 to 3952
+2025-05-17 16:28:29,653 - scrapers.google_maps - INFO - Found 63 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-17 16:28:29,792 - scrapers.google_maps - INFO - Scrolled down results pane from 3269.333251953125 to 3769.333251953125
+2025-05-17 16:28:32,076 - scrapers.google_maps - INFO - New content loaded, scroll height increased from 3952 to 5009
+2025-05-17 16:28:34,232 - scrapers.google_maps - INFO - Found 78 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-17 16:28:34,937 - scrapers.google_maps - INFO - Scrolled down results pane from 3362 to 3862
+2025-05-17 16:28:40,444 - scrapers.google_maps - INFO - Found 78 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-17 16:28:40,596 - scrapers.google_maps - INFO - Scrolled down results pane from 3862 to 4362
+2025-05-17 16:28:46,216 - scrapers.google_maps - INFO - Found 78 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-17 16:28:46,352 - scrapers.google_maps - INFO - Scrolled down results pane from 4362 to 4862
+2025-05-17 16:28:47,388 - scrapers.google_maps - INFO - New content loaded, scroll height increased from 4993 to 6011
+2025-05-17 16:28:49,591 - scrapers.google_maps - INFO - Found 93 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-17 16:28:49,739 - scrapers.google_maps - INFO - Scrolled down results pane from 4458.66650390625 to 4958.66650390625
+2025-05-17 16:28:55,205 - scrapers.google_maps - INFO - Found 93 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-17 16:28:55,461 - scrapers.google_maps - INFO - Scrolled down results pane from 4958.66650390625 to 5458.66650390625
+2025-05-17 16:28:56,543 - scrapers.google_maps - INFO - New content loaded, scroll height increased from 6011 to 7076
+2025-05-17 16:28:59,352 - scrapers.google_maps - INFO - Found 108 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-17 16:28:59,397 - scrapers.google_maps - INFO - Found 36 elements with selector: div.Nv2PK
+2025-05-17 16:29:01,109 - scrapers.google_maps - INFO - Successfully extracted 36 URLs from 36 results
+2025-05-17 16:29:03,839 - scrapers.google_maps - INFO - Starting parallel processing of 36 URLs with 8 workers
+2025-05-17 16:29:26,835 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.5', 'address': '', 'oh': '', '0': '', '1': '', '2': '', 'menu': 'https://singleo.com.au/surryhills/', 'authority': 'https://singleo.com.au/', 'phone:tel:+61292110665': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-17 16:29:26,916 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.1', 'address': '', 'locatedin': '', '0': '', '1': '', '2': '', '3': '', 'action:1': 'https://www.opentable.com.au/restaurant/profile/45146?ref=11025', 'menu': 'https://thegrounds.com.au/dine-in/the-city/#menu', 'authority': 'https://thegrounds.com.au/dine-in/the-city', 'phone:tel:+61296992225': '', 'oloc': ''}
+2025-05-17 16:29:26,997 - scrapers.google_maps - INFO - Successfully extracted data for Singleo
+2025-05-17 16:29:27,011 - scrapers.google_maps - INFO - Successfully extracted data for Thegrounds
+2025-05-17 16:29:28,511 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.5', 'address': '', 'locatedin': '', 'menu': 'http://cafesydney.com/eat-and-drink', 'authority': 'http://www.cafesydney.com/', 'phone:tel:+61292518683': '', 'oloc': ''}
+2025-05-17 16:29:28,603 - scrapers.google_maps - INFO - Successfully extracted data for Cafesydney
+2025-05-17 16:29:28,712 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.5', 'address': '', '0': '', '1': '', '2': '', 'menu': 'https://industrybeans.com/pages/york-st-sydney', 'authority': 'https://industrybeans.com/pages/york-st-cafe', 'phone:tel:+61291888501': '', 'oloc': ''}
+2025-05-17 16:29:28,821 - scrapers.google_maps - INFO - Successfully extracted data for Industrybeans
+2025-05-17 16:29:28,906 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.7', 'address': '', 'oh': '', '0': '', '1': '', '2': '', 'menu': 'https://www.joeblackcafe.com.au/uploads/b/1c2ee790-9371-11ea-8d90-b58e28eedd0d/JBC-MW220507_NTk4Mz.pdf', 'authority': 'https://www.joeblackcafe.com.au/', 'phone:tel:+61280978646': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-17 16:29:29,048 - scrapers.google_maps - INFO - Successfully extracted data for Joeblackcafe
+2025-05-17 16:29:29,572 - scrapers.google_maps - INFO - Processed 1/36: Thegrounds
+2025-05-17 16:29:29,590 - scrapers.google_maps - INFO - Processed 2/36: Singleo
+2025-05-17 16:29:31,186 - scrapers.google_maps - INFO - Processed 3/36: Cafesydney
+2025-05-17 16:29:31,344 - scrapers.google_maps - INFO - Processed 4/36: Industrybeans
+2025-05-17 16:29:31,628 - scrapers.google_maps - INFO - Processed 5/36: Joeblackcafe
+2025-05-17 16:30:05,423 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.2', 'address': '', '0': '', '1': '', '2': '', 'oloc': ''}
+2025-05-17 16:30:05,545 - scrapers.google_maps - INFO - Successfully extracted data for 
+2025-05-17 16:30:05,563 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.3', 'address': '', '0': '', '1': '', '2': '', '3': '', 'authority': 'http://www.therockscafe.com.au/', 'phone:tel:+61292473089': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-17 16:30:05,641 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.9', 'address': '', 'oh': '', '0': '', '1': '', '2': '', 'authority': 'https://www.lafamigliacafe.com.au/', 'phone:tel:+61280659449': '', 'oloc': ''}
+2025-05-17 16:30:05,701 - scrapers.google_maps - INFO - Successfully extracted data for Therockscafe
+2025-05-17 16:30:05,831 - scrapers.google_maps - INFO - Successfully extracted data for Lafamigliacafe
+2025-05-17 16:30:06,557 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.6', 'address': '', '0': '', '1': '', '2': '', 'menu': 'https://nthdegreecafe.com.au/menu/', 'authority': 'https://nthdegreecafe.com.au/', 'phone:tel:+61292671230': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-17 16:30:06,681 - scrapers.google_maps - INFO - Successfully extracted data for Nthdegreecafe
+2025-05-17 16:30:07,010 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.7', 'address': '', '0': '', '1': '', '2': '', 'authority': 'http://skittlelane.com.au/', 'phone:tel:+61448887728': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-17 16:30:07,114 - scrapers.google_maps - INFO - Successfully extracted data for Skittlelane
+2025-05-17 16:30:08,236 - scrapers.google_maps - INFO - Processed 6/36: 
+2025-05-17 16:30:08,679 - scrapers.google_maps - INFO - Processed 7/36: Therockscafe
+2025-05-17 16:30:08,855 - scrapers.google_maps - INFO - Processed 8/36: Lafamigliacafe
+2025-05-17 16:30:09,273 - scrapers.google_maps - INFO - Processed 9/36: Nthdegreecafe
+2025-05-17 16:30:09,616 - scrapers.google_maps - INFO - Processed 10/36: Skittlelane
+2025-05-17 16:30:32,809 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.6', 'address': '', 'locatedin': '', 'action:1': 'https://voguecafe.au/reservations', 'menu': 'https://voguecafe.au/food', 'authority': 'https://voguecafe.au/', 'phone:tel:+61285298850': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-17 16:30:32,984 - scrapers.google_maps - INFO - Successfully extracted data for Voguecafe Au
+2025-05-17 16:30:36,608 - scrapers.google_maps - INFO - Processed 11/36: Voguecafe Au
+2025-05-17 16:30:43,070 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.4', 'address': '', 'locatedin': '', 'oh': '', '0': '', '1': '', '2': '', 'action:1': '', 'authority': 'http://www.editionroasters.com/', 'oloc': ''}
+2025-05-17 16:30:43,245 - scrapers.google_maps - INFO - Successfully extracted data for Editionroasters
+2025-05-17 16:30:43,318 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.2', 'address': '', 'locatedin': '', 'oh': '', '0': '', '1': '', '2': '', 'authority': 'http://www.paramountcoffeeproject.com.au/', 'phone:tel:+61481148439': '', 'oloc': ''}
+2025-05-17 16:30:43,462 - scrapers.google_maps - INFO - Successfully extracted data for Paramountcoffeeproject
+2025-05-17 16:30:44,007 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.6', 'address': '', 'locatedin': '', 'oh': '', '0': '', '1': '', '2': '', 'menu': 'http://www.dutchsmuggler.com.au/', 'authority': 'http://www.dutchsmuggler.com.au/', 'oloc': ''}
+2025-05-17 16:30:44,131 - scrapers.google_maps - INFO - Successfully extracted data for Dutchsmuggler
+2025-05-17 16:30:45,002 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.4', 'address': '', '0': '', '1': '', '2': '', 'phone:tel:+61292677664': '', 'oloc': ''}
+2025-05-17 16:30:45,192 - scrapers.google_maps - INFO - Successfully extracted data for 
+2025-05-17 16:30:45,776 - scrapers.google_maps - INFO - Processed 12/36: Editionroasters
+2025-05-17 16:30:46,023 - scrapers.google_maps - INFO - Processed 13/36: Paramountcoffeeproject
+2025-05-17 16:30:46,687 - scrapers.google_maps - INFO - Processed 14/36: Dutchsmuggler
+2025-05-17 16:30:49,629 - scrapers.google_maps - INFO - Processed 15/36: 
+2025-05-17 16:31:14,137 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.2', 'address': '', 'locatedin': '', '0': '', '1': '', '2': '', 'action:1': 'https://www.opentable.com.au/restaurant/profile/172064?ref=11025', 'authority': 'https://www.taogroup.com.au/en/cafealma', 'phone:tel:+61439378999': '', 'oloc': ''}
+2025-05-17 16:31:14,301 - scrapers.google_maps - INFO - Successfully extracted data for Taogroup
+2025-05-17 16:31:14,922 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.7', 'address': '', 'locatedin': '', '0': '', '1': '', '2': '', 'phone:tel:+61289203358': '', 'oloc': ''}
+2025-05-17 16:31:15,050 - scrapers.google_maps - INFO - Successfully extracted data for 
+2025-05-17 16:31:17,072 - scrapers.google_maps - INFO - Processed 16/36: Taogroup
+2025-05-17 16:31:17,588 - scrapers.google_maps - INFO - Processed 17/36: 
+2025-05-17 16:31:18,603 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.6', 'address': '', '0': '', '1': '', '2': '', 'menu': 'http://www.room10group.com.au/', 'authority': 'http://www.room10group.com.au/', 'oloc': '', 'place-info-links:': ''}
+2025-05-17 16:31:18,736 - scrapers.google_maps - INFO - Successfully extracted data for Room10Group
+2025-05-17 16:31:19,339 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.0', 'address': '', 'locatedin': '', '0': '', '1': '', '2': '', '3': '', 'action:1': 'https://www.opentable.com.au/restaurant/profile/44429?ref=11025', 'menu': 'https://thegrounds.com.au/dine-in/the-grounds-cafe/', 'authority': 'http://www.thegrounds.com.au/', 'phone:tel:+61296992225': '', 'oloc': ''}
+2025-05-17 16:31:19,388 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.4', 'address': '', '0': '', '1': '', '2': '', 'authority': 'https://www.instagram.com/coffeepitt?igsh=MWFuaXo4NWx5OWVxNA%3D%3D&utm_source=qr', 'oloc': ''}
+2025-05-17 16:31:19,421 - scrapers.google_maps - INFO - Successfully extracted data for Thegrounds
+2025-05-17 16:31:19,490 - scrapers.google_maps - INFO - Successfully extracted data for Instagram
+2025-05-17 16:31:21,407 - scrapers.google_maps - INFO - Processed 18/36: Room10Group
+2025-05-17 16:31:21,928 - scrapers.google_maps - INFO - Processed 19/36: Thegrounds
+2025-05-17 16:31:22,021 - scrapers.google_maps - INFO - Processed 20/36: Instagram
+2025-05-17 16:31:53,747 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '', 'address': '', '0': '', '1': '', '2': '', 'authority': 'https://www.metrobrewin.com.au/', 'phone:tel:+61295641946': '', 'oloc': ''}
+2025-05-17 16:31:53,831 - scrapers.google_maps - INFO - Successfully extracted data for Metrobrewin
+2025-05-17 16:31:56,375 - scrapers.google_maps - INFO - Processed 21/36: Metrobrewin
+2025-05-17 16:31:57,347 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '', 'address': '', '0': '', '1': '', '2': '', '3': '', 'authority': 'https://www.celsiuscoffee.au/', 'oloc': ''}
+2025-05-17 16:31:57,650 - scrapers.google_maps - INFO - Successfully extracted data for Celsiuscoffee Au
+2025-05-17 16:31:57,812 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '', 'address': '', '0': '', '1': '', '2': '', 'authority': 'https://www.metrobrewin.com.au/', 'phone:tel:+61295641946': '', 'oloc': ''}
+2025-05-17 16:31:58,125 - scrapers.google_maps - INFO - Successfully extracted data for Metrobrewin
+2025-05-17 16:31:59,072 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '', 'address': '', '0': '', '1': '', '2': '', 'authority': 'http://www.socialbrewcafe.com.au/', 'phone:tel:+61295718792': '', 'oloc': ''}
+2025-05-17 16:31:59,296 - scrapers.google_maps - INFO - Successfully extracted data for Socialbrewcafe
+2025-05-17 16:31:59,469 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '', 'address': '', '0': '', '1': '', '2': '', '3': '', 'action:1': 'http://twochaps.com.au/reservations/', 'menu': 'http://twochaps.com.au/day-menu/', 'authority': 'https://twochaps.com.au/', 'phone:tel:+61295728858': '', 'oloc': ''}
+2025-05-17 16:31:59,567 - scrapers.google_maps - INFO - Successfully extracted data for Twochaps
+2025-05-17 16:32:01,229 - scrapers.google_maps - INFO - Processed 22/36: Celsiuscoffee Au
+2025-05-17 16:32:01,522 - scrapers.google_maps - INFO - Processed 23/36: Metrobrewin
+2025-05-17 16:32:01,774 - scrapers.google_maps - INFO - Processed 24/36: Socialbrewcafe
+2025-05-17 16:32:01,921 - scrapers.google_maps - INFO - Processed 25/36: Twochaps
+2025-05-17 16:32:32,663 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '', 'address': '', '0': '', '1': '', '2': '', 'phone:tel:+61432487598': '', 'oloc': ''}
+2025-05-17 16:32:32,754 - scrapers.google_maps - INFO - Successfully extracted data for 
+2025-05-17 16:32:33,073 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '', 'address': '', '0': '', '1': '', '2': '', 'authority': 'https://www.facebook.com/pages/Kosmos-espresso-cafe/738896149460043?sk=reviews', 'phone:tel:+61282889194': '', 'oloc': ''}
+2025-05-17 16:32:33,257 - scrapers.google_maps - INFO - Successfully extracted data for Facebook
+2025-05-17 16:32:35,240 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '', 'address': '', '0': '', '1': '', '2': '', 'phone:tel:+61433465609': '', 'oloc': ''}
+2025-05-17 16:32:35,321 - scrapers.google_maps - INFO - Successfully extracted data for 
+2025-05-17 16:32:35,516 - scrapers.google_maps - INFO - Processed 26/36: 
+2025-05-17 16:32:35,735 - scrapers.google_maps - ERROR - Error scraping listing https://www.google.com/maps/place/BOON+Restaurant+and+caf%C3%A9/data=!4m7!3m6!1s0x6b12ae232be6a897:0xd99e4ef36f8c37b3!8m2!3d-33.8786976!4d151.2071291!16s%2Fg%2F11b7lb85th!19sChIJl6jmKyOuEmsRszeMb_NOntk?authuser=0&hl=ja&rclk=1: Message: timeout: Timed out receiving message from renderer: 17.541
+  (Session info: chrome=136.0.7103.114)
+Stacktrace:
+	GetHandleVerifier [0x0055FC83+61635]
+	GetHandleVerifier [0x0055FCC4+61700]
+	(No symbol) [0x003805D3]
+	(No symbol) [0x0037116B]
+	(No symbol) [0x00370EA1]
+	(No symbol) [0x0036EE80]
+	(No symbol) [0x0036F93D]
+	(No symbol) [0x0037C049]
+	(No symbol) [0x0038D6C5]
+	(No symbol) [0x003930E6]
+	(No symbol) [0x0036FF4D]
+	(No symbol) [0x0038D461]
+	(No symbol) [0x0040E91C]
+	(No symbol) [0x003ED096]
+	(No symbol) [0x003BC840]
+	(No symbol) [0x003BD6A4]
+	GetHandleVerifier [0x007E45A3+2701795]
+	GetHandleVerifier [0x007DFD26+2683238]
+	GetHandleVerifier [0x007FAA6E+2793134]
+	GetHandleVerifier [0x00576945+155013]
+	GetHandleVerifier [0x0057D02D+181357]
+	GetHandleVerifier [0x005674D8+92440]
+	GetHandleVerifier [0x00567680+92864]
+	GetHandleVerifier [0x00552070+5296]
+	BaseThreadInitThunk [0x761A5D49+25]
+	RtlInitializeExceptionChain [0x77AECF0B+107]
+	RtlGetAppContainerNamedObjectPath [0x77AECE91+561]
+
+2025-05-17 16:32:35,917 - scrapers.google_maps - INFO - Processed 27/36: Facebook
+2025-05-17 16:32:36,422 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '', 'address': '', 'locatedin': '', '0': '', '1': '', '2': '', 'authority': 'http://www.facebook.com/metropoleQVB', 'phone:tel:+61292671122': '', 'oloc': ''}
+2025-05-17 16:32:36,571 - scrapers.google_maps - INFO - Successfully extracted data for Facebook
+2025-05-17 16:32:37,981 - scrapers.google_maps - INFO - Processed 28/36: 
+2025-05-17 16:32:38,251 - scrapers.google_maps - INFO - Processed 29/36: 
+2025-05-17 16:32:39,976 - scrapers.google_maps - INFO - Processed 30/36: Facebook
+2025-05-17 16:33:06,052 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.3', 'address': '', '0': '', '1': '', '2': '', 'authority': 'https://www.cafelostandfound.com.au/', 'phone:tel:+61468883633': '', 'oloc': ''}
+2025-05-17 16:33:06,221 - scrapers.google_maps - INFO - Successfully extracted data for Cafelostandfound
+2025-05-17 16:33:06,370 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.7', 'address': '', 'oh': '', '0': '', '1': '', '2': '', '3': '', 'action:1': '', 'menu': 'https://www.happyfield.com.au/menu', 'authority': 'http://www.happyfield.com.au/', 'phone:tel:+61297165168': '', 'oloc': ''}
+2025-05-17 16:33:06,576 - scrapers.google_maps - INFO - Successfully extracted data for Happyfield
+2025-05-17 16:33:07,096 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.3', 'address': '', 'locatedin': '', '0': '', '1': '', '2': '', 'authority': 'https://coffeealchemy.com.au/pages/gumption', 'phone:tel:+61295161997': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-17 16:33:07,242 - scrapers.google_maps - INFO - Successfully extracted data for Coffeealchemy
+2025-05-17 16:33:07,703 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.5', 'address': '', '0': '', '1': '', '2': '', 'menu': 'http://www.yorklane.com/breakfast-menu/', 'authority': 'https://yorklane.au/', 'phone:tel:+61415236351': '', 'oloc': ''}
+2025-05-17 16:33:07,801 - scrapers.google_maps - INFO - Successfully extracted data for Yorklane
+2025-05-17 16:33:08,521 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.3', 'address': '', 'oh': '', '0': '', '1': '', '2': '', 'action:1': 'https://pabloandrustyssyd.resos.com/booking', 'authority': 'https://pabloandrustys.com.au/pages/locations', 'oloc': ''}
+2025-05-17 16:33:08,786 - scrapers.google_maps - INFO - Successfully extracted data for Pabloandrustys
+2025-05-17 16:33:08,977 - scrapers.google_maps - INFO - Processed 31/36: Cafelostandfound
+2025-05-17 16:33:09,256 - scrapers.google_maps - INFO - Processed 32/36: Happyfield
+2025-05-17 16:33:09,751 - scrapers.google_maps - INFO - Processed 33/36: Coffeealchemy
+2025-05-17 16:33:10,369 - scrapers.google_maps - INFO - Processed 34/36: Yorklane
+2025-05-17 16:33:12,298 - scrapers.google_maps - INFO - Processed 35/36: Pabloandrustys
+2025-05-17 16:33:33,952 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.3', 'address': '', 'locatedin': '', 'oh': '', '0': '', '1': '', '2': '', 'menu': 'https://www.cafeportico.com/menu', 'authority': 'https://www.cafeportico.com/', 'oloc': '', 'place-info-links:': ''}
+2025-05-17 16:33:34,042 - scrapers.google_maps - INFO - Successfully extracted data for Cafeportico
+2025-05-17 16:33:37,597 - scrapers.google_maps - INFO - Processed 36/36: Cafeportico
+2025-05-17 16:33:39,843 - scrapers.google_maps - INFO - Parallel processing complete. Processed 36/36 listings
+2025-05-17 16:33:39,845 - controllers.main_controller - INFO - Found 36 leads from Google Maps
+2025-05-17 16:33:40,731 - controllers.main_controller - INFO - Exported 36 leads to data/output/leads_cafes _sydney_20250517_163339.csv, data/output/leads_cafes _sydney_20250517_163339.xlsx, and data/output/leads_cafes _sydney_20250517_163339.json
+2025-05-17 16:52:34,281 - controllers.main_controller - INFO - Starting scraping for cafes  in iceland (Max leads: 500)
+2025-05-17 16:52:34,288 - controllers.main_controller - INFO - Starting Google Maps scraping
+2025-05-17 16:52:34,327 - utils.web - INFO - Setting up Chrome driver (headless=False)
+2025-05-17 16:52:39,140 - scrapers.google_maps - INFO - Navigating to Google Maps to search for cafes  in iceland
+2025-05-17 16:52:51,310 - scrapers.google_maps - INFO - Clicked search button
+2025-05-17 16:52:56,193 - scrapers.google_maps - INFO - Scrolled down results pane from 0 to 500
+2025-05-17 16:52:57,203 - scrapers.google_maps - INFO - New content loaded, scroll height increased from 922 to 1665
+2025-05-17 16:52:59,393 - scrapers.google_maps - INFO - Found 30 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-17 16:52:59,497 - scrapers.google_maps - INFO - Scrolled down results pane from 387.3333435058594 to 887.3333435058594
+2025-05-17 16:53:05,232 - scrapers.google_maps - INFO - Found 30 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-17 16:53:05,328 - scrapers.google_maps - INFO - Scrolled down results pane from 887.3333129882812 to 1387.3333129882812
+2025-05-17 16:53:06,339 - scrapers.google_maps - INFO - New content loaded, scroll height increased from 1665 to 2497
+2025-05-17 16:53:08,712 - scrapers.google_maps - INFO - Found 45 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-17 16:53:08,859 - scrapers.google_maps - INFO - Scrolled down results pane from 1130.6666259765625 to 1630.6666259765625
+2025-05-17 16:53:14,248 - scrapers.google_maps - INFO - Found 45 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-17 16:53:14,415 - scrapers.google_maps - INFO - Scrolled down results pane from 1630.6666259765625 to 2130.6666259765625
+2025-05-17 16:53:15,906 - scrapers.google_maps - INFO - New content loaded, scroll height increased from 2497 to 3240
+2025-05-17 16:53:18,850 - scrapers.google_maps - INFO - Found 60 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-17 16:53:19,017 - scrapers.google_maps - INFO - Scrolled down results pane from 1962 to 2462
+2025-05-17 16:53:25,038 - scrapers.google_maps - INFO - Found 60 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-17 16:53:25,171 - scrapers.google_maps - INFO - Scrolled down results pane from 2462 to 2962
+2025-05-17 16:53:28,319 - scrapers.google_maps - INFO - New content loaded, scroll height increased from 3240 to 3983
+2025-05-17 16:53:31,224 - scrapers.google_maps - INFO - Found 75 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-17 16:53:31,454 - scrapers.google_maps - INFO - Scrolled down results pane from 2705.333251953125 to 3205.333251953125
+2025-05-17 16:53:36,536 - scrapers.google_maps - INFO - Found 75 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-17 16:53:36,700 - scrapers.google_maps - INFO - Scrolled down results pane from 3205.333251953125 to 3705.333251953125
+2025-05-17 16:53:37,961 - scrapers.google_maps - INFO - New content loaded, scroll height increased from 3983 to 4741
+2025-05-17 16:53:40,800 - scrapers.google_maps - INFO - Found 90 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-17 16:53:40,927 - scrapers.google_maps - INFO - Scrolled down results pane from 3448.666748046875 to 3948.666748046875
+2025-05-17 16:53:46,421 - scrapers.google_maps - INFO - Found 90 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-17 16:53:46,556 - scrapers.google_maps - INFO - Scrolled down results pane from 3948.666748046875 to 4448.666748046875
+2025-05-17 16:53:47,890 - scrapers.google_maps - INFO - New content loaded, scroll height increased from 4741 to 5512
+2025-05-17 16:53:50,866 - scrapers.google_maps - INFO - Found 105 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-17 16:53:51,021 - scrapers.google_maps - INFO - Scrolled down results pane from 4206 to 4706
+2025-05-17 16:53:56,823 - scrapers.google_maps - INFO - Found 105 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-17 16:53:57,023 - scrapers.google_maps - INFO - Scrolled down results pane from 4706 to 5206
+2025-05-17 16:53:59,286 - scrapers.google_maps - INFO - New content loaded, scroll height increased from 5512 to 6269
+2025-05-17 16:54:01,989 - scrapers.google_maps - INFO - Found 120 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-17 16:54:02,095 - scrapers.google_maps - INFO - Scrolled down results pane from 4977.33349609375 to 5477.33349609375
+2025-05-17 16:54:07,350 - scrapers.google_maps - INFO - Found 120 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-17 16:54:07,455 - scrapers.google_maps - INFO - Scrolled down results pane from 5477.33349609375 to 5977.33349609375
+2025-05-17 16:54:09,481 - scrapers.google_maps - INFO - New content loaded, scroll height increased from 6269 to 7061
+2025-05-17 16:54:11,733 - scrapers.google_maps - INFO - Found 135 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-17 16:54:11,828 - scrapers.google_maps - INFO - Scrolled down results pane from 5734.66650390625 to 6234.66650390625
+2025-05-17 16:54:17,596 - scrapers.google_maps - INFO - Found 135 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-17 16:54:17,725 - scrapers.google_maps - INFO - Scrolled down results pane from 6234.66650390625 to 6734.66650390625
+2025-05-17 16:54:18,937 - scrapers.google_maps - INFO - New content loaded, scroll height increased from 7061 to 7818
+2025-05-17 16:54:21,743 - scrapers.google_maps - INFO - Found 150 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-17 16:54:21,882 - scrapers.google_maps - INFO - Scrolled down results pane from 6526 to 7026
+2025-05-17 16:54:26,973 - scrapers.google_maps - INFO - Found 150 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-17 16:54:27,108 - scrapers.google_maps - INFO - Scrolled down results pane from 7026 to 7526
+2025-05-17 16:54:28,168 - scrapers.google_maps - INFO - New content loaded, scroll height increased from 7818 to 8613
+2025-05-17 16:54:30,827 - scrapers.google_maps - INFO - Found 165 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-17 16:54:30,955 - scrapers.google_maps - INFO - Scrolled down results pane from 7283.33349609375 to 7783.33349609375
+2025-05-17 16:54:36,772 - scrapers.google_maps - INFO - Found 165 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-17 16:54:36,893 - scrapers.google_maps - INFO - Scrolled down results pane from 7783.33349609375 to 8283.33349609375
+2025-05-17 16:54:37,939 - scrapers.google_maps - INFO - New content loaded, scroll height increased from 8613 to 9371
+2025-05-17 16:54:40,913 - scrapers.google_maps - INFO - Found 180 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-17 16:54:41,044 - scrapers.google_maps - INFO - Scrolled down results pane from 8078.66650390625 to 8578.66650390625
+2025-05-17 16:54:46,635 - scrapers.google_maps - INFO - Found 180 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-17 16:54:46,756 - scrapers.google_maps - INFO - Scrolled down results pane from 8578.6669921875 to 9078.6669921875
+2025-05-17 16:54:49,795 - scrapers.google_maps - INFO - New content loaded, scroll height increased from 9371 to 10148
+2025-05-17 16:54:52,434 - scrapers.google_maps - INFO - Found 195 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-17 16:54:52,561 - scrapers.google_maps - INFO - Scrolled down results pane from 8836 to 9336
+2025-05-17 16:54:58,003 - scrapers.google_maps - INFO - Found 195 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-17 16:54:58,142 - scrapers.google_maps - INFO - Scrolled down results pane from 9336 to 9836
+2025-05-17 16:54:59,228 - scrapers.google_maps - INFO - New content loaded, scroll height increased from 10148 to 10925
+2025-05-17 16:55:01,708 - scrapers.google_maps - INFO - Found 210 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-17 16:55:01,832 - scrapers.google_maps - INFO - Scrolled down results pane from 9613.3330078125 to 10113.3330078125
+2025-05-17 16:55:07,163 - scrapers.google_maps - INFO - Found 210 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-17 16:55:07,302 - scrapers.google_maps - INFO - Scrolled down results pane from 10113.3330078125 to 10613.3330078125
+2025-05-17 16:55:08,347 - scrapers.google_maps - INFO - New content loaded, scroll height increased from 10925 to 11703
+2025-05-17 16:55:10,495 - scrapers.google_maps - INFO - Found 225 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-17 16:55:10,614 - scrapers.google_maps - INFO - Scrolled down results pane from 10390.6669921875 to 10890.6669921875
+2025-05-17 16:55:15,974 - scrapers.google_maps - INFO - Found 225 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-17 16:55:16,099 - scrapers.google_maps - INFO - Scrolled down results pane from 10890.6669921875 to 11390.6669921875
+2025-05-17 16:55:17,655 - scrapers.google_maps - INFO - New content loaded, scroll height increased from 11703 to 12460
+2025-05-17 16:55:20,073 - scrapers.google_maps - INFO - Found 240 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-17 16:55:20,202 - scrapers.google_maps - INFO - Scrolled down results pane from 11168 to 11668
+2025-05-17 16:55:25,443 - scrapers.google_maps - INFO - Found 240 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-17 16:55:25,587 - scrapers.google_maps - INFO - Scrolled down results pane from 11668 to 12168
+2025-05-17 16:55:28,270 - scrapers.google_maps - INFO - New content loaded, scroll height increased from 12460 to 13380
+2025-05-17 16:55:31,232 - scrapers.google_maps - INFO - Found 255 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-17 16:55:31,353 - scrapers.google_maps - INFO - Scrolled down results pane from 11925.3330078125 to 12425.3330078125
+2025-05-17 16:55:36,461 - scrapers.google_maps - INFO - Found 255 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-17 16:55:36,591 - scrapers.google_maps - INFO - Scrolled down results pane from 12425.3330078125 to 12925.3330078125
+2025-05-17 16:55:42,678 - scrapers.google_maps - INFO - Found 255 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-17 16:55:42,793 - scrapers.google_maps - INFO - Already at the bottom of the scroll pane
+2025-05-17 16:55:42,793 - scrapers.google_maps - WARNING - Scroll failed. Failures: 1/3
+2025-05-17 16:55:42,836 - scrapers.google_maps - INFO - Found 255 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-17 16:55:42,917 - scrapers.google_maps - INFO - Already at the bottom of the scroll pane
+2025-05-17 16:55:42,917 - scrapers.google_maps - WARNING - Scroll failed. Failures: 2/3
+2025-05-17 16:55:42,974 - scrapers.google_maps - INFO - Found 255 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-17 16:55:43,056 - scrapers.google_maps - INFO - Already at the bottom of the scroll pane
+2025-05-17 16:55:43,062 - scrapers.google_maps - WARNING - Scroll failed. Failures: 3/3
+2025-05-17 16:55:43,106 - scrapers.google_maps - INFO - Found 255 results with selector: div.Nv2PK, a[href^="https://www.google.com/maps/place"], div.bfdHYd
+2025-05-17 16:55:43,153 - scrapers.google_maps - INFO - Found 85 elements with selector: div.Nv2PK
+2025-05-17 16:55:46,218 - scrapers.google_maps - INFO - Successfully extracted 85 URLs from 85 results
+2025-05-17 16:55:48,823 - scrapers.google_maps - INFO - Starting parallel processing of 85 URLs with 8 workers
+2025-05-17 16:56:13,702 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.5', 'address': '', '0': '', '1': '', '2': '', 'authority': 'https://www.mokka.is/', 'phone:tel:+3545521174': '', 'oloc': ''}
+2025-05-17 16:56:13,886 - scrapers.google_maps - INFO - Successfully extracted data for Mokka Is
+2025-05-17 16:56:14,309 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.5', 'address': '', '0': '', '1': '', '2': '', '3': '', 'authority': 'http://loki.is/', 'phone:tel:+3544662828': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-17 16:56:14,316 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.6', 'address': '', '0': '', '1': '', '2': '', 'authority': 'http://www.reykjavikroasters.is/', 'phone:tel:+3545175535': '', 'oloc': ''}
+2025-05-17 16:56:14,415 - scrapers.google_maps - INFO - Successfully extracted data for Loki Is
+2025-05-17 16:56:14,422 - scrapers.google_maps - INFO - Successfully extracted data for Reykjavikroasters Is
+2025-05-17 16:56:14,678 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.5', 'address': '', '0': '', '1': '', '2': '', 'authority': 'https://www.babalu.is/menu.html', 'phone:tel:+3545558845': '', 'oloc': ''}
+2025-05-17 16:56:14,785 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.6', 'address': '', 'oh': '', '0': '', '1': '', '2': '', 'authority': 'https://kaffibrennslan101.is/', 'phone:tel:+3545115888': '', 'oloc': ''}
+2025-05-17 16:56:14,788 - scrapers.google_maps - INFO - Successfully extracted data for Babalu Is
+2025-05-17 16:56:14,975 - scrapers.google_maps - INFO - Successfully extracted data for Kaffibrennslan101 Is
+2025-05-17 16:56:16,684 - scrapers.google_maps - INFO - Processed 1/85: Mokka Is
+2025-05-17 16:56:16,973 - scrapers.google_maps - INFO - Processed 2/85: Loki Is
+2025-05-17 16:56:17,093 - scrapers.google_maps - INFO - Processed 3/85: Reykjavikroasters Is
+2025-05-17 16:56:17,353 - scrapers.google_maps - INFO - Processed 4/85: Babalu Is
+2025-05-17 16:56:17,468 - scrapers.google_maps - INFO - Processed 5/85: Kaffibrennslan101 Is
+2025-05-17 16:56:40,764 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.8', 'address': '', '0': '', '1': '', '2': '', 'phone:tel:+3548882688': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-17 16:56:40,899 - scrapers.google_maps - INFO - Successfully extracted data for 
+2025-05-17 16:56:40,973 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.6', 'address': '', '0': '', '1': '', '2': '', '3': '', 'authority': 'http://www.reykjavikrost.is/', 'phone:tel:+3545527777': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-17 16:56:41,213 - scrapers.google_maps - INFO - Successfully extracted data for Reykjavikrost Is
+2025-05-17 16:56:41,583 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.7', 'address': '', '0': '', '1': '', '2': '', 'phone:tel:+3548693030': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-17 16:56:41,686 - scrapers.google_maps - INFO - Successfully extracted data for 
+2025-05-17 16:56:41,907 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.8', 'address': '', '0': '', '1': '', '2': '', 'action:4': 'https://wolt.com/is/isl/reykjavik/restaurant/wake-n-bake?utm_source=googlemapreserved&utm_campaign=wake-n-bake&utm_content=67ae05b091bad97761cd704f&rwg_token=AAiGsoakvOJqEKIbgjeVyWeRoeJQhG1hbU8RS-x_fdB4wv89gHk2T9WX6_exoeFbrPv937qvYoqQPhSt3VPgzF_rPvhhN_XWUmnRDiY5i7vmJET8Ni5Sw8Y%3D', 'phone:tel:+3545715887': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-17 16:56:42,023 - scrapers.google_maps - INFO - Successfully extracted data for 
+2025-05-17 16:56:42,386 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.6', 'address': '', '0': '', '1': '', '2': '', 'authority': 'http://www.reykjavikroasters.is/', 'phone:tel:+3545713102': '', 'oloc': ''}
+2025-05-17 16:56:42,478 - scrapers.google_maps - INFO - Successfully extracted data for Reykjavikroasters Is
+2025-05-17 16:56:43,698 - scrapers.google_maps - INFO - Processed 6/85: 
+2025-05-17 16:56:43,876 - scrapers.google_maps - INFO - Processed 7/85: Reykjavikrost Is
+2025-05-17 16:56:44,300 - scrapers.google_maps - INFO - Processed 8/85: 
+2025-05-17 16:56:44,595 - scrapers.google_maps - INFO - Processed 9/85: 
+2025-05-17 16:56:45,193 - scrapers.google_maps - INFO - Processed 10/85: Reykjavikroasters Is
+2025-05-17 16:57:08,182 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.5', 'address': '', '0': '', '1': '', '2': '', 'phone:tel:+3545461842': '', 'oloc': ''}
+2025-05-17 16:57:08,293 - scrapers.google_maps - INFO - Successfully extracted data for 
+2025-05-17 16:57:08,586 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.6', 'address': '', '0': '', '1': '', '2': '', 'menu': 'http://www.kattakaffihusid.is/menu', 'authority': 'https://www.kattakaffihusid.is/', 'oloc': '', 'place-info-links:': ''}
+2025-05-17 16:57:08,681 - scrapers.google_maps - INFO - Successfully extracted data for Kattakaffihusid Is
+2025-05-17 16:57:08,805 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.9', 'address': '', '0': '', '1': '', '2': '', 'authority': 'http://plantankaffihus.is/', 'phone:tel:+3545106464': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-17 16:57:08,933 - scrapers.google_maps - INFO - Successfully extracted data for Plantankaffihus Is
+2025-05-17 16:57:09,187 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.9', 'address': '', '0': '', '1': '', '2': '', 'menu': 'https://www.skoolbeans.com/eat-me', 'authority': 'http://skoolbeans.com/', 'phone:tel:+3548300079': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-17 16:57:09,304 - scrapers.google_maps - INFO - Successfully extracted data for Skoolbeans
+2025-05-17 16:57:09,902 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.6', 'address': '', '0': '', '1': '', '2': '', '3': '', 'authority': 'http://sandholt.is/', 'phone:tel:+3545513524': '', 'oloc': ''}
+2025-05-17 16:57:09,995 - scrapers.google_maps - INFO - Successfully extracted data for Sandholt Is
+2025-05-17 16:57:10,940 - scrapers.google_maps - INFO - Processed 11/85: 
+2025-05-17 16:57:11,405 - scrapers.google_maps - INFO - Processed 12/85: Kattakaffihusid Is
+2025-05-17 16:57:11,511 - scrapers.google_maps - INFO - Processed 13/85: Plantankaffihus Is
+2025-05-17 16:57:11,973 - scrapers.google_maps - INFO - Processed 14/85: Skoolbeans
+2025-05-17 16:57:12,473 - scrapers.google_maps - INFO - Processed 15/85: Sandholt Is
+2025-05-17 16:57:34,412 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.6', 'address': '', '0': '', '1': '', '2': '', 'authority': 'https://facebook.com/IdaZimsen/', 'phone:tel:+3545115004': '', 'oloc': ''}
+2025-05-17 16:57:34,495 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.8', 'address': '', '0': '', '1': '', '2': '', 'authority': 'https://www.hyggebakery.is/', 'phone:tel:+3547773202': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-17 16:57:34,540 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.9', 'address': '', '0': '', '1': '', '2': '', 'menu': 'https://www.cafevatnajokull.is/the-cafe', 'authority': 'https://www.cafevatnajokull.is/the-cafe', 'phone:tel:+3548881788': '', 'oloc': ''}
+2025-05-17 16:57:34,544 - scrapers.google_maps - INFO - Successfully extracted data for Facebook
+2025-05-17 16:57:34,716 - scrapers.google_maps - INFO - Successfully extracted data for Cafevatnajokull Is
+2025-05-17 16:57:34,737 - scrapers.google_maps - INFO - Successfully extracted data for Hyggebakery Is
+2025-05-17 16:57:34,926 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.7', 'address': '', '0': '', '1': '', '2': '', '3': '', 'authority': 'http://www.reykjavikroasters.is/', 'phone:tel:+3545550041': '+354 555 0041', 'oloc': '43RC+9M Reykjavík, Iceland'}
+2025-05-17 16:57:35,009 - scrapers.google_maps - INFO - Successfully extracted data for Reykjavikroasters Is
+2025-05-17 16:57:35,375 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.4', 'address': '', '0': '', '1': '', '2': '', '3': '', 'action:1': 'https://noona.app/thelaundromatcafe', 'action:4': 'https://wolt.com/is/isl/reykjavik/restaurant/the-laundromat-cafe?utm_source=googlemapreserved&utm_campaign=the-laundromat-cafe&utm_content=643e6a4dabb90a7540b7aed6&rwg_token=AAiGsoaqsMjMVLJuyNWhNY4XsleDGX5XMqQ9prevKlemV6yTsgQ34SLIm6ImDN-unsjNYpXZPm-c8UvRgCy90GBKayxZSKnyBw%3D%3D', 'authority': 'https://www.thelaundromatcafe.is/', 'phone:tel:+3547719660': '+354 771 9660', 'oloc': '43X6+46 Reykjavík, Iceland'}
+2025-05-17 16:57:35,463 - scrapers.google_maps - INFO - Successfully extracted data for Thelaundromatcafe Is
+2025-05-17 16:57:37,337 - scrapers.google_maps - INFO - Processed 16/85: Facebook
+2025-05-17 16:57:37,353 - scrapers.google_maps - INFO - Processed 17/85: Cafevatnajokull Is
+2025-05-17 16:57:37,424 - scrapers.google_maps - INFO - Processed 18/85: Hyggebakery Is
+2025-05-17 16:57:37,687 - scrapers.google_maps - INFO - Processed 19/85: Reykjavikroasters Is
+2025-05-17 16:57:38,085 - scrapers.google_maps - INFO - Processed 20/85: Thelaundromatcafe Is
+2025-05-17 16:57:58,554 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.3', 'address': '', '0': '', '1': '', '2': '', 'action:4': 'https://wolt.com/is/isl/reykjavik/restaurant/te-kaffi-laugavegur-27?utm_source=googlemapreserved&utm_campaign=te-kaffi-laugavegur-27&utm_content=65084f56b647437d223a909c&rwg_token=AAiGsoZaW0usQzoK3pisV8kjSQZTtdtu79mTaUiKW9P1iM1RJWW-XzvtLjbyDdqmT0NgahiIO7oithkHricIxMXHzDnTv784PnT3a2gai732wKaL5DHOPOw%3D', 'menu': 'https://www.teogkaffi.is/panta/#/category/1', 'authority': 'https://www.teogkaffi.is/', 'phone:tel:+3545272880': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-17 16:57:58,628 - scrapers.google_maps - INFO - Successfully extracted data for Teogkaffi Is
+2025-05-17 16:57:58,851 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.5', 'address': '', '0': '', '1': '', '2': '', '3': '', 'action:1': 'https://dineout.is/en/kaffivest?rwg_token=AAiGsoYm2bLcxi0cjtenlOnvddVDwLdjORUlXowGcllxxJDZjvp9OVxEiLLIhz8MSZ8f_2tEATWBDV0GZ9YcT1hdomtbaPOh7PSEFmUqY73axrMBd6Tw1bw%3D', 'authority': 'http://www.kaffihusvesturbaejar.is/', 'phone:tel:+3545510623': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-17 16:57:58,930 - scrapers.google_maps - INFO - Successfully extracted data for Kaffihusvesturbaejar Is
+2025-05-17 16:57:59,080 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.3', 'address': '', 'locatedin': '', '0': '', '1': '', '2': '', 'authority': 'http://www.floran.is/', 'phone:tel:+3545538872': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-17 16:57:59,199 - scrapers.google_maps - INFO - Successfully extracted data for Floran Is
+2025-05-17 16:57:59,616 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.8', 'address': '', '0': '', '1': '', '2': '', 'phone:tel:+3545533740': '', 'oloc': '', 'merchant': 'https://business.google.com/create?fp=5261590493547751836&hl=en&authuser=0&gmbsrc=in-en-et-ip-z-gmb-s-z-l~mrc%7Cclaimbz%7Cu&ppsrc=GMBMI&utm_campaign=in-en-et-ip-z-gmb-s-z-l~mrc%7Cclaimbz%7Cu&utm_source=gmb_mrc81&utm_medium=et&getstarted&lis=0'}
+2025-05-17 16:57:59,690 - scrapers.google_maps - INFO - Successfully extracted data for 
+2025-05-17 16:58:00,015 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.6 stars (90 reviews)', 'address': 'Borgartún 21A, 105 Reykjavík, Iceland', '0': '', '1': '', '2': '', '3': '', 'action:4': 'https://wolt.com/is/isl/reykjavik/restaurant/te-kaffi-borgartun?utm_source=googlemapreserved&utm_campaign=te-kaffi-borgartun&utm_content=65084f56b647437d223a9097&rwg_token=AAiGsoafEzyykrhgOsjGND7ses6KuLrHsLloyG3hu0WbkapVj3d3gh3fx8WiPvD5upGdFlV6N9DQ05nB-ZDCbIt7APwWsu7umYrVsbDgLbhTVf5e1BU1kYo%3D', 'menu': 'https://www.teogkaffi.is/panta/#/', 'authority': 'https://www.teogkaffi.is/', 'phone:tel:+3545272889': '+354 527 2889', 'oloc': '43WX+CF Reykjavík, Iceland', 'place-info-links:': 'LGBTQ+ friendly'}
+2025-05-17 16:58:00,090 - scrapers.google_maps - INFO - Successfully extracted data for Teogkaffi Is
+2025-05-17 16:58:01,202 - scrapers.google_maps - INFO - Processed 21/85: Teogkaffi Is
+2025-05-17 16:58:01,464 - scrapers.google_maps - INFO - Processed 22/85: Kaffihusvesturbaejar Is
+2025-05-17 16:58:01,641 - scrapers.google_maps - INFO - Processed 23/85: Floran Is
+2025-05-17 16:58:02,092 - scrapers.google_maps - INFO - Processed 24/85: 
+2025-05-17 16:58:02,675 - scrapers.google_maps - INFO - Processed 25/85: Teogkaffi Is
+2025-05-17 16:58:23,963 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.4', 'address': '', '0': '', '1': '', '2': '', 'authority': 'http://www.kaffifelagid.is/', 'phone:tel:+3548408229': '', 'oloc': ''}
+2025-05-17 16:58:24,032 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.4', 'address': '', '0': '', '1': '', '2': '', 'action:4': 'https://wolt.com/is/isl/reykjavik/restaurant/te-kaffi-laekjatorg?utm_source=googlemapreserved&utm_campaign=te-kaffi-laekjatorg&utm_content=65084f56b647437d223a909d&rwg_token=AAiGsobCHKwz23aB4uGk9EzV1dCc_z2-U5WeNQPik6ytl82aXmVx9Hdbm9_7vhtR-J5bg9XyhCmQe8uwLhL4OKcvAeAXcYtcHwFaHynwcAL2luHOm1mQtEY%3D', 'authority': 'http://www.teogkaffi.is/', 'phone:tel:+3545551910': '', 'oloc': ''}
+2025-05-17 16:58:24,116 - scrapers.google_maps - INFO - Successfully extracted data for Teogkaffi Is
+2025-05-17 16:58:24,197 - scrapers.google_maps - INFO - Successfully extracted data for Kaffifelagid Is
+2025-05-17 16:58:24,343 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.6', 'address': '', 'locatedin': '', '0': '', '1': '', '2': '', 'action:4': 'https://wolt.com/is/isl/reykjavik/restaurant/kaffitar-kringlan?utm_source=googlemapreserved&utm_campaign=kaffitar-kringlan&utm_content=65d8869f1cf7421a0910ae76&rwg_token=AAiGsoaQz_kdjxQLpZWXRHeOc3NB-EpPnj6X6qM0hd7sHEmbOWA9mvYILkHAsrMlhZkIbXdreep86YWGHQKxezn_mVlKmdtBjmkdlTRHctAtgUttvpt5h5Y%3D', 'phone:tel:+3546698251': '', 'oloc': '', 'merchant': 'https://business.google.com/create?fp=13526420313440808983&hl=en&authuser=0&gmbsrc=in-en-et-ip-z-gmb-s-z-l~mrc%7Cclaimbz%7Cu&ppsrc=GMBMI&utm_campaign=in-en-et-ip-z-gmb-s-z-l~mrc%7Cclaimbz%7Cu&utm_source=gmb_mrc81&utm_medium=et&getstarted&lis=0'}
+2025-05-17 16:58:24,432 - scrapers.google_maps - INFO - Successfully extracted data for 
+2025-05-17 16:58:24,604 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.6', 'address': '', '0': '', '1': '', '2': '', '3': '', 'action:4': 'https://wolt.com/is/isl/reykjavik/restaurant/grai-kotturinn?utm_source=googlemapreserved&utm_campaign=grai-kotturinn&utm_content=6481e6d7e37c6945bed8b1a3&rwg_token=AAiGsob2PYccPuIY-kOt8Ax8bS3OPW0y0a0BUalrlgwdwj9PPm2mQUHr7PXirrKNH5uOfcdF1PZN7-40OC8lKuXMNrGZsbC5WQ%3D%3D', 'menu': 'https://www.graikotturinn.is/menu', 'authority': 'https://www.graikotturinn.is/', 'phone:tel:+3545511544': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-17 16:58:24,701 - scrapers.google_maps - INFO - Successfully extracted data for Graikotturinn Is
+2025-05-17 16:58:25,039 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '5.0', 'address': '', '0': '', '1': '', '2': '', 'authority': 'http://valeria.is/', 'phone:tel:+3548888507': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-17 16:58:25,118 - scrapers.google_maps - INFO - Successfully extracted data for Valeria Is
+2025-05-17 16:58:26,724 - scrapers.google_maps - INFO - Processed 26/85: Kaffifelagid Is
+2025-05-17 16:58:26,733 - scrapers.google_maps - INFO - Processed 27/85: Teogkaffi Is
+2025-05-17 16:58:26,919 - scrapers.google_maps - INFO - Processed 28/85: 
+2025-05-17 16:58:27,083 - scrapers.google_maps - INFO - Processed 29/85: Graikotturinn Is
+2025-05-17 16:58:27,558 - scrapers.google_maps - INFO - Processed 30/85: Valeria Is
+2025-05-17 16:58:48,517 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.6', 'address': '', '0': '', '1': '', '2': '', '3': '', 'menu': 'https://www.facebook.com/media/set/?vanity=100088905876221&set=a.166948249612037', 'authority': 'http://harbour-cafe.com/', 'phone:tel:+3548315565': '', 'oloc': ''}
+2025-05-17 16:58:48,605 - scrapers.google_maps - INFO - Successfully extracted data for Facebook
+2025-05-17 16:58:49,170 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.9', 'address': '', '0': '', '1': '', '2': '', 'authority': 'http://www.braudogco.is/', 'phone:tel:+3544567777': '', 'oloc': ''}
+2025-05-17 16:58:49,442 - scrapers.google_maps - INFO - Successfully extracted data for Braudogco Is
+2025-05-17 16:58:49,836 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.6', 'address': '', 'oh': '', '0': '', '1': '', '2': '', '3': '', 'menu': 'https://eldsto.is/#menu', 'authority': 'http://eldsto.is/', 'phone:tel:+3544821011': '', 'oloc': ''}
+2025-05-17 16:58:49,968 - scrapers.google_maps - INFO - Successfully extracted data for Eldsto Is
+2025-05-17 16:58:50,035 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.6', 'address': '', 'oh': '', '0': '', '1': '', '2': '', 'menu': 'http://www.kaffiilmur.is/alldaymenu', 'authority': 'https://kaffiilmur.is/', 'phone:tel:+3546805851': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-17 16:58:50,143 - scrapers.google_maps - INFO - Successfully extracted data for Kaffiilmur Is
+2025-05-17 16:58:50,167 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.9', 'address': '', '0': '', '1': '', '2': '', 'authority': 'https://dalvikhostel.is/our-cafe/', 'phone:tel:+3548658391': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-17 16:58:50,254 - scrapers.google_maps - INFO - Successfully extracted data for Dalvikhostel Is
+2025-05-17 16:58:51,130 - scrapers.google_maps - INFO - Processed 31/85: Facebook
+2025-05-17 16:58:52,023 - scrapers.google_maps - INFO - Processed 32/85: Braudogco Is
+2025-05-17 16:58:52,522 - scrapers.google_maps - INFO - Processed 33/85: Eldsto Is
+2025-05-17 16:58:52,586 - scrapers.google_maps - INFO - Processed 34/85: Kaffiilmur Is
+2025-05-17 16:58:52,629 - scrapers.google_maps - INFO - Processed 35/85: Dalvikhostel Is
+2025-05-17 16:59:13,521 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.4', 'address': '', 'action:1': '', 'action:4': 'https://www.laekur.is/saekja', 'authority': 'http://www.laekur.is/', 'phone:tel:+3545376556': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-17 16:59:13,633 - scrapers.google_maps - INFO - Successfully extracted data for Laekur Is
+2025-05-17 16:59:14,143 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.7', 'address': '', 'locatedin': '', 'authority': 'https://www.facebook.com/KaldiBarCafe', 'phone:tel:+3545812200': '', 'oloc': ''}
+2025-05-17 16:59:14,187 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.9', 'address': '', '0': '', '1': '', '2': '', 'authority': 'https://instagram.com/pallettkaffi', 'phone:tel:+3545714144': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-17 16:59:14,228 - scrapers.google_maps - INFO - Successfully extracted data for Facebook
+2025-05-17 16:59:14,293 - scrapers.google_maps - INFO - Successfully extracted data for Instagram
+2025-05-17 16:59:14,398 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.9', 'address': '', 'locatedin': '', '0': '', '1': '', '2': '', 'phone:tel:+3545550434': '', 'oloc': ''}
+2025-05-17 16:59:14,481 - scrapers.google_maps - INFO - Successfully extracted data for 
+2025-05-17 16:59:14,681 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.4', 'address': '', 'oh': '', '0': '', '1': '', '2': '', 'action:4': 'https://wolt.com/is/isl/reykjavik/restaurant/saeta-husid-laugavegur?utm_source=googlemapreserved&utm_campaign=saeta-husid-laugavegur&utm_content=64820a24dd9c6548b382198c&rwg_token=AAiGsobFXspPd4kYppYxbCC4RI0sSlqSzZEPPKJ2MSe5DFzk9uQlwy5tFoeWWUJLM83uktpUMm5FE0grsmFViA4UKEuadGD5E0GI8ajpWbYWYEcpgDDbPGc%3D', 'authority': 'http://www.saetahusid.is/', 'phone:tel:+3547906939': '', 'oloc': ''}
+2025-05-17 16:59:14,848 - scrapers.google_maps - INFO - Successfully extracted data for Saetahusid Is
+2025-05-17 16:59:16,974 - scrapers.google_maps - INFO - Processed 36/85: Laekur Is
+2025-05-17 16:59:17,141 - scrapers.google_maps - INFO - Processed 37/85: 
+2025-05-17 16:59:17,209 - scrapers.google_maps - INFO - Processed 38/85: Instagram
+2025-05-17 16:59:17,209 - scrapers.google_maps - INFO - Processed 39/85: Facebook
+2025-05-17 16:59:17,563 - scrapers.google_maps - INFO - Processed 40/85: Saetahusid Is
+2025-05-17 16:59:39,443 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.8', 'address': '', 'authority': 'http://www.blomasetrid.is/', 'phone:tel:+3544371878': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-17 16:59:39,588 - scrapers.google_maps - INFO - Successfully extracted data for Blomasetrid Is
+2025-05-17 16:59:40,259 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.4', 'address': '', 'action:1': 'https://dineout.is/en/hardrockreykjavik?rwg_token=AAiGsoZBuyJ54ROBuP6Kx1WQI3fggfhsMwLYtyMqLxtCL1XtTkpwL5D4iHDyRfMbbbF7RZGBcFdHXSH7h8PfziOPcr5WSehR9AQ_wjDnKuuyVHPrqJE0mzQ%3D', 'action:4': 'https://wolt.com/is/isl/reykjavik/restaurant/hard-rock-cafe-reykjavik?utm_source=googlemapreserved&utm_campaign=hard-rock-cafe-reykjavik&utm_content=666c16960ad73420f6487335&rwg_token=AAiGsoYx0Cxu4-nERFEE1omnwzT17XjdxfoSe5NGeAOUKLlX8RE46M_T_3B3v4Fmk6DtUBzm6td4qDgctmn5KJwlr-HAgfrs9crJWN6DMCHXnEfx3BxZkos%3D', 'menu': 'https://cafe.hardrock.com/reykjavik/files/5336/120829-HRC-MATSEDILL-SAMSETT-ENS.pdf', 'authority': 'https://cafe.hardrock.com/reykjavik/#utm_source=Google&utm_medium=Yext&utm_campaign=Listings', 'phone:tel:+3545600803': '', 'oloc': ''}
+2025-05-17 16:59:40,357 - scrapers.google_maps - INFO - Successfully extracted data for Cafe Hardrock
+2025-05-17 16:59:40,455 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.8', 'address': '', 'locatedin': '', '0': '', '1': '', '2': '', 'authority': 'http://www.konungskaffi.is/', 'phone:tel:+3547666999': '', 'oloc': ''}
+2025-05-17 16:59:40,578 - scrapers.google_maps - INFO - Successfully extracted data for Konungskaffi Is
+2025-05-17 16:59:40,735 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.3', 'address': '', 'locatedin': '', '0': '', '1': '', '2': '', '3': '', '4': '', 'authority': 'https://www.bluelagoon.com/restaurant/cafe', 'oloc': ''}
+2025-05-17 16:59:40,834 - scrapers.google_maps - INFO - Successfully extracted data for Bluelagoon
+2025-05-17 16:59:41,010 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.7', 'address': '', '0': '', '1': '', '2': '', 'menu': 'https://lyst.is/matsedill/', 'authority': 'http://www.lyst.is/', 'oloc': ''}
+2025-05-17 16:59:41,153 - scrapers.google_maps - INFO - Successfully extracted data for Lyst Is
+2025-05-17 16:59:42,251 - scrapers.google_maps - INFO - Processed 41/85: Blomasetrid Is
+2025-05-17 16:59:42,998 - scrapers.google_maps - INFO - Processed 42/85: Cafe Hardrock
+2025-05-17 16:59:43,114 - scrapers.google_maps - INFO - Processed 43/85: Konungskaffi Is
+2025-05-17 16:59:43,297 - scrapers.google_maps - INFO - Processed 44/85: Bluelagoon
+2025-05-17 16:59:43,619 - scrapers.google_maps - INFO - Processed 45/85: Lyst Is
+2025-05-17 17:00:05,642 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.7', 'address': '', 'locatedin': '', '0': '', '1': '', '2': '', 'merchant': 'https://business.google.com/create?fp=12949174226163985438&hl=en&authuser=0&gmbsrc=in-en-et-ip-z-gmb-s-z-l~mrc%7Cclaimbz%7Cu&ppsrc=GMBMI&utm_campaign=in-en-et-ip-z-gmb-s-z-l~mrc%7Cclaimbz%7Cu&utm_source=gmb_mrc81&utm_medium=et&getstarted&lis=0'}
+2025-05-17 17:00:05,882 - scrapers.google_maps - INFO - Successfully extracted data for 
+2025-05-17 17:00:06,319 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.7', 'address': '', 'menu': 'https://www.coffeebike.is/offer', 'phone:tel:+3547828947': '', 'merchant': 'https://business.google.com/create?fp=11049988741663884383&hl=en&authuser=0&gmbsrc=in-en-et-ip-z-gmb-s-z-l~mrc%7Cclaimbz%7Cu&ppsrc=GMBMI&utm_campaign=in-en-et-ip-z-gmb-s-z-l~mrc%7Cclaimbz%7Cu&utm_source=gmb_mrc81&utm_medium=et&getstarted&lis=0', 'place-info-links:': ''}
+2025-05-17 17:00:06,587 - scrapers.google_maps - INFO - Successfully extracted data for Coffeebike Is
+2025-05-17 17:00:06,637 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.8', 'address': '', '0': '', '1': '', '2': '', 'authority': 'https://www.facebook.com/cafepetitee/', 'phone:tel:+3545835889': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-17 17:00:06,724 - scrapers.google_maps - INFO - Successfully extracted data for Facebook
+2025-05-17 17:00:06,853 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.8', 'address': '', '0': '', '1': '', '2': '', '3': '', 'authority': 'https://www.facebook.com/Heimabyggd/', 'phone:tel:+3547742596': '', 'oloc': ''}
+2025-05-17 17:00:06,930 - scrapers.google_maps - INFO - Successfully extracted data for Facebook
+2025-05-17 17:00:07,870 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.6', 'address': '', '0': '', '1': '', '2': '', 'phone:tel:+3545556655': '', 'oloc': ''}
+2025-05-17 17:00:07,949 - scrapers.google_maps - INFO - Successfully extracted data for 
+2025-05-17 17:00:08,544 - scrapers.google_maps - INFO - Processed 46/85: 
+2025-05-17 17:00:09,053 - scrapers.google_maps - INFO - Processed 47/85: Coffeebike Is
+2025-05-17 17:00:09,170 - scrapers.google_maps - INFO - Processed 48/85: Facebook
+2025-05-17 17:00:09,340 - scrapers.google_maps - INFO - Processed 49/85: Facebook
+2025-05-17 17:00:10,411 - scrapers.google_maps - INFO - Processed 50/85: 
+2025-05-17 17:00:31,335 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.1', 'address': '', '0': '', '1': '', '2': '', '3': '', 'authority': 'http://caveandlava.com/', 'phone:tel:+3547925616': '', 'oloc': ''}
+2025-05-17 17:00:31,414 - scrapers.google_maps - INFO - Successfully extracted data for Caveandlava
+2025-05-17 17:00:31,885 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.4', 'address': '', 'authority': 'https://www.facebook.com/eldurogis/', 'phone:tel:+3545712480': '', 'oloc': ''}
+2025-05-17 17:00:32,060 - scrapers.google_maps - INFO - Successfully extracted data for Facebook
+2025-05-17 17:00:32,110 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.6', 'address': '', '0': '', '1': '', '2': '', 'authority': 'http://mosfellsbakari.is/', 'phone:tel:+3545666145': '', 'oloc': '', 'merchant': 'https://business.google.com/create?fp=3324927164775542163&hl=en&authuser=0&gmbsrc=in-en-et-ip-z-gmb-s-z-l~mrc%7Cclaimbz%7Cu&ppsrc=GMBMI&utm_campaign=in-en-et-ip-z-gmb-s-z-l~mrc%7Cclaimbz%7Cu&utm_source=gmb_mrc81&utm_medium=et&getstarted&lis=0'}
+2025-05-17 17:00:32,197 - scrapers.google_maps - INFO - Successfully extracted data for Mosfellsbakari Is
+2025-05-17 17:00:32,300 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '3.7', 'address': '', 'authority': 'https://www.vestrahorn.is/', 'phone:tel:+3544782577': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-17 17:00:32,389 - scrapers.google_maps - INFO - Successfully extracted data for Vestrahorn Is
+2025-05-17 17:00:32,800 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.8', 'address': '', 'locatedin': '', '0': '', '1': '', '2': '', '3': '', 'action:4': 'https://wolt.com/is/isl/akureyri/restaurant/ketil-kaffi?utm_source=googlemapreserved&utm_campaign=ketil-kaffi&utm_content=66d5892487c955001267fcd7&rwg_token=AAiGsoa2Akzqa8mfK3R-QNSY7Ay7lq66LX_Yxe4aLHNUgwzzt0SGc2tCeEuzx-OxdrMn8ex0vLDRDJDndLoLOUa4jhf5EGBu_6WODg0kfzmPsHX3FE_SCLQ%3D', 'authority': 'http://www.ketilkaffi.is/', 'oloc': ''}
+2025-05-17 17:00:32,879 - scrapers.google_maps - INFO - Successfully extracted data for Ketilkaffi Is
+2025-05-17 17:00:34,019 - scrapers.google_maps - INFO - Processed 51/85: Caveandlava
+2025-05-17 17:00:34,620 - scrapers.google_maps - INFO - Processed 52/85: Facebook
+2025-05-17 17:00:34,762 - scrapers.google_maps - INFO - Processed 53/85: Mosfellsbakari Is
+2025-05-17 17:00:34,941 - scrapers.google_maps - INFO - Processed 54/85: Vestrahorn Is
+2025-05-17 17:00:35,326 - scrapers.google_maps - INFO - Processed 55/85: Ketilkaffi Is
+2025-05-17 17:00:55,311 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.5', 'address': '', '0': '', '1': '', '2': '', 'phone:tel:+3544788220': '', 'oloc': ''}
+2025-05-17 17:00:55,489 - scrapers.google_maps - INFO - Successfully extracted data for 
+2025-05-17 17:00:56,519 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '5.0', 'address': '', '0': '', '1': '', '2': '', 'phone:tel:+3546647580': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-17 17:00:56,601 - scrapers.google_maps - INFO - Successfully extracted data for 
+2025-05-17 17:00:56,729 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.4', 'address': '', '0': '', '1': '', '2': '', 'authority': 'https://www.skogasafn.is/skogar-museum/freya-caf%C3%A9/', 'phone:tel:+3548359534': '', 'place-info-links:': ''}
+2025-05-17 17:00:56,756 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.9', 'address': '', 'menu': 'https://www.sweetaurorareykjavik.com/menu', 'authority': 'http://sweetaurorareykjavik.com/', 'phone:tel:+3547919169': '', 'oloc': ''}
+2025-05-17 17:00:56,828 - scrapers.google_maps - INFO - Successfully extracted data for Skogasafn Is
+2025-05-17 17:00:56,874 - scrapers.google_maps - INFO - Successfully extracted data for Sweetaurorareykjavik
+2025-05-17 17:00:57,280 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.4', 'address': '', '0': '', '1': '', '2': '', '3': '', 'phone:tel:+3545616663': '', 'oloc': ''}
+2025-05-17 17:00:57,369 - scrapers.google_maps - INFO - Successfully extracted data for 
+2025-05-17 17:00:58,357 - scrapers.google_maps - INFO - Processed 56/85: 
+2025-05-17 17:00:59,087 - scrapers.google_maps - INFO - Processed 57/85: 
+2025-05-17 17:00:59,225 - scrapers.google_maps - INFO - Processed 58/85: Skogasafn Is
+2025-05-17 17:00:59,385 - scrapers.google_maps - INFO - Processed 59/85: Sweetaurorareykjavik
+2025-05-17 17:00:59,741 - scrapers.google_maps - INFO - Processed 60/85: 
+2025-05-17 17:01:26,509 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.6', 'address': '', '0': '', '1': '', '2': '', 'phone:tel:+3544614600': '', 'oloc': '', 'merchant': 'https://business.google.com/create?fp=8560171508940350603&hl=en&authuser=0&gmbsrc=in-en-et-ip-z-gmb-s-z-l~mrc%7Cclaimbz%7Cu&ppsrc=GMBMI&utm_campaign=in-en-et-ip-z-gmb-s-z-l~mrc%7Cclaimbz%7Cu&utm_source=gmb_mrc81&utm_medium=et&getstarted&lis=0'}
+2025-05-17 17:01:26,942 - scrapers.google_maps - INFO - Successfully extracted data for 
+2025-05-17 17:01:27,246 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.5', 'address': 'G6RW+8MR, Hafnarhús, Bakkagerði, 720 Borgarfjörður Eystri, Iceland', '0': '', '1': '', '2': '', 'authority': 'https://www.facebook.com/hafnarhuskaffi/', 'phone:tel:+3544721180': '', 'merchant': 'https://business.google.com/create?fp=54048883761165385&hl=en&authuser=0&gmbsrc=in-en-et-ip-z-gmb-s-z-l~mrc%7Cclaimbz%7Cu&ppsrc=GMBMI&utm_campaign=in-en-et-ip-z-gmb-s-z-l~mrc%7Cclaimbz%7Cu&utm_source=gmb_mrc81&utm_medium=et&getstarted&lis=0'}
+2025-05-17 17:01:27,320 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.4', 'address': '', '0': '', '1': '', '2': '', 'authority': 'http://idno.is/', 'phone:tel:+3545378800': '', 'oloc': ''}
+2025-05-17 17:01:27,336 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.6', 'address': '', '0': '', '1': '', '2': '', '3': '', 'action:4': 'https://wolt.com/is/isl/selfoss/restaurant/kaffi-krus?utm_source=googlemapreserved&utm_campaign=kaffi-krus&utm_content=663a1191e6ba6f55da0bda60&rwg_token=AAiGsoaKowwnDq-P9J90UfeB2y0i4ji3GZ3yhXDKpjamXrbbo4Q-wkGo8R24ygxyy-ykY_qZ00OkTk8WXWK3VE9J89oG3V0KuQ%3D%3D', 'menu': 'https://kaffikrus.is/menu/', 'authority': 'http://www.kaffikrus.is/', 'phone:tel:+3544821266': '', 'oloc': ''}
+2025-05-17 17:01:27,410 - scrapers.google_maps - INFO - Successfully extracted data for Facebook
+2025-05-17 17:01:27,511 - scrapers.google_maps - INFO - Successfully extracted data for Idno Is
+2025-05-17 17:01:27,545 - scrapers.google_maps - INFO - Successfully extracted data for Kaffikrus Is
+2025-05-17 17:01:27,653 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.8', 'address': '', '0': '', '1': '', '2': '', 'phone:tel:+3545536280': '', 'merchant': 'https://business.google.com/create?fp=2429260541102467181&hl=en&authuser=0&gmbsrc=in-en-et-ip-z-gmb-s-z-l~mrc%7Cclaimbz%7Cu&ppsrc=GMBMI&utm_campaign=in-en-et-ip-z-gmb-s-z-l~mrc%7Cclaimbz%7Cu&utm_source=gmb_mrc81&utm_medium=et&getstarted&lis=0'}
+2025-05-17 17:01:27,762 - scrapers.google_maps - INFO - Successfully extracted data for 
+2025-05-17 17:01:29,834 - scrapers.google_maps - INFO - Processed 61/85: 
+2025-05-17 17:01:31,267 - scrapers.google_maps - INFO - Processed 62/85: Idno Is
+2025-05-17 17:01:31,270 - scrapers.google_maps - INFO - Processed 63/85: Kaffikrus Is
+2025-05-17 17:01:33,408 - scrapers.google_maps - INFO - Processed 64/85: Facebook
+2025-05-17 17:01:33,470 - scrapers.google_maps - INFO - Processed 65/85: 
+2025-05-17 17:01:55,909 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.3', 'address': '', '0': '', '1': '', '2': '', 'authority': 'http://eymundsson.is/', 'phone:tel:+3545402610': '', 'oloc': '', 'merchant': 'https://business.google.com/create?fp=3340211737257877631&hl=en&authuser=0&gmbsrc=in-en-et-ip-z-gmb-s-z-l~mrc%7Cclaimbz%7Cu&ppsrc=GMBMI&utm_campaign=in-en-et-ip-z-gmb-s-z-l~mrc%7Cclaimbz%7Cu&utm_source=gmb_mrc81&utm_medium=et&getstarted&lis=0'}
+2025-05-17 17:01:56,012 - scrapers.google_maps - INFO - Successfully extracted data for Eymundsson Is
+2025-05-17 17:01:57,266 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.3', 'address': '', '0': '', '1': '', '2': '', '3': '', '4': '', 'action:1': 'https://dineout.is/en/forsetinn?rwg_token=AAiGsoYfCl-oW2CYMQKAxEStM721Csz9NbNrfDu2Qxf0OWPF1lCIvS9vesFnlbJyBj6QyD4rVMwH5HNPCF0irJD4K41z-j_kYv8CKNb_qO4cIkUZOzOnDqE%3D', 'menu': 'https://forsetinncafe.is/is/matsedill/', 'authority': 'https://forsetinncafe.is/', 'phone:tel:+3548375151': '', 'oloc': ''}
+2025-05-17 17:01:57,402 - scrapers.google_maps - INFO - Successfully extracted data for Forsetinncafe Is
+2025-05-17 17:01:57,516 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.8', 'address': '', '0': '', '1': '', '2': '', 'authority': 'http://www.litlibaer.is/', 'phone:tel:+3546955377': '', 'oloc': ''}
+2025-05-17 17:01:57,663 - scrapers.google_maps - INFO - Successfully extracted data for Litlibaer Is
+2025-05-17 17:01:57,963 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.1', 'address': '', 'locatedin': '', '0': '', '1': '', '2': '', 'menu': 'https://www.flyovericeland.com/experience/kaffi-grandi/', 'phone:tel:+3545626700': '', 'oloc': ''}
+2025-05-17 17:01:58,074 - scrapers.google_maps - INFO - Successfully extracted data for Flyovericeland
+2025-05-17 17:01:58,212 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.8', 'address': '', '0': '', '1': '', '2': '', 'action:4': 'https://wolt.com/is/isl/reykjavik/restaurant/te-kaffi-gardartorg?utm_source=googlemapreserved&utm_campaign=te-kaffi-gardartorg&utm_content=65084f56b647437d223a9098&rwg_token=AAiGsoY79cOceqzxReKcK-g5Wn0JbtwJYEoloYguY1CNocIukbMKZEBiKIcLqcCMErbS_4DCDpSJ3_vwUS7nSt4whwhXY599k7o6shOtAUmob-2512R_pc8%3D', 'authority': 'https://www.teogkaffi.is/', 'phone:tel:+3545551910': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-17 17:01:58,383 - scrapers.google_maps - INFO - Successfully extracted data for Teogkaffi Is
+2025-05-17 17:01:58,520 - scrapers.google_maps - INFO - Processed 66/85: Eymundsson Is
+2025-05-17 17:02:00,420 - scrapers.google_maps - INFO - Processed 67/85: Forsetinncafe Is
+2025-05-17 17:02:00,532 - scrapers.google_maps - INFO - Processed 68/85: Litlibaer Is
+2025-05-17 17:02:00,660 - scrapers.google_maps - INFO - Processed 69/85: Flyovericeland
+2025-05-17 17:02:01,866 - scrapers.google_maps - INFO - Processed 70/85: Teogkaffi Is
+2025-05-17 17:02:24,388 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.4', 'address': '', '0': '', '1': '', '2': '', '3': '', 'action:1': 'https://dineout.is/en/bakabaka?rwg_token=AAiGsoavVSazemFH7k8CcK5sV2gcexb4VqVSmTrYyjDnOsiZ-pm4zRFPMmSnlpcxd2QDfjoWygw-ouUQLJvM9ryLVetA8RgfCWvxV3ZLZmo3nueaBjBJzkM%3D', 'action:4': 'https://wolt.com/is/isl/reykjavik/restaurant/bakabaka-pizzeria?utm_source=googlemapreserved&utm_campaign=bakabaka-pizzeria&utm_content=65a9143d9174a4737029ea11&rwg_token=AAiGsobdSoZx0-VfPssu2nJ40gT5e4WS-tb9dX_w8koHuqWmWeQE0vrZagNCVtR5ZCdH4cd_XoVX7IuLUuLImYf8lZDODSvaI7UngzeCjobSvWt7D1lPeEE%3D', 'authority': 'http://bakabaka.is/', 'phone:tel:+3545514430': '', 'oloc': ''}
+2025-05-17 17:02:24,469 - scrapers.google_maps - INFO - Successfully extracted data for Bakabaka Is
+2025-05-17 17:02:24,592 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.8', 'address': '', 'locatedin': '', '0': '', '1': '', '2': '', 'menu': 'https://arnacafe.is/#matsedill', 'phone:tel:+3548884224': '', 'oloc': ''}
+2025-05-17 17:02:24,672 - scrapers.google_maps - INFO - Successfully extracted data for Arnacafe Is
+2025-05-17 17:02:24,853 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.6', 'address': '', '0': '', '1': '', '2': '', 'phone:tel:+3548478221': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-17 17:02:24,858 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.7', 'address': '', '0': '', '1': '', '2': '', '3': '', '4': '', 'action:1': 'https://dineout.is/en/fridheimar?rwg_token=AAiGsoZrziPFxZkttss5T3BbWu78rU3zoSMj9B46LENNKfF1H656F9x4DZaRp1Xjf6MAAP7BrnRvQ07H60KNTE70nCd0xc5A_CQ3Eqyjrt7J1xxSAMbJAqs%3D', 'authority': 'http://fridheimar.is/', 'phone:tel:+3544868894': '', 'merchant': 'https://business.google.com/create?fp=16061791164616054191&hl=en&authuser=0&gmbsrc=in-en-et-ip-z-gmb-s-z-l~mrc%7Cclaimbz%7Cu&ppsrc=GMBMI&utm_campaign=in-en-et-ip-z-gmb-s-z-l~mrc%7Cclaimbz%7Cu&utm_source=gmb_mrc81&utm_medium=et&getstarted&lis=0'}
+2025-05-17 17:02:24,943 - scrapers.google_maps - INFO - Successfully extracted data for 
+2025-05-17 17:02:24,996 - scrapers.google_maps - INFO - Successfully extracted data for Fridheimar Is
+2025-05-17 17:02:25,204 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.0', 'address': '', 'locatedin': '', '0': '', '1': '', '2': '', 'action:4': 'https://wolt.com/is/isl/reykjavik/restaurant/te-kaffi-kringlan?utm_source=googlemapreserved&utm_campaign=te-kaffi-kringlan&utm_content=65084f56b647437d223a909b&rwg_token=AAiGsobIk7406HKd_rRmKgKXHBFA26HfjX_IZJVdqvPw9loBMuAvWnNZRdvwdmR3t-xmwD4TUSP9Ul5E_MjSIgKDPix61Q2LQA%3D%3D', 'menu': 'https://www.teogkaffi.is/panta/#/category/1', 'authority': 'https://www.teogkaffi.is/', 'phone:tel:+3545272887': '', 'oloc': '44H3+WP Reykjavík, Iceland', 'place-info-links:': 'LGBTQ+ friendly'}
+2025-05-17 17:02:25,295 - scrapers.google_maps - INFO - Successfully extracted data for Teogkaffi Is
+2025-05-17 17:02:27,087 - scrapers.google_maps - INFO - Processed 71/85: Bakabaka Is
+2025-05-17 17:02:27,256 - scrapers.google_maps - INFO - Processed 72/85: Arnacafe Is
+2025-05-17 17:02:27,565 - scrapers.google_maps - INFO - Processed 73/85: Fridheimar Is
+2025-05-17 17:02:27,602 - scrapers.google_maps - INFO - Processed 74/85: 
+2025-05-17 17:02:28,068 - scrapers.google_maps - INFO - Processed 75/85: Teogkaffi Is
+2025-05-17 17:02:48,507 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.5', 'address': '365 Snæfellsnes, Hellnar, Iceland', '0': '', '1': '', '2': '', 'authority': 'https://www.facebook.com/FjoruhusidHellnum/', 'phone:tel:+3544356844': '', 'oloc': '', 'merchant': 'https://business.google.com/create?fp=8156847372918242820&hl=en&authuser=0&gmbsrc=in-en-et-ip-z-gmb-s-z-l~mrc%7Cclaimbz%7Cu&ppsrc=GMBMI&utm_campaign=in-en-et-ip-z-gmb-s-z-l~mrc%7Cclaimbz%7Cu&utm_source=gmb_mrc81&utm_medium=et&getstarted&lis=0'}
+2025-05-17 17:02:48,659 - scrapers.google_maps - INFO - Successfully extracted data for Facebook
+2025-05-17 17:02:48,839 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.7', 'address': '', 'oh': '', '0': '', '1': '', '2': '', '3': '', 'action:4': 'https://wolt.com/is/isl/reykjavik/restaurant/brikk-hteigsvegur?utm_source=googlemapreserved&utm_campaign=brikk-hteigsvegur&utm_content=67178539b548b027bd281ab6&rwg_token=AAiGsoavfFDe11hyqDs9VpCZ5qpFvDoQTRC3vAZhpNAzhhfPNRtuFWsdiUGMFhkl-2TBzloFvTgv7OvixA9cuJvU9_I_LehaxVJYCC5scjhS7QBtAeggz84%3D', 'authority': 'http://www.brikk.is/', 'phone:tel:+3545651665': '', 'oloc': ''}
+2025-05-17 17:02:48,926 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.6', 'address': '', '0': '', '1': '', '2': '', '3': '', 'authority': 'https://www.facebook.com/svartakaffid', 'phone:tel:+3545512999': '', 'oloc': '', 'merchant': 'https://business.google.com/create?fp=17010808632551751164&hl=en&authuser=0&gmbsrc=in-en-et-ip-z-gmb-s-z-l~mrc%7Cclaimbz%7Cu&ppsrc=GMBMI&utm_campaign=in-en-et-ip-z-gmb-s-z-l~mrc%7Cclaimbz%7Cu&utm_source=gmb_mrc81&utm_medium=et&getstarted&lis=0'}
+2025-05-17 17:02:48,934 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.6', 'address': '', 'locatedin': '', 'oh': '', '0': '', '1': '', '2': '', 'authority': 'https://www.islandshotel.is/is/hotelin/hotel-reykjavik-centrum/uppsalir-bar-cafe/', 'oloc': '', 'place-info-links:': ''}
+2025-05-17 17:02:48,960 - scrapers.google_maps - INFO - Successfully extracted data for Brikk Is
+2025-05-17 17:02:49,028 - scrapers.google_maps - INFO - Successfully extracted data for Facebook
+2025-05-17 17:02:49,081 - scrapers.google_maps - INFO - Successfully extracted data for Islandshotel Is
+2025-05-17 17:02:50,054 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.6', 'address': '', 'authority': 'http://gelato.is/', 'oloc': '', 'place-info-links:': ''}
+2025-05-17 17:02:50,133 - scrapers.google_maps - INFO - Successfully extracted data for Gelato Is
+2025-05-17 17:02:51,345 - scrapers.google_maps - INFO - Processed 76/85: Facebook
+2025-05-17 17:02:51,639 - scrapers.google_maps - INFO - Processed 77/85: Brikk Is
+2025-05-17 17:02:51,655 - scrapers.google_maps - INFO - Processed 78/85: Facebook
+2025-05-17 17:02:51,698 - scrapers.google_maps - INFO - Processed 79/85: Islandshotel Is
+2025-05-17 17:02:52,609 - scrapers.google_maps - INFO - Processed 80/85: Gelato Is
+2025-05-17 17:03:11,927 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.9', 'address': 'Foss á Síðu, 880 Kirkjubæjarklaustur, Iceland', '0': '', '1': '', '2': '', 'phone:tel:+3548941576': '', 'oloc': ''}
+2025-05-17 17:03:11,936 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.6', 'address': '', 'locatedin': '', '0': '', '1': '', '2': '', 'authority': 'https://kaffivagninn.is/', 'phone:tel:+3545515932': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-17 17:03:12,009 - scrapers.google_maps - INFO - Successfully extracted data for 
+2025-05-17 17:03:12,050 - scrapers.google_maps - INFO - Successfully extracted data for Kaffivagninn Is
+2025-05-17 17:03:12,183 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '5.0', 'address': '', '0': '', '1': '', '2': '', 'authority': 'http://www.audkula.is/', 'phone:tel:+3548956066': '', 'oloc': ''}
+2025-05-17 17:03:12,263 - scrapers.google_maps - INFO - Successfully extracted data for Audkula Is
+2025-05-17 17:03:14,472 - scrapers.google_maps - INFO - Processed 81/85: Kaffivagninn Is
+2025-05-17 17:03:14,487 - scrapers.google_maps - INFO - Processed 82/85: 
+2025-05-17 17:03:14,678 - scrapers.google_maps - INFO - Processed 83/85: Audkula Is
+2025-05-17 17:03:15,907 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.6', 'address': '', '0': '', '1': '', '2': '', 'phone:tel:+3544267100': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-17 17:03:15,980 - scrapers.google_maps - INFO - Successfully extracted data for 
+2025-05-17 17:03:16,357 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.8', 'address': 'Gilbakki, 360 Hellissandur, Iceland', '0': '', '1': '', '2': '', '3': '', 'authority': 'https://www.facebook.com/gilbakki/', 'phone:tel:+3544361001': '', 'oloc': '', 'place-info-links:': ''}
+2025-05-17 17:03:16,458 - scrapers.google_maps - INFO - Successfully extracted data for Facebook
+2025-05-17 17:03:18,445 - scrapers.google_maps - INFO - Processed 84/85: 
+2025-05-17 17:03:18,870 - scrapers.google_maps - INFO - Processed 85/85: Facebook
+2025-05-17 17:03:21,279 - scrapers.google_maps - INFO - Parallel processing complete. Processed 85/85 listings
+2025-05-17 17:03:21,281 - controllers.main_controller - INFO - Found 85 leads from Google Maps
+2025-05-17 17:03:21,391 - controllers.main_controller - INFO - Exported 85 leads to data/output/leads_cafes _iceland_20250517_170321.csv, data/output/leads_cafes _iceland_20250517_170321.xlsx, and data/output/leads_cafes _iceland_20250517_170321.json
