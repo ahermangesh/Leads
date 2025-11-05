@@ -38,13 +38,11 @@ def setup_ui() -> tuple[str, str, List[str], str, int]:
         keyword = st.text_input("Business Type", placeholder="e.g., Cafe")
         location = st.text_input("Location", placeholder="e.g., New York, NY")
         
-        # Add extraction limit option
-        max_leads = st.slider(
-            "Maximum Leads to Extract", 
-            min_value=5, 
-            max_value=100, 
+        # Add extraction limit option as text input
+        max_leads = st.number_input(
+            "Maximum Leads to Extract",
+            min_value=1,
             value=15,
-            step=5,
             help="Limit the number of leads to extract to avoid long processing times"
         )
     
