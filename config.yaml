@@ -30,3 +30,55 @@ retry:
 logging:
   level: INFO
   file: "data/scraper.log"
+
+# AI Agent Configuration
+ai_agent:
+  # Gemini Model Settings
+  model:
+    name: "gemini-1.5-flash"
+    temperature: 0.7
+    max_tokens: 2048
+    top_p: 0.9
+  
+  # Lead Qualification Settings
+  qualification:
+    min_score: 60  # Minimum score (0-100) for a lead to be qualified
+    score_weights:
+      website_quality: 0.3
+      business_info_completeness: 0.2
+      contact_availability: 0.2
+      relevance: 0.3
+  
+  # Research Settings
+  research:
+    max_pages_to_scrape: 3  # Maximum pages to visit per website
+    pages_to_check:
+      - "/"  # Homepage
+      - "/contact"
+      - "/about"
+      - "/team"
+    timeout: 10  # seconds per page
+  
+  # Email Generation Settings
+  email:
+    tone: "professional"  # Options: professional, casual, friendly, formal
+    max_subject_length: 60
+    max_body_length: 500
+    include_unsubscribe: true
+    strategies:
+      - "value_proposition"
+      - "pain_point"
+      - "social_proof"
+  
+  # Outreach Settings
+  outreach:
+    max_emails_per_day: 50  # Respect Resend free tier limits
+    delay_between_emails: 10  # seconds
+    batch_size: 10
+    require_approval: true  # Human-in-the-loop mode
+  
+  # Notion CRM Settings
+  notion:
+    auto_sync: true
+    sync_interval: 300  # seconds (5 minutes)
+    create_missing_properties: true

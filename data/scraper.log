@@ -12006,3 +12006,1007 @@ Stacktrace:
 2025-11-05 17:20:06,800 - scrapers.google_maps - INFO - Parallel processing complete. Processed 9 valid results from 10 URLs
 2025-11-05 17:20:06,800 - controllers.main_controller - INFO - Found 9 leads from Google Maps
 2025-11-05 17:20:07,472 - controllers.main_controller - INFO - Exported 9 leads to data/output/leads_UGC agencies_pune_20251105_172006.csv, data/output/leads_UGC agencies_pune_20251105_172006.xlsx, and data/output/leads_UGC agencies_pune_20251105_172006.json
+2025-11-05 17:40:48,281 - controllers.main_controller - INFO - Starting scraping for UGC agencies in india (Max leads: 50)
+2025-11-05 17:40:48,281 - controllers.main_controller - INFO - Starting Google Maps scraping
+2025-11-05 17:40:48,284 - utils.web - INFO - Setting up Chrome driver (headless=False)
+2025-11-05 17:40:52,689 - scrapers.google_maps - INFO - Navigating to Google Maps to search for UGC agencies in india
+2025-11-05 17:41:03,566 - scrapers.google_maps - INFO - Clicked search button
+2025-11-05 17:41:17,042 - scrapers.google_maps - WARNING - Could not find results container
+2025-11-05 17:41:17,044 - scrapers.google_maps - WARNING - Results not found on attempt 1, retrying...
+2025-11-05 17:41:34,438 - scrapers.google_maps - WARNING - Could not find results container
+2025-11-05 17:41:34,438 - scrapers.google_maps - WARNING - Results not found on attempt 2, retrying...
+2025-11-05 17:41:50,342 - scrapers.google_maps - WARNING - Could not find results container
+2025-11-05 17:41:50,342 - scrapers.google_maps - WARNING - Results not found on attempt 3, retrying...
+2025-11-05 17:41:52,506 - scrapers.google_maps - WARNING - No results found after multiple attempts
+2025-11-05 17:41:55,374 - controllers.main_controller - INFO - Found 0 leads from Google Maps
+2025-11-05 17:41:55,440 - controllers.main_controller - INFO - Exported 0 leads to data/output/leads_UGC agencies_india_20251105_174155.csv, data/output/leads_UGC agencies_india_20251105_174155.xlsx, and data/output/leads_UGC agencies_india_20251105_174155.json
+2025-11-05 17:49:43,912 - controllers.main_controller - INFO - Starting scraping for UGC agencies in india (Max leads: 50)
+2025-11-05 17:49:43,912 - controllers.main_controller - INFO - Starting Google Maps scraping
+2025-11-05 17:49:43,920 - utils.web - INFO - Setting up Chrome driver (headless=False)
+2025-11-05 17:49:48,275 - scrapers.google_maps - INFO - Navigating to Google Maps to search for UGC agencies in india
+2025-11-05 17:49:59,776 - scrapers.google_maps - INFO - Clicked search button
+2025-11-05 17:50:13,962 - scrapers.google_maps - WARNING - Could not find results container
+2025-11-05 17:50:13,968 - scrapers.google_maps - WARNING - Results not found on attempt 1, retrying...
+2025-11-05 17:50:29,704 - scrapers.google_maps - WARNING - Could not find results container
+2025-11-05 17:50:29,704 - scrapers.google_maps - WARNING - Results not found on attempt 2, retrying...
+2025-11-05 17:50:38,165 - scrapers.google_maps - ERROR - Error waiting for results: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=141.0.7390.123)
+Stacktrace:
+	GetHandleVerifier [0x0x112fe43+66515]
+	GetHandleVerifier [0x0x112fe84+66580]
+	(No symbol) [0x0xf1dc48]
+	(No symbol) [0x0xf0ce80]
+	(No symbol) [0x0xf2b81b]
+	(No symbol) [0x0xf91c25]
+	(No symbol) [0x0xfac4d9]
+	(No symbol) [0x0xf8afc6]
+	(No symbol) [0x0xf5c2ca]
+	(No symbol) [0x0xf5d154]
+	GetHandleVerifier [0x0x1387353+2521315]
+	GetHandleVerifier [0x0x13822d3+2500707]
+	GetHandleVerifier [0x0x1157c94+229924]
+	GetHandleVerifier [0x0x11481f8+165768]
+	GetHandleVerifier [0x0x114ecad+193085]
+	GetHandleVerifier [0x0x1138158+100072]
+	GetHandleVerifier [0x0x11382f0+100480]
+	GetHandleVerifier [0x0x11225aa+11066]
+	BaseThreadInitThunk [0x0x74df5d49+25]
+	RtlInitializeExceptionChain [0x0x773ad6db+107]
+	RtlGetAppContainerNamedObjectPath [0x0x773ad661+561]
+
+2025-11-05 17:50:38,168 - scrapers.google_maps - WARNING - Results not found on attempt 3, retrying...
+2025-11-05 17:50:40,411 - scrapers.google_maps - WARNING - No results found after multiple attempts
+2025-11-05 17:50:42,429 - controllers.main_controller - INFO - Found 0 leads from Google Maps
+2025-11-05 17:50:42,487 - controllers.main_controller - INFO - Exported 0 leads to data/output/leads_UGC agencies_india_20251105_175042.csv, data/output/leads_UGC agencies_india_20251105_175042.xlsx, and data/output/leads_UGC agencies_india_20251105_175042.json
+2025-11-05 17:52:01,570 - controllers.main_controller - INFO - Starting scraping for cafes  in pune (Max leads: 15)
+2025-11-05 17:52:01,579 - controllers.main_controller - INFO - Starting Google Maps scraping
+2025-11-05 17:52:01,592 - utils.web - INFO - Setting up Chrome driver (headless=False)
+2025-11-05 17:52:05,978 - scrapers.google_maps - INFO - Navigating to Google Maps to search for cafes  in pune
+2025-11-05 17:52:14,647 - scrapers.google_maps - INFO - Clicked search button
+2025-11-05 17:52:17,939 - scrapers.google_maps - INFO - Scrolled down results pane from 0 to 500
+2025-11-05 17:52:21,047 - scrapers.google_maps - INFO - Found 5 elements with selector: div.Nv2PK
+2025-11-05 17:52:21,272 - scrapers.google_maps - INFO - Successfully extracted 5 URLs from 5 results
+2025-11-05 17:52:21,279 - scrapers.google_maps - INFO - Found 5 new URLs, total unique URLs: 5
+2025-11-05 17:52:23,492 - scrapers.google_maps - INFO - Scrolled down results pane from 500 to 1000
+2025-11-05 17:52:24,503 - scrapers.google_maps - INFO - New content loaded, scroll height increased from 1287 to 2368
+2025-11-05 17:52:24,555 - scrapers.google_maps - INFO - Found 10 elements with selector: div.Nv2PK
+2025-11-05 17:52:24,973 - scrapers.google_maps - INFO - Successfully extracted 10 URLs from 10 results
+2025-11-05 17:52:24,977 - scrapers.google_maps - INFO - Found 5 new URLs, total unique URLs: 10
+2025-11-05 17:52:27,469 - scrapers.google_maps - INFO - Scrolled down results pane from 752 to 1252
+2025-11-05 17:52:30,547 - scrapers.google_maps - INFO - Found 10 elements with selector: div.Nv2PK
+2025-11-05 17:52:30,918 - scrapers.google_maps - INFO - Successfully extracted 10 URLs from 10 results
+2025-11-05 17:52:30,918 - scrapers.google_maps - WARNING - No new URLs found (attempt 1/5)
+2025-11-05 17:52:33,689 - scrapers.google_maps - INFO - Scrolled down results pane from 1252 to 1752
+2025-11-05 17:52:36,761 - scrapers.google_maps - INFO - Found 10 elements with selector: div.Nv2PK
+2025-11-05 17:52:37,112 - scrapers.google_maps - INFO - Successfully extracted 10 URLs from 10 results
+2025-11-05 17:52:37,112 - scrapers.google_maps - WARNING - No new URLs found (attempt 2/5)
+2025-11-05 17:52:39,328 - scrapers.google_maps - INFO - Scrolled down results pane from 1752 to 2252
+2025-11-05 17:52:40,336 - scrapers.google_maps - INFO - New content loaded, scroll height increased from 2368 to 3397
+2025-11-05 17:52:40,388 - scrapers.google_maps - INFO - Found 15 elements with selector: div.Nv2PK
+2025-11-05 17:52:40,935 - scrapers.google_maps - INFO - Successfully extracted 15 URLs from 15 results
+2025-11-05 17:52:40,935 - scrapers.google_maps - INFO - Found 5 new URLs, total unique URLs: 15
+2025-11-05 17:52:43,821 - scrapers.google_maps - INFO - Collected 15 unique URLs for processing
+2025-11-05 17:52:46,469 - scrapers.google_maps - INFO - Found 15 unique URLs out of 15 total URLs
+2025-11-05 17:52:46,469 - scrapers.google_maps - INFO - Starting parallel processing of 15 URLs with 10 workers
+2025-11-05 17:53:12,218 - scrapers.google_maps - INFO - Extracted data with reliable selectors for Zen Cafe
+2025-11-05 17:53:12,347 - scrapers.google_maps - INFO - Extracted data with reliable selectors for Vohuman Cafe
+2025-11-05 17:53:17,955 - scrapers.google_maps - INFO - Extracted data with reliable selectors for Cafe Kathaa
+2025-11-05 17:53:18,746 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.2', 'address': '', 'menu': 'https://www.zencafe.co/themenu.html', 'authority': 'http://www.zencafe.co/', 'phone:tel:09021712312': '', 'oloc': ''}
+2025-11-05 17:53:18,928 - scrapers.google_maps - ERROR - Error scraping listing https://www.google.com/maps/place/CAFE+FLYING+GYPSY%27S/data=!4m7!3m6!1s0x3bc2c1641b34664d:0x4067a60f7000cdf4!8m2!3d18.5239789!4d73.8424699!16s%2Fg%2F11pzfmx6w_!19sChIJTWY0G2TBwjsR9M0AcA-mZ0A?authuser=0&hl=en&rclk=1: Message: timeout: Timed out receiving message from renderer: 17.361
+  (Session info: chrome=141.0.7390.123)
+Stacktrace:
+	GetHandleVerifier [0x0x112fe43+66515]
+	GetHandleVerifier [0x0x112fe84+66580]
+	(No symbol) [0x0xf1dc48]
+	(No symbol) [0x0xf0e1bc]
+	(No symbol) [0x0xf0deef]
+	(No symbol) [0x0xf0be60]
+	(No symbol) [0x0xf0c937]
+	(No symbol) [0x0xf1963e]
+	(No symbol) [0x0xf2b195]
+	(No symbol) [0x0xf30d26]
+	(No symbol) [0x0xf0cfb6]
+	(No symbol) [0x0xf2aee2]
+	(No symbol) [0x0xfacedf]
+	(No symbol) [0x0xf8afc6]
+	(No symbol) [0x0xf5c2ca]
+	(No symbol) [0x0xf5d154]
+	GetHandleVerifier [0x0x1387353+2521315]
+	GetHandleVerifier [0x0x13822d3+2500707]
+	GetHandleVerifier [0x0x1157c94+229924]
+	GetHandleVerifier [0x0x11481f8+165768]
+	GetHandleVerifier [0x0x114ecad+193085]
+	GetHandleVerifier [0x0x1138158+100072]
+	GetHandleVerifier [0x0x11382f0+100480]
+	GetHandleVerifier [0x0x11225aa+11066]
+	BaseThreadInitThunk [0x0x74df5d49+25]
+	RtlInitializeExceptionChain [0x0x773ad6db+107]
+	RtlGetAppContainerNamedObjectPath [0x0x773ad661+561]
+
+2025-11-05 17:53:19,185 - scrapers.google_maps - INFO - Extracted data with reliable selectors for Cafe Déjà Vu SB
+2025-11-05 17:53:19,505 - scrapers.google_maps - INFO - Successfully extracted data for Zen Cafe
+2025-11-05 17:53:20,023 - scrapers.google_maps - INFO - Extracted data with reliable selectors for One O Eight Lifestyle Cafe
+2025-11-05 17:53:22,940 - scrapers.google_maps - ERROR - Error scraping listing https://www.google.com/maps/place/Open+Window+Cafe+Bistro/data=!4m7!3m6!1s0x3bc2bf801c802af3:0x4ebe63fa233a5006!8m2!3d18.5281707!4d73.8410106!16s%2Fg%2F11cn18h0g9!19sChIJ8yqAHIC_wjsRBlA6I_pjvk4?authuser=0&hl=en&rclk=1: Message: timeout: Timed out receiving message from renderer: 18.311
+  (Session info: chrome=141.0.7390.123)
+Stacktrace:
+	GetHandleVerifier [0x0x112fe43+66515]
+	GetHandleVerifier [0x0x112fe84+66580]
+	(No symbol) [0x0xf1dc48]
+	(No symbol) [0x0xf0e1bc]
+	(No symbol) [0x0xf0deef]
+	(No symbol) [0x0xf0be60]
+	(No symbol) [0x0xf0c937]
+	(No symbol) [0x0xf1963e]
+	(No symbol) [0x0xf2b195]
+	(No symbol) [0x0xf30d26]
+	(No symbol) [0x0xf0cfb6]
+	(No symbol) [0x0xf2aee2]
+	(No symbol) [0x0xfacedf]
+	(No symbol) [0x0xf8afc6]
+	(No symbol) [0x0xf5c2ca]
+	(No symbol) [0x0xf5d154]
+	GetHandleVerifier [0x0x1387353+2521315]
+	GetHandleVerifier [0x0x13822d3+2500707]
+	GetHandleVerifier [0x0x1157c94+229924]
+	GetHandleVerifier [0x0x11481f8+165768]
+	GetHandleVerifier [0x0x114ecad+193085]
+	GetHandleVerifier [0x0x1138158+100072]
+	GetHandleVerifier [0x0x11382f0+100480]
+	GetHandleVerifier [0x0x11225aa+11066]
+	BaseThreadInitThunk [0x0x74df5d49+25]
+	RtlInitializeExceptionChain [0x0x773ad6db+107]
+	RtlGetAppContainerNamedObjectPath [0x0x773ad661+561]
+
+2025-11-05 17:53:23,785 - scrapers.google_maps - ERROR - Error scraping listing https://www.google.com/maps/place/11+East+Street+Cafe/data=!4m7!3m6!1s0x3bc2c11122467bb1:0xf7da602ed178337a!8m2!3d18.5126242!4d73.8801956!16s%2Fg%2F11r8xj6cj!19sChIJsXtGIhHBwjsRejN40S5g2vc?authuser=0&hl=en&rclk=1: Message: timeout: Timed out receiving message from renderer: 17.926
+  (Session info: chrome=141.0.7390.123)
+Stacktrace:
+	GetHandleVerifier [0x0x112fe43+66515]
+	GetHandleVerifier [0x0x112fe84+66580]
+	(No symbol) [0x0xf1dc48]
+	(No symbol) [0x0xf0e1bc]
+	(No symbol) [0x0xf0deef]
+	(No symbol) [0x0xf0be60]
+	(No symbol) [0x0xf0c937]
+	(No symbol) [0x0xf1963e]
+	(No symbol) [0x0xf2b195]
+	(No symbol) [0x0xf30d26]
+	(No symbol) [0x0xf0cfb6]
+	(No symbol) [0x0xf2aee2]
+	(No symbol) [0x0xfacedf]
+	(No symbol) [0x0xf8afc6]
+	(No symbol) [0x0xf5c2ca]
+	(No symbol) [0x0xf5d154]
+	GetHandleVerifier [0x0x1387353+2521315]
+	GetHandleVerifier [0x0x13822d3+2500707]
+	GetHandleVerifier [0x0x1157c94+229924]
+	GetHandleVerifier [0x0x11481f8+165768]
+	GetHandleVerifier [0x0x114ecad+193085]
+	GetHandleVerifier [0x0x1138158+100072]
+	GetHandleVerifier [0x0x11382f0+100480]
+	GetHandleVerifier [0x0x11225aa+11066]
+	BaseThreadInitThunk [0x0x74df5d49+25]
+	RtlInitializeExceptionChain [0x0x773ad6db+107]
+	RtlGetAppContainerNamedObjectPath [0x0x773ad661+561]
+
+2025-11-05 17:53:24,588 - scrapers.google_maps - INFO - Extracted data with reliable selectors for Mauji - The Time Cafe
+2025-11-05 17:53:24,627 - scrapers.google_maps - INFO - Extracted data with reliable selectors for Chafa Cafe And Studio
+2025-11-05 17:53:24,680 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.3', 'address': '', 'locatedin': '', '0': '', '1': '', '2': '', 'action:1': '', 'authority': 'https://m.facebook.com/vohumancafe/', 'phone:tel:09373323263': '', 'oloc': ''}
+2025-11-05 17:53:24,891 - scrapers.google_maps - INFO - Successfully extracted data for Vohuman Cafe
+2025-11-05 17:53:27,463 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.3', 'address': '', 'menu': 'https://www.oneoeightcafe.com/pages/menu', 'phone:tel:07071081080': '', 'oloc': '', 'place-info-links:': ''}
+2025-11-05 17:53:27,609 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.2 stars (2,030 reviews)', 'address': 'A1, Aadit Enclave Building, Lane Number 5, S Main Rd, Koregaon Park, Pune, Maharashtra 411001', 'action:1': 'Find a table', 'authority': 'https://www.facebook.com/chafacafeandstudio/', 'phone:tel:09767100022': '097671 00022', 'oloc': 'GVMW+8R Pune, Maharashtra', 'place-info-links:': 'LGBTQ+ friendly'}
+2025-11-05 17:53:27,878 - scrapers.google_maps - INFO - Successfully extracted data for Chafa Cafe And Studio
+2025-11-05 17:53:28,002 - scrapers.google_maps - INFO - Successfully extracted data for One O Eight Lifestyle Cafe
+2025-11-05 17:53:28,193 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.1', 'address': '', '0': '', '1': '', '2': '', '3': '', 'action:1': '', 'authority': 'https://www.google.com/url?q=http://www.cafedejavu.in/&opi=79508299&sa=U&ved=0ahUKEwjfrtqUgNuQAxVcyDgGHf4mDEMQ61gIGSgQ&usg=AOvVaw3P3mD-ib17z9Wg9M-8m97w', 'phone:tel:07887836666': '', 'oloc': ''}
+2025-11-05 17:53:28,456 - scrapers.google_maps - INFO - Successfully extracted data for Cafe Déjà Vu SB
+2025-11-05 17:53:28,594 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.2', 'address': '', 'oh': '', '0': '', '1': '', '2': '', '3': '', 'action:1': '', 'menu': 'https://www.flowcode.com/page/cafe.kathaa', 'authority': 'https://cafekathaa.com/?ec=c4c35f1a75d80ab8383016dd90e1e699:643514', 'phone:tel:09119496767': '', 'oloc': '', 'place-info-links:': ''}
+2025-11-05 17:53:28,741 - scrapers.google_maps - INFO - Successfully extracted data for Cafe Kathaa
+2025-11-05 17:53:29,130 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.8', 'address': '', 'oh': '', '0': '', '1': '', '2': '', '3': '', '4': '', 'action:1': 'http://www.maujicafe.com/', 'menu': 'https://www.maujicafe.com/online-ordering', 'authority': 'http://www.maujicafe.com/', 'oloc': 'GRVM+G5 Pune, Maharashtra', 'place-info-links:': 'Identifies as women-owned'}
+2025-11-05 17:53:29,214 - scrapers.google_maps - INFO - Successfully extracted data for Mauji - The Time Cafe
+2025-11-05 17:53:32,746 - scrapers.google_maps - WARNING - Skipping invalid result for URL: https://www.google.com/maps/place/Open+Window+Cafe+Bistro/data=!4m7!3m6!1s0x3bc2bf801c802af3:0x4ebe63fa233a5006!8m2!3d18.5281707!4d73.8410106!16s%2Fg%2F11cn18h0g9!19sChIJ8yqAHIC_wjsRBlA6I_pjvk4?authuser=0&hl=en&rclk=1
+2025-11-05 17:53:32,772 - scrapers.google_maps - INFO - Processed 1/15: Cafe Déjà Vu SB
+2025-11-05 17:53:32,813 - scrapers.google_maps - WARNING - Skipping invalid result for URL: https://www.google.com/maps/place/11+East+Street+Cafe/data=!4m7!3m6!1s0x3bc2c11122467bb1:0xf7da602ed178337a!8m2!3d18.5126242!4d73.8801956!16s%2Fg%2F11r8xj6cj!19sChIJsXtGIhHBwjsRejN40S5g2vc?authuser=0&hl=en&rclk=1
+2025-11-05 17:53:32,827 - scrapers.google_maps - WARNING - Skipping invalid result for URL: https://www.google.com/maps/place/CAFE+FLYING+GYPSY%27S/data=!4m7!3m6!1s0x3bc2c1641b34664d:0x4067a60f7000cdf4!8m2!3d18.5239789!4d73.8424699!16s%2Fg%2F11pzfmx6w_!19sChIJTWY0G2TBwjsR9M0AcA-mZ0A?authuser=0&hl=en&rclk=1
+2025-11-05 17:53:32,835 - scrapers.google_maps - INFO - Processed 2/15: Chafa Cafe And Studio
+2025-11-05 17:53:32,861 - scrapers.google_maps - INFO - Processed 3/15: Cafe Kathaa
+2025-11-05 17:53:32,922 - scrapers.google_maps - INFO - Processed 4/15: One O Eight Lifestyle Cafe
+2025-11-05 17:53:32,922 - scrapers.google_maps - INFO - Processed 5/15: Vohuman Cafe
+2025-11-05 17:53:34,638 - scrapers.google_maps - INFO - Processed 6/15: Zen Cafe
+2025-11-05 17:53:34,680 - scrapers.google_maps - INFO - Processed 7/15: Mauji - The Time Cafe
+2025-11-05 17:53:55,852 - scrapers.google_maps - INFO - Extracted data with reliable selectors for Cafe Goodluck
+2025-11-05 17:53:57,457 - scrapers.google_maps - INFO - Extracted data with reliable selectors for Waari Book Cafe
+2025-11-05 17:53:58,560 - scrapers.google_maps - INFO - Extracted data with reliable selectors for Cafe - The Voyage
+2025-11-05 17:54:00,627 - scrapers.google_maps - INFO - Extracted data with reliable selectors for Cafe Bahar Pune
+2025-11-05 17:54:01,130 - scrapers.google_maps - INFO - Extracted data with reliable selectors for CAFE MHUZO GOA
+2025-11-05 17:54:01,237 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.2', 'address': '', '0': '', '1': '', '2': '', 'action:1': '', 'menu': 'https://menu.tmbill.com/digimenu/8537', 'authority': 'http://www.waaribookcafe.in/', 'phone:tel:09763951618': '', 'oloc': ''}
+2025-11-05 17:54:01,293 - scrapers.google_maps - INFO - Successfully extracted data for Waari Book Cafe
+2025-11-05 17:54:01,487 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.8', 'address': '', 'action:1': '', 'menu': 'https://www.google.com/url?q=https://thevoyagecafe.dotpe.in/store/1/1/999&opi=79508299&sa=U&ved=0ahUKEwi11OGqgNuQAxWGyTgGHVxXHP0QqRkIGCgU&usg=AOvVaw1INd_igEuGXzNeZE_crZIv', 'phone:tel:08596950267': '', 'oloc': '', 'place-info-links:': ''}
+2025-11-05 17:54:01,547 - scrapers.google_maps - INFO - Successfully extracted data for Cafe - The Voyage
+2025-11-05 17:54:01,627 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.6', 'address': '', 'menu': 'https://linktr.ee/Cafebaharpune', 'authority': 'https://instagram.com/cafebaharpune/', 'phone:tel:08484013281': '', 'oloc': '', 'place-info-links:': ''}
+2025-11-05 17:54:01,715 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.2', 'address': '', '0': '', '1': '', '2': '', 'phone:tel:09923364756': '', 'oloc': ''}
+2025-11-05 17:54:01,733 - scrapers.google_maps - INFO - Successfully extracted data for Cafe Bahar Pune
+2025-11-05 17:54:01,833 - scrapers.google_maps - INFO - Successfully extracted data for Cafe Goodluck
+2025-11-05 17:54:02,418 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.8 stars (753 reviews)', 'address': '1229, Fergusson College Rd, Shivajinagar, Pune, Maharashtra 411004', '0': '', '1': '', '2': '', 'phone:tel:09511898593': '095118 98593', 'oloc': 'GR9R+6V Pune, Maharashtra', 'place-info-links:': 'Identifies as women-owned'}
+2025-11-05 17:54:02,490 - scrapers.google_maps - INFO - Successfully extracted data for CAFE MHUZO GOA
+2025-11-05 17:54:04,271 - scrapers.google_maps - INFO - Processed 8/15: Waari Book Cafe
+2025-11-05 17:54:04,342 - scrapers.google_maps - INFO - Processed 9/15: Cafe - The Voyage
+2025-11-05 17:54:04,976 - scrapers.google_maps - INFO - Processed 10/15: Cafe Bahar Pune
+2025-11-05 17:54:05,073 - scrapers.google_maps - INFO - Processed 11/15: Cafe Goodluck
+2025-11-05 17:54:05,342 - scrapers.google_maps - INFO - Processed 12/15: CAFE MHUZO GOA
+2025-11-05 17:54:08,434 - scrapers.google_maps - INFO - Parallel processing complete. Processed 12 valid results from 15 URLs
+2025-11-05 17:54:08,434 - controllers.main_controller - INFO - Found 12 leads from Google Maps
+2025-11-05 17:54:09,141 - controllers.main_controller - INFO - Exported 12 leads to data/output/leads_cafes _pune_20251105_175408.csv, data/output/leads_cafes _pune_20251105_175408.xlsx, and data/output/leads_cafes _pune_20251105_175408.json
+2025-11-05 17:55:33,660 - controllers.main_controller - INFO - Starting scraping for restaurents in bhubneshwar (Max leads: 15)
+2025-11-05 17:55:33,660 - controllers.main_controller - INFO - Starting Google Maps scraping
+2025-11-05 17:55:33,856 - utils.web - INFO - Setting up Chrome driver (headless=False)
+2025-11-05 17:55:38,003 - scrapers.google_maps - INFO - Navigating to Google Maps to search for restaurents in bhubneshwar
+2025-11-05 17:55:48,937 - scrapers.google_maps - INFO - Clicked search button
+2025-11-05 17:55:52,931 - scrapers.google_maps - INFO - Scrolled down results pane from 0 to 500
+2025-11-05 17:55:56,016 - scrapers.google_maps - INFO - Found 5 elements with selector: div.Nv2PK
+2025-11-05 17:55:56,234 - scrapers.google_maps - INFO - Successfully extracted 5 URLs from 5 results
+2025-11-05 17:55:56,234 - scrapers.google_maps - INFO - Found 5 new URLs, total unique URLs: 5
+2025-11-05 17:55:59,266 - scrapers.google_maps - INFO - Scrolled down results pane from 500 to 1000
+2025-11-05 17:56:00,278 - scrapers.google_maps - INFO - New content loaded, scroll height increased from 1485 to 2552
+2025-11-05 17:56:00,343 - scrapers.google_maps - INFO - Found 10 elements with selector: div.Nv2PK
+2025-11-05 17:56:00,677 - scrapers.google_maps - INFO - Successfully extracted 10 URLs from 10 results
+2025-11-05 17:56:00,677 - scrapers.google_maps - INFO - Found 5 new URLs, total unique URLs: 10
+2025-11-05 17:56:03,671 - scrapers.google_maps - INFO - Scrolled down results pane from 950 to 1450
+2025-11-05 17:56:06,734 - scrapers.google_maps - INFO - Found 10 elements with selector: div.Nv2PK
+2025-11-05 17:56:07,244 - scrapers.google_maps - INFO - Successfully extracted 10 URLs from 10 results
+2025-11-05 17:56:07,244 - scrapers.google_maps - WARNING - No new URLs found (attempt 1/5)
+2025-11-05 17:56:09,977 - scrapers.google_maps - INFO - Scrolled down results pane from 1450 to 1950
+2025-11-05 17:56:13,062 - scrapers.google_maps - INFO - Found 10 elements with selector: div.Nv2PK
+2025-11-05 17:56:13,391 - scrapers.google_maps - INFO - Successfully extracted 10 URLs from 10 results
+2025-11-05 17:56:13,391 - scrapers.google_maps - WARNING - No new URLs found (attempt 2/5)
+2025-11-05 17:56:15,728 - scrapers.google_maps - INFO - Scrolled down results pane from 1950 to 2450
+2025-11-05 17:56:16,740 - scrapers.google_maps - INFO - New content loaded, scroll height increased from 2552 to 3665
+2025-11-05 17:56:16,802 - scrapers.google_maps - INFO - Found 15 elements with selector: div.Nv2PK
+2025-11-05 17:56:17,425 - scrapers.google_maps - INFO - Successfully extracted 15 URLs from 15 results
+2025-11-05 17:56:17,425 - scrapers.google_maps - INFO - Found 5 new URLs, total unique URLs: 15
+2025-11-05 17:56:19,831 - scrapers.google_maps - INFO - Collected 15 unique URLs for processing
+2025-11-05 17:56:22,540 - scrapers.google_maps - INFO - Found 15 unique URLs out of 15 total URLs
+2025-11-05 17:56:22,540 - scrapers.google_maps - INFO - Starting parallel processing of 15 URLs with 10 workers
+2025-11-05 17:56:46,503 - scrapers.google_maps - INFO - Extracted data with reliable selectors for Sufi's Restaurant
+2025-11-05 17:56:50,991 - scrapers.google_maps - INFO - Extracted data with reliable selectors for OPPHEEM ROOFTOP LOUNGE & BAR
+2025-11-05 17:56:52,215 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.5', 'address': '', 'action:1': 'https://www.swiggy.com/restaurants/sufis-restaurant-patia-koramangala-bhubaneswar-1055475/dineout?is_retargeting=true&media_source=GoogleReserve&utm_campaign=GoogleMap&utm_source=GoogleReserve', 'phone:tel:09763920915': '', 'oloc': '', 'merchant': 'https://business.google.com/create?fp=17394294597313000892&hl=en&authuser=0&gmbsrc=in-en-et-ip-z-gmb-s-z-l~mrc%7Cclaimbz%7Cu&ppsrc=GMBMI&utm_campaign=in-en-et-ip-z-gmb-s-z-l~mrc%7Cclaimbz%7Cu&utm_source=gmb_mrc81&utm_medium=et&getstarted&lis=0'}
+2025-11-05 17:56:52,410 - scrapers.google_maps - INFO - Extracted data with reliable selectors for Just Delicious
+2025-11-05 17:56:53,399 - scrapers.google_maps - INFO - Extracted data with reliable selectors for Aangan Horizon - Luxe Lounge & Rooftop
+2025-11-05 17:56:53,528 - scrapers.google_maps - INFO - Successfully extracted data for Sufi's Restaurant
+2025-11-05 17:56:55,048 - scrapers.google_maps - INFO - Extracted data with reliable selectors for Malva Restaurant
+2025-11-05 17:56:58,327 - scrapers.google_maps - INFO - Extracted data with reliable selectors for The Aromas, Multi Cuisine Restaurant
+2025-11-05 17:56:58,746 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.3', 'address': '', 'phone:tel:09777166788': '', 'oloc': ''}
+2025-11-05 17:56:59,373 - scrapers.google_maps - INFO - Successfully extracted data for OPPHEEM ROOFTOP LOUNGE & BAR
+2025-11-05 17:56:59,770 - scrapers.google_maps - INFO - Extracted data with reliable selectors for Karim's - Original From Jama Masjid Delhi - 6
+2025-11-05 17:57:00,680 - scrapers.google_maps - ERROR - Error scraping listing https://www.google.com/maps/place/Uptown+Vibes+Multi+Cuisine+Restaurants+Bhubaneswar/data=!4m7!3m6!1s0x3a1909afd27f235d:0x3cfeb58e27dbb75e!8m2!3d20.3529607!4d85.8221139!16s%2Fg%2F11t33d56pk!19sChIJXSN_0q8JGToRXrfbJ461_jw?authuser=0&hl=en&rclk=1: Message: timeout: Timed out receiving message from renderer: 17.914
+  (Session info: chrome=141.0.7390.123)
+Stacktrace:
+	GetHandleVerifier [0x0x112fe43+66515]
+	GetHandleVerifier [0x0x112fe84+66580]
+	(No symbol) [0x0xf1dc48]
+	(No symbol) [0x0xf0e1bc]
+	(No symbol) [0x0xf0deef]
+	(No symbol) [0x0xf0be60]
+	(No symbol) [0x0xf0c937]
+	(No symbol) [0x0xf1963e]
+	(No symbol) [0x0xf2b195]
+	(No symbol) [0x0xf30d26]
+	(No symbol) [0x0xf0cfb6]
+	(No symbol) [0x0xf2aee2]
+	(No symbol) [0x0xfacedf]
+	(No symbol) [0x0xf8afc6]
+	(No symbol) [0x0xf5c2ca]
+	(No symbol) [0x0xf5d154]
+	GetHandleVerifier [0x0x1387353+2521315]
+	GetHandleVerifier [0x0x13822d3+2500707]
+	GetHandleVerifier [0x0x1157c94+229924]
+	GetHandleVerifier [0x0x11481f8+165768]
+	GetHandleVerifier [0x0x114ecad+193085]
+	GetHandleVerifier [0x0x1138158+100072]
+	GetHandleVerifier [0x0x11382f0+100480]
+	GetHandleVerifier [0x0x11225aa+11066]
+	BaseThreadInitThunk [0x0x74df5d49+25]
+	RtlInitializeExceptionChain [0x0x773ad6db+107]
+	RtlGetAppContainerNamedObjectPath [0x0x773ad661+561]
+
+2025-11-05 17:57:00,739 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.6', 'address': '', 'oh': '', 'authority': 'http://crystalcrown.in/', 'phone:tel:06370700972': '', 'oloc': '', 'place-info-links:': ''}
+2025-11-05 17:57:00,778 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.3', 'address': '', 'action:1': '', 'authority': 'http://www.fb.com/malvarestaurantbbsr', 'phone:tel:09040096077': '', 'oloc': ''}
+2025-11-05 17:57:00,911 - scrapers.google_maps - INFO - Successfully extracted data for Malva Restaurant
+2025-11-05 17:57:00,951 - scrapers.google_maps - ERROR - Error scraping listing https://www.google.com/maps/place/Spicy+Flames/data=!4m7!3m6!1s0x3a19095c2df4185f:0xc3e3eaf315539c5f!8m2!3d20.3527919!4d85.8267895!16s%2Fg%2F11t1bnmjbw!19sChIJXxj0LVwJGToRX5xTFfPq48M?authuser=0&hl=en&rclk=1: Message: timeout: Timed out receiving message from renderer: 18.878
+  (Session info: chrome=141.0.7390.123)
+Stacktrace:
+	GetHandleVerifier [0x0x112fe43+66515]
+	GetHandleVerifier [0x0x112fe84+66580]
+	(No symbol) [0x0xf1dc48]
+	(No symbol) [0x0xf0e1bc]
+	(No symbol) [0x0xf0deef]
+	(No symbol) [0x0xf0be60]
+	(No symbol) [0x0xf0c937]
+	(No symbol) [0x0xf1963e]
+	(No symbol) [0x0xf2b195]
+	(No symbol) [0x0xf30d26]
+	(No symbol) [0x0xf0cfb6]
+	(No symbol) [0x0xf2aee2]
+	(No symbol) [0x0xfacedf]
+	(No symbol) [0x0xf8afc6]
+	(No symbol) [0x0xf5c2ca]
+	(No symbol) [0x0xf5d154]
+	GetHandleVerifier [0x0x1387353+2521315]
+	GetHandleVerifier [0x0x13822d3+2500707]
+	GetHandleVerifier [0x0x1157c94+229924]
+	GetHandleVerifier [0x0x11481f8+165768]
+	GetHandleVerifier [0x0x114ecad+193085]
+	GetHandleVerifier [0x0x1138158+100072]
+	GetHandleVerifier [0x0x11382f0+100480]
+	GetHandleVerifier [0x0x11225aa+11066]
+	BaseThreadInitThunk [0x0x74df5d49+25]
+	RtlInitializeExceptionChain [0x0x773ad6db+107]
+	RtlGetAppContainerNamedObjectPath [0x0x773ad661+561]
+
+2025-11-05 17:57:01,031 - scrapers.google_maps - INFO - Successfully extracted data for Just Delicious
+2025-11-05 17:57:01,358 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.0', 'address': '', 'phone:tel:08260000940': '', 'oloc': ''}
+2025-11-05 17:57:01,519 - scrapers.google_maps - INFO - Successfully extracted data for Karim's - Original From Jama Masjid Delhi - 6
+2025-11-05 17:57:02,583 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.2', 'address': '', 'oh': '', 'action:1': '', 'phone:tel:07437903790': '', 'oloc': '', 'place-info-links:': ''}
+2025-11-05 17:57:02,940 - scrapers.google_maps - INFO - Successfully extracted data for Aangan Horizon - Luxe Lounge & Rooftop
+2025-11-05 17:57:03,310 - scrapers.google_maps - INFO - Extracted data with reliable selectors for Kake Di Hatti - Patia, Bhubaneswar
+2025-11-05 17:57:03,664 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.6', 'address': '', '0': '', '1': '', '2': '', 'action:1': '', 'phone:tel:09797538637': '', 'oloc': '', 'place-info-links:': ''}
+2025-11-05 17:57:03,761 - scrapers.google_maps - INFO - Successfully extracted data for The Aromas, Multi Cuisine Restaurant
+2025-11-05 17:57:06,520 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.8', 'address': '', 'locatedin': '', '0': '', '1': '', '2': '', '3': '', 'authority': 'https://www.kakedihatti.com/', 'phone:tel:08280846502': '', 'oloc': '', 'place-info-links:': ''}
+2025-11-05 17:57:06,589 - scrapers.google_maps - INFO - Successfully extracted data for Kake Di Hatti - Patia, Bhubaneswar
+2025-11-05 17:57:06,744 - scrapers.google_maps - INFO - Processed 1/15: OPPHEEM ROOFTOP LOUNGE & BAR
+2025-11-05 17:57:06,744 - scrapers.google_maps - INFO - Processed 2/15: Malva Restaurant
+2025-11-05 17:57:06,773 - scrapers.google_maps - WARNING - Skipping invalid result for URL: https://www.google.com/maps/place/Spicy+Flames/data=!4m7!3m6!1s0x3a19095c2df4185f:0xc3e3eaf315539c5f!8m2!3d20.3527919!4d85.8267895!16s%2Fg%2F11t1bnmjbw!19sChIJXxj0LVwJGToRX5xTFfPq48M?authuser=0&hl=en&rclk=1
+2025-11-05 17:57:06,774 - scrapers.google_maps - WARNING - Skipping invalid result for URL: https://www.google.com/maps/place/Uptown+Vibes+Multi+Cuisine+Restaurants+Bhubaneswar/data=!4m7!3m6!1s0x3a1909afd27f235d:0x3cfeb58e27dbb75e!8m2!3d20.3529607!4d85.8221139!16s%2Fg%2F11t33d56pk!19sChIJXSN_0q8JGToRXrfbJ461_jw?authuser=0&hl=en&rclk=1
+2025-11-05 17:57:06,803 - scrapers.google_maps - INFO - Processed 3/15: Sufi's Restaurant
+2025-11-05 17:57:07,338 - scrapers.google_maps - INFO - Processed 4/15: Just Delicious
+2025-11-05 17:57:07,396 - scrapers.google_maps - INFO - Processed 5/15: Karim's - Original From Jama Masjid Delhi - 6
+2025-11-05 17:57:07,431 - scrapers.google_maps - INFO - Processed 6/15: Aangan Horizon - Luxe Lounge & Rooftop
+2025-11-05 17:57:07,607 - scrapers.google_maps - INFO - Processed 7/15: The Aromas, Multi Cuisine Restaurant
+2025-11-05 17:57:09,195 - scrapers.google_maps - INFO - Processed 8/15: Kake Di Hatti - Patia, Bhubaneswar
+2025-11-05 17:57:36,100 - scrapers.google_maps - INFO - Extracted data with reliable selectors for Three King Restaurant
+2025-11-05 17:57:36,227 - scrapers.google_maps - INFO - Extracted data with reliable selectors for Drip Cafe & Restaurant
+2025-11-05 17:57:36,824 - scrapers.google_maps - INFO - Extracted data with reliable selectors for JUGAAD JN. Patia KiiT
+2025-11-05 17:57:36,934 - scrapers.google_maps - INFO - Extracted data with reliable selectors for Adda Cafe
+2025-11-05 17:57:37,667 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.4 stars (267 reviews)', 'address': '3RD FLOOR, DRIP CAFE AND RESTAURANT, NAVAYUGA HOTELS AND RESORTS, Infocity Ave, near CTTC COLLEGE 99NORTH BUILDING, Patia, Bhubaneswar, Odisha 751024', '0': '', '1': '', '2': '', 'phone:tel:07008949092': '070089 49092', 'oloc': '8RV5+FH Bhubaneswar, Odisha', 'place-info-links:': 'LGBTQ+ friendly'}
+2025-11-05 17:57:37,751 - scrapers.google_maps - INFO - Successfully extracted data for Drip Cafe & Restaurant
+2025-11-05 17:57:37,968 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.2', 'address': '', 'locatedin': '', '0': '', '1': '', '2': '', '3': '', 'action:1': '', 'phone:tel:09777133340': '', 'oloc': '', 'place-info-links:': ''}
+2025-11-05 17:57:38,041 - scrapers.google_maps - INFO - Successfully extracted data for Three King Restaurant
+2025-11-05 17:57:38,259 - scrapers.google_maps - INFO - Extracted data with reliable selectors for OOPRE Kitchen & Bar
+2025-11-05 17:57:38,357 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.2', 'address': '', 'oh': '', '0': '', '1': '', '2': '', 'menu': 'https://jugaadjn.com/order/', 'authority': 'https://www.jugaadjn.com/', 'phone:tel:07735545031': ''}
+2025-11-05 17:57:38,484 - scrapers.google_maps - INFO - Successfully extracted data for JUGAAD JN. Patia KiiT
+2025-11-05 17:57:38,689 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.2', 'address': '', '0': '', '1': '', '2': '', '3': '', '4': '', 'action:1': '', 'menu': 'https://www.google.com/url?q=https://www.addakitchen.in/&opi=79508299&sa=U&ved=0ahUKEwjwqcWRgduQAxW0xTgGHaUDHp8QqRkIHSgT&usg=AOvVaw1lPany0Cz6LB8CEO5M_0r6', 'authority': 'https://www.google.com/url?q=https://www.addakitchen.in/&opi=79508299&sa=U&ved=0ahUKEwjwqcWRgduQAxW0xTgGHaUDHp8Q61gIHCgS&usg=AOvVaw3l376hVOHlS9q1OqwsFSMs', 'phone:tel:07440022003': '', 'oloc': ''}
+2025-11-05 17:57:38,767 - scrapers.google_maps - INFO - Successfully extracted data for Adda Cafe
+2025-11-05 17:57:39,086 - scrapers.google_maps - INFO - Extracted data using generic parser: {'business_name': '', 'rating': '4.2', 'address': '', 'action:1': '', 'menu': 'https://oopre.in/our-menu/', 'authority': 'https://oopre.in/', 'phone:tel:07440026026': '', 'oloc': ''}
+2025-11-05 17:57:39,140 - scrapers.google_maps - INFO - Successfully extracted data for OOPRE Kitchen & Bar
+2025-11-05 17:57:40,525 - scrapers.google_maps - INFO - Processed 9/15: Drip Cafe & Restaurant
+2025-11-05 17:57:41,135 - scrapers.google_maps - INFO - Processed 10/15: Three King Restaurant
+2025-11-05 17:57:41,157 - scrapers.google_maps - INFO - Processed 11/15: JUGAAD JN. Patia KiiT
+2025-11-05 17:57:41,617 - scrapers.google_maps - INFO - Processed 12/15: Adda Cafe
+2025-11-05 17:57:41,709 - scrapers.google_maps - INFO - Processed 13/15: OOPRE Kitchen & Bar
+2025-11-05 17:57:44,627 - scrapers.google_maps - INFO - Parallel processing complete. Processed 13 valid results from 15 URLs
+2025-11-05 17:57:44,627 - controllers.main_controller - INFO - Found 13 leads from Google Maps
+2025-11-05 17:57:44,757 - controllers.main_controller - INFO - Exported 13 leads to data/output/leads_restaurents_bhubneshwar_20251105_175744.csv, data/output/leads_restaurents_bhubneshwar_20251105_175744.xlsx, and data/output/leads_restaurents_bhubneshwar_20251105_175744.json
+2025-11-05 18:45:42,299 - outreach.email_sender - INFO - Resend email sender initialized
+2025-11-05 18:45:43,264 - outreach.notion_crm - INFO - Notion client initialized successfully
+2025-11-05 18:45:44,709 - agents.memory - INFO - Agent memory initialized with 0 campaigns
+2025-11-05 18:45:44,709 - utils.ai_helpers - INFO - Gemini API initialized successfully
+2025-11-05 18:45:44,714 - utils.ai_helpers - INFO - Gemini API initialized successfully
+2025-11-05 18:45:45,128 - utils.ai_helpers - ERROR - Error generating text with Gemini: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2025-11-05 18:48:06,549 - outreach.email_sender - INFO - Resend email sender initialized
+2025-11-05 18:48:07,253 - outreach.notion_crm - INFO - Notion client initialized successfully
+2025-11-05 18:48:07,913 - agents.memory - INFO - Agent memory initialized with 0 campaigns
+2025-11-05 18:48:07,913 - utils.ai_helpers - INFO - Gemini API initialized successfully
+2025-11-05 18:48:07,913 - utils.ai_helpers - INFO - Gemini API initialized successfully
+2025-11-05 18:48:08,346 - utils.ai_helpers - ERROR - Error generating text with Gemini: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2025-11-05 18:53:54,584 - outreach.email_sender - INFO - Resend email sender initialized
+2025-11-05 18:53:55,470 - outreach.notion_crm - INFO - Notion client initialized successfully
+2025-11-05 18:53:56,149 - agents.memory - INFO - Agent memory initialized with 0 campaigns
+2025-11-05 18:53:56,150 - utils.ai_helpers - INFO - Gemini API initialized successfully
+2025-11-05 18:53:56,150 - utils.ai_helpers - INFO - Gemini API initialized successfully
+2025-11-05 18:53:57,731 - utils.ai_helpers - INFO - Gemini API initialized successfully
+2025-11-05 18:53:57,731 - agents.simple_agent - INFO - SimpleLeadAgent initialized
+2025-11-05 18:53:57,731 - agents.simple_agent - INFO - Processing lead: Trimitiy Studios Pvt. Ltd.
+2025-11-05 18:53:57,731 - agents.simple_agent - INFO - Finding email for Trimitiy Studios Pvt. Ltd.
+2025-11-05 18:53:57,735 - outreach.email_finder - INFO - Starting email search for https://trimitiy.com/
+2025-11-05 18:54:08,162 - outreach.email_finder - WARNING - Failed to scrape https://trimitiy.com/: HTTPSConnectionPool(host='trimitiy.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x00000140143F1EB0>, 'Connection to trimitiy.com timed out. (connect timeout=10)'))
+2025-11-05 18:54:19,171 - outreach.email_finder - WARNING - Failed to scrape https://trimitiy.com/contact: HTTPSConnectionPool(host='trimitiy.com', port=443): Max retries exceeded with url: /contact (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x00000140147087A0>, 'Connection to trimitiy.com timed out. (connect timeout=10)'))
+2025-11-05 18:54:30,183 - outreach.email_finder - WARNING - Failed to scrape https://trimitiy.com/contact-us: HTTPSConnectionPool(host='trimitiy.com', port=443): Max retries exceeded with url: /contact-us (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001401470B7D0>, 'Connection to trimitiy.com timed out. (connect timeout=10)'))
+2025-11-05 18:54:31,184 - outreach.email_finder - INFO - Found 0 emails for https://trimitiy.com/
+2025-11-05 18:54:31,184 - agents.simple_agent - INFO - Researching Trimitiy Studios Pvt. Ltd.
+2025-11-05 18:54:31,186 - outreach.lead_researcher - INFO - Researching lead: Trimitiy Studios Pvt. Ltd.
+2025-11-05 18:54:41,212 - outreach.lead_researcher - ERROR - Error scraping https://trimitiy.com/: HTTPSConnectionPool(host='trimitiy.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x0000014014709E50>, 'Connection to trimitiy.com timed out. (connect timeout=10)'))
+2025-11-05 18:54:52,224 - outreach.lead_researcher - ERROR - Error scraping https://trimitiy.com/contact: HTTPSConnectionPool(host='trimitiy.com', port=443): Max retries exceeded with url: /contact (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x0000014011F92A50>, 'Connection to trimitiy.com timed out. (connect timeout=10)'))
+2025-11-05 18:55:03,234 - outreach.lead_researcher - ERROR - Error scraping https://trimitiy.com/about: HTTPSConnectionPool(host='trimitiy.com', port=443): Max retries exceeded with url: /about (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x0000014014709940>, 'Connection to trimitiy.com timed out. (connect timeout=10)'))
+2025-11-05 18:55:04,237 - outreach.lead_researcher - WARNING - No data scraped for Trimitiy Studios Pvt. Ltd.
+2025-11-05 18:57:32,643 - outreach.notion_crm - INFO - Notion client initialized successfully
+2025-11-05 18:57:32,786 - outreach.email_sender - INFO - Resend email sender initialized
+2025-11-05 18:58:59,331 - utils.ai_helpers - INFO - Gemini API initialized successfully
+2025-11-05 18:58:59,331 - agents.simple_agent - INFO - SimpleLeadAgent initialized
+2025-11-05 18:58:59,338 - agents.orchestrator - INFO - OutreachOrchestrator initialized
+2025-11-05 18:58:59,344 - agents.orchestrator - INFO - ==================================================
+2025-11-05 18:58:59,344 - agents.orchestrator - INFO - Starting Complete Outreach Workflow
+2025-11-05 18:58:59,345 - agents.orchestrator - INFO - ==================================================
+2025-11-05 18:58:59,375 - agents.orchestrator - INFO - Loaded 9 leads from data/output/temp_outreach.json
+2025-11-05 18:58:59,376 - agents.orchestrator - INFO - Starting research phase for 9 leads...
+2025-11-05 18:58:59,376 - agents.simple_agent - INFO - Starting batch processing for 9 leads
+2025-11-05 18:58:59,377 - agents.orchestrator - INFO - Starting batch processing for 9 leads
+2025-11-05 18:58:59,377 - agents.simple_agent - INFO - Processing lead 1/9: Trimitiy Studios Pvt. Ltd.
+2025-11-05 18:58:59,377 - agents.orchestrator - INFO - Processing lead 1/9: Trimitiy Studios Pvt. Ltd.
+2025-11-05 18:58:59,377 - agents.simple_agent - INFO - Processing lead: Trimitiy Studios Pvt. Ltd.
+2025-11-05 18:58:59,378 - agents.orchestrator - INFO - Processing lead: Trimitiy Studios Pvt. Ltd.
+2025-11-05 18:58:59,378 - agents.simple_agent - INFO - Finding email for Trimitiy Studios Pvt. Ltd.
+2025-11-05 18:58:59,378 - agents.orchestrator - INFO - Finding email for Trimitiy Studios Pvt. Ltd.
+2025-11-05 18:58:59,378 - outreach.email_finder - INFO - Starting email search for https://trimitiy.com/
+2025-11-05 18:59:09,412 - outreach.email_finder - WARNING - Failed to scrape https://trimitiy.com/: HTTPSConnectionPool(host='trimitiy.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x0000022F035E5400>, 'Connection to trimitiy.com timed out. (connect timeout=10)'))
+2025-11-05 18:59:20,423 - outreach.email_finder - WARNING - Failed to scrape https://trimitiy.com/contact: HTTPSConnectionPool(host='trimitiy.com', port=443): Max retries exceeded with url: /contact (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x0000022F035DE5A0>, 'Connection to trimitiy.com timed out. (connect timeout=10)'))
+2025-11-05 18:59:31,434 - outreach.email_finder - WARNING - Failed to scrape https://trimitiy.com/contact-us: HTTPSConnectionPool(host='trimitiy.com', port=443): Max retries exceeded with url: /contact-us (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x0000022F035DC4D0>, 'Connection to trimitiy.com timed out. (connect timeout=10)'))
+2025-11-05 18:59:32,436 - outreach.email_finder - INFO - Found 0 emails for https://trimitiy.com/
+2025-11-05 18:59:32,436 - agents.simple_agent - INFO - Researching Trimitiy Studios Pvt. Ltd.
+2025-11-05 18:59:32,436 - agents.orchestrator - INFO - Researching Trimitiy Studios Pvt. Ltd.
+2025-11-05 18:59:32,436 - outreach.lead_researcher - INFO - Researching lead: Trimitiy Studios Pvt. Ltd.
+2025-11-05 18:59:42,454 - outreach.lead_researcher - ERROR - Error scraping https://trimitiy.com/: HTTPSConnectionPool(host='trimitiy.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x0000022F035DDAC0>, 'Connection to trimitiy.com timed out. (connect timeout=10)'))
+2025-11-05 18:59:53,469 - outreach.lead_researcher - ERROR - Error scraping https://trimitiy.com/contact: HTTPSConnectionPool(host='trimitiy.com', port=443): Max retries exceeded with url: /contact (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x0000022F035DDE80>, 'Connection to trimitiy.com timed out. (connect timeout=10)'))
+2025-11-05 19:00:04,487 - outreach.lead_researcher - ERROR - Error scraping https://trimitiy.com/about: HTTPSConnectionPool(host='trimitiy.com', port=443): Max retries exceeded with url: /about (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x0000022F035DDA30>, 'Connection to trimitiy.com timed out. (connect timeout=10)'))
+2025-11-05 19:00:05,488 - outreach.lead_researcher - WARNING - No data scraped for Trimitiy Studios Pvt. Ltd.
+2025-11-05 19:00:05,488 - agents.simple_agent - INFO - Processing lead 2/9: Brew My Idea (Social Media & Digital Marketing Agency in Pune)
+2025-11-05 19:00:05,488 - agents.orchestrator - INFO - Processing lead 2/9: Brew My Idea (Social Media & Digital Marketing Agency in Pune)
+2025-11-05 19:00:05,488 - agents.simple_agent - INFO - Processing lead: Brew My Idea (Social Media & Digital Marketing Agency in Pune)
+2025-11-05 19:00:05,488 - agents.orchestrator - INFO - Processing lead: Brew My Idea (Social Media & Digital Marketing Agency in Pune)
+2025-11-05 19:00:05,488 - agents.simple_agent - INFO - Finding email for Brew My Idea (Social Media & Digital Marketing Agency in Pune)
+2025-11-05 19:00:05,488 - agents.orchestrator - INFO - Finding email for Brew My Idea (Social Media & Digital Marketing Agency in Pune)
+2025-11-05 19:00:05,488 - outreach.email_finder - INFO - Starting email search for https://www.brewmyidea.com/social-media-agency-in-pune/
+2025-11-05 19:00:10,510 - outreach.email_finder - INFO - Found 1 emails on https://www.brewmyidea.com/
+2025-11-05 19:00:13,044 - outreach.email_finder - INFO - Found 1 emails on https://www.brewmyidea.com/contact
+2025-11-05 19:00:15,073 - outreach.email_finder - INFO - Found 1 emails on https://www.brewmyidea.com/contact-us
+2025-11-05 19:00:16,075 - outreach.email_finder - INFO - Found 1 emails for https://www.brewmyidea.com/social-media-agency-in-pune/
+2025-11-05 19:00:16,075 - agents.simple_agent - INFO - Researching Brew My Idea (Social Media & Digital Marketing Agency in Pune)
+2025-11-05 19:00:16,075 - agents.orchestrator - INFO - Researching Brew My Idea (Social Media & Digital Marketing Agency in Pune)
+2025-11-05 19:00:16,075 - outreach.lead_researcher - INFO - Researching lead: Brew My Idea (Social Media & Digital Marketing Agency in Pune)
+2025-11-05 19:00:22,895 - utils.ai_helpers - INFO - Gemini API initialized successfully
+2025-11-05 19:00:28,093 - outreach.lead_researcher - INFO - Successfully analyzed website for Brew My Idea (Social Media & Digital Marketing Agency in Pune)
+2025-11-05 19:00:28,103 - outreach.lead_researcher - INFO - Research completed for Brew My Idea (Social Media & Digital Marketing Agency in Pune) - Quality Score: 77
+2025-11-05 19:00:28,103 - agents.simple_agent - INFO - Processing lead 3/9: Sulekha.com New Media Pvt. Ltd.
+2025-11-05 19:00:28,103 - agents.orchestrator - INFO - Processing lead 3/9: Sulekha.com New Media Pvt. Ltd.
+2025-11-05 19:00:28,103 - agents.simple_agent - INFO - Processing lead: Sulekha.com New Media Pvt. Ltd.
+2025-11-05 19:00:28,103 - agents.orchestrator - INFO - Processing lead: Sulekha.com New Media Pvt. Ltd.
+2025-11-05 19:00:28,103 - agents.simple_agent - INFO - Finding email for Sulekha.com New Media Pvt. Ltd.
+2025-11-05 19:00:28,106 - agents.orchestrator - INFO - Finding email for Sulekha.com New Media Pvt. Ltd.
+2025-11-05 19:00:28,106 - outreach.email_finder - INFO - Starting email search for https://www.sulekha.com/pune
+2025-11-05 19:00:29,721 - outreach.email_finder - INFO - Found 0 emails on https://www.sulekha.com/
+2025-11-05 19:00:32,257 - outreach.email_finder - WARNING - Failed to scrape https://www.sulekha.com/contact: 404 Client Error: Not Found for url: https://www.sulekha.com/404?ref=/contact
+2025-11-05 19:00:34,748 - outreach.email_finder - WARNING - Failed to scrape https://www.sulekha.com/contact-us: 404 Client Error: Not Found for url: https://www.sulekha.com/404?ref=/contact-us
+2025-11-05 19:00:35,754 - outreach.email_finder - INFO - Found 0 emails for https://www.sulekha.com/pune
+2025-11-05 19:00:35,754 - agents.simple_agent - INFO - Researching Sulekha.com New Media Pvt. Ltd.
+2025-11-05 19:00:35,754 - agents.orchestrator - INFO - Researching Sulekha.com New Media Pvt. Ltd.
+2025-11-05 19:00:35,754 - outreach.lead_researcher - INFO - Researching lead: Sulekha.com New Media Pvt. Ltd.
+2025-11-05 19:00:40,187 - outreach.lead_researcher - ERROR - Error scraping https://www.sulekha.com/contact: 404 Client Error: Not Found for url: https://www.sulekha.com/404?ref=/contact
+2025-11-05 19:00:42,689 - outreach.lead_researcher - ERROR - Error scraping https://www.sulekha.com/about: 404 Client Error: Not Found for url: https://www.sulekha.com/404?ref=/about
+2025-11-05 19:00:43,706 - utils.ai_helpers - INFO - Gemini API initialized successfully
+2025-11-05 19:00:45,369 - utils.ai_helpers - ERROR - Error generating text with Gemini: 429 Resource exhausted. Please try again later. Please refer to https://cloud.google.com/vertex-ai/generative-ai/docs/error-code-429 for more details.
+2025-11-05 19:00:45,369 - outreach.lead_researcher - ERROR - No response from AI for website analysis
+2025-11-05 19:00:45,369 - outreach.lead_researcher - WARNING - AI analysis failed for Sulekha.com New Media Pvt. Ltd.
+2025-11-05 19:00:45,376 - outreach.lead_researcher - INFO - Research completed for Sulekha.com New Media Pvt. Ltd. - Quality Score: 43
+2025-11-05 19:00:45,376 - agents.simple_agent - INFO - Processing lead 4/9: Mage Marketer - Best Digital Marketing Agency in Pune | Social Media | SEO | Performance Marketing | Branding | Website
+2025-11-05 19:00:45,376 - agents.orchestrator - INFO - Processing lead 4/9: Mage Marketer - Best Digital Marketing Agency in Pune | Social Media | SEO | Performance Marketing | Branding | Website
+2025-11-05 19:00:45,376 - agents.simple_agent - INFO - Processing lead: Mage Marketer - Best Digital Marketing Agency in Pune | Social Media | SEO | Performance Marketing | Branding | Website
+2025-11-05 19:00:45,379 - agents.orchestrator - INFO - Processing lead: Mage Marketer - Best Digital Marketing Agency in Pune | Social Media | SEO | Performance Marketing | Branding | Website
+2025-11-05 19:00:45,379 - agents.simple_agent - INFO - Finding email for Mage Marketer - Best Digital Marketing Agency in Pune | Social Media | SEO | Performance Marketing | Branding | Website
+2025-11-05 19:00:45,379 - agents.orchestrator - INFO - Finding email for Mage Marketer - Best Digital Marketing Agency in Pune | Social Media | SEO | Performance Marketing | Branding | Website
+2025-11-05 19:00:45,380 - outreach.email_finder - INFO - Starting email search for https://www.magemarketer.com/
+2025-11-05 19:00:49,562 - outreach.email_finder - INFO - Found 2 emails on https://www.magemarketer.com/
+2025-11-05 19:00:52,423 - outreach.email_finder - INFO - Found 1 emails on https://www.magemarketer.com/contact
+2025-11-05 19:00:57,172 - outreach.email_finder - WARNING - Failed to scrape https://www.magemarketer.com/contact-us: 404 Client Error: Not Found for url: https://magemarketer.com/contact-us
+2025-11-05 19:00:58,186 - outreach.email_finder - INFO - Found 2 emails for https://www.magemarketer.com/
+2025-11-05 19:00:58,186 - agents.simple_agent - INFO - Researching Mage Marketer - Best Digital Marketing Agency in Pune | Social Media | SEO | Performance Marketing | Branding | Website
+2025-11-05 19:00:58,186 - agents.orchestrator - INFO - Researching Mage Marketer - Best Digital Marketing Agency in Pune | Social Media | SEO | Performance Marketing | Branding | Website
+2025-11-05 19:00:58,186 - outreach.lead_researcher - INFO - Researching lead: Mage Marketer - Best Digital Marketing Agency in Pune | Social Media | SEO | Performance Marketing | Branding | Website
+2025-11-05 19:01:07,373 - utils.ai_helpers - INFO - Gemini API initialized successfully
+2025-11-05 19:01:14,880 - outreach.lead_researcher - INFO - Successfully analyzed website for Mage Marketer - Best Digital Marketing Agency in Pune | Social Media | SEO | Performance Marketing | Branding | Website
+2025-11-05 19:01:14,890 - outreach.lead_researcher - INFO - Research completed for Mage Marketer - Best Digital Marketing Agency in Pune | Social Media | SEO | Performance Marketing | Branding | Website - Quality Score: 88
+2025-11-05 19:01:14,890 - agents.simple_agent - INFO - Processing lead 5/9: ADSSBOOK
+2025-11-05 19:01:14,890 - agents.orchestrator - INFO - Processing lead 5/9: ADSSBOOK
+2025-11-05 19:01:14,890 - agents.simple_agent - INFO - Processing lead: ADSSBOOK
+2025-11-05 19:01:14,890 - agents.orchestrator - INFO - Processing lead: ADSSBOOK
+2025-11-05 19:01:14,890 - agents.simple_agent - INFO - Finding email for ADSSBOOK
+2025-11-05 19:01:14,890 - agents.orchestrator - INFO - Finding email for ADSSBOOK
+2025-11-05 19:01:14,890 - outreach.email_finder - INFO - Starting email search for http://adssbook.com/
+2025-11-05 19:01:25,040 - outreach.email_finder - WARNING - Failed to scrape http://adssbook.com/: HTTPConnectionPool(host='adssbook.com', port=80): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x0000022F04148AA0>, 'Connection to adssbook.com timed out. (connect timeout=10)'))
+2025-11-05 19:01:36,062 - outreach.email_finder - WARNING - Failed to scrape http://adssbook.com/contact: HTTPConnectionPool(host='adssbook.com', port=80): Max retries exceeded with url: /contact (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x0000022F04148CB0>, 'Connection to adssbook.com timed out. (connect timeout=10)'))
+2025-11-05 19:01:47,085 - outreach.email_finder - WARNING - Failed to scrape http://adssbook.com/contact-us: HTTPConnectionPool(host='adssbook.com', port=80): Max retries exceeded with url: /contact-us (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x0000022F035E5970>, 'Connection to adssbook.com timed out. (connect timeout=10)'))
+2025-11-05 19:01:48,087 - outreach.email_finder - INFO - Found 0 emails for http://adssbook.com/
+2025-11-05 19:01:48,087 - agents.simple_agent - INFO - Researching ADSSBOOK
+2025-11-05 19:01:48,087 - agents.orchestrator - INFO - Researching ADSSBOOK
+2025-11-05 19:01:48,087 - outreach.lead_researcher - INFO - Researching lead: ADSSBOOK
+2025-11-05 19:01:58,110 - outreach.lead_researcher - ERROR - Error scraping http://adssbook.com/: HTTPConnectionPool(host='adssbook.com', port=80): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x0000022F04148680>, 'Connection to adssbook.com timed out. (connect timeout=10)'))
+2025-11-05 19:02:09,131 - outreach.lead_researcher - ERROR - Error scraping http://adssbook.com/contact: HTTPConnectionPool(host='adssbook.com', port=80): Max retries exceeded with url: /contact (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x0000022F04148D10>, 'Connection to adssbook.com timed out. (connect timeout=10)'))
+2025-11-05 19:02:20,141 - outreach.lead_researcher - ERROR - Error scraping http://adssbook.com/about: HTTPConnectionPool(host='adssbook.com', port=80): Max retries exceeded with url: /about (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x0000022F045D7620>, 'Connection to adssbook.com timed out. (connect timeout=10)'))
+2025-11-05 19:02:21,144 - outreach.lead_researcher - WARNING - No data scraped for ADSSBOOK
+2025-11-05 19:02:21,149 - agents.simple_agent - INFO - Processing lead 6/9: Seagull Advertising
+2025-11-05 19:02:21,149 - agents.orchestrator - INFO - Processing lead 6/9: Seagull Advertising
+2025-11-05 19:02:21,149 - agents.simple_agent - INFO - Processing lead: Seagull Advertising
+2025-11-05 19:02:21,149 - agents.orchestrator - INFO - Processing lead: Seagull Advertising
+2025-11-05 19:02:21,149 - agents.simple_agent - INFO - Finding email for Seagull Advertising
+2025-11-05 19:02:21,149 - agents.orchestrator - INFO - Finding email for Seagull Advertising
+2025-11-05 19:02:21,151 - outreach.email_finder - INFO - Starting email search for https://www.seagulladvertising.com/
+2025-11-05 19:02:22,522 - outreach.email_finder - INFO - Found 1 emails on https://www.seagulladvertising.com/
+2025-11-05 19:02:24,722 - outreach.email_finder - INFO - Found 1 emails on https://www.seagulladvertising.com/contact
+2025-11-05 19:02:27,360 - outreach.email_finder - INFO - Found 1 emails on https://www.seagulladvertising.com/contact-us
+2025-11-05 19:02:28,372 - outreach.email_finder - INFO - Found 1 emails for https://www.seagulladvertising.com/
+2025-11-05 19:02:28,372 - agents.simple_agent - INFO - Researching Seagull Advertising
+2025-11-05 19:02:28,372 - agents.orchestrator - INFO - Researching Seagull Advertising
+2025-11-05 19:02:28,372 - outreach.lead_researcher - INFO - Researching lead: Seagull Advertising
+2025-11-05 19:02:35,469 - utils.ai_helpers - INFO - Gemini API initialized successfully
+2025-11-05 19:02:41,439 - outreach.lead_researcher - INFO - Successfully analyzed website for Seagull Advertising
+2025-11-05 19:02:41,454 - outreach.lead_researcher - INFO - Research completed for Seagull Advertising - Quality Score: 88
+2025-11-05 19:02:41,454 - agents.simple_agent - INFO - Processing lead 7/9: Awrange Digital Solutions
+2025-11-05 19:02:41,456 - agents.orchestrator - INFO - Processing lead 7/9: Awrange Digital Solutions
+2025-11-05 19:02:41,456 - agents.simple_agent - INFO - Processing lead: Awrange Digital Solutions
+2025-11-05 19:02:41,456 - agents.orchestrator - INFO - Processing lead: Awrange Digital Solutions
+2025-11-05 19:02:41,456 - agents.simple_agent - INFO - Finding email for Awrange Digital Solutions
+2025-11-05 19:02:41,457 - agents.orchestrator - INFO - Finding email for Awrange Digital Solutions
+2025-11-05 19:02:41,457 - outreach.email_finder - INFO - Starting email search for https://awrange.com/
+2025-11-05 19:02:51,885 - outreach.email_finder - WARNING - Failed to scrape https://awrange.com/: HTTPSConnectionPool(host='awrange.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x0000022F03F1DFD0>, 'Connection to awrange.com timed out. (connect timeout=10)'))
+2025-11-05 19:03:02,894 - outreach.email_finder - WARNING - Failed to scrape https://awrange.com/contact: HTTPSConnectionPool(host='awrange.com', port=443): Max retries exceeded with url: /contact (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x0000022F04087F50>, 'Connection to awrange.com timed out. (connect timeout=10)'))
+2025-11-05 19:03:13,909 - outreach.email_finder - WARNING - Failed to scrape https://awrange.com/contact-us: HTTPSConnectionPool(host='awrange.com', port=443): Max retries exceeded with url: /contact-us (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x0000022F04087E30>, 'Connection to awrange.com timed out. (connect timeout=10)'))
+2025-11-05 19:03:14,911 - outreach.email_finder - INFO - Found 0 emails for https://awrange.com/
+2025-11-05 19:03:14,911 - agents.simple_agent - INFO - Researching Awrange Digital Solutions
+2025-11-05 19:03:14,911 - agents.orchestrator - INFO - Researching Awrange Digital Solutions
+2025-11-05 19:03:14,911 - outreach.lead_researcher - INFO - Researching lead: Awrange Digital Solutions
+2025-11-05 19:03:24,923 - outreach.lead_researcher - ERROR - Error scraping https://awrange.com/: HTTPSConnectionPool(host='awrange.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x0000022F03F1EED0>, 'Connection to awrange.com timed out. (connect timeout=10)'))
+2025-11-05 19:03:35,945 - outreach.lead_researcher - ERROR - Error scraping https://awrange.com/contact: HTTPSConnectionPool(host='awrange.com', port=443): Max retries exceeded with url: /contact (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x0000022F03F77FE0>, 'Connection to awrange.com timed out. (connect timeout=10)'))
+2025-11-05 19:03:46,979 - outreach.lead_researcher - ERROR - Error scraping https://awrange.com/about: HTTPSConnectionPool(host='awrange.com', port=443): Max retries exceeded with url: /about (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x0000022F03DFF2C0>, 'Connection to awrange.com timed out. (connect timeout=10)'))
+2025-11-05 19:03:47,981 - outreach.lead_researcher - WARNING - No data scraped for Awrange Digital Solutions
+2025-11-05 19:03:47,987 - agents.simple_agent - INFO - Processing lead 8/9: Digibrandz IT Solutions Pvt. Ltd.
+2025-11-05 19:03:47,987 - agents.orchestrator - INFO - Processing lead 8/9: Digibrandz IT Solutions Pvt. Ltd.
+2025-11-05 19:03:47,987 - agents.simple_agent - INFO - Processing lead: Digibrandz IT Solutions Pvt. Ltd.
+2025-11-05 19:03:47,987 - agents.orchestrator - INFO - Processing lead: Digibrandz IT Solutions Pvt. Ltd.
+2025-11-05 19:03:47,987 - agents.simple_agent - INFO - Finding email for Digibrandz IT Solutions Pvt. Ltd.
+2025-11-05 19:03:47,987 - agents.orchestrator - INFO - Finding email for Digibrandz IT Solutions Pvt. Ltd.
+2025-11-05 19:03:47,987 - outreach.email_finder - INFO - Starting email search for https://www.google.com/url?q=https://digibrandz.in/&opi=79508299&sa=U&ved=0ahUKEwiA18jY-NqQAxUZxDgGHamSHjoQ61gIFigS&usg=AOvVaw17F2WHUA4OPU2Dr0fONJGb
+2025-11-05 19:03:49,130 - outreach.email_finder - INFO - Found 0 emails on https://www.google.com/
+2025-11-05 19:03:51,437 - outreach.email_finder - INFO - Found 1 emails on https://www.google.com/contact
+2025-11-05 19:03:52,845 - outreach.email_finder - WARNING - Failed to scrape https://www.google.com/contact-us: 404 Client Error: Not Found for url: https://www.google.com/contact-us
+2025-11-05 19:03:53,856 - outreach.email_finder - INFO - Found 1 emails for https://www.google.com/url?q=https://digibrandz.in/&opi=79508299&sa=U&ved=0ahUKEwiA18jY-NqQAxUZxDgGHamSHjoQ61gIFigS&usg=AOvVaw17F2WHUA4OPU2Dr0fONJGb
+2025-11-05 19:03:53,856 - agents.simple_agent - INFO - Researching Digibrandz IT Solutions Pvt. Ltd.
+2025-11-05 19:03:53,856 - agents.orchestrator - INFO - Researching Digibrandz IT Solutions Pvt. Ltd.
+2025-11-05 19:03:53,857 - outreach.lead_researcher - INFO - Researching lead: Digibrandz IT Solutions Pvt. Ltd.
+2025-11-05 19:03:59,786 - utils.ai_helpers - INFO - Gemini API initialized successfully
+2025-11-05 19:04:01,125 - utils.ai_helpers - ERROR - Error generating text with Gemini: 429 Resource exhausted. Please try again later. Please refer to https://cloud.google.com/vertex-ai/generative-ai/docs/error-code-429 for more details.
+2025-11-05 19:04:01,125 - outreach.lead_researcher - ERROR - No response from AI for website analysis
+2025-11-05 19:04:01,125 - outreach.lead_researcher - WARNING - AI analysis failed for Digibrandz IT Solutions Pvt. Ltd.
+2025-11-05 19:04:01,125 - outreach.lead_researcher - INFO - Research completed for Digibrandz IT Solutions Pvt. Ltd. - Quality Score: 53
+2025-11-05 19:04:01,125 - agents.simple_agent - INFO - Processing lead 9/9: SocialChamps Media Pvt. Ltd.
+2025-11-05 19:04:01,125 - agents.orchestrator - INFO - Processing lead 9/9: SocialChamps Media Pvt. Ltd.
+2025-11-05 19:04:01,125 - agents.simple_agent - INFO - Processing lead: SocialChamps Media Pvt. Ltd.
+2025-11-05 19:04:01,133 - agents.orchestrator - INFO - Processing lead: SocialChamps Media Pvt. Ltd.
+2025-11-05 19:04:01,133 - agents.simple_agent - INFO - Finding email for SocialChamps Media Pvt. Ltd.
+2025-11-05 19:04:01,133 - agents.orchestrator - INFO - Finding email for SocialChamps Media Pvt. Ltd.
+2025-11-05 19:04:01,133 - outreach.email_finder - INFO - Starting email search for https://socialchamps.com/
+2025-11-05 19:04:02,343 - outreach.email_finder - INFO - Found 0 emails on https://socialchamps.com/
+2025-11-05 19:04:04,297 - outreach.email_finder - INFO - Found 0 emails on https://socialchamps.com/contact
+2025-11-05 19:04:10,076 - outreach.email_finder - INFO - Found 0 emails on https://socialchamps.com/contact-us
+2025-11-05 19:04:11,085 - outreach.email_finder - INFO - Found 0 emails for https://socialchamps.com/
+2025-11-05 19:04:11,085 - agents.simple_agent - INFO - Researching SocialChamps Media Pvt. Ltd.
+2025-11-05 19:04:11,085 - agents.orchestrator - INFO - Researching SocialChamps Media Pvt. Ltd.
+2025-11-05 19:04:11,085 - outreach.lead_researcher - INFO - Researching lead: SocialChamps Media Pvt. Ltd.
+2025-11-05 19:04:23,052 - utils.ai_helpers - INFO - Gemini API initialized successfully
+2025-11-05 19:04:26,770 - outreach.lead_researcher - INFO - Successfully analyzed website for SocialChamps Media Pvt. Ltd.
+2025-11-05 19:04:26,772 - outreach.lead_researcher - INFO - Research completed for SocialChamps Media Pvt. Ltd. - Quality Score: 68
+2025-11-05 19:04:26,772 - agents.simple_agent - INFO - Batch processing completed: 4 qualified, 0 emails generated
+2025-11-05 19:04:26,772 - agents.orchestrator - INFO - Batch processing completed: 4 qualified, 0 emails generated
+2025-11-05 19:04:26,772 - agents.orchestrator - INFO - Research phase complete: 4/9 qualified
+2025-11-05 19:04:26,772 - agents.orchestrator - INFO - Generating emails for 4 qualified leads...
+2025-11-05 19:04:26,772 - agents.simple_agent - INFO - Starting batch processing for 4 leads
+2025-11-05 19:04:26,772 - agents.orchestrator - INFO - Starting batch processing for 4 leads
+2025-11-05 19:04:26,772 - agents.simple_agent - INFO - Processing lead 1/4: Brew My Idea (Social Media & Digital Marketing Agency in Pune)
+2025-11-05 19:04:26,772 - agents.orchestrator - INFO - Processing lead 1/4: Brew My Idea (Social Media & Digital Marketing Agency in Pune)
+2025-11-05 19:04:26,772 - agents.simple_agent - INFO - Processing lead: Brew My Idea (Social Media & Digital Marketing Agency in Pune)
+2025-11-05 19:04:26,772 - agents.orchestrator - INFO - Processing lead: Brew My Idea (Social Media & Digital Marketing Agency in Pune)
+2025-11-05 19:04:26,772 - agents.simple_agent - INFO - Generating email for Brew My Idea (Social Media & Digital Marketing Agency in Pune) (score: 77)
+2025-11-05 19:04:26,772 - agents.orchestrator - INFO - Generating email for Brew My Idea (Social Media & Digital Marketing Agency in Pune) (score: 77)
+2025-11-05 19:04:26,787 - outreach.email_generator - INFO - Generating email for Brew My Idea (Social Media & Digital Marketing Agency in Pune) using value_proposition strategy with professional tone
+2025-11-05 19:04:26,787 - utils.ai_helpers - INFO - Gemini API initialized successfully
+2025-11-05 19:04:28,266 - outreach.email_generator - INFO - Generated subject line for Brew My Idea (Social Media & Digital Marketing Agency in Pune): Brew My Idea: Elevate Your Digital Presence?
+2025-11-05 19:04:28,269 - utils.ai_helpers - INFO - Gemini API initialized successfully
+2025-11-05 19:04:31,519 - outreach.email_generator - INFO - Generated email body for Brew My Idea (Social Media & Digital Marketing Agency in Pune) (1388 chars)
+2025-11-05 19:04:31,519 - agents.simple_agent - INFO - Processing lead 2/4: Mage Marketer - Best Digital Marketing Agency in Pune | Social Media | SEO | Performance Marketing | Branding | Website
+2025-11-05 19:04:31,519 - agents.orchestrator - INFO - Processing lead 2/4: Mage Marketer - Best Digital Marketing Agency in Pune | Social Media | SEO | Performance Marketing | Branding | Website
+2025-11-05 19:04:31,519 - agents.simple_agent - INFO - Processing lead: Mage Marketer - Best Digital Marketing Agency in Pune | Social Media | SEO | Performance Marketing | Branding | Website
+2025-11-05 19:04:31,519 - agents.orchestrator - INFO - Processing lead: Mage Marketer - Best Digital Marketing Agency in Pune | Social Media | SEO | Performance Marketing | Branding | Website
+2025-11-05 19:04:31,519 - agents.simple_agent - INFO - Generating email for Mage Marketer - Best Digital Marketing Agency in Pune | Social Media | SEO | Performance Marketing | Branding | Website (score: 88)
+2025-11-05 19:04:31,519 - agents.orchestrator - INFO - Generating email for Mage Marketer - Best Digital Marketing Agency in Pune | Social Media | SEO | Performance Marketing | Branding | Website (score: 88)
+2025-11-05 19:04:31,536 - outreach.email_generator - INFO - Generating email for Mage Marketer - Best Digital Marketing Agency in Pune | Social Media | SEO | Performance Marketing | Branding | Website using value_proposition strategy with professional tone
+2025-11-05 19:04:31,536 - utils.ai_helpers - INFO - Gemini API initialized successfully
+2025-11-05 19:04:33,021 - outreach.email_generator - INFO - Generated subject line for Mage Marketer - Best Digital Marketing Agency in Pune | Social Media | SEO | Performance Marketing | Branding | Website: Mage Marketer: Elevate Your Digital Edge?
+2025-11-05 19:04:33,024 - utils.ai_helpers - INFO - Gemini API initialized successfully
+2025-11-05 19:04:35,896 - outreach.email_generator - INFO - Generated email body for Mage Marketer - Best Digital Marketing Agency in Pune | Social Media | SEO | Performance Marketing | Branding | Website (1148 chars)
+2025-11-05 19:04:35,897 - agents.simple_agent - INFO - Processing lead 3/4: Seagull Advertising
+2025-11-05 19:04:35,897 - agents.orchestrator - INFO - Processing lead 3/4: Seagull Advertising
+2025-11-05 19:04:35,897 - agents.simple_agent - INFO - Processing lead: Seagull Advertising
+2025-11-05 19:04:35,897 - agents.orchestrator - INFO - Processing lead: Seagull Advertising
+2025-11-05 19:04:35,897 - agents.simple_agent - INFO - Generating email for Seagull Advertising (score: 88)
+2025-11-05 19:04:35,897 - agents.orchestrator - INFO - Generating email for Seagull Advertising (score: 88)
+2025-11-05 19:04:35,897 - outreach.email_generator - INFO - Generating email for Seagull Advertising using value_proposition strategy with professional tone
+2025-11-05 19:04:35,897 - utils.ai_helpers - INFO - Gemini API initialized successfully
+2025-11-05 19:04:37,072 - outreach.email_generator - INFO - Generated subject line for Seagull Advertising: Seagull: Elevate ROI with Creative Ads?
+2025-11-05 19:04:37,079 - utils.ai_helpers - INFO - Gemini API initialized successfully
+2025-11-05 19:04:40,245 - outreach.email_generator - INFO - Generated email body for Seagull Advertising (1406 chars)
+2025-11-05 19:04:40,245 - agents.simple_agent - INFO - Processing lead 4/4: SocialChamps Media Pvt. Ltd.
+2025-11-05 19:04:40,245 - agents.orchestrator - INFO - Processing lead 4/4: SocialChamps Media Pvt. Ltd.
+2025-11-05 19:04:40,245 - agents.simple_agent - INFO - Processing lead: SocialChamps Media Pvt. Ltd.
+2025-11-05 19:04:40,245 - agents.orchestrator - INFO - Processing lead: SocialChamps Media Pvt. Ltd.
+2025-11-05 19:04:40,245 - agents.simple_agent - INFO - Generating email for SocialChamps Media Pvt. Ltd. (score: 68)
+2025-11-05 19:04:40,245 - agents.orchestrator - INFO - Generating email for SocialChamps Media Pvt. Ltd. (score: 68)
+2025-11-05 19:04:40,260 - outreach.email_generator - INFO - Generating email for SocialChamps Media Pvt. Ltd. using value_proposition strategy with professional tone
+2025-11-05 19:04:40,260 - utils.ai_helpers - INFO - Gemini API initialized successfully
+2025-11-05 19:04:41,426 - outreach.email_generator - INFO - Generated subject line for SocialChamps Media Pvt. Ltd.: SocialChamps: Enhance Your Online Presence
+2025-11-05 19:04:41,442 - utils.ai_helpers - INFO - Gemini API initialized successfully
+2025-11-05 19:04:45,149 - outreach.email_generator - INFO - Generated email body for SocialChamps Media Pvt. Ltd. (1295 chars)
+2025-11-05 19:04:45,151 - agents.simple_agent - INFO - Batch processing completed: 4 qualified, 4 emails generated
+2025-11-05 19:04:45,151 - agents.orchestrator - INFO - Batch processing completed: 4 qualified, 4 emails generated
+2025-11-05 19:04:45,151 - agents.orchestrator - INFO - Email generation complete: 4 emails ready for approval
+2025-11-05 19:04:45,151 - agents.orchestrator - INFO - Approved email for Brew My Idea (Social Media & Digital Marketing Agency in Pune)
+2025-11-05 19:04:45,151 - agents.orchestrator - INFO - Approved email for Mage Marketer - Best Digital Marketing Agency in Pune | Social Media | SEO | Performance Marketing | Branding | Website
+2025-11-05 19:04:45,151 - agents.orchestrator - INFO - Approved email for Seagull Advertising
+2025-11-05 19:04:45,151 - agents.orchestrator - INFO - Approved email for SocialChamps Media Pvt. Ltd.
+2025-11-05 19:04:45,154 - agents.orchestrator - INFO - Bulk approved 4 leads
+2025-11-05 19:04:45,155 - agents.orchestrator - INFO - Email sending disabled - awaiting manual approval
+2025-11-05 19:04:45,155 - agents.orchestrator - INFO - Syncing 9 leads to Notion...
+2025-11-05 19:04:46,889 - outreach.notion_crm - ERROR - Notion API error creating lead: Could not find database with ID: 2a2e6592-6f2e-80d9-8eae-c57d9dc6cc3d. Make sure the relevant pages and databases are shared with your integration.
+2025-11-05 19:04:48,937 - outreach.notion_crm - ERROR - Notion API error creating lead: Could not find database with ID: 2a2e6592-6f2e-80d9-8eae-c57d9dc6cc3d. Make sure the relevant pages and databases are shared with your integration.
+2025-11-05 19:04:51,003 - outreach.notion_crm - ERROR - Notion API error creating lead: Could not find database with ID: 2a2e6592-6f2e-80d9-8eae-c57d9dc6cc3d. Make sure the relevant pages and databases are shared with your integration.
+2025-11-05 19:04:52,017 - outreach.notion_crm - ERROR - Notion API error creating lead: Could not find database with ID: 2a2e6592-6f2e-80d9-8eae-c57d9dc6cc3d. Make sure the relevant pages and databases are shared with your integration.
+2025-11-05 19:04:52,385 - outreach.notion_crm - ERROR - Notion API error creating lead: Could not find database with ID: 2a2e6592-6f2e-80d9-8eae-c57d9dc6cc3d. Make sure the relevant pages and databases are shared with your integration.
+2025-11-05 19:04:52,750 - outreach.notion_crm - ERROR - Notion API error creating lead: Could not find database with ID: 2a2e6592-6f2e-80d9-8eae-c57d9dc6cc3d. Make sure the relevant pages and databases are shared with your integration.
+2025-11-05 19:04:56,015 - outreach.notion_crm - ERROR - Notion API error creating lead: Could not find database with ID: 2a2e6592-6f2e-80d9-8eae-c57d9dc6cc3d. Make sure the relevant pages and databases are shared with your integration.
+2025-11-05 19:04:56,365 - outreach.notion_crm - ERROR - Notion API error creating lead: Could not find database with ID: 2a2e6592-6f2e-80d9-8eae-c57d9dc6cc3d. Make sure the relevant pages and databases are shared with your integration.
+2025-11-05 19:04:56,729 - outreach.notion_crm - ERROR - Notion API error creating lead: Could not find database with ID: 2a2e6592-6f2e-80d9-8eae-c57d9dc6cc3d. Make sure the relevant pages and databases are shared with your integration.
+2025-11-05 19:04:56,729 - agents.orchestrator - INFO - Notion sync complete: 0 synced, 9 failed
+2025-11-05 19:04:56,729 - agents.orchestrator - INFO - ==================================================
+2025-11-05 19:04:56,729 - agents.orchestrator - INFO - Workflow Complete!
+2025-11-05 19:04:56,729 - agents.orchestrator - INFO - Total Leads: 9
+2025-11-05 19:04:56,729 - agents.orchestrator - INFO - Researched: 9
+2025-11-05 19:04:56,729 - agents.orchestrator - INFO - Qualified: 4
+2025-11-05 19:04:56,729 - agents.orchestrator - INFO - Emails Generated: 4
+2025-11-05 19:04:56,729 - agents.orchestrator - INFO - Approved: 4
+2025-11-05 19:04:56,735 - agents.orchestrator - INFO - Sent: 0
+2025-11-05 19:04:56,735 - agents.orchestrator - INFO - Synced to Notion: 0
+2025-11-05 19:04:56,735 - agents.orchestrator - INFO - ==================================================
+2025-11-05 20:18:47,581 - outreach.notion_crm - INFO - Notion client initialized successfully
+2025-11-05 20:18:47,692 - outreach.email_sender - INFO - Resend email sender initialized
+2025-11-05 20:20:02,371 - utils.ai_helpers - INFO - Gemini API initialized successfully
+2025-11-05 20:20:02,372 - agents.simple_agent - INFO - SimpleLeadAgent initialized
+2025-11-05 20:20:02,379 - agents.orchestrator - INFO - OutreachOrchestrator initialized
+2025-11-05 20:20:02,386 - agents.orchestrator - INFO - ==================================================
+2025-11-05 20:20:02,387 - agents.orchestrator - INFO - Starting Complete Outreach Workflow
+2025-11-05 20:20:02,387 - agents.orchestrator - INFO - ==================================================
+2025-11-05 20:20:02,391 - agents.orchestrator - INFO - Loaded 9 leads from data/output/temp_outreach.json
+2025-11-05 20:20:02,392 - agents.orchestrator - INFO - Starting research phase for 9 leads...
+2025-11-05 20:20:02,392 - agents.simple_agent - INFO - Starting batch processing for 9 leads
+2025-11-05 20:20:02,392 - agents.orchestrator - INFO - Starting batch processing for 9 leads
+2025-11-05 20:20:02,393 - agents.simple_agent - INFO - Processing lead 1/9: Trimitiy Studios Pvt. Ltd.
+2025-11-05 20:20:02,393 - agents.orchestrator - INFO - Processing lead 1/9: Trimitiy Studios Pvt. Ltd.
+2025-11-05 20:20:02,393 - agents.simple_agent - INFO - Processing lead: Trimitiy Studios Pvt. Ltd.
+2025-11-05 20:20:02,393 - agents.orchestrator - INFO - Processing lead: Trimitiy Studios Pvt. Ltd.
+2025-11-05 20:20:02,393 - agents.simple_agent - INFO - Finding email for Trimitiy Studios Pvt. Ltd.
+2025-11-05 20:20:02,393 - agents.orchestrator - INFO - Finding email for Trimitiy Studios Pvt. Ltd.
+2025-11-05 20:20:02,393 - outreach.email_finder - INFO - Starting email search for https://trimitiy.com/
+2025-11-05 20:20:12,617 - outreach.email_finder - WARNING - Failed to scrape https://trimitiy.com/: HTTPSConnectionPool(host='trimitiy.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x00000192F9351AF0>, 'Connection to trimitiy.com timed out. (connect timeout=10)'))
+2025-11-05 20:20:23,634 - outreach.email_finder - WARNING - Failed to scrape https://trimitiy.com/contact: HTTPSConnectionPool(host='trimitiy.com', port=443): Max retries exceeded with url: /contact (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x00000192FA697290>, 'Connection to trimitiy.com timed out. (connect timeout=10)'))
+2025-11-05 20:20:34,644 - outreach.email_finder - WARNING - Failed to scrape https://trimitiy.com/contact-us: HTTPSConnectionPool(host='trimitiy.com', port=443): Max retries exceeded with url: /contact-us (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x00000192FA697B30>, 'Connection to trimitiy.com timed out. (connect timeout=10)'))
+2025-11-05 20:20:35,646 - outreach.email_finder - INFO - Found 0 emails for https://trimitiy.com/
+2025-11-05 20:20:35,646 - agents.simple_agent - INFO - Researching Trimitiy Studios Pvt. Ltd.
+2025-11-05 20:20:35,646 - agents.orchestrator - INFO - Researching Trimitiy Studios Pvt. Ltd.
+2025-11-05 20:20:35,646 - outreach.lead_researcher - INFO - Researching lead: Trimitiy Studios Pvt. Ltd.
+2025-11-05 20:20:45,674 - outreach.lead_researcher - ERROR - Error scraping https://trimitiy.com/: HTTPSConnectionPool(host='trimitiy.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x00000192FA6953A0>, 'Connection to trimitiy.com timed out. (connect timeout=10)'))
+2025-11-05 20:20:56,684 - outreach.lead_researcher - ERROR - Error scraping https://trimitiy.com/contact: HTTPSConnectionPool(host='trimitiy.com', port=443): Max retries exceeded with url: /contact (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x00000192FA695130>, 'Connection to trimitiy.com timed out. (connect timeout=10)'))
+2025-11-05 20:21:07,694 - outreach.lead_researcher - ERROR - Error scraping https://trimitiy.com/about: HTTPSConnectionPool(host='trimitiy.com', port=443): Max retries exceeded with url: /about (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x00000192FA6971D0>, 'Connection to trimitiy.com timed out. (connect timeout=10)'))
+2025-11-05 20:21:08,695 - outreach.lead_researcher - WARNING - No data scraped for Trimitiy Studios Pvt. Ltd.
+2025-11-05 20:21:08,700 - agents.simple_agent - INFO - Processing lead 2/9: Brew My Idea (Social Media & Digital Marketing Agency in Pune)
+2025-11-05 20:21:08,700 - agents.orchestrator - INFO - Processing lead 2/9: Brew My Idea (Social Media & Digital Marketing Agency in Pune)
+2025-11-05 20:21:08,702 - agents.simple_agent - INFO - Processing lead: Brew My Idea (Social Media & Digital Marketing Agency in Pune)
+2025-11-05 20:21:08,702 - agents.orchestrator - INFO - Processing lead: Brew My Idea (Social Media & Digital Marketing Agency in Pune)
+2025-11-05 20:21:08,702 - agents.simple_agent - INFO - Finding email for Brew My Idea (Social Media & Digital Marketing Agency in Pune)
+2025-11-05 20:21:08,702 - agents.orchestrator - INFO - Finding email for Brew My Idea (Social Media & Digital Marketing Agency in Pune)
+2025-11-05 20:21:08,702 - outreach.email_finder - INFO - Starting email search for https://www.brewmyidea.com/social-media-agency-in-pune/
+2025-11-05 20:21:10,529 - outreach.email_finder - INFO - Found 1 emails on https://www.brewmyidea.com/
+2025-11-05 20:21:12,716 - outreach.email_finder - INFO - Found 1 emails on https://www.brewmyidea.com/contact
+2025-11-05 20:21:14,679 - outreach.email_finder - INFO - Found 1 emails on https://www.brewmyidea.com/contact-us
+2025-11-05 20:21:15,682 - outreach.email_finder - INFO - Found 1 emails for https://www.brewmyidea.com/social-media-agency-in-pune/
+2025-11-05 20:21:15,682 - agents.simple_agent - INFO - Researching Brew My Idea (Social Media & Digital Marketing Agency in Pune)
+2025-11-05 20:21:15,682 - agents.orchestrator - INFO - Researching Brew My Idea (Social Media & Digital Marketing Agency in Pune)
+2025-11-05 20:21:15,682 - outreach.lead_researcher - INFO - Researching lead: Brew My Idea (Social Media & Digital Marketing Agency in Pune)
+2025-11-05 20:21:22,178 - utils.ai_helpers - INFO - Gemini API initialized successfully
+2025-11-05 20:21:26,892 - outreach.lead_researcher - INFO - Successfully analyzed website for Brew My Idea (Social Media & Digital Marketing Agency in Pune)
+2025-11-05 20:21:26,909 - outreach.lead_researcher - INFO - Research completed for Brew My Idea (Social Media & Digital Marketing Agency in Pune) - Quality Score: 77
+2025-11-05 20:21:26,909 - agents.simple_agent - INFO - Processing lead 3/9: Sulekha.com New Media Pvt. Ltd.
+2025-11-05 20:21:26,909 - agents.orchestrator - INFO - Processing lead 3/9: Sulekha.com New Media Pvt. Ltd.
+2025-11-05 20:21:26,909 - agents.simple_agent - INFO - Processing lead: Sulekha.com New Media Pvt. Ltd.
+2025-11-05 20:21:26,909 - agents.orchestrator - INFO - Processing lead: Sulekha.com New Media Pvt. Ltd.
+2025-11-05 20:21:26,914 - agents.simple_agent - INFO - Finding email for Sulekha.com New Media Pvt. Ltd.
+2025-11-05 20:21:26,914 - agents.orchestrator - INFO - Finding email for Sulekha.com New Media Pvt. Ltd.
+2025-11-05 20:21:26,914 - outreach.email_finder - INFO - Starting email search for https://www.sulekha.com/pune
+2025-11-05 20:21:28,549 - outreach.email_finder - INFO - Found 0 emails on https://www.sulekha.com/
+2025-11-05 20:21:30,958 - outreach.email_finder - WARNING - Failed to scrape https://www.sulekha.com/contact: 404 Client Error: Not Found for url: https://www.sulekha.com/404?ref=/contact
+2025-11-05 20:21:33,393 - outreach.email_finder - WARNING - Failed to scrape https://www.sulekha.com/contact-us: 404 Client Error: Not Found for url: https://www.sulekha.com/404?ref=/contact-us
+2025-11-05 20:21:34,397 - outreach.email_finder - INFO - Found 0 emails for https://www.sulekha.com/pune
+2025-11-05 20:21:34,397 - agents.simple_agent - INFO - Researching Sulekha.com New Media Pvt. Ltd.
+2025-11-05 20:21:34,397 - agents.orchestrator - INFO - Researching Sulekha.com New Media Pvt. Ltd.
+2025-11-05 20:21:34,397 - outreach.lead_researcher - INFO - Researching lead: Sulekha.com New Media Pvt. Ltd.
+2025-11-05 20:21:39,208 - outreach.lead_researcher - ERROR - Error scraping https://www.sulekha.com/contact: 404 Client Error: Not Found for url: https://www.sulekha.com/404?ref=/contact
+2025-11-05 20:21:41,702 - outreach.lead_researcher - ERROR - Error scraping https://www.sulekha.com/about: 404 Client Error: Not Found for url: https://www.sulekha.com/404?ref=/about
+2025-11-05 20:21:42,703 - utils.ai_helpers - INFO - Gemini API initialized successfully
+2025-11-05 20:21:49,255 - outreach.lead_researcher - INFO - Successfully analyzed website for Sulekha.com New Media Pvt. Ltd.
+2025-11-05 20:21:49,273 - outreach.lead_researcher - INFO - Research completed for Sulekha.com New Media Pvt. Ltd. - Quality Score: 73
+2025-11-05 20:21:49,273 - agents.simple_agent - INFO - Processing lead 4/9: Mage Marketer - Best Digital Marketing Agency in Pune | Social Media | SEO | Performance Marketing | Branding | Website
+2025-11-05 20:21:49,273 - agents.orchestrator - INFO - Processing lead 4/9: Mage Marketer - Best Digital Marketing Agency in Pune | Social Media | SEO | Performance Marketing | Branding | Website
+2025-11-05 20:21:49,273 - agents.simple_agent - INFO - Processing lead: Mage Marketer - Best Digital Marketing Agency in Pune | Social Media | SEO | Performance Marketing | Branding | Website
+2025-11-05 20:21:49,275 - agents.orchestrator - INFO - Processing lead: Mage Marketer - Best Digital Marketing Agency in Pune | Social Media | SEO | Performance Marketing | Branding | Website
+2025-11-05 20:21:49,275 - agents.simple_agent - INFO - Finding email for Mage Marketer - Best Digital Marketing Agency in Pune | Social Media | SEO | Performance Marketing | Branding | Website
+2025-11-05 20:21:49,275 - agents.orchestrator - INFO - Finding email for Mage Marketer - Best Digital Marketing Agency in Pune | Social Media | SEO | Performance Marketing | Branding | Website
+2025-11-05 20:21:49,275 - outreach.email_finder - INFO - Starting email search for https://www.magemarketer.com/
+2025-11-05 20:21:51,248 - outreach.email_finder - INFO - Found 2 emails on https://www.magemarketer.com/
+2025-11-05 20:21:54,194 - outreach.email_finder - INFO - Found 1 emails on https://www.magemarketer.com/contact
+2025-11-05 20:21:58,685 - outreach.email_finder - WARNING - Failed to scrape https://www.magemarketer.com/contact-us: 404 Client Error: Not Found for url: https://magemarketer.com/contact-us
+2025-11-05 20:21:59,698 - outreach.email_finder - INFO - Found 2 emails for https://www.magemarketer.com/
+2025-11-05 20:21:59,698 - agents.simple_agent - INFO - Researching Mage Marketer - Best Digital Marketing Agency in Pune | Social Media | SEO | Performance Marketing | Branding | Website
+2025-11-05 20:21:59,701 - agents.orchestrator - INFO - Researching Mage Marketer - Best Digital Marketing Agency in Pune | Social Media | SEO | Performance Marketing | Branding | Website
+2025-11-05 20:21:59,701 - outreach.lead_researcher - INFO - Researching lead: Mage Marketer - Best Digital Marketing Agency in Pune | Social Media | SEO | Performance Marketing | Branding | Website
+2025-11-05 20:22:08,412 - utils.ai_helpers - INFO - Gemini API initialized successfully
+2025-11-05 20:22:12,726 - outreach.lead_researcher - INFO - Successfully analyzed website for Mage Marketer - Best Digital Marketing Agency in Pune | Social Media | SEO | Performance Marketing | Branding | Website
+2025-11-05 20:22:12,731 - outreach.lead_researcher - INFO - Research completed for Mage Marketer - Best Digital Marketing Agency in Pune | Social Media | SEO | Performance Marketing | Branding | Website - Quality Score: 88
+2025-11-05 20:22:12,731 - agents.simple_agent - INFO - Processing lead 5/9: ADSSBOOK
+2025-11-05 20:22:12,731 - agents.orchestrator - INFO - Processing lead 5/9: ADSSBOOK
+2025-11-05 20:22:12,731 - agents.simple_agent - INFO - Processing lead: ADSSBOOK
+2025-11-05 20:22:12,731 - agents.orchestrator - INFO - Processing lead: ADSSBOOK
+2025-11-05 20:22:12,734 - agents.simple_agent - INFO - Finding email for ADSSBOOK
+2025-11-05 20:22:12,734 - agents.orchestrator - INFO - Finding email for ADSSBOOK
+2025-11-05 20:22:12,734 - outreach.email_finder - INFO - Starting email search for http://adssbook.com/
+2025-11-05 20:22:22,932 - outreach.email_finder - WARNING - Failed to scrape http://adssbook.com/: HTTPConnectionPool(host='adssbook.com', port=80): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x00000192FB924A10>, 'Connection to adssbook.com timed out. (connect timeout=10)'))
+2025-11-05 20:22:33,945 - outreach.email_finder - WARNING - Failed to scrape http://adssbook.com/contact: HTTPConnectionPool(host='adssbook.com', port=80): Max retries exceeded with url: /contact (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x00000192FB945EE0>, 'Connection to adssbook.com timed out. (connect timeout=10)'))
+2025-11-05 20:22:44,956 - outreach.email_finder - WARNING - Failed to scrape http://adssbook.com/contact-us: HTTPConnectionPool(host='adssbook.com', port=80): Max retries exceeded with url: /contact-us (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x00000192FB9273B0>, 'Connection to adssbook.com timed out. (connect timeout=10)'))
+2025-11-05 20:22:45,958 - outreach.email_finder - INFO - Found 0 emails for http://adssbook.com/
+2025-11-05 20:22:45,958 - agents.simple_agent - INFO - Researching ADSSBOOK
+2025-11-05 20:22:45,958 - agents.orchestrator - INFO - Researching ADSSBOOK
+2025-11-05 20:22:45,958 - outreach.lead_researcher - INFO - Researching lead: ADSSBOOK
+2025-11-05 20:22:55,969 - outreach.lead_researcher - ERROR - Error scraping http://adssbook.com/: HTTPConnectionPool(host='adssbook.com', port=80): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x00000192FB945460>, 'Connection to adssbook.com timed out. (connect timeout=10)'))
+2025-11-05 20:23:06,994 - outreach.lead_researcher - ERROR - Error scraping http://adssbook.com/contact: HTTPConnectionPool(host='adssbook.com', port=80): Max retries exceeded with url: /contact (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x00000192FB9D22D0>, 'Connection to adssbook.com timed out. (connect timeout=10)'))
+2025-11-05 20:23:18,005 - outreach.lead_researcher - ERROR - Error scraping http://adssbook.com/about: HTTPConnectionPool(host='adssbook.com', port=80): Max retries exceeded with url: /about (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x00000192FB9D3F20>, 'Connection to adssbook.com timed out. (connect timeout=10)'))
+2025-11-05 20:23:19,007 - outreach.lead_researcher - WARNING - No data scraped for ADSSBOOK
+2025-11-05 20:23:19,011 - agents.simple_agent - INFO - Processing lead 6/9: Seagull Advertising
+2025-11-05 20:23:19,011 - agents.orchestrator - INFO - Processing lead 6/9: Seagull Advertising
+2025-11-05 20:23:19,011 - agents.simple_agent - INFO - Processing lead: Seagull Advertising
+2025-11-05 20:23:19,011 - agents.orchestrator - INFO - Processing lead: Seagull Advertising
+2025-11-05 20:23:19,016 - agents.simple_agent - INFO - Finding email for Seagull Advertising
+2025-11-05 20:23:19,016 - agents.orchestrator - INFO - Finding email for Seagull Advertising
+2025-11-05 20:23:19,016 - outreach.email_finder - INFO - Starting email search for https://www.seagulladvertising.com/
+2025-11-05 20:23:20,688 - outreach.email_finder - INFO - Found 1 emails on https://www.seagulladvertising.com/
+2025-11-05 20:23:22,965 - outreach.email_finder - INFO - Found 1 emails on https://www.seagulladvertising.com/contact
+2025-11-05 20:23:26,164 - outreach.email_finder - INFO - Found 1 emails on https://www.seagulladvertising.com/contact-us
+2025-11-05 20:23:27,166 - outreach.email_finder - INFO - Found 1 emails for https://www.seagulladvertising.com/
+2025-11-05 20:23:27,167 - agents.simple_agent - INFO - Researching Seagull Advertising
+2025-11-05 20:23:27,167 - agents.orchestrator - INFO - Researching Seagull Advertising
+2025-11-05 20:23:27,167 - outreach.lead_researcher - INFO - Researching lead: Seagull Advertising
+2025-11-05 20:23:34,328 - utils.ai_helpers - INFO - Gemini API initialized successfully
+2025-11-05 20:23:39,901 - outreach.lead_researcher - INFO - Successfully analyzed website for Seagull Advertising
+2025-11-05 20:23:39,904 - outreach.lead_researcher - INFO - Research completed for Seagull Advertising - Quality Score: 88
+2025-11-05 20:23:39,904 - agents.simple_agent - INFO - Processing lead 7/9: Awrange Digital Solutions
+2025-11-05 20:23:39,904 - agents.orchestrator - INFO - Processing lead 7/9: Awrange Digital Solutions
+2025-11-05 20:23:39,904 - agents.simple_agent - INFO - Processing lead: Awrange Digital Solutions
+2025-11-05 20:23:39,904 - agents.orchestrator - INFO - Processing lead: Awrange Digital Solutions
+2025-11-05 20:23:39,904 - agents.simple_agent - INFO - Finding email for Awrange Digital Solutions
+2025-11-05 20:23:39,904 - agents.orchestrator - INFO - Finding email for Awrange Digital Solutions
+2025-11-05 20:23:39,904 - outreach.email_finder - INFO - Starting email search for https://awrange.com/
+2025-11-05 20:23:50,312 - outreach.email_finder - WARNING - Failed to scrape https://awrange.com/: HTTPSConnectionPool(host='awrange.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x00000192FA6D5160>, 'Connection to awrange.com timed out. (connect timeout=10)'))
+2025-11-05 20:24:01,327 - outreach.email_finder - WARNING - Failed to scrape https://awrange.com/contact: HTTPSConnectionPool(host='awrange.com', port=443): Max retries exceeded with url: /contact (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x00000192FB2AA510>, 'Connection to awrange.com timed out. (connect timeout=10)'))
+2025-11-05 20:24:12,338 - outreach.email_finder - WARNING - Failed to scrape https://awrange.com/contact-us: HTTPSConnectionPool(host='awrange.com', port=443): Max retries exceeded with url: /contact-us (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x00000192FB24C4A0>, 'Connection to awrange.com timed out. (connect timeout=10)'))
+2025-11-05 20:24:13,340 - outreach.email_finder - INFO - Found 0 emails for https://awrange.com/
+2025-11-05 20:24:13,340 - agents.simple_agent - INFO - Researching Awrange Digital Solutions
+2025-11-05 20:24:13,340 - agents.orchestrator - INFO - Researching Awrange Digital Solutions
+2025-11-05 20:24:13,340 - outreach.lead_researcher - INFO - Researching lead: Awrange Digital Solutions
+2025-11-05 20:24:23,366 - outreach.lead_researcher - ERROR - Error scraping https://awrange.com/: HTTPSConnectionPool(host='awrange.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x00000192FB859670>, 'Connection to awrange.com timed out. (connect timeout=10)'))
+2025-11-05 20:24:34,372 - outreach.lead_researcher - ERROR - Error scraping https://awrange.com/contact: HTTPSConnectionPool(host='awrange.com', port=443): Max retries exceeded with url: /contact (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x00000192FB24E720>, 'Connection to awrange.com timed out. (connect timeout=10)'))
+2025-11-05 20:24:45,387 - outreach.lead_researcher - ERROR - Error scraping https://awrange.com/about: HTTPSConnectionPool(host='awrange.com', port=443): Max retries exceeded with url: /about (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x00000192FB944650>, 'Connection to awrange.com timed out. (connect timeout=10)'))
+2025-11-05 20:24:46,388 - outreach.lead_researcher - WARNING - No data scraped for Awrange Digital Solutions
+2025-11-05 20:24:46,392 - agents.simple_agent - INFO - Processing lead 8/9: Digibrandz IT Solutions Pvt. Ltd.
+2025-11-05 20:24:46,392 - agents.orchestrator - INFO - Processing lead 8/9: Digibrandz IT Solutions Pvt. Ltd.
+2025-11-05 20:24:46,392 - agents.simple_agent - INFO - Processing lead: Digibrandz IT Solutions Pvt. Ltd.
+2025-11-05 20:24:46,392 - agents.orchestrator - INFO - Processing lead: Digibrandz IT Solutions Pvt. Ltd.
+2025-11-05 20:24:46,394 - agents.simple_agent - INFO - Finding email for Digibrandz IT Solutions Pvt. Ltd.
+2025-11-05 20:24:46,394 - agents.orchestrator - INFO - Finding email for Digibrandz IT Solutions Pvt. Ltd.
+2025-11-05 20:24:46,394 - outreach.email_finder - INFO - Starting email search for https://www.google.com/url?q=https://digibrandz.in/&opi=79508299&sa=U&ved=0ahUKEwiA18jY-NqQAxUZxDgGHamSHjoQ61gIFigS&usg=AOvVaw17F2WHUA4OPU2Dr0fONJGb
+2025-11-05 20:24:47,746 - outreach.email_finder - INFO - Found 0 emails on https://www.google.com/
+2025-11-05 20:24:49,860 - outreach.email_finder - INFO - Found 1 emails on https://www.google.com/contact
+2025-11-05 20:24:51,354 - outreach.email_finder - WARNING - Failed to scrape https://www.google.com/contact-us: 404 Client Error: Not Found for url: https://www.google.com/contact-us
+2025-11-05 20:24:52,361 - outreach.email_finder - INFO - Found 1 emails for https://www.google.com/url?q=https://digibrandz.in/&opi=79508299&sa=U&ved=0ahUKEwiA18jY-NqQAxUZxDgGHamSHjoQ61gIFigS&usg=AOvVaw17F2WHUA4OPU2Dr0fONJGb
+2025-11-05 20:24:52,361 - agents.simple_agent - INFO - Researching Digibrandz IT Solutions Pvt. Ltd.
+2025-11-05 20:24:52,361 - agents.orchestrator - INFO - Researching Digibrandz IT Solutions Pvt. Ltd.
+2025-11-05 20:24:52,361 - outreach.lead_researcher - INFO - Researching lead: Digibrandz IT Solutions Pvt. Ltd.
+2025-11-05 20:24:57,735 - utils.ai_helpers - INFO - Gemini API initialized successfully
+2025-11-05 20:25:02,379 - outreach.lead_researcher - INFO - Successfully analyzed website for Digibrandz IT Solutions Pvt. Ltd.
+2025-11-05 20:25:02,388 - outreach.lead_researcher - INFO - Research completed for Digibrandz IT Solutions Pvt. Ltd. - Quality Score: 83
+2025-11-05 20:25:02,388 - agents.simple_agent - INFO - Processing lead 9/9: SocialChamps Media Pvt. Ltd.
+2025-11-05 20:25:02,388 - agents.orchestrator - INFO - Processing lead 9/9: SocialChamps Media Pvt. Ltd.
+2025-11-05 20:25:02,388 - agents.simple_agent - INFO - Processing lead: SocialChamps Media Pvt. Ltd.
+2025-11-05 20:25:02,388 - agents.orchestrator - INFO - Processing lead: SocialChamps Media Pvt. Ltd.
+2025-11-05 20:25:02,388 - agents.simple_agent - INFO - Finding email for SocialChamps Media Pvt. Ltd.
+2025-11-05 20:25:02,388 - agents.orchestrator - INFO - Finding email for SocialChamps Media Pvt. Ltd.
+2025-11-05 20:25:02,388 - outreach.email_finder - INFO - Starting email search for https://socialchamps.com/
+2025-11-05 20:25:03,695 - outreach.email_finder - INFO - Found 0 emails on https://socialchamps.com/
+2025-11-05 20:25:05,691 - outreach.email_finder - INFO - Found 0 emails on https://socialchamps.com/contact
+2025-11-05 20:25:07,450 - outreach.email_finder - INFO - Found 0 emails on https://socialchamps.com/contact-us
+2025-11-05 20:25:08,453 - outreach.email_finder - INFO - Found 0 emails for https://socialchamps.com/
+2025-11-05 20:25:08,453 - agents.simple_agent - INFO - Researching SocialChamps Media Pvt. Ltd.
+2025-11-05 20:25:08,453 - agents.orchestrator - INFO - Researching SocialChamps Media Pvt. Ltd.
+2025-11-05 20:25:08,453 - outreach.lead_researcher - INFO - Researching lead: SocialChamps Media Pvt. Ltd.
+2025-11-05 20:25:21,956 - utils.ai_helpers - INFO - Gemini API initialized successfully
+2025-11-05 20:25:26,057 - outreach.lead_researcher - INFO - Successfully analyzed website for SocialChamps Media Pvt. Ltd.
+2025-11-05 20:25:26,072 - outreach.lead_researcher - INFO - Research completed for SocialChamps Media Pvt. Ltd. - Quality Score: 73
+2025-11-05 20:25:26,072 - agents.simple_agent - INFO - Batch processing completed: 6 qualified, 0 emails generated
+2025-11-05 20:25:26,072 - agents.orchestrator - INFO - Batch processing completed: 6 qualified, 0 emails generated
+2025-11-05 20:25:26,072 - agents.orchestrator - INFO - Research phase complete: 6/9 qualified
+2025-11-05 20:25:26,072 - agents.orchestrator - INFO - Generating emails for 6 qualified leads...
+2025-11-05 20:25:26,082 - agents.simple_agent - INFO - Starting batch processing for 6 leads
+2025-11-05 20:25:26,082 - agents.orchestrator - INFO - Starting batch processing for 6 leads
+2025-11-05 20:25:26,083 - agents.simple_agent - INFO - Processing lead 1/6: Brew My Idea (Social Media & Digital Marketing Agency in Pune)
+2025-11-05 20:25:26,083 - agents.orchestrator - INFO - Processing lead 1/6: Brew My Idea (Social Media & Digital Marketing Agency in Pune)
+2025-11-05 20:25:26,083 - agents.simple_agent - INFO - Processing lead: Brew My Idea (Social Media & Digital Marketing Agency in Pune)
+2025-11-05 20:25:26,083 - agents.orchestrator - INFO - Processing lead: Brew My Idea (Social Media & Digital Marketing Agency in Pune)
+2025-11-05 20:25:26,083 - agents.simple_agent - INFO - Generating email for Brew My Idea (Social Media & Digital Marketing Agency in Pune) (score: 77)
+2025-11-05 20:25:26,084 - agents.orchestrator - INFO - Generating email for Brew My Idea (Social Media & Digital Marketing Agency in Pune) (score: 77)
+2025-11-05 20:25:26,087 - outreach.email_generator - INFO - Generating email for Brew My Idea (Social Media & Digital Marketing Agency in Pune) using value_proposition strategy with professional tone
+2025-11-05 20:25:26,087 - utils.ai_helpers - INFO - Gemini API initialized successfully
+2025-11-05 20:25:27,137 - outreach.email_generator - INFO - Generated subject line for Brew My Idea (Social Media & Digital Marketing Agency in Pune): Brew My Idea: Elevate Client Results?
+2025-11-05 20:25:27,137 - utils.ai_helpers - INFO - Gemini API initialized successfully
+2025-11-05 20:25:30,143 - outreach.email_generator - INFO - Generated email body for Brew My Idea (Social Media & Digital Marketing Agency in Pune) (1024 chars)
+2025-11-05 20:25:30,143 - agents.simple_agent - INFO - Processing lead 2/6: Sulekha.com New Media Pvt. Ltd.
+2025-11-05 20:25:30,159 - agents.orchestrator - INFO - Processing lead 2/6: Sulekha.com New Media Pvt. Ltd.
+2025-11-05 20:25:30,159 - agents.simple_agent - INFO - Processing lead: Sulekha.com New Media Pvt. Ltd.
+2025-11-05 20:25:30,159 - agents.orchestrator - INFO - Processing lead: Sulekha.com New Media Pvt. Ltd.
+2025-11-05 20:25:30,159 - agents.simple_agent - INFO - Generating email for Sulekha.com New Media Pvt. Ltd. (score: 73)
+2025-11-05 20:25:30,159 - agents.orchestrator - INFO - Generating email for Sulekha.com New Media Pvt. Ltd. (score: 73)
+2025-11-05 20:25:30,159 - outreach.email_generator - INFO - Generating email for Sulekha.com New Media Pvt. Ltd. using value_proposition strategy with professional tone
+2025-11-05 20:25:30,159 - utils.ai_helpers - INFO - Gemini API initialized successfully
+2025-11-05 20:25:31,658 - outreach.email_generator - INFO - Generated subject line for Sulekha.com New Media Pvt. Ltd.: Sulekha: Enhance Provider Quality & Accuracy
+2025-11-05 20:25:31,658 - utils.ai_helpers - INFO - Gemini API initialized successfully
+2025-11-05 20:25:35,195 - outreach.email_generator - INFO - Generated email body for Sulekha.com New Media Pvt. Ltd. (1270 chars)
+2025-11-05 20:25:35,195 - agents.simple_agent - INFO - Processing lead 3/6: Mage Marketer - Best Digital Marketing Agency in Pune | Social Media | SEO | Performance Marketing | Branding | Website
+2025-11-05 20:25:35,195 - agents.orchestrator - INFO - Processing lead 3/6: Mage Marketer - Best Digital Marketing Agency in Pune | Social Media | SEO | Performance Marketing | Branding | Website
+2025-11-05 20:25:35,195 - agents.simple_agent - INFO - Processing lead: Mage Marketer - Best Digital Marketing Agency in Pune | Social Media | SEO | Performance Marketing | Branding | Website
+2025-11-05 20:25:35,195 - agents.orchestrator - INFO - Processing lead: Mage Marketer - Best Digital Marketing Agency in Pune | Social Media | SEO | Performance Marketing | Branding | Website
+2025-11-05 20:25:35,195 - agents.simple_agent - INFO - Generating email for Mage Marketer - Best Digital Marketing Agency in Pune | Social Media | SEO | Performance Marketing | Branding | Website (score: 88)
+2025-11-05 20:25:35,195 - agents.orchestrator - INFO - Generating email for Mage Marketer - Best Digital Marketing Agency in Pune | Social Media | SEO | Performance Marketing | Branding | Website (score: 88)
+2025-11-05 20:25:35,211 - outreach.email_generator - INFO - Generating email for Mage Marketer - Best Digital Marketing Agency in Pune | Social Media | SEO | Performance Marketing | Branding | Website using value_proposition strategy with professional tone
+2025-11-05 20:25:35,211 - utils.ai_helpers - INFO - Gemini API initialized successfully
+2025-11-05 20:25:36,754 - outreach.email_generator - INFO - Generated subject line for Mage Marketer - Best Digital Marketing Agency in Pune | Social Media | SEO | Performance Marketing | Branding | Website: Mage Marketer: Elevate Your Pune Presence?
+2025-11-05 20:25:36,758 - utils.ai_helpers - INFO - Gemini API initialized successfully
+2025-11-05 20:25:39,542 - outreach.email_generator - INFO - Generated email body for Mage Marketer - Best Digital Marketing Agency in Pune | Social Media | SEO | Performance Marketing | Branding | Website (1146 chars)
+2025-11-05 20:25:39,542 - agents.simple_agent - INFO - Processing lead 4/6: Seagull Advertising
+2025-11-05 20:25:39,542 - agents.orchestrator - INFO - Processing lead 4/6: Seagull Advertising
+2025-11-05 20:25:39,542 - agents.simple_agent - INFO - Processing lead: Seagull Advertising
+2025-11-05 20:25:39,542 - agents.orchestrator - INFO - Processing lead: Seagull Advertising
+2025-11-05 20:25:39,542 - agents.simple_agent - INFO - Generating email for Seagull Advertising (score: 88)
+2025-11-05 20:25:39,542 - agents.orchestrator - INFO - Generating email for Seagull Advertising (score: 88)
+2025-11-05 20:25:39,549 - outreach.email_generator - INFO - Generating email for Seagull Advertising using value_proposition strategy with professional tone
+2025-11-05 20:25:39,549 - utils.ai_helpers - INFO - Gemini API initialized successfully
+2025-11-05 20:25:40,719 - outreach.email_generator - INFO - Generated subject line for Seagull Advertising: Seagull Advertising: Elevate Your Brand's ROI
+2025-11-05 20:25:40,719 - utils.ai_helpers - INFO - Gemini API initialized successfully
+2025-11-05 20:25:44,324 - outreach.email_generator - INFO - Generated email body for Seagull Advertising (1434 chars)
+2025-11-05 20:25:44,324 - agents.simple_agent - INFO - Processing lead 5/6: Digibrandz IT Solutions Pvt. Ltd.
+2025-11-05 20:25:44,324 - agents.orchestrator - INFO - Processing lead 5/6: Digibrandz IT Solutions Pvt. Ltd.
+2025-11-05 20:25:44,324 - agents.simple_agent - INFO - Processing lead: Digibrandz IT Solutions Pvt. Ltd.
+2025-11-05 20:25:44,324 - agents.orchestrator - INFO - Processing lead: Digibrandz IT Solutions Pvt. Ltd.
+2025-11-05 20:25:44,324 - agents.simple_agent - INFO - Generating email for Digibrandz IT Solutions Pvt. Ltd. (score: 83)
+2025-11-05 20:25:44,324 - agents.orchestrator - INFO - Generating email for Digibrandz IT Solutions Pvt. Ltd. (score: 83)
+2025-11-05 20:25:44,324 - outreach.email_generator - INFO - Generating email for Digibrandz IT Solutions Pvt. Ltd. using value_proposition strategy with professional tone
+2025-11-05 20:25:44,324 - utils.ai_helpers - INFO - Gemini API initialized successfully
+2025-11-05 20:25:47,938 - outreach.email_generator - INFO - Generated subject line for Digibrandz IT Solutions Pvt. Ltd.: Digibrandz: Enhancing User Privacy & Market Edge
+2025-11-05 20:25:47,950 - utils.ai_helpers - INFO - Gemini API initialized successfully
+2025-11-05 20:25:48,347 - utils.ai_helpers - ERROR - Error generating text with Gemini: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10
+Please retry in 11.62549792s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash-exp"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 10
+}
+, retry_delay {
+  seconds: 11
+}
+]
+2025-11-05 20:25:48,353 - agents.simple_agent - INFO - Processing lead 6/6: SocialChamps Media Pvt. Ltd.
+2025-11-05 20:25:48,355 - agents.orchestrator - INFO - Processing lead 6/6: SocialChamps Media Pvt. Ltd.
+2025-11-05 20:25:48,355 - agents.simple_agent - INFO - Processing lead: SocialChamps Media Pvt. Ltd.
+2025-11-05 20:25:48,355 - agents.orchestrator - INFO - Processing lead: SocialChamps Media Pvt. Ltd.
+2025-11-05 20:25:48,355 - agents.simple_agent - INFO - Generating email for SocialChamps Media Pvt. Ltd. (score: 73)
+2025-11-05 20:25:48,355 - agents.orchestrator - INFO - Generating email for SocialChamps Media Pvt. Ltd. (score: 73)
+2025-11-05 20:25:48,358 - outreach.email_generator - INFO - Generating email for SocialChamps Media Pvt. Ltd. using value_proposition strategy with professional tone
+2025-11-05 20:25:48,358 - utils.ai_helpers - INFO - Gemini API initialized successfully
+2025-11-05 20:25:48,729 - utils.ai_helpers - ERROR - Error generating text with Gemini: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10
+Please retry in 11.218411162s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash-exp"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 10
+}
+, retry_delay {
+  seconds: 11
+}
+]
+2025-11-05 20:25:48,746 - utils.ai_helpers - INFO - Gemini API initialized successfully
+2025-11-05 20:25:49,215 - utils.ai_helpers - ERROR - Error generating text with Gemini: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10
+Please retry in 10.75077982s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash-exp"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 10
+}
+, retry_delay {
+  seconds: 10
+}
+]
+2025-11-05 20:25:49,219 - agents.simple_agent - INFO - Batch processing completed: 6 qualified, 6 emails generated
+2025-11-05 20:25:49,219 - agents.orchestrator - INFO - Batch processing completed: 6 qualified, 6 emails generated
+2025-11-05 20:25:49,219 - agents.orchestrator - INFO - Email generation complete: 6 emails ready for approval
+2025-11-05 20:25:49,219 - agents.orchestrator - INFO - Approved email for Mage Marketer - Best Digital Marketing Agency in Pune | Social Media | SEO | Performance Marketing | Branding | Website
+2025-11-05 20:25:49,219 - agents.orchestrator - INFO - Approved email for Seagull Advertising
+2025-11-05 20:25:49,219 - agents.orchestrator - INFO - Approved email for Digibrandz IT Solutions Pvt. Ltd.
+2025-11-05 20:25:49,219 - agents.orchestrator - INFO - Bulk approved 3 leads
+2025-11-05 20:25:49,223 - agents.orchestrator - INFO - Email sending disabled - awaiting manual approval
+2025-11-05 20:25:49,223 - agents.orchestrator - INFO - Syncing 9 leads to Notion...
+2025-11-05 20:25:52,100 - outreach.notion_crm - ERROR - Notion API error creating lead: Could not find database with ID: 2a2e6592-6f2e-80d9-8eae-c57d9dc6cc3d. Make sure the relevant pages and databases are shared with your integration.
+2025-11-05 20:25:52,441 - outreach.notion_crm - ERROR - Notion API error creating lead: Could not find database with ID: 2a2e6592-6f2e-80d9-8eae-c57d9dc6cc3d. Make sure the relevant pages and databases are shared with your integration.
+2025-11-05 20:25:53,311 - outreach.notion_crm - ERROR - Notion API error creating lead: Could not find database with ID: 2a2e6592-6f2e-80d9-8eae-c57d9dc6cc3d. Make sure the relevant pages and databases are shared with your integration.
+2025-11-05 20:25:53,650 - outreach.notion_crm - ERROR - Notion API error creating lead: Could not find database with ID: 2a2e6592-6f2e-80d9-8eae-c57d9dc6cc3d. Make sure the relevant pages and databases are shared with your integration.
+2025-11-05 20:25:53,975 - outreach.notion_crm - ERROR - Notion API error creating lead: Could not find database with ID: 2a2e6592-6f2e-80d9-8eae-c57d9dc6cc3d. Make sure the relevant pages and databases are shared with your integration.
+2025-11-05 20:25:54,345 - outreach.notion_crm - ERROR - Notion API error creating lead: Could not find database with ID: 2a2e6592-6f2e-80d9-8eae-c57d9dc6cc3d. Make sure the relevant pages and databases are shared with your integration.
+2025-11-05 20:25:55,410 - outreach.notion_crm - ERROR - Notion API error creating lead: Could not find database with ID: 2a2e6592-6f2e-80d9-8eae-c57d9dc6cc3d. Make sure the relevant pages and databases are shared with your integration.
+2025-11-05 20:25:55,906 - outreach.notion_crm - ERROR - Notion API error creating lead: Could not find database with ID: 2a2e6592-6f2e-80d9-8eae-c57d9dc6cc3d. Make sure the relevant pages and databases are shared with your integration.
+2025-11-05 20:25:56,234 - outreach.notion_crm - ERROR - Notion API error creating lead: Could not find database with ID: 2a2e6592-6f2e-80d9-8eae-c57d9dc6cc3d. Make sure the relevant pages and databases are shared with your integration.
+2025-11-05 20:25:56,234 - agents.orchestrator - INFO - Notion sync complete: 0 synced, 9 failed
+2025-11-05 20:25:56,234 - agents.orchestrator - INFO - ==================================================
+2025-11-05 20:25:56,234 - agents.orchestrator - INFO - Workflow Complete!
+2025-11-05 20:25:56,234 - agents.orchestrator - INFO - Total Leads: 9
+2025-11-05 20:25:56,234 - agents.orchestrator - INFO - Researched: 9
+2025-11-05 20:25:56,234 - agents.orchestrator - INFO - Qualified: 6
+2025-11-05 20:25:56,234 - agents.orchestrator - INFO - Emails Generated: 6
+2025-11-05 20:25:56,234 - agents.orchestrator - INFO - Approved: 3
+2025-11-05 20:25:56,234 - agents.orchestrator - INFO - Sent: 0
+2025-11-05 20:25:56,234 - agents.orchestrator - INFO - Synced to Notion: 0
+2025-11-05 20:25:56,234 - agents.orchestrator - INFO - ==================================================
+2025-11-05 21:28:25,357 - outreach.notion_crm - INFO - Notion client initialized successfully
+2025-11-05 21:28:25,410 - outreach.email_sender - INFO - Resend email sender initialized

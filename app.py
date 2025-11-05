@@ -7,6 +7,9 @@ import streamlit as st
 import pandas as pd
 from typing import List, Dict
 from controllers.main_controller import LeadController
+from agents.orchestrator import OutreachOrchestrator
+from outreach.email_sender import email_sender
+from outreach.notion_crm import notion_crm
 from utils.logger import setup_logger
 
 logger = setup_logger(__name__)
@@ -21,6 +24,16 @@ def initialize_session_state():
         st.session_state.live_data = []
     if 'log_messages' not in st.session_state:
         st.session_state.log_messages = []
+    
+    # AI Outreach state
+    if 'outreach_leads' not in st.session_state:
+        st.session_state.outreach_leads = []
+    if 'outreach_in_progress' not in st.session_state:
+        st.session_state.outreach_in_progress = False
+    if 'outreach_logs' not in st.session_state:
+        st.session_state.outreach_logs = []
+    if 'workflow_stats' not in st.session_state:
+        st.session_state.workflow_stats = None
 
 def setup_ui() -> tuple[str, str, List[str], str, int]:
     """
@@ -204,15 +217,265 @@ def display_results(results):
                     key=json_key
                 )
 
+def render_ai_outreach_tab():
+    """Render the AI Outreach Agent tab."""
+    st.header("🤖 AI Outreach Agent")
+    
+    # Configuration section
+    with st.expander("⚙️ Configuration", expanded=False):
+        col1, col2 = st.columns(2)
+        
+        with col1:
+            st.write("**API Status**")
+            gemini_key = os.getenv('GEMINI_API_KEY', 'Not set')
+            resend_key = os.getenv('RESEND_API_KEY', 'Not set')
+            notion_key = os.getenv('NOTION_API_KEY', 'Not set')
+            
+            st.text(f"Gemini API: {'✓' if gemini_key != 'Not set' and gemini_key != 'your_gemini_api_key_here' else '✗'}")
+            st.text(f"Resend API: {'✓' if resend_key != 'Not set' and resend_key != 'your_resend_api_key_here' else '✗'}")
+            st.text(f"Notion API: {'✓' if notion_key != 'Not set' and notion_key != 'your_notion_integration_key_here' else '✗'}")
+        
+        with col2:
+            st.write("**Email Stats**")
+            if email_sender.is_configured():
+                stats = email_sender.get_email_stats()
+                st.text(f"Sent Today: {stats['emails_sent_today']}/{stats['max_per_day']}")
+                st.text(f"Remaining: {stats['remaining_today']}")
+            else:
+                st.warning("Email sender not configured")
+    
+    # Lead import section
+    st.subheader("1️⃣ Import Leads")
+    
+    col1, col2 = st.columns([2, 1])
+    
+    with col1:
+        # File upload
+        uploaded_file = st.file_uploader(
+            "Upload JSON file with leads",
+            type=['json'],
+            help="Upload a JSON file from previous scraping sessions"
+        )
+        
+        if uploaded_file:
+            try:
+                leads_data = json.load(uploaded_file)
+                st.success(f"Loaded {len(leads_data)} leads from file")
+                if st.button("Import These Leads"):
+                    st.session_state.outreach_leads = leads_data
+                    st.session_state.workflow_stats = None
+                    st.rerun()
+            except Exception as e:
+                st.error(f"Failed to load file: {str(e)}")
+    
+    with col2:
+        # Or use recent scrapes
+        st.write("**Or use recent scrapes:**")
+        output_dir = "data/output"
+        if os.path.exists(output_dir):
+            json_files = [f for f in os.listdir(output_dir) if f.endswith('.json')]
+            if json_files:
+                selected_file = st.selectbox("Recent files", json_files)
+                if st.button("Load Selected"):
+                    try:
+                        with open(os.path.join(output_dir, selected_file), 'r') as f:
+                            leads_data = json.load(f)
+                        st.session_state.outreach_leads = leads_data
+                        st.session_state.workflow_stats = None
+                        st.success(f"Loaded {len(leads_data)} leads")
+                        st.rerun()
+                    except Exception as e:
+                        st.error(f"Failed to load: {str(e)}")
+    
+    # Show loaded leads
+    if st.session_state.outreach_leads:
+        st.info(f"📊 {len(st.session_state.outreach_leads)} leads loaded")
+        
+        # Workflow controls
+        st.subheader("2️⃣ AI Workflow")
+        
+        col1, col2, col3 = st.columns(3)
+        
+        with col1:
+            auto_approve_score = st.number_input(
+                "Auto-approve threshold",
+                min_value=0,
+                max_value=100,
+                value=80,
+                help="Automatically approve leads with quality score above this"
+            )
+        
+        with col2:
+            send_immediately = st.checkbox(
+                "Send emails immediately",
+                value=False,
+                help="Send approved emails immediately (otherwise manual review)"
+            )
+        
+        with col3:
+            sync_notion = st.checkbox(
+                "Sync to Notion",
+                value=True,
+                help="Sync leads to Notion CRM"
+            )
+        
+        # Run workflow button
+        if st.button("🚀 Run AI Workflow", type="primary", disabled=st.session_state.outreach_in_progress):
+            st.session_state.outreach_in_progress = True
+            st.session_state.outreach_logs = []
+            
+            # Create orchestrator with callbacks
+            def on_status(msg):
+                st.session_state.outreach_logs.append(msg)
+            
+            orchestrator = OutreachOrchestrator(on_status_update=on_status)
+            
+            # Save leads to temp file
+            temp_file = "data/output/temp_outreach.json"
+            with open(temp_file, 'w') as f:
+                json.dump(st.session_state.outreach_leads, f)
+            
+            # Run workflow
+            with st.spinner("Running AI workflow..."):
+                result = orchestrator.run_complete_workflow(
+                    temp_file,
+                    auto_approve_threshold=auto_approve_score if auto_approve_score > 0 else None,
+                    send_emails=send_immediately
+                )
+            
+            st.session_state.outreach_leads = result['leads']
+            st.session_state.workflow_stats = result['stats']
+            st.session_state.outreach_in_progress = False
+            st.rerun()
+        
+        # Display logs
+        if st.session_state.outreach_logs:
+            with st.expander("📋 Workflow Logs", expanded=True):
+                for log in st.session_state.outreach_logs:
+                    st.text(log)
+        
+        # Display workflow stats
+        if st.session_state.workflow_stats:
+            st.subheader("📊 Workflow Statistics")
+            
+            col1, col2, col3, col4 = st.columns(4)
+            stats = st.session_state.workflow_stats
+            
+            with col1:
+                st.metric("Total Leads", stats['total_leads'])
+                st.metric("Researched", stats['researched'])
+            
+            with col2:
+                st.metric("Qualified", stats['qualified'])
+                st.metric("Not Qualified", stats['total_leads'] - stats['qualified'])
+            
+            with col3:
+                st.metric("Emails Generated", stats['emails_generated'])
+                st.metric("Approved", stats['approved'])
+            
+            with col4:
+                st.metric("Sent", stats['sent'])
+                st.metric("Notion Synced", stats['synced_to_notion'])
+        
+        # Lead review section
+        st.subheader("3️⃣ Review & Approve Emails")
+        
+        # Filter options
+        filter_option = st.radio(
+            "Show",
+            ["All Leads", "Awaiting Approval", "Qualified Only", "Sent"],
+            horizontal=True
+        )
+        
+        # Filter leads based on selection
+        display_leads = st.session_state.outreach_leads
+        if filter_option == "Awaiting Approval":
+            display_leads = [l for l in display_leads if l.get('email_status') == 'generated' and not l.get('email_approved')]
+        elif filter_option == "Qualified Only":
+            display_leads = [l for l in display_leads if l.get('quality_score', 0) >= 60]
+        elif filter_option == "Sent":
+            display_leads = [l for l in display_leads if l.get('email_sent')]
+        
+        st.write(f"Showing {len(display_leads)} leads")
+        
+        # Display leads for review
+        for i, lead in enumerate(display_leads):
+            with st.expander(
+                f"{'✅' if lead.get('email_approved') else '⏳'} {lead.get('business_name', 'Unknown')} "
+                f"(Score: {lead.get('quality_score', 0)})"
+            ):
+                col1, col2 = st.columns([2, 1])
+                
+                with col1:
+                    st.write("**Business Information**")
+                    st.text(f"Website: {lead.get('website', 'N/A')}")
+                    st.text(f"Phone: {lead.get('phone', 'N/A')}")
+                    st.text(f"Emails: {', '.join(lead.get('emails', ['None']))}")
+                    
+                    if lead.get('business_summary'):
+                        st.write("**AI Research Summary**")
+                        st.info(lead['business_summary'])
+                    
+                    if lead.get('pain_points'):
+                        st.write("**Pain Points**")
+                        for pp in lead['pain_points'][:3]:
+                            st.text(f"• {pp}")
+                
+                with col2:
+                    st.write("**Status**")
+                    st.text(f"Quality: {lead.get('quality_score', 0)}/100")
+                    st.text(f"Email Status: {lead.get('email_status', 'N/A')}")
+                    if lead.get('email_approved'):
+                        st.success("✅ Approved")
+                    if lead.get('email_sent'):
+                        st.success(f"✉️ Sent at {lead.get('email_sent_at', 'N/A')[:19]}")
+                
+                # Show generated email
+                if lead.get('email_subject') and lead.get('email_body'):
+                    st.write("**Generated Email**")
+                    st.text_input(f"Subject {i}", value=lead['email_subject'], key=f"subj_{i}", disabled=True)
+                    st.text_area(f"Body {i}", value=lead['email_body'], height=200, key=f"body_{i}", disabled=True)
+                    
+                    # Approval buttons
+                    if not lead.get('email_approved') and not lead.get('email_sent'):
+                        col1, col2 = st.columns(2)
+                        with col1:
+                            if st.button(f"✅ Approve", key=f"approve_{i}"):
+                                lead['email_approved'] = True
+                                st.success("Approved!")
+                                st.rerun()
+                        with col2:
+                            if st.button(f"❌ Reject", key=f"reject_{i}"):
+                                lead['email_approved'] = False
+                                lead['email_rejected'] = True
+                                st.rerun()
+    
+    else:
+        st.info("👆 Import leads to begin the AI outreach workflow")
+
 def main():
     """Main application entry point."""
     st.set_page_config(
-        page_title="Lead Scraper",
+        page_title="Lead Scraper & AI Outreach",
         page_icon="🎯",
         layout="wide"
     )
     
     initialize_session_state()
+    
+    # Create tabs
+    tab1, tab2 = st.tabs(["🔍 Lead Scraper", "🤖 AI Outreach"])
+    
+    with tab1:
+        render_lead_scraper_tab()
+    
+    with tab2:
+        render_ai_outreach_tab()
+
+def render_lead_scraper_tab():
+    """Render the original lead scraper tab."""
+    st.title("Lead Scraper Dashboard")
+    
     keyword, location, platforms, mode, max_leads = setup_ui()
     
     # Create columns for buttons

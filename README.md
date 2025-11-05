@@ -1,39 +1,77 @@
-# Lead Scraper Dashboard 🎯
+# AI Lead Outreach Agent 🎯
 
-A robust, modular lead generation tool that automates the extraction of business contact information from multiple platforms. Built with Python and Streamlit, this tool empowers users to generate high-quality sales leads efficiently.
+A complete AI-powered lead generation and outreach automation platform. This system doesn't just scrape leads - it autonomously researches businesses, generates personalized outreach emails, and manages your entire outreach workflow with intelligent decision-making powered by Google's Gemini AI.
 
 ## 🚀 Features
 
-### Core Capabilities
+### 🤖 AI Agent Capabilities (NEW!)
+- **Autonomous Research**: AI analyzes websites to understand business context, pain points, and opportunities
+- **Intelligent Qualification**: Automatic lead scoring (0-100) based on quality indicators
+- **Personalized Email Generation**: Gemini AI writes unique, customized outreach emails for each lead
+- **Smart Email Finding**: Multi-page scraping with confidence scoring for contact emails
+- **Learning System**: Agent improves over time by tracking outcomes and user preferences
+- **Human-in-the-Loop**: Hybrid autonomy with approval workflow for quality control
+
+### 📊 Lead Scraping
 - **Multi-Platform Scraping**: Extract leads from Google Maps and websites
 - **Contact Extraction**: Automatically collect phone numbers and email addresses
 - **Business Intelligence**: Gather business names, addresses, ratings, and social media profiles
 - **Real-time Dashboard**: Live updates during scraping with progress tracking
 - **Export Options**: Download results in CSV, Excel, or JSON formats
 
-### User Experience
-- **Intuitive UI**: Simple Streamlit interface requiring no technical knowledge
-- **Live Data Display**: See leads being collected in real-time
-- **Progress Tracking**: Visual progress bars and detailed logging
-- **Error Handling**: Robust retry mechanisms with user-friendly error messages
+### ✉️ Outreach Automation
+- **Email Personalization**: Multiple strategies (value proposition, pain point, social proof)
+- **Tone Adaptation**: Professional, casual, friendly, or formal writing styles
+- **CAN-SPAM Compliance**: Automatic unsubscribe links and proper sender identification
+- **Resend Integration**: Reliable email delivery with rate limiting (3,000 emails/month free)
+- **Batch Processing**: Queue and send emails efficiently with progress tracking
 
-### Technical Features
-- **Rate Limiting**: Respectful scraping with configurable delays
-- **Browser Automation**: Headless Chrome with randomized user agents
-- **Modular Architecture**: Easy to extend with new platforms
-- **Comprehensive Logging**: Detailed logs for debugging and monitoring
+### 🗃️ CRM Integration
+- **Notion Database**: Complete CRM tracking with rich metadata
+- **Pipeline Management**: Track leads through stages (New → Researching → Qualified → Sent → Replied)
+- **Analytics**: Monitor open rates, reply rates, and campaign performance
+- **Tags & Campaigns**: Organize leads by industry, priority, and campaign
+
+### 🧠 Intelligence & Learning
+- **Quality Scoring**: AI evaluates leads based on website quality, contact availability, and relevance
+- **Performance Tracking**: Monitors which strategies work best per industry
+- **User Preference Learning**: Adapts to your approval patterns over time
+- **Insights Generation**: Provides recommendations for improving campaigns
+
+### 💻 User Experience
+- **Dual Interface**: Lead Scraper tab + AI Outreach Agent tab
+- **Live Progress**: Real-time updates during AI research and email generation
+- **Approval Interface**: Review AI-generated emails before sending
+- **Statistics Dashboard**: Comprehensive metrics on qualification, approval, and send rates
 
 ## 📋 Table of Contents
 
+- [What Makes This an AI Agent?](#what-makes-this-an-ai-agent)
 - [Installation](#installation)
 - [Quick Start](#quick-start)
+- [AI Outreach Workflow](#ai-outreach-workflow)
 - [Usage Guide](#usage-guide)
 - [Configuration](#configuration)
 - [Project Structure](#project-structure)
+- [API Keys Setup](#api-keys-setup)
 - [Development](#development)
 - [Testing](#testing)
 - [Contributing](#contributing)
 - [License](#license)
+
+## 🤖 What Makes This an AI Agent?
+
+This isn't just automation - it's a **true AI agent** that:
+
+1. **Perceives**: Scrapes and analyzes website content to understand business context
+2. **Reasons**: Uses Gemini AI to identify pain points, value propositions, and opportunities
+3. **Decides**: Autonomously qualifies leads and prioritizes based on quality scoring
+4. **Acts**: Generates and executes personalized outreach campaigns
+5. **Learns**: Tracks outcomes and improves performance over time
+
+**Key Difference from Traditional Automation:**
+- Traditional: Follow rigid scripts → Same email for everyone
+- AI Agent: Understand context → Unique strategy per lead → Adapt based on results
 
 ## 🛠 Installation
 
@@ -41,6 +79,10 @@ A robust, modular lead generation tool that automates the extraction of business
 - Python 3.9 or higher
 - Chrome browser (for Selenium automation)
 - Git
+- **API Keys** (all free tiers):
+  - Google Gemini API (60 requests/min)
+  - Resend Email API (3,000 emails/month)
+  - Notion API (optional, for CRM tracking)
 
 ### Setup Instructions
 
@@ -66,7 +108,26 @@ A robust, modular lead generation tool that automates the extraction of business
    pip install -r requirements.txt
    ```
 
-4. **Verify installation**
+4. **Configure API Keys**
+   
+   Rename `env_example.txt` to `.env` and add your API keys:
+   ```env
+   GEMINI_API_KEY=your_gemini_key_here
+   RESEND_API_KEY=your_resend_key_here
+   NOTION_API_KEY=your_notion_key_here (optional)
+   NOTION_DATABASE_ID=your_database_id_here (optional)
+   SENDER_EMAIL=your@email.com
+   SENDER_NAME=Your Name
+   ```
+
+   See [API Keys Setup](#api-keys-setup) for detailed instructions.
+
+5. **Test the system**
+   ```bash
+   python test_ai_agent.py
+   ```
+
+6. **Launch the application**
    ```bash
    streamlit run app.py
    ```
