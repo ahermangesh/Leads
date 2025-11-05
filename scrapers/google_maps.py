@@ -226,7 +226,6 @@ def extract_info_from_result(result, driver) -> Dict:
         "business_name": "",
         "phone": "",
         "website": "",
-        "address": "",
         "rating": "",
         "notes": ""
     }
@@ -241,19 +240,6 @@ def extract_info_from_result(result, driver) -> Dict:
                         name_elem = result.find_element(By.CSS_SELECTOR, selector)
                         if name_elem and name_elem.text.strip():
                             lead["business_name"] = name_elem.text.strip()
-                            break
-                    except (NoSuchElementException, StaleElementReferenceException):
-                        continue
-            except Exception:
-                pass
-            
-            # Try to extract address
-            try:
-                for selector in [ADDRESS_IN_LIST, 'div.W4Efsd:last-child', 'span[jstcache*="address"]', 'div[aria-label*="Address"]']:
-                    try:
-                        address_elem = result.find_element(By.CSS_SELECTOR, selector)
-                        if address_elem and address_elem.text.strip():
-                            lead["address"] = address_elem.text.strip()
                             break
                     except (NoSuchElementException, StaleElementReferenceException):
                         continue
@@ -473,12 +459,11 @@ def normalize_lead_data(lead: Dict) -> Dict:
         
     Returns:
         Normalized lead dictionary with standard keys
-    """
+    """    
     normalized = {
         'business_name': '',
         'phone': '',
         'website': '',
-        'address': '',
         'rating': '',
         'notes': ''
     }
@@ -515,19 +500,13 @@ def normalize_lead_data(lead: Dict) -> Dict:
     if phone_keys:
         # Get the number from the value if present, otherwise from the key
         phone = lead[phone_keys[0]] if lead[phone_keys[0]] else phone_keys[0].replace('phone:tel:', '')
-        normalized['phone'] = f"+91 {phone}"
+        normalized['phone'] = phone  # Keep phone number exactly as found
     
     # Extract website
     if 'authority' in lead:
         normalized['website'] = lead['authority']
     elif 'website' in lead:
         normalized['website'] = lead['website']
-    
-    # Extract address
-    if 'address' in lead and lead['address']:
-        normalized['address'] = lead['address']
-    elif 'oloc' in lead and lead['oloc']:
-        normalized['address'] = lead['oloc']
     
     # Extract rating
     if 'rating' in lead:
@@ -574,7 +553,7 @@ def extract_data_from_side_panel(driver) -> Dict:
 
 def is_duplicate_lead(leads, new_lead):
     """
-    Check if a lead is a duplicate of an existing lead based on business name and address.
+    Check if a lead is a duplicate based on business name or phone number.
     
     Args:
         leads: List of existing leads
@@ -584,7 +563,7 @@ def is_duplicate_lead(leads, new_lead):
         True if the lead is a duplicate, False otherwise
     """
     # If we don't have enough info to compare, treat as not duplicate
-    if not new_lead.get('business_name') and not new_lead.get('address'):
+    if not new_lead.get('business_name') and not new_lead.get('phone'):
         return False
     
     for lead in leads:
@@ -592,16 +571,8 @@ def is_duplicate_lead(leads, new_lead):
         if (new_lead.get('business_name') and lead.get('business_name') and 
             new_lead['business_name'].lower() == lead['business_name'].lower()):
             return True
-        
-        # If both addresses exist and match substantially (allow for minor differences)
-        if (new_lead.get('address') and lead.get('address') and
-            # Check if at least 70% of the words match between addresses
-            len(set(new_lead['address'].lower().split()) & 
-                set(lead['address'].lower().split())) / 
-            max(len(new_lead['address'].split()), len(lead['address'].split())) > 0.7):
-            return True
             
-        # If phone numbers match
+        # If phone numbers match (comparing only digits)
         if (new_lead.get('phone') and lead.get('phone') and
             ''.join(filter(str.isdigit, new_lead['phone'])) == 
             ''.join(filter(str.isdigit, lead['phone']))):
@@ -721,20 +692,17 @@ def scrape_single_listing(url: str) -> Dict:
         'business_name': '',
         'phone': '',
         'website': '',
-        'address': '',
         'rating': '',
-        'review_count': ''
+        'notes': ''
     }
     
     try:
         # Initialize Chrome with visible window
         options = webdriver.ChromeOptions()
-        # Removed headless mode to make browser visible
         options.add_argument('--no-sandbox')
         options.add_argument('--disable-gpu')
         options.add_argument(f'user-agent={random.choice(USER_AGENTS)}')
         
-        # Create WebDriver with service
         service = webdriver.ChromeService(ChromeDriverManager().install())
         driver = webdriver.Chrome(service=service, options=options)
         
@@ -742,64 +710,67 @@ def scrape_single_listing(url: str) -> Dict:
         
         # Load the listing URL
         driver.get(url)
-        time.sleep(random.uniform(1, 2))  # Random delay
+        time.sleep(random.uniform(1, 2))
         
-        # Wait for main content to load and try multiple selectors for business name
         try:
             WebDriverWait(driver, 10).until(
-                EC.presence_of_element_located((By.CSS_SELECTOR, 'h1 span, div.fontHeadlineLarge'))
+                EC.presence_of_element_located((By.CSS_SELECTOR, "h1.DUwDvf"))
             )
             
-            # Enhanced business name extraction with multiple selectors
-            name_selectors = [
-                'h1.DUwDvf span',
-                'h1.DUwDvf.lfPIob span', 
-                'h1.fontHeadlineLarge',
-                'h1 span',
-                'div.fontHeadlineLarge'
-            ]
-            
-            for selector in name_selectors:
-                try:
-                    name_elem = driver.find_element(By.CSS_SELECTOR, selector)
-                    if name_elem and name_elem.text.strip():
-                        data['business_name'] = name_elem.text.strip()
-                        logger.info(f"Found business name: {data['business_name']}")
-                        break
-                except NoSuchElementException:
-                    continue
+            # Extract business name
+            try:
+                name = driver.find_element(By.CSS_SELECTOR, "h1.DUwDvf").text
+                data['business_name'] = name
+            except: 
+                pass
+                
+            # Extract rating and review count
+            try:
+                rating = driver.find_element(By.CSS_SELECTOR, ".F7nice span[aria-hidden='true']").text
+                if rating:
+                    data['rating'] = rating
+                    # Get review count
+                    try:
+                        reviews_elem = driver.find_element(By.CSS_SELECTOR, 'span[aria-label*="reviews"]')
+                        review_count = reviews_elem.text.strip().replace("(", "").replace(")", "")
+                        if review_count:
+                            data['rating'] = f"{rating} ({review_count} reviews)"
+                    except NoSuchElementException:
+                        pass
+            except: 
+                pass
+                
+            # Extract phone number (keeping original format)
+            try:
+                phone = driver.find_element(By.CSS_SELECTOR, 'button[data-item-id^="phone:tel:"] div').text
+                if phone != "-":
+                    data['phone'] = phone
+            except: 
+                pass
+                
+            # Extract website
+            try:
+                website = driver.find_element(By.CSS_SELECTOR, 'a[data-item-id="authority"]').get_attribute("href")
+                if website:
+                    data['website'] = website
+            except: 
+                pass
+                
+            logger.info(f"Extracted data with reliable selectors for {data['business_name']}")
                     
         except TimeoutException:
             logger.warning(f"Timeout waiting for content to load for {url}")
         
-        # Use our comprehensive generic parser
+        # Use comprehensive generic parser
         raw_data = generic_parse_details(driver)
-        
-        # If business name wasn't found earlier, try to get it from raw_data
-        if not data['business_name'] and raw_data.get('business_name'):
-            data['business_name'] = raw_data['business_name']
         
         # Normalize the data using our existing function
         normalized_data = normalize_lead_data(raw_data)
         
-        # Update our data dictionary with normalized values, preserving business name if we found it
-        business_name = data['business_name']  # Save the business name we found
-        data.update(normalized_data)
-        if business_name:  # Restore our business name if we found it earlier
-            data['business_name'] = business_name
-        
-        # Additional extraction for review count if not captured
-        if not data.get('review_count'):
-            try:
-                reviews_text = driver.find_element(
-                    By.CSS_SELECTOR, 
-                    'span.UY7F9, button.fontTitleSmall span'
-                ).text
-                if reviews_text:
-                    review_match = re.search(r'(\d+)', reviews_text)
-                    if review_match:
-                        data['review_count'] = review_match.group(1)
-            except: pass
+        # Update our data dictionary with any missing values from normalized data
+        for key in normalized_data:
+            if not data.get(key) and normalized_data.get(key):
+                data[key] = normalized_data[key]
         
         # Additional social links extraction
         social_links = []
@@ -812,41 +783,41 @@ def scrape_single_listing(url: str) -> Dict:
         except: pass
         
         if social_links:
-            if data['notes']:
-                data['notes'] += f"; Social links: {', '.join(social_links)}"
-            else:
-                data['notes'] = f"Social links: {', '.join(social_links)}"
+            note = f"Social links: {', '.join(social_links)}"
+            data['notes'] = note if not data.get('notes') else f"{data['notes']} | {note}"
         
         # Extract business hours if available
         try:
             hours_button = driver.find_element(By.CSS_SELECTOR, 'button[data-item-id*="oh"]')
             hours_text = hours_button.text
             if hours_text and 'hours' in hours_text.lower():
-                if data['notes']:
-                    data['notes'] += f"; Hours: {hours_text}"
-                else:
-                    data['notes'] = f"Hours: {hours_text}"
+                note = f"Hours: {hours_text}"
+                data['notes'] = note if not data.get('notes') else f"{data['notes']} | {note}"
         except: pass
         
-        logger.info(f"Successfully extracted data for {data.get('business_name', 'unknown business')}")
+        # Skip entries with no business name
+        if not data['business_name']:
+            logger.warning(f"Skipping entry with no business name for URL: {url}")
+            return None
+            
+        logger.info(f"Successfully extracted data for {data.get('business_name')}")
+        return data
         
     except Exception as e:
         logger.error(f"Error scraping listing {url}: {str(e)}")
-        data['error'] = str(e)
+        return None
     
     finally:
         if driver:
             driver.quit()
-    
-    return data
 
-def scrape_listings_parallel(urls: List[str], max_workers: int = 8) -> List[Dict]:
+def scrape_listings_parallel(urls: List[str], max_workers: int = 10) -> List[Dict]:
     """
     Scrape multiple listings in parallel using ProcessPoolExecutor.
     
     Args:
         urls: List of Google Maps listing URLs
-        max_workers: Maximum number of parallel processes
+        max_workers: Maximum number of parallel processes (default 10)
         
     Returns:
         List of dictionaries containing business information
@@ -854,12 +825,23 @@ def scrape_listings_parallel(urls: List[str], max_workers: int = 8) -> List[Dict
     results = []
     total_urls = len(urls)
     processed = 0
+    seen_urls = set()  # Track unique URLs
+    unique_urls = []
+    
+    # Ensure unique URLs only
+    for url in urls:
+        if url not in seen_urls:
+            seen_urls.add(url)
+            unique_urls.append(url)
+    
+    logger.info(f"Found {len(unique_urls)} unique URLs out of {total_urls} total URLs")
+    total_urls = len(unique_urls)
     
     logger.info(f"Starting parallel processing of {total_urls} URLs with {max_workers} workers")
     
-    # Split URLs into smaller batches to avoid overwhelming the system
-    batch_size = min(5, total_urls)
-    url_batches = [urls[i:i + batch_size] for i in range(0, len(urls), batch_size)]
+    # Split URLs into smaller batches
+    batch_size = min(10, total_urls)  # Increased batch size to match worker count
+    url_batches = [unique_urls[i:i + batch_size] for i in range(0, len(unique_urls), batch_size)]
     
     for batch in url_batches:
         with ProcessPoolExecutor(max_workers=min(max_workers, len(batch))) as executor:
@@ -871,29 +853,20 @@ def scrape_listings_parallel(urls: List[str], max_workers: int = 8) -> List[Dict
                 url = future_to_url[future]
                 try:
                     result = future.result()
-                    if result:
+                    if result and result.get('business_name'):  # Only add valid results
                         results.append(result)
                         processed += 1
                         logger.info(f"Processed {processed}/{total_urls}: {result.get('business_name', 'Unknown')}")
+                    else:
+                        logger.warning(f"Skipping invalid result for URL: {url}")
                 except Exception as e:
                     logger.error(f"Error processing {url}: {str(e)}")
-                    # Add empty result with error note
-                    results.append({
-                        'business_name': '',
-                        'phone': '',
-                        'website': '',
-                        'address': '',
-                        'rating': '',
-                        'review_count': '',
-                        'notes': f"Error processing: {str(e)}; URL: {url}"
-                    })
-                    processed += 1
         
         # Small delay between batches
         if len(url_batches) > 1:
             time.sleep(2)
     
-    logger.info(f"Parallel processing complete. Processed {len(results)}/{total_urls} listings")
+    logger.info(f"Parallel processing complete. Processed {len(results)} valid results from {total_urls} URLs")
     return results
 
 @retry_with_backoff
@@ -1003,24 +976,41 @@ def scrape(
             logger.warning("No results found after multiple attempts")
             return []
 
-        # Scroll until we have enough results visible
-        consecutive_scroll_failures = 0
-        max_scroll_failures = 3
-        while consecutive_scroll_failures < max_scroll_failures:
-            if scroll_results_pane(driver):
-                consecutive_scroll_failures = 0
-                random_sleep(2, 3)
-            else:
-                consecutive_scroll_failures += 1
-                logger.warning(f"Scroll failed. Failures: {consecutive_scroll_failures}/{max_scroll_failures}")
-            
-            # Check if we have enough results
-            results = get_results(driver)
-            if len(results) >= max_results:
-                break
+        # Track unique URLs while scrolling
+        seen_urls = set()
+        consecutive_no_new_urls = 0
+        max_no_new_urls = 5  # Maximum attempts without finding new URLs before giving up
         
-        # Extract listing URLs
-        listing_urls = extract_listing_urls(driver, max_results)
+        while len(seen_urls) < max_results:
+            # Scroll the results pane
+            if not scroll_results_pane(driver):
+                logger.warning("Failed to scroll, checking if we have enough unique URLs")
+                consecutive_no_new_urls += 1
+            
+            # Extract current visible URLs
+            current_urls = set(extract_listing_urls(driver, max_results * 2))  # Extract more to ensure we find new ones
+            new_urls = current_urls - seen_urls
+            
+            if new_urls:
+                # Reset counter when we find new URLs
+                consecutive_no_new_urls = 0
+                seen_urls.update(new_urls)
+                logger.info(f"Found {len(new_urls)} new URLs, total unique URLs: {len(seen_urls)}")
+            else:
+                consecutive_no_new_urls += 1
+                logger.warning(f"No new URLs found (attempt {consecutive_no_new_urls}/{max_no_new_urls})")
+            
+            # Stop if we've tried too many times without finding new URLs
+            if consecutive_no_new_urls >= max_no_new_urls:
+                logger.warning(f"Stopping after {max_no_new_urls} attempts without new URLs")
+                break
+                
+            random_sleep(2, 3)
+        
+        # Use the collected unique URLs
+        listing_urls = list(seen_urls)[:max_results]
+        logger.info(f"Collected {len(listing_urls)} unique URLs for processing")
+        
         if not listing_urls:
             logger.error("No listing URLs extracted")
             return []
@@ -1029,10 +1019,10 @@ def scrape(
         driver.quit()
         driver = None
         
-        # Process listings in parallel
+        # Process listings in parallel with increased worker count
         leads = scrape_listings_parallel(
-            listing_urls[:max_results],
-            max_workers=min(8, len(listing_urls))
+            listing_urls,
+            max_workers=10  # Using 10 workers as requested
         )
         
         # Report progress through callback
@@ -1061,7 +1051,6 @@ if __name__ == "__main__":
         print(f"\n{lead.get('business_name', 'Unnamed business')}")
         print(f"   Phone: {lead.get('phone', 'N/A')}")
         print(f"   Website: {lead.get('website', 'N/A')}")
-        print(f"   Address: {lead.get('address', 'N/A')}")
         print(f"   Rating: {lead.get('rating', 'N/A')}")
     
     results = scrape(args.keyword, args.location, max_results=args.max_results, on_lead_callback=print_lead)
